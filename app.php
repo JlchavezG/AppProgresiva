@@ -8,16 +8,16 @@
   </head>
   <body>
     <!-- inicia navbar -->
-    <nav class="navbar shadow navbar-light bg-light fixed-top">
+    <nav class="navbar shadow navbar-light bg-light navbar-expand-lg fixed-top">
     <div class="container-fluid mx-5">
        <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" class="text-decoration-none">
         <svg class="bi" width="20" height="20" fill="currentColor">
            <use xlink:href="app/icons/bootstrap-icons.svg#grid-fill"/>
         </svg> <span class="text-dark"> Menu</span>
       </a>
-      <ul class="navbar-nav my-lg-0 navbar-nav-scroll">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Home</a>
+      <ul class="navbar-nav my-lg-0">
+        <li class="nav-item py-2">
+          Bienvenido: <img src="img/user/yo.jpeg" alt="perfil" style="width:30px; border-radius:50%;">
         </li>
       </ul>
 
@@ -80,6 +80,16 @@
         <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
            <use xlink:href="app/icons/bootstrap-icons.svg#calendar2-date"/>
         </svg>&nbsp; Calendario</a>
+      </li>
+      <li class="nav-item items">
+        <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
+           <use xlink:href="app/icons/bootstrap-icons.svg#files"/>
+        </svg>&nbsp; Informes</a>
+      </li>
+      <li class="nav-item items">
+        <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
+           <use xlink:href="app/icons/bootstrap-icons.svg#mailbox2"/>
+        </svg>&nbsp; Notificaciones</a>
       </li>
     </ul>
   </div>
