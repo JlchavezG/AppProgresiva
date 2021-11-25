@@ -1,3 +1,4 @@
+// funcion de mapa gps ubicacion y tomar datos de longitud y latitu
 function findMe(){
    var output = document.getElementById('map');
    nombre = '<?=$nombre ?>';

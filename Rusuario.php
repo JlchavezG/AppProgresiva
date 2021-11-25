@@ -109,8 +109,8 @@
                                                      <option value="3">Atizapan</option>
                                                   </select>
                                            </div>
-                                           <input type="text" name="latitud" id="latitud" required>
-                                           <input type="text" name="longitud" id="longitud" required>
+                                           <input type="hidden" name="latitud" id="latitud" required>
+                                           <input type="hidden" name="longitud" id="longitud" required>
                                            <div class="input-group mb-3">
                                                <span class="input-group-text" id="usuario">
                                                  <svg class="bi" width="15" height="15" fill="currentColor">
@@ -134,7 +134,11 @@
                                          </div>
                                           <div id="map"></div>
                                           <div class="py-1 d-grid gap-2">
-                                             <input type="submit" name="Registrar" value="Registrar" class="btn btn-sm btn-success" disabled>
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" role="switch" id="aviso" onclick="activar(this);">
+                                                    <label class="form-check-label" for="aviso">Aceptas aviso de privacidad</label>
+                                                </div>
+                                             <input type="submit" id="registrar" name="Registrar" value="Registrar" class="btn btn-sm btn-success">
                                           </div>
                                        </div>
                                      </div>
@@ -145,6 +149,16 @@
               </div>
         </div>
   </div>
+  <script type="text/javascript">
+  // desabilitar btn de registro
+  document.getElementById('registrar').disabled=true;
+  function activar(cb){
+    if(cb.checked)
+    document.getElementById('registrar').disabled=false;
+    else
+    document.getElementById('registrar').disabled=true;
+  }
+  </script>
   <script src="js/main.js"></script>
   <script src="js/pace.js"></script>
   <script src="js/bootstrap.min.js"></script>
