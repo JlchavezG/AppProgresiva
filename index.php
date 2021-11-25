@@ -40,6 +40,7 @@ if(isset($_POST['ingresar'])){
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="js/jquery.js"></script>
     <title>Inicio de Sistema | ServicePlubic</title>
   </head>
   <body>
@@ -85,7 +86,15 @@ if(isset($_POST['ingresar'])){
                                                   <use xlink:href="app/icons/bootstrap-icons.svg#key-fill"/>
                                                </svg>
                                              </span>
-                                                <input type="password" name="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping" required>
+                                                <input type="password" name="password" id="pass" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping" required>
+                                          </div>
+                                          <div class="d-grid gap-2 mt-2">
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" role="switch" id="ver" onclick="verpass(this);">
+                                                <label class="form-check-label" for="ver">
+                                                  <span>ver password</span>
+                                                </label>
+                                            </div>
                                           </div>
                                           <div class="d-grid gap-2 mt-2">
                                              <input type="submit" name="ingresar" value="Ingresar" class="btn btn-sm btn-success bg-gradient">
@@ -120,5 +129,13 @@ if(isset($_POST['ingresar'])){
         </div>
   </div>
   <script src="js/bootstrap.min.js"></script>
+  <script>
+  function verpass(cb){
+    if(cb.checked)
+    $('#pass').attr("type","text");
+    else
+    $('#pass').attr("type","password");
+  }
+  </script>
   </body>
 </html>
