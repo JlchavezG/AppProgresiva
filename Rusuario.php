@@ -1,3 +1,27 @@
+<?php
+ if(isset($_POST['Registrar'])){
+   $Nombre = $conect->real_escape_string($_POST['nombre']);
+   $ApellidoP = $conect->real_escape_string($_POST['apellidop']);
+   $ApellidoM = $conect->real_escape_string($_POST['apellidom']);
+   $Telefono = $conect->real_escape_string($_POST['telefono']);
+   $Email = $conect->real_escape_string($_POST['email']);
+   $Genero = $conect->real_escape_string($_POST['genero']);
+   $Calle = $conect->real_escape_string($_POST['calle']);
+   $Numero = $conect->real_escape_string($_POST['numero']);
+   $Colonia = $conect->real_escape_string($_POST['colonia']);
+   $Estado = $conect->real_escape_string($_POST['estado']);
+   $Municipio = $conect->real_escape_string($_POST['municipio']);
+   $Latitud = $conect->real_escape_string($_POST['latitud']);
+   $Longitud = $conect->real_escape_string($_POST['longitud']);
+   $UserName = $conect->real_escape_string($_POST['usuario']);
+   $Img = 'user.png';
+   $Password = $conect->real_escape_string($_POST['password']);
+   $Estatus = '1';
+   $Tuser = '4';
+   $Online = '0';
+ }
+
+?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -102,7 +126,7 @@
                                           </div>
                                           <div class="input-group mb-3">
                                                <label class="input-group-text" for="inputGroupSelect01">Municipio</label>
-                                                  <select class="form-select" id="minicipio" name="municipio" required>
+                                                  <select class="form-select" id="municipio" name="municipio" required>
                                                      <option selected>Selecciona una opción</option>
                                                      <option value="1">Ciudad de Mexico</option>
                                                      <option value="2">Naucalpan</option>
