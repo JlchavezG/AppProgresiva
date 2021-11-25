@@ -102,9 +102,10 @@ if(isset($_POST['ingresar'])){
                                           <div class="row mt-3">
                                              <div class="col-auto">
                                                 <span class="text-primary">
-                                                    <svg class="bi" width="20" height="20" fill="currentColor">
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#ModalRegistro" class="text-decoration-none">
+                                                      <svg class="bi" width="20" height="20" fill="currentColor">
                                                       <use xlink:href="app/icons/bootstrap-icons.svg#person-plus-fill"/>
-                                                    </svg> Registrate
+                                                    </svg> Registrate </a>
                                                 </span>
                                              </div>
                                              <div class="col-auto">
@@ -128,6 +129,30 @@ if(isset($_POST['ingresar'])){
             </div>
         </div>
   </div>
+  <!--modal tipo de registro -->
+  <div class="modal fade" id="ModalRegistro" tabindex="-1" aria-labelledby="ModalRegistroLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalRegistroLabel">¿Como te quieres registrar?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <div class="row py-3">
+             <div class="col">
+                Socio
+             </div>
+             <div class="col">
+                Usuario
+             </div>
+         </div>
+      </div>
+      <div class="modal-footer">
+        <span class="text-muted text-center">Derechos recervados@iscjlchavezg</span>
+      </div>
+    </div>
+  </div>
+</div>
   <script src="js/bootstrap.min.js"></script>
   <script>
   function verpass(cb){
