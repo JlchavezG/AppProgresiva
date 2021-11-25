@@ -40,6 +40,7 @@ if(isset($_POST['ingresar'])){
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/pace.css">
     <script src="js/jquery.js"></script>
     <title>Inicio de Sistema | ServicePlubic</title>
   </head>
@@ -102,7 +103,7 @@ if(isset($_POST['ingresar'])){
                                           <div class="row mt-3">
                                              <div class="col-auto">
                                                 <span class="text-primary">
-                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#ModalRegistro" class="text-decoration-none">
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#ModalRegistro" class="text-decoration-none text-muted">
                                                       <svg class="bi" width="20" height="20" fill="currentColor">
                                                       <use xlink:href="app/icons/bootstrap-icons.svg#person-plus-fill"/>
                                                     </svg> Registrate </a>
@@ -138,12 +139,22 @@ if(isset($_POST['ingresar'])){
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-         <div class="row py-3">
+         <div class="row py-3 text-center">
              <div class="col">
-                Socio
+               <a href="RUsuario.php"><svg class='bi' width='40' height='40' role='img' aria-label='Tools'>
+                 <use xlink:href='app/icons/bootstrap-icons.svg#person-workspace' style="color:#f6b65f;"/>
+               </svg></a>
+               <div class="mt-2">
+                  <span>Usuario</span>
+               </div>
              </div>
              <div class="col">
-                Usuario
+               <a href="RSocio.php"><svg class='bi text-danger' width='40' height='40' role='img' aria-label='Tools'>
+                 <use xlink:href='app/icons/bootstrap-icons.svg#tools'/>
+               </svg></a>
+               <div class="mt-2">
+                  <span>Socio</span>
+               </div>
              </div>
          </div>
       </div>
@@ -154,6 +165,7 @@ if(isset($_POST['ingresar'])){
   </div>
 </div>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/pace.js"></script>
   <script>
   function verpass(cb){
     if(cb.checked)
