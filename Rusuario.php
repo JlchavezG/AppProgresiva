@@ -103,8 +103,8 @@
                                                      <option value="3">Atizapan</option>
                                                   </select>
                                            </div>
-                                           <input type="hidden" name="latitud" id="latitud">
-                                           <input type="hidden" name="longitud" id="longitud">
+                                           <input type="text" name="latitud" id="latitud">
+                                           <input type="text" name="longitud" id="longitud">
                                            <div class="input-group mb-3">
                                                <span class="input-group-text" id="usuario">
                                                  <svg class="bi" width="15" height="15" fill="currentColor">
@@ -135,58 +135,8 @@
                     </div>
               </div>
         </div>
-    </div>
-    <?php $nombre = "Jose Luis"; ?>
-    <script>
-         function findMe(){
-            var output = document.getElementById('map');
-            nombre = '<?=$nombre ?>';
-            // Verificar si soporta geolocalizacion
-            if (navigator.geolocation) {
-                output.innerHTML = "<p>Tu navegador soporta Geolocalizacion</p>";
-                output.innerHTML = nombre;
-            }else{
-               output.innerHTML = "<p>Tu navegador no soporta Geolocalizacion</p>";
-            }
-              //Obtenemos latitud y longitud
-               function localizacion(posicion){
-                 var latitude = posicion.coords.latitude;
-                 var longitude = posicion.coords.longitude;
-                 var ventana ='<h5>Tu Domicilio</h5>'+'<p>Para servicios o envio de pagos</p>';
-
-                 output.innerHTML ="<p>Latitud: "+latitude+"<br> Longitud: "+longitude+"</p>";
-                 const myLatLng = { lat:latitude, lng: longitude };
-                 const map = new google.maps.Map(document.getElementById("map"), {
-                 zoom: 15,
-                 center: myLatLng,
-                 // cambiar a terreno  mapTypeId: 'satellite',
-               });
-                 marcador = new google.maps.Marker({
-                 position: myLatLng,
-                 draggable: true,
-                 map,
-                 title: "Te encuentras aqui!",
-                 });
-                 var info = new google.maps.InfoWindow({
-                   content: ventana
-                 });
-                 marcador.addListener('click',function(){
-                   info.open(map, marcador);
-                 });
-                 marcador.addListener('dragend',function(event){
-                   document.getElementById("latitud").value = this.getPosition().lat();
-                   document.getElementById("longitud").value = this.getPosition().lng();
-                 })
-
-
-
-               }
-               function error(){
-               output.innerHTML = "<p>No se pudo obtener tu ubicación</p>";
-               }
-              navigator.geolocation.getCurrentPosition(localizacion,error);
-            }
-       </script>
+  </div>
+  <script src="js/main.js"></script>
   <script src="js/pace.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYMPGtM7VUn1aq61tkGbu99qD95c-w5zc&callback=initMap"></script>
