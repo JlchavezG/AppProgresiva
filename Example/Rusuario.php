@@ -172,7 +172,7 @@
                                           <div class="py-1 d-grid gap-2">
                                             <div class="form-check form-switch">
                                                 <input class="form-check-input" type="checkbox" role="switch" id="aviso" onclick="activar(this);">
-                                                <a href="#"><label class="">Aceptas aviso de privacidad</label></a>
+                                                    <label class="form-check-label" for="aviso">Aceptas aviso de privacidad</label>
                                                 </div>
                                              <input type="submit" id="registrar" name="Registrar" value="Registrar" class="btn btn-sm btn-success">
                                           </div>
