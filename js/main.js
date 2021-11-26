@@ -1,11 +1,9 @@
 // funcion de mapa gps ubicacion y tomar datos de longitud y latitu
 function findMe(){
    var output = document.getElementById('map');
-   nombre = '<?=$nombre ?>';
    // Verificar si soporta geolocalizacion
    if (navigator.geolocation) {
        output.innerHTML = "<p>Tu navegador soporta Geolocalizacion</p>";
-       output.innerHTML = nombre;
    }else{
       output.innerHTML = "<p>Tu navegador no soporta Geolocalizacion</p>";
    }
