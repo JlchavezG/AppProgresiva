@@ -1,4 +1,6 @@
 <?php
+ include 'includes/conection.php';
+ include 'includes/querys.php';
  if(isset($_POST['Registrar'])){
    $Nombre = $conect->real_escape_string($_POST['nombre']);
    $ApellidoP = $conect->real_escape_string($_POST['apellidop']);
@@ -15,10 +17,11 @@
    $Longitud = $conect->real_escape_string($_POST['longitud']);
    $UserName = $conect->real_escape_string($_POST['usuario']);
    $Img = 'user.png';
-   $Password = $conect->real_escape_string($_POST['password']);
+   $Password = $conect->real_escape_string(md5($_POST['password']));
    $Estatus = '1';
    $Tuser = '4';
    $Online = '0';
+   // consulta para insertar los datos en la base de datos
  }
 
 ?>
@@ -31,6 +34,18 @@
     <link rel="stylesheet" type="text/css" href="css/pace.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+				$("#estado").change(function () {					
+					$("#estado option:selected").each(function () {
+						   Id_Estado  = $(this).val();
+						$.post("includes/getMunicipio.php", { Id_Estado: Id_Estado  }, function(data){
+							$("#municipio").html(data);
+						});            
+					});
+				})
+			});
+    </script>
   </head>
   <body onload="findMe()";>
     <div class="container">
@@ -93,9 +108,9 @@
                                                 <label class="input-group-text" for="inputGroupSelect01">Genero</label>
                                                    <select class="form-select" id="genero" name="genero">
                                                       <option selected>Selecciona una opción</option>
-                                                      <option value="1">Masculino</option>
-                                                      <option value="2">Femenino</option>
-                                                      <option value="3">Otro</option>
+                                                      <?php while($row = $genero->fetch_assoc()){ ?>
+                                                      <option value="<?php echo $row['Id_Genero']; ?>"><?php echo $row['NombreG']; ?></option>
+                                                      <?php } ?>
                                                    </select>
                                             </div>
                                        </div>
@@ -119,18 +134,15 @@
                                               <label class="input-group-text" for="inputGroupSelect01">Estado</label>
                                                  <select class="form-select" id="estado" name="estado" required>
                                                     <option selected>Selecciona una opción</option>
-                                                    <option value="1">Mexico</option>
-                                                    <option value="2">Guadalajara</option>
-                                                    <option value="3">Chiapas</option>
+                                                    <?php while($row1 = $estados->fetch_assoc()) { ?>
+                                                    <option value="<?php echo $row1['Id_Estado'];?>"><?php echo $row1['NombreE'];?></option>  
+                                                    <?php } ?>  
                                                  </select>
                                           </div>
                                           <div class="input-group mb-3">
                                                <label class="input-group-text" for="inputGroupSelect01">Municipio</label>
                                                   <select class="form-select" id="municipio" name="municipio" required>
-                                                     <option selected>Selecciona una opción</option>
-                                                     <option value="1">Ciudad de Mexico</option>
-                                                     <option value="2">Naucalpan</option>
-                                                     <option value="3">Atizapan</option>
+                                                     
                                                   </select>
                                            </div>
                                            <input type="hidden" name="latitud" id="latitud" required>
