@@ -1,4 +1,5 @@
 <?php 
+ error_reporting(0);
  include 'includes/conection.php';
  include 'includes/querys.php';
  if(isset($_POST['Registrar'])){
@@ -27,7 +28,13 @@
   Estatus, TUser, Online)VALUES('$Nombre','$ApellidoP','$ApellidoM','$Telefono','$Email','$Genero',
   '$Calle','$Numero','$Colonia','$Estado','$Municipio','$latitud','$Longitud','$UserName','$Img','$Password','$Estatus','$Tuser','$Online')";
   $insertar = $conect->query($Registro);
-  
+  if($insertar > 0){
+     $alertas.='<div class="alert alert-success alert-dismissible fade show" role="alert">
+                   <strong>Registro exitoso!</strong> Bienvenido a nuestra platafoma ya puedes iniciar sesión con tu usuario y password solo da <a href="index.php"> A qui</a>.
+                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                   </button>
+                </div>';
+  }
 
  }
 
@@ -192,6 +199,9 @@
               </div>
           </div>
        </div>
+    </div>
+    <div class="py-1 text-center">
+       <?php echo $alertas; ?>
     </div>
 </div>
 <script>
