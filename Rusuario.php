@@ -22,6 +22,17 @@
   $Estatus = '1';
   $Tuser = '4';
   $Online = '0';
+  // verificar que no existe usuario o email igual en la base de datos 
+  $vuser = "SELECT * FROM Usuarios WHERE Email = '$Email' || UserName = '$UserName'";
+  $vusuario = $conect->query($vuser);
+  if($vusuario > 0){
+   $alertas.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                 <strong>Error al registrar al usuario!</strong> El usuario o email ya esta registrado en la plataforma verifica tu Usuario o Email.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                </button>
+              </div>';
+  }
+  else{
   // la consulta para insertar los datos 
   $Registro = "INSERT INTO Usuarios(Nombre, ApellidoP, ApellidoM, Telefono, Email, Id_Genero,
   Calle, Numero, Colonia, Id_Estado, Id_Municipio, Latitud, Longitud, UserName, Imagen, Password, 
@@ -35,8 +46,16 @@
                    </button>
                 </div>';
   }
+  else{
+   $alertas.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                 <strong>Error al Registrar!</strong> No se pudo registrar en la plataforma intenta más tarde o comunicate con soporte <a href="soporte.php"> A qui</a>.
+                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                   </button>
+                 </div>';
+  }
 
  }
+}
 
 ?>
 <!DOCTYPE html>
@@ -67,11 +86,28 @@
 <div class="container">
     <div class="row d-flex justify-content-center">
        <h2 class="text-center display-6 mt-5">Registro de | <span class="text-warning"> Usuarios</span></h2>
-       <div class="col-sm-12 col-md-12 col-lg-12 py-5">
+       <p class="text-center text-muted">Bienvenidos al registro de usuario de nuestra plataforma. </p>
+       <div class="row mt-2 text-center">
+          <div class="col py-2">
+                <a href="index.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="20" height="20" fill="currentColor">
+                     <use xlink:href="app/icons/bootstrap-icons.svg#arrow-left-circle-fill"/>
+                </svg> Regresar </a>
+          </div>
+          <div class="col"></div>
+          <div class="col">
+          <a href="#" data-bs-toggle="offcanvas" data-bs-target="#Ayuda" class="text-decoration-none text-muted"><svg class="bi text-warning" width="20" height="20" fill="currentColor">
+                     <use xlink:href="app/icons/bootstrap-icons.svg#exclamation-circle-fill"/>
+                </svg> Ayuda </a>
+          </div>
+       </div>
+       <div class="py-1 text-center">
+       <?php echo $alertas; ?>
+       </div>
+       <div class="col-sm-12 col-md-12 col-lg-12 py-2">
           <div class="card shadow">
               <div class="container">
                  <div class="row py-3 text-center">
-                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" autocomplete="off">
                        <div class="row">
                           <div class="col-sm-12 col-md-12 col-lg-4">
                               <div class="py-2">
@@ -200,10 +236,21 @@
           </div>
        </div>
     </div>
-    <div class="py-1 text-center">
-       <?php echo $alertas; ?>
+    <div class="container ">
+        <div class="row d-flex justify-content-center mt-2">
+           <img src="img/craken.png" alt="logo" style="width:100px;">
+        </div>
     </div>
 </div>
+<!-- ofcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="Ayuda" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">Ayuda en Registro de Usuarios</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    Ayuda
+  </div>
 <script>
     // deabilitar el boton de registrar
     document.getElementById('registrar').disabled=true;
