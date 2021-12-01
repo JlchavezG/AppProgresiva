@@ -111,9 +111,9 @@ if(isset($_POST['ingresar'])){
                                              </div>
                                              <div class="col-auto">
                                                 <span class="text-primary">
-                                                   <svg class="bi" width="20" height="20" fill="currentColor">
+                                                   <a href="RecuperarPassUser.php" class="text-decoration-none text-muted"><svg class="bi" width="20" height="20" fill="currentColor">
                                                       <use xlink:href="app/icons/bootstrap-icons.svg#gear-fill"/>
-                                                   </svg> Perdiste tu Password
+                                                   </svg> Perdiste tu Password </a>
                                                  </span>
                                              </div>
                                           </div>

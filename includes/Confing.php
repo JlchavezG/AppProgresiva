@@ -10,6 +10,20 @@ if(!isset($usuario)){
 ini_Set('date.timezone','America/Mexico_City');
 $fecha = date('Y-m-d');
 $tiempo = date('H:i:s', time());
+$hora = date("H");
+$dia = 7;
+$tarde = 13;
+$noche = 20;
+$saludo = "";
+if($hora > $tarde){
+  $saludo = "Buenos dias";
+}
+else if($hora > $tarde){
+  $saludo = "Buenas tardes";
+}
+else if($hora > $noche){
+  $saludo = "Buenas noches";
+}
 // consulta para exraer los datos del usuario conectado
 $consulta = "SELECT * FROM Usuarios WHERE UserName = '$usuario'";
 $r = $conect->query($consulta);

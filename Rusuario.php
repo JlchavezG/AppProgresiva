@@ -25,7 +25,7 @@
   // verificar que no existe usuario o email igual en la base de datos 
   $vuser = "SELECT * FROM Usuarios WHERE Email = '$Email' || UserName = '$UserName'";
   $vusuario = $conect->query($vuser);
-  if($vusuario > 0){
+  if($vusuario->num_rows > 0){
    $alertas.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
                  <strong>Error al registrar al usuario!</strong> El usuario o email ya esta registrado en la plataforma verifica tu Usuario o Email.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
@@ -243,13 +243,13 @@
     </div>
 </div>
 <!-- ofcanvas -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="Ayuda" aria-labelledby="offcanvasRightLabel">
+<div class="offcanvas offcanvas-end" tabindex="-1" id="Ayuda" aria-labelledby="Ayuda">
   <div class="offcanvas-header">
     <h5 id="offcanvasRightLabel">Ayuda en Registro de Usuarios</h5>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    Ayuda
+    
   </div>
 <script>
     // deabilitar el boton de registrar
