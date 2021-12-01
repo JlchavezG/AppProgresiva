@@ -59,12 +59,15 @@
                         Por favor ingresa un email para la busqueda
                      </div>
                    </div>
-                   <div class="py-2 d-grid gap-2">
+                   <div class="py-2 d-grid gap-2 py-3">
                        <input type="submit" name="buscar" value="Buscar" class="btn btn-sm btn-success bg-gradient">
                    </div>
                   </form>
               </div>
               </div>        
+        </div>
+        <div class="text-center py-3">
+          
         </div>
     </div>
 </div>
