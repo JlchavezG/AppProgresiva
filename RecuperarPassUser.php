@@ -36,12 +36,28 @@
               <span class="text-muted text-center mt-3"> Ingresa tu nombre de usuario junto con tu email registrado</span><hr>
               <div class="row container justify-content-center">
               <div class="col-sm-8 col-md-8 col-lg-8">
-                  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="Post" autocomplete="off">
-                   <div class="py-2">
-                       <input type="text" name="usuario" placeholder="Usuario" class="form-control" required>
+                  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="needs-validation" novalidate method="Post" autocomplete="off">
+                   <div class="input-group mb-3">
+                     <span class="input-group-text" id="basic-addon1">
+                        <svg class="bi" width="20" height="20" fill="currentColor">
+                            <use xlink:href="app/icons/bootstrap-icons.svg#person-fill"/>
+                        </svg>
+                     </span>
+                     <input type="text" class="form-control" name="usuario" placeholder="Usuario" aria-label="Usuario" aria-describedby="usuario" required>
+                     <div class="invalid-feedback">
+                        Por favor ingresa un usuario para la busqueda
+                     </div>
                    </div>
-                   <div class="py-2">
-                       <input type="email" name="email" placeholder="Email" class="form-control" required>
+                   <div class="input-group mb-3">
+                     <span class="input-group-text" id="basic-addon1">
+                        <svg class="bi" width="20" height="20" fill="currentColor">
+                            <use xlink:href="app/icons/bootstrap-icons.svg#envelope"/>
+                        </svg>
+                     </span>
+                     <input type="text" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="Email" required>
+                     <div class="invalid-feedback">
+                        Por favor ingresa un email para la busqueda
+                     </div>
                    </div>
                    <div class="py-2 d-grid gap-2">
                        <input type="submit" name="buscar" value="Buscar" class="btn btn-sm btn-success bg-gradient">
@@ -64,6 +80,8 @@
   
 <!-- termina offcanva -->
 <script src="js/bootstrap.min.js"></script>
-<script src="js/pace.js"></script>    
+<script src="js/pace.js"></script> 
+<script src="js/main.js"></script>  
+<script src="js/validate.js"></script> 
 </body>
 </html>
