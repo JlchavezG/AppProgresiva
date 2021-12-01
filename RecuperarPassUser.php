@@ -33,9 +33,12 @@
     </div>
     <div class="row justify-content-center h-100 py-4">
         <div class="card shadow">
-              <span class="text-muted text-center mt-3"> Ingresa tu nombre de usuario junto con tu email registrado</span><hr>
+              <span class="text-muted text-center mt-3">
+              <svg class="bi" width="20" height="20" fill="currentColor">
+                     <use xlink:href="app/icons/bootstrap-icons.svg#pencil"/>
+                </svg> Ingresa tu nombre de usuario junto con tu email registrado</span><hr>
               <div class="row container justify-content-center">
-              <div class="col-sm-8 col-md-8 col-lg-8">
+              <div class="col-sm-10 col-md-10 col-lg-10">
                   <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="needs-validation" novalidate method="Post" autocomplete="off">
                    <div class="input-group mb-3">
                      <span class="input-group-text" id="basic-addon1">

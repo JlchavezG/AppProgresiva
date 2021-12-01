@@ -37,7 +37,7 @@
           <div class="col"></div>
           <div class="col">
           <a href="#" data-bs-toggle="offcanvas" data-bs-target="#Ayuda" class="text-decoration-none text-muted"><svg class="bi text-warning" width="20" height="20" fill="currentColor">
-                     <use xlink:href="app/icons/bootstrap-icons.svg#exclamation-circle-fill"/>
+                     <use xlink:href="app/icons/bootstrap-icons.svg#lightbulb"/>
                 </svg> Ayuda </a>
           </div>
        </div>
@@ -165,7 +165,8 @@
                              <div class="py-1 d-grid gap-2">
                                 <div class="form-check form-switch">
                                    <input class="form-check-input" type="checkbox" role="switch" id="aviso" onclick="activar(this);">
-                                   <label class="form-check-label" for="aviso1">Acepto terminos y condiciones</label>
+                                   <label class="form-check-label" for="aviso1">
+                                      <a href="#" class="text-decoration-none text-muted" data-bs-toggle="modal" data-bs-target="#Terminos">Acepto terminos y condiciones</a></label>
                                 </div>
                                 <input type="submit" id="registrar" name="Registrar" value="Registrar" class="btn btn-sm btn-success">
                              </div>
@@ -192,6 +193,8 @@
   <div class="offcanvas-body">
     
   </div>
+</div>  
+ <?php include 'includes/Terminos.php'; ?> 
 <script>
     // deabilitar el boton de registrar
     document.getElementById('registrar').disabled=true;

@@ -36,7 +36,9 @@
                                   <div class="col-sm-6 col-md-6 col-lg-6">
                                       <div class="container mt-3">
                                         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="needs-validation" novalidate method="post">
-                                          <span>Por favor ingresa tus credenciales para ingresar a la aplicación.</span><hr>
+                                          <span>
+                                            Por favor ingresa tus credenciales para ingresar a la aplicación.
+                                          </span><hr>
                                           <div class="input-group flex-nowrap mt-2">
                                              <span class="input-group-text" id="addon-wrapping">
                                                <svg class="bi" width="20" height="20" fill="currentColor">
