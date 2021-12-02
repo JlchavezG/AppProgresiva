@@ -120,28 +120,28 @@ switch ($hora) {
   </div>
   <!--modal tipo de registro -->
   <div class="modal fade" id="ModalRegistro" tabindex="-1" aria-labelledby="ModalRegistroLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="ModalRegistroLabel">¿Como te quieres registrar?</h5>
+        <h5 class="modal-title" id="ModalRegistroLabel">Registro</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
          <div class="row py-3 text-center">
              <div class="col">
-               <a href="RUsuario.php"><svg class='bi' width='40' height='40' role='img' aria-label='Tools'>
+               <a href="Rusuario.php"><svg class='bi' width='40' height='40' role='img' aria-label='Tools'>
                  <use xlink:href='app/icons/bootstrap-icons.svg#person-workspace'/>
                </svg></a>
                <div class="mt-2">
-                  <span>Usuario</span>
+                  <span class="text-info">Usuario</span>
                </div>
              </div>
              <div class="col">
-               <a href="RSocio.php"><svg class='bi text-danger' width='40' height='40' role='img' aria-label='Tools'>
+               <a href="Rofertante.php"><svg class='bi text-danger' width='40' height='40' role='img' aria-label='Tools'>
                  <use xlink:href='app/icons/bootstrap-icons.svg#tools'/>
                </svg></a>
                <div class="mt-2">
-                  <span>Socio</span>
+                  <span class="text-warning">Socio</span>
                </div>
              </div>
          </div>

@@ -1,4 +1,4 @@
-<?php include 'includes/RegistroUser.php'; ?>
+<?php include 'includes/RegistroOferta.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,13 +21,13 @@
 				})
 			});
     </script>
-    <title>Registro de Usuarios | IscjlchavezG</title>
+    <title>Registro de Socios u Ofertante | IscjlchavezG</title>
 </head>
 <body onload="findMe()";>
 <div class="container">
     <div class="row d-flex justify-content-center">
-       <h2 class="text-center display-6 mt-5">Registro de | <span class="text-warning"> Usuarios</span></h2>
-       <p class="text-center text-muted">Bienvenidos al registro de usuario de nuestra plataforma. </p>
+       <h2 class="text-center display-6 mt-5">Registro de | <span class="text-warning"> Socios u Ofertante</span></h2>
+       <p class="text-center text-muted">Bienvenidos al registro de ofertante de nuestra plataforma. </p>
        <div class="row mt-2 text-center">
           <div class="col py-2">
                 <a href="index.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="20" height="20" fill="currentColor">
@@ -121,6 +121,15 @@
                                        <use xlink:href="app/icons/bootstrap-icons.svg#compass"/>
                                   </svg>
                                   <span class="text-muted"> Datos de Servicio</span>
+                              </div>
+                              <div class="input-group mb-3">
+                                <label class="input-group-text" for="oficio">Oficio</label> 
+                                <select class="form-select" id="oficio" name="oficio">
+                                   <option selected> Selecciona una opción</option>
+                                   <?php while($row4 = $oficios->fetch_assoc()){ ?>
+                                      <option value="<?php echo $row4['Id_Oficio'];?>"><?php echo $row4['NombreOf'];?></option> 
+                                   <?php } ?>
+                                </select>
                               </div>
                               <div class="input-group mb-3">
                                  <span class="input-group-text">Dirección</span>
