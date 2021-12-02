@@ -26,7 +26,7 @@
   $Online = '0';
   // verificar que no existe usuario o email igual en la base de datos 
   $vofertante = "SELECT * FROM Ofertante WHERE EmailO = '$Email' || UserNameO = '$UserName'";
-  $vofertantes = $conect->query($vuser);
+  $vofertantes = $conect->query($vofertante);
   if($vofertantes->num_rows > 0){
    $alertas.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
                  <strong>Error al registrar al socio!</strong> El usuario o email ya esta registrado en la plataforma verifica tu Usuario o Email.
