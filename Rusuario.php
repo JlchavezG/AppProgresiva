@@ -106,6 +106,14 @@
                                    <?php } ?>
                                 </select>
                               </div>
+                              <div class="input-group mb-3">
+                                  <span class="input-group-text" id="email">
+                                    <svg class="bi" width="15" height="15" fill="currentColor">
+                                       <use xlink:href="app/icons/bootstrap-icons.svg#envelope"/>
+                                    </svg>
+                                 </span>
+                                 <input type="date" class="form-control" name="fecha" placeholder="Fecha" arial-label="Fecha" aria-describedby="basic-addon1" required>   
+                              </div>
                           </div>
                           <div class="col-sm-12 col-md-12 col-lg-4">
                               <div class="py-2">

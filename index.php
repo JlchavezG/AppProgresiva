@@ -3,11 +3,9 @@ $hora = date('G');
 switch ($hora) {
    case (($hora >= 6) AND ($hora < 12)):
         $mensaje = "Buenos dias";
-    echo $mensaje;
          break;
    case (($hora >= 12) AND ($hora < 18)):
          $mensaje = "Buenas tardes"; 
-    echo $mensaje;
          break;
    case (($hora >= 0) AND ($hora < 6)):
          $mensaje = "Buenas Noches"; 
@@ -132,7 +130,7 @@ switch ($hora) {
          <div class="row py-3 text-center">
              <div class="col">
                <a href="RUsuario.php"><svg class='bi' width='40' height='40' role='img' aria-label='Tools'>
-                 <use xlink:href='app/icons/bootstrap-icons.svg#person-workspace' style="color:#f6b65f;"/>
+                 <use xlink:href='app/icons/bootstrap-icons.svg#person-workspace'/>
                </svg></a>
                <div class="mt-2">
                   <span>Usuario</span>
