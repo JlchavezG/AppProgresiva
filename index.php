@@ -1,4 +1,19 @@
-<?php include 'includes/loginUser.php';?>
+<?php include 'includes/loginUser.php';
+$hora = date('G'); 
+switch ($hora) {
+   case (($hora >= 6) AND ($hora < 12)):
+        $mensaje = "Buenos dias";
+    echo $mensaje;
+         break;
+   case (($hora >= 12) AND ($hora < 18)):
+         $mensaje = "Buenas tardes"; 
+    echo $mensaje;
+         break;
+   case (($hora >= 0) AND ($hora < 6)):
+         $mensaje = "Buenas Noches"; 
+         break;
+}
+?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -12,6 +27,9 @@
   <div class="container">
       <div class="row d-flex justify-content-center">
            <h2 class="text-center display-6 mt-5">Inicio de Sesión | <span class="text-warning">Login</span></h2>
+           <div class="mt-1 text-center">
+             <?php echo $mensaje; ?>
+          </div>
            <div class="col-sm-10 col-md-10 col-lg-10 py-5">
                   <div class="card shadow">
                       <div class="row">

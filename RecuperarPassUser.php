@@ -1,3 +1,45 @@
+<?php
+error_reporting(0);
+// iniciar la conexion 
+include 'includes/conection.php';
+// validar click en el boton buscar 
+if(isset($_POST['buscar'])){
+// recuperar los datos que nos da el usuario atravez de la cajas de texto 
+$RecuperarUsuario = $conect->real_escape_string($_POST['usuario']);
+$RecuperarEmail = $conect->real_escape_string($_POST['email']);
+// generar la consulta para buscar el usuario, email si existe y dar respuesta al passsword
+$buscar = "SELECT * FROM Usuarios WHERE Email = '$RecuperarEmail' || UserName = '$RecuperarUsuario'";
+$EjecutaBusqueda = $conect->query($buscar);
+$resultado = $EjecutaBusqueda->fetch_array();
+$id = $resultado['Id_Usuarios'];
+$email = $resultado['Email'];
+if($resultado > 0){
+  $alerta.="<div class='alert alert-success alert-dismissible fade show' role='alert'>
+               <strong>Datos Encontrados!</strong> Por favor ingresa el nuevo password.
+               <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>
+            <div class='card shadow'> 
+              <div class='container py-3'>
+              <form action='includes/ModificarPassword.php' method='get'>
+                 <div class='row pt-2'>
+                     <input type='hidden' name='id' value='$id'>
+                     <input type='hidden' name='id' value='$email'>
+                     <input type='password' class='form-control' name='npass' placeholder='Nuevo Password' required><br>
+                 </div>
+                 <div class='row py-2'>
+                    <input type='submit' name='guardar' value='Guardar nuevo password' class='btn btn-success btn-sm'>
+                 </div>
+              </div>   
+              </form>
+            </div>";
+}
+else{
+  $alerta.='<div class="alert alert-danger" role="alert">
+              No se en contraron datos de Usuario y/o Contraseña en la plataforma  por favor <a href="mailto:contacto@iscjoseluischavezg.mx" class="text-decoration-none text-dark">Contacta a soporte tecnico</a> 
+            </div>';
+ }
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -38,7 +80,10 @@
                      <use xlink:href="app/icons/bootstrap-icons.svg#pencil"/>
                 </svg> Ingresa tu nombre de usuario junto con tu email registrado</span><hr>
               <div class="row container justify-content-center">
-              <div class="col-sm-10 col-md-10 col-lg-10">
+              <div class="col-sm-6 col-md-6 col-lg-6 text-center py-2">
+                  <img src="img/password.png" width="200px;" class="img-fluid">
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-6">
                   <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="needs-validation" novalidate method="Post" autocomplete="off">
                    <div class="input-group mb-3">
                      <span class="input-group-text" id="basic-addon1">
@@ -70,7 +115,12 @@
               </div>        
         </div>
         <div class="text-center py-3">
-          
+        <?php echo $alerta; ?>
+        </div>
+    </div>
+    <div class="container ">
+        <div class="row d-flex justify-content-center mt-2">
+           <img src="img/craken.png" alt="logo" style="width:100px;">
         </div>
     </div>
 </div>
