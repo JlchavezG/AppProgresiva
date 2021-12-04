@@ -17,19 +17,40 @@ switch ($hora) {
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/dark.css"
     <link rel="stylesheet" type="text/css" href="css/pace.css">
     <script src="js/jquery.js"></script>
     <title>Inicio de Sistema | ServicePlubic</title>
   </head>
   <body>
   <div class="container">
+     <div class="row mt-4">
+        <div class="col">
+  
+        </div>
+        <div class="col">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="darkSwitch" onclick="">
+                    <label class="form-check-label" for="darkSwitch">
+                      <span>
+                      <svg class="bi" width="20" height="20" fill="currentColor">
+                          <use xlink:href="app/icons/bootstrap-icons.svg#moon-stars"/> 
+                      </svg> |
+                      <svg class="bi" width="20" height="20" fill="currentColor">
+                          <use xlink:href="app/icons/bootstrap-icons.svg#brightness-low"/> 
+                      </svg>
+                      </span>
+                    </label>
+                </div>
+        </div>
+     </div>
       <div class="row d-flex justify-content-center">
            <h2 class="text-center display-6 mt-5">Inicio de Sesión | <span class="text-warning">Login</span></h2>
            <div class="mt-1 text-center">
              <?php echo $mensaje; ?>
           </div>
            <div class="col-sm-10 col-md-10 col-lg-10 py-5">
-                  <div class="card shadow">
+                  <div class="card shadow bg-light">
                       <div class="row">
                           <div class="container">
                              <div class="row py-2">
@@ -37,15 +58,15 @@ switch ($hora) {
                                       <img src="img/craken.png" alt="logo" style="width:250px;">
                                       <div class="row">
                                          <div class="col">
-                                           <svg class="bi" width="15" height="15" fill="currentColor">
+                                           <a href="https://www.facebook.com/iscjoseluischavezg" target="_blank"><svg class="bi text-primary" width="15" height="15" fill="currentColor">
                                               <use xlink:href="app/icons/bootstrap-icons.svg#facebook"/>
-                                           </svg>
-                                           <svg class="bi" width="15" height="15" fill="currentColor">
+                                           </svg></a>
+                                           <a href="https://twitter.com/iscjlchavezg" target="_blank"><svg class="bi text-info" width="15" height="15" fill="currentColor">
                                               <use xlink:href="app/icons/bootstrap-icons.svg#twitter"/>
-                                           </svg>
-                                           <svg class="bi" width="15" height="15" fill="currentColor">
+                                           </svg></a>
+                                           <a href="https://www.instagram.com/iscjlchavezg" target="_blank"><svg class="bi" width="15" height="15" fill="currentColor">
                                               <use xlink:href="app/icons/bootstrap-icons.svg#instagram"/>
-                                           </svg>
+                                           </svg></a>
                                          </div>
                                       </div>
                                   </div>
@@ -154,7 +175,8 @@ switch ($hora) {
 </div>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/pace.js"></script>
-  <script src="js/validate.js"></script> 
+  <script src="js/validate.js"></script>
+  <script src="js/dark-mode.js"></script> 
   <script>
   function verpass(cb){
     if(cb.checked)
