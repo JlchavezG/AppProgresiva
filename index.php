@@ -1,55 +1,21 @@
-<?php include 'includes/loginUser.php';
-$hora = date('G'); 
-switch ($hora) {
-   case (($hora >= 6) AND ($hora < 12)):
-        $mensaje = "Buenos dias";
-         break;
-   case (($hora >= 12) AND ($hora < 18)):
-         $mensaje = "Buenas tardes"; 
-         break;
-   case (($hora >= 0) AND ($hora < 6)):
-         $mensaje = "Buenas Noches"; 
-         break;
-}
-?>
+<?php include 'includes/loginUser.php';?>
+<?php include 'includes/saludo.php';?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/dark.css"
     <link rel="stylesheet" type="text/css" href="css/pace.css">
     <script src="js/jquery.js"></script>
     <title>Inicio de Sistema | ServicePlubic</title>
   </head>
   <body>
-  <div class="container">
-     <div class="row mt-4">
-        <div class="col">
-  
-        </div>
-        <div class="col">
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="darkSwitch" onclick="">
-                    <label class="form-check-label" for="darkSwitch">
-                      <span>
-                      <svg class="bi" width="20" height="20" fill="currentColor">
-                          <use xlink:href="app/icons/bootstrap-icons.svg#moon-stars"/> 
-                      </svg> |
-                      <svg class="bi" width="20" height="20" fill="currentColor">
-                          <use xlink:href="app/icons/bootstrap-icons.svg#brightness-low"/> 
-                      </svg>
-                      </span>
-                    </label>
-                </div>
-        </div>
-     </div>
-      <div class="row d-flex justify-content-center">
-           <h2 class="text-center display-6 mt-5">Inicio de Sesión | <span class="text-warning">Login</span></h2>
-           <div class="mt-1 text-center">
+  <div class="row d-flex justify-content-center">
+      <h2 class="text-center display-6 mt-5">Inicio de Sesión | <span class="text-warning">Login</span></h2>
+         <div class="mt-1 text-center">
              <?php echo $mensaje; ?>
-          </div>
-           <div class="col-sm-10 col-md-10 col-lg-10 py-5">
+         </div>
+         <div class="col-sm-10 col-md-10 col-lg-10 py-5">
                   <div class="card shadow bg-light">
                       <div class="row">
                           <div class="container">
@@ -176,7 +142,6 @@ switch ($hora) {
   <script src="js/bootstrap.min.js"></script>
   <script src="js/pace.js"></script>
   <script src="js/validate.js"></script>
-  <script src="js/dark-mode.js"></script> 
   <script>
   function verpass(cb){
     if(cb.checked)
