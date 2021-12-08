@@ -20,10 +20,10 @@ if($resultado > 0){
             </div>
             <div class='card shadow'> 
               <div class='container py-3'>
-              <form action='includes/ModificarPassword.php' method='get'>
+              <form action='ModificarPassword.php' method='get'>
                  <div class='row pt-2'>
                      <input type='hidden' name='id' value='$id'>
-                     <input type='hidden' name='id' value='$email'>
+                     <input type='hidden' name='email' value='$email'>
                      <input type='password' class='form-control' name='npass' placeholder='Nuevo Password' required><br>
                  </div>
                  <div class='row py-2'>
