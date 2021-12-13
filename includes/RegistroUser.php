@@ -23,12 +23,21 @@
   $Estatus = '1';
   $Tuser = '4';
   $Online = '0';
+  $actual = date("Y");
+  $validar = date("Y",strtotime($fecha));
   // verificar que no existe usuario o email igual en la base de datos 
   $vuser = "SELECT * FROM Usuarios WHERE Email = '$Email' || UserName = '$UserName'";
   $vusuario = $conect->query($vuser);
   if($vusuario->num_rows > 0){
    $alertas.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
                  <strong>Error al registrar al usuario!</strong> El usuario o email ya esta registrado en la plataforma verifica tu Usuario o Email.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                </button>
+              </div>';
+  }
+  elseif(($actual - $validar) < 18){
+    $alertas.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                 <strong>Error al registrar al Usuario!</strong> No eres mayor de edad para poder ofrecer servicios en nuestra plataforma .
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                 </button>
               </div>';
@@ -47,6 +56,7 @@
                    </button>
                 </div>';
   }
+
   else{
    $alertas.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
                  <strong>Error al Registrar!</strong> No se pudo registrar en la plataforma intenta más tarde o comunicate con soporte <a href="soporte.php"> A qui</a>.

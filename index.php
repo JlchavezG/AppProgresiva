@@ -103,6 +103,11 @@
                        <?php echo $alerta; ?>
                    </div>
             </div>
+            <div class="container ">
+              <div class="row d-flex justify-content-center mt-1 text-muted">
+                Iscjlchavezg@2021 | Webdeveloper </a>
+              </div>
+    </div>
         </div>
   </div>
   <!--modal tipo de registro -->

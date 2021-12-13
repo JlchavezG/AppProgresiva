@@ -162,7 +162,15 @@
                                        <use xlink:href="app/icons/bootstrap-icons.svg#key-fill"/>
                                     </svg>
                                  </span>
-                                 <input type="password" class="form-control" name="password" id="pass" placeholder="Password" arial-label="password" aria-describedby="basic-addon1" required>   
+                                 <input type="password" class="form-control" name="password" id="password" placeholder="Password" arial-label="password" aria-describedby="basic-addon1" required>   
+                              </div>
+                              <div class="input-group mb-3">
+                                  <span class="input-group-text" id="passwords">
+                                    <svg class="bi" width="15" height="15" fill="currentColor">
+                                       <use xlink:href="app/icons/bootstrap-icons.svg#key-fill"/>
+                                    </svg>
+                                 </span>
+                                 <input type="password" class="form-control" name="passwordC" id="passwordC" placeholder="Comfirma tu Password" arial-label="password" aria-describedby="basic-addon1" required>                              
                               </div>
                           </div>
                           <div class="col-sm-12 col-md-12 col-lg-4">
@@ -185,10 +193,14 @@
               </div>
           </div>
        </div>
+       <div class="mb-3 text-center">
+         <span id='message'></span> 
+      </div>
     </div>
     <div class="container ">
         <div class="row d-flex justify-content-center mt-2">
            <img src="img/craken.png" alt="logo" style="width:100px;">
+           <span class="text-center text-muted"> Iscjlchavezg@2021 | Webdeveloper</span>
         </div>
     </div>
 </div>
@@ -212,6 +224,12 @@
         else
         document.getElementById('registrar').disabled=true;
     }
+    $('#password, #passwordC').on('keyup', function () {
+       if ($('#password').val() == $('#passwordC').val()) {
+       $('#message').html('Validacion de password').css('color', 'green');
+  } else 
+    $('#message').html('Verifica bien tu password no coincide').css('color', 'red');
+});
 </script>
 <script src="js/main.js"></script> 
 <script src="js/pace.js"></script>   

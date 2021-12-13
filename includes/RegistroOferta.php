@@ -24,12 +24,21 @@
   $Estatus = '1';
   $Tuser = '6';
   $Online = '0';
+  $actual = date("Y");
+  $validar = date("Y",strtotime($fecha));
   // verificar que no existe usuario o email igual en la base de datos 
   $vofertante = "SELECT * FROM Ofertante WHERE EmailO = '$Email' || UserNameO = '$UserName'";
   $vofertantes = $conect->query($vofertante);
   if($vofertantes->num_rows > 0){
    $alertas.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
                  <strong>Error al registrar al socio!</strong> El usuario o email ya esta registrado en la plataforma verifica tu Usuario o Email.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                </button>
+              </div>';
+  }
+  elseif(($actual - $validar) < 18){
+    $alertas.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                 <strong>Error al registrar al socio!</strong> No eres mayor de edad para poder ofrecer servicios en nuestra plataforma .
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                 </button>
               </div>';

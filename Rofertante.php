@@ -198,6 +198,7 @@
     <div class="container ">
         <div class="row d-flex justify-content-center mt-2">
            <img src="img/craken.png" alt="logo" style="width:100px;">
+           <span class="text-center text-muted"> Iscjlchavezg@2021 | Webdeveloper</span>
         </div>
     </div>
 </div>
@@ -208,7 +209,7 @@
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    
+   
   </div>
 </div>  
  <?php include 'includes/Terminos.php'; ?> 
