@@ -24,11 +24,18 @@ if($resultado > 0){
                  <div class='row pt-2'>
                      <input type='hidden' name='id' value='$id'>
                      <input type='hidden' name='email' value='$email'>
-                     <input type='password' class='form-control' name='npass' placeholder='Nuevo Password' required><br>
-                 </div>
-                 <div class='row py-2'>
-                    <input type='submit' name='guardar' value='Guardar nuevo password' class='btn btn-success btn-sm'>
-                 </div>
+                     <div class='row'>
+                        <div class='col'>
+                           <input type='password' id='password' class='form-control' name='npass' placeholder='Nuevo Password' required>
+                        </div>
+                        <div class='col'>
+                        <input type='password' id='passwordC' class='form-control' name='cpass' placeholder='Confirma tu Password' required>
+                        </div>
+                  </div>
+              </div>
+              <div class='row py-2'>
+                  <input type='submit' name='guardar' value='Guardar nuevo password' class='btn btn-success btn-sm'>
+              </div>
               </div>   
               </form>
             </div>";
@@ -112,15 +119,19 @@ else{
                    </div>
                   </form>
               </div>
-              </div>        
-        </div>
-        <div class="text-center py-3">
+        </div>            
+    </div>
+     <div class="text-center py-3">
         <?php echo $alerta; ?>
-        </div>
+     </div>
+     <div class="mb-3 text-center">
+         <span id='message'></span> 
+      </div>  
     </div>
     <div class="container ">
         <div class="row d-flex justify-content-center mt-2">
            <img src="img/craken.png" alt="logo" style="width:100px;">
+           <span class="text-center text-muted"> Iscjlchavezg@2021 | Webdeveloper</span>
         </div>
     </div>
 </div>
@@ -132,6 +143,26 @@ else{
   </div>
   <div class="offcanvas-body">
     <h3> Ayuda</h3>
+    <ul class="list-group list-group-flush">
+     <li class="list-group-item ">
+          <svg class="bi text-primary" width="20" height="20" fill="currentColor">
+               <use xlink:href="app/icons/bootstrap-icons.svg#arrow-right-circle-fill"/>
+          </svg>
+          <span class="justificado"> Digita el usuario y email registrado en la plataforma para verificar que eres usuario de nustra plataforma.</span>
+     </li>
+     <li class="list-group-item">
+     <svg class="bi text-primary" width="20" height="20" fill="currentColor">
+               <use xlink:href="app/icons/bootstrap-icons.svg#arrow-right-circle-fill"/>
+          </svg>
+          <span class="justificado"> Si verificamos que eres usuario podras colocar tu nuevo password por favor recuerdalo para ingresar de manera más facil a la plataforma.</span>
+     </li>
+     <li class="list-group-item">
+     <svg class="bi text-primary" width="20" height="20" fill="currentColor">
+               <use xlink:href="app/icons/bootstrap-icons.svg#arrow-right-circle-fill"/>
+          </svg>
+          <span class="justificado"> Una vez que realices la modificación del password te enviaremos un email con los datos.</span>
+     </li>
+</ul>
   </div>
   
 <!-- termina offcanva -->
@@ -139,5 +170,13 @@ else{
 <script src="js/pace.js"></script> 
 <script src="js/main.js"></script>  
 <script src="js/validate.js"></script> 
+<script>
+  $('#password, #passwordC').on('keyup', function () {
+       if ($('#password').val() == $('#passwordC').val()) {
+       $('#message').html('Validacion de password').css('color', 'green');
+  } else 
+    $('#message').html('Verifica bien tu password no coincide').css('color', 'red');
+});
+</script>
 </body>
 </html>

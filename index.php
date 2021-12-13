@@ -121,25 +121,25 @@
       <div class="modal-body">
          <div class="row py-3 text-center">
              <div class="col">
-               <a href="Rusuario.php"><svg class='bi' width='40' height='40' role='img' aria-label='Tools'>
+               <a href="Rusuario.php" class="text-decoration-none"><svg class='bi' width='40' height='40' role='img' aria-label='Tools'>
                  <use xlink:href='app/icons/bootstrap-icons.svg#person-workspace'/>
-               </svg></a>
+               </svg>
                <div class="mt-2">
-                  <span class="text-info">Usuario</span>
+                  <span class="text-info">Usuario</span></a>
                </div>
              </div>
              <div class="col">
-               <a href="Rofertante.php"><svg class='bi text-danger' width='40' height='40' role='img' aria-label='Tools'>
+               <a href="Rofertante.php" class="text-decoration-none"><svg class='bi text-danger' width='40' height='40' role='img' aria-label='Tools'>
                  <use xlink:href='app/icons/bootstrap-icons.svg#tools'/>
-               </svg></a>
+               </svg>
                <div class="mt-2">
-                  <span class="text-warning">Socio</span>
+                  <span class="text-warning">Socio</span></a>
                </div>
              </div>
          </div>
       </div>
-      <div class="modal-footer">
-        <span class="text-muted text-center">Derechos recervados@iscjlchavezg</span>
+      <div class="modal-footer text-center">
+        <span class="text-muted justificado">Selecciona el tipo de Perfil que usaras dentro de la plataforma.</span>
       </div>
     </div>
   </div>
