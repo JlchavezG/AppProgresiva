@@ -20,6 +20,7 @@
   $UserName = $conect->real_escape_string($_POST['usuario']);
   $Img = 'user.png';
   $Password = $conect->real_escape_string(md5($_POST['password']));
+  $PasswordC = $conect->real_escape_string(md5($_POST['passwordC']));
   $Estatus = '1';
   $Tuser = '4';
   $Online = '0';
@@ -31,6 +32,13 @@
   if($vusuario->num_rows > 0){
    $alertas.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
                  <strong>Error al registrar al usuario!</strong> El usuario o email ya esta registrado en la plataforma verifica tu Usuario o Email.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                </button>
+              </div>';
+  }
+  elseif($Password != $PasswordC){
+    $alertas.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                 <strong>Error al registrar al Usuario!</strong> Los Password no coinciden por favor verficalos antes de seguir.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                 </button>
               </div>';
