@@ -26,3 +26,6 @@
   text-align: justify;
   padding: 3px;
 }
+textarea {
+  resize: none;
+}

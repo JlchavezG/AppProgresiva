@@ -11,6 +11,7 @@
   $Genero = $conect->real_escape_string($_POST['genero']);
   $fecha = $conect->real_escape_string($_POST['fecha']);
   $Oficio = $conect->real_escape_string($_POST['oficio']);
+  $Descripcion = $conect->real_escape_string($_POST['Descripcion']);
   $Calle = $conect->real_escape_string($_POST['calle']);
   $Numero = $conect->real_escape_string($_POST['numero']);
   $Colonia = $conect->real_escape_string($_POST['colonia']);
@@ -21,6 +22,7 @@
   $UserName = $conect->real_escape_string($_POST['usuario']);
   $Img = 'user.png';
   $Password = $conect->real_escape_string(md5($_POST['password']));
+  $PasswordC = $conect->real_escape_string(md5($_POST['passwordC']));
   $Estatus = '1';
   $Tuser = '6';
   $Online = '0';
@@ -36,6 +38,13 @@
                 </button>
               </div>';
   }
+  elseif($Password != $PasswordC){
+    $alertas.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                 <strong>Error al registrar al socio!</strong> Los Password no coinciden por favor verificalos antes de seguir.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                </button>
+              </div>';
+  }
   elseif(($actual - $validar) < 18){
     $alertas.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
                  <strong>Error al registrar al socio!</strong> No eres mayor de edad para poder ofrecer servicios en nuestra plataforma .
@@ -45,9 +54,9 @@
   }
   else{
   // la consulta para insertar los datos 
-  $Registro = "INSERT INTO Ofertante(NombreO, ApellidoPO, ApellidoMO, TelefonoO, EmailO, Id_GeneroO, FNacO, Id_TOficio,
+  $Registro = "INSERT INTO Ofertante(NombreO, ApellidoPO, ApellidoMO, TelefonoO, EmailO, Id_GeneroO, FNacO, Id_TOficio, Descripcion,
   CalleO, NumeroO, ColoniaO, Id_EstadoO, Id_MunicipioO, LatitudO, LongitudO, UserNameO, ImagenO, PasswordO, 
-  EstatusO, TUserO, OnlineO)VALUES('$Nombre','$ApellidoP','$ApellidoM','$Telefono','$Email','$Genero', '$fecha', '$Oficio',
+  EstatusO, TUserO, OnlineO)VALUES('$Nombre','$ApellidoP','$ApellidoM','$Telefono','$Email','$Genero', '$fecha', '$Oficio', '$Descripcion',
   '$Calle','$Numero','$Colonia','$Estado','$Municipio','$latitud','$Longitud','$UserName','$Img','$Password','$Estatus','$Tuser','$Online')";
   $insertar = $conect->query($Registro);
   if($insertar > 0){

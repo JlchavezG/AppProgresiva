@@ -114,22 +114,25 @@
                                  </span>
                                  <input type="date" class="form-control" name="fecha" placeholder="Fecha" arial-label="Fecha" aria-describedby="basic-addon1" required>   
                               </div>
+                              <div class="input-group mb-3">
+                                <label class="input-group-text" for="oficio">Tu Oficio</label> 
+                                <select class="form-select" id="oficio" name="oficio" required>
+                                   <option selected> Selecciona una opción</option>
+                                   <?php while($row4 = $oficios->fetch_assoc()){ ?>
+                                      <option value="<?php echo $row4['Id_Oficio'];?>"><?php echo $row4['NombreOf'];?></option> 
+                                   <?php } ?>
+                                </select>
+                              </div>
                           </div>
                           <div class="col-sm-12 col-md-12 col-lg-4">
                               <div class="py-2">
                                   <svg class="bi" width="15" height="15" fill="currentColor">
                                        <use xlink:href="app/icons/bootstrap-icons.svg#compass"/>
                                   </svg>
-                                  <span class="text-muted"> Datos de Servicio</span>
+                                  <span class="text-muted"> Datos de Ubicación</span>
                               </div>
                               <div class="input-group mb-3">
-                                <label class="input-group-text" for="oficio">Oficio</label> 
-                                <select class="form-select" id="oficio" name="oficio">
-                                   <option selected> Selecciona una opción</option>
-                                   <?php while($row4 = $oficios->fetch_assoc()){ ?>
-                                      <option value="<?php echo $row4['Id_Oficio'];?>"><?php echo $row4['NombreOf'];?></option> 
-                                   <?php } ?>
-                                </select>
+                                 <textarea name="Descripcion" id="Descripcion" class="form-control" cols="30" rows="1" placeholder="Describe tus servicios Brevemente" require></textarea>
                               </div>
                               <div class="input-group mb-3">
                                  <span class="input-group-text">Dirección</span>
@@ -171,27 +174,38 @@
                                        <use xlink:href="app/icons/bootstrap-icons.svg#key-fill"/>
                                     </svg>
                                  </span>
-                                 <input type="password" class="form-control" name="password" id="pass" placeholder="Password" arial-label="password" aria-describedby="basic-addon1" required>   
+                                 <input type="password" class="form-control" name="password" id="password" placeholder="Password" arial-label="password" aria-describedby="basic-addon1" required>   
+                              </div>
+                              <div class="input-group mb-3">
+                                  <span class="input-group-text" id="passwords">
+                                    <svg class="bi" width="15" height="15" fill="currentColor">
+                                       <use xlink:href="app/icons/bootstrap-icons.svg#key-fill"/>
+                                    </svg>
+                                 </span>
+                                 <input type="password" class="form-control" name="passwordC" id="passwordC" placeholder="Confirma tu Password" arial-label="password" aria-describedby="basic-addon1" required>   
                               </div>
                           </div>
                           <div class="col-sm-12 col-md-12 col-lg-4">
-                             <div class="py-2">
+                             <div class="py-1 mt-2">
                                  <span class="text-muted"> Confirma tu ubicación arrastrando el marcador</span>
                              </div>
-                             <div id="map"></div>
-                             <div class="py-1 d-grid gap-2">
+                             <div id="map" class="mt-3"></div>
+                             <div class="py-1 d-grid gap-2 mt-2">
                                 <div class="form-check form-switch">
                                    <input class="form-check-input" type="checkbox" role="switch" id="aviso" onclick="activar(this);">
                                    <label class="form-check-label" for="aviso1">
                                       <a href="#" class="text-decoration-none text-muted" data-bs-toggle="modal" data-bs-target="#Terminos">Acepto terminos y condiciones</a></label>
                                 </div>
-                                <input type="submit" id="registrar" name="Registrar" value="Registrar" class="btn btn-sm btn-success">
+                                <input type="submit" id="registrar" name="Registrar" value="Registrar" class="btn btn-sm btn-success mt-2">
                              </div>
                           </div>
                        </div>
                     </form>
                  </div>
               </div>
+          </div>
+          <div class="mb-3 text-center mt-3">
+            <span id='message'></span> 
           </div>
        </div>
     </div>
@@ -253,6 +267,12 @@
         else
         document.getElementById('registrar').disabled=true;
     }
+    $('#password, #passwordC').on('keyup', function () {
+       if ($('#password').val() == $('#passwordC').val()) {
+       $('#message').html('Validacion de password').css('color', 'green');
+  } else 
+    $('#message').html('Verifica bien tu password no coincide').css('color', 'red');
+});
 </script>
 <script src="js/main.js"></script> 
 <script src="js/pace.js"></script>   
