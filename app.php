@@ -9,6 +9,7 @@
     <title>Inicio de Sistema | IscjlchavezG</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/dark.css">
   </head>
   <body>
   <!-- navbar -->
@@ -19,11 +20,12 @@
   <!-- termina sidebar -->
   <!-- inicia contenido -->
   <div class="container pt-4">
-    <div class="mt-5">
+    <div class="mt-2">
       texto
     </div>
   </div>
   <!-- termina contenido -->
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/dark-mode.js"></script>
   </body>
 </html>

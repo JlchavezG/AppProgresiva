@@ -7,7 +7,7 @@
     background-color: #333 !important;
     color:#fff;
   }
-  [data-theme="dark"] .bg-white {
+  [data-theme="dark"] .bg-white  {
     background-color: #000 !important;
     color:#fff;
   }
