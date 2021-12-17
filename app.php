@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/dark.css">
+    <script scr="js/jquery.js"></script>
   </head>
   <body>
   <!-- navbar -->
