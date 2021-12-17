@@ -1,6 +1,7 @@
 <?php
   include 'includes/conection.php';
   include 'includes/Confing.php';
+  include 'includes/querys.php';
  ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
@@ -22,7 +23,29 @@
   <!-- inicia contenido -->
   <div class="container pt-4">
     <div class="mt-2">
-      texto
+      <!-- inicia dasboard sistemas -->
+       <div class="row text-center">
+          <div class="col-sm-3 col-md-3 col-lg-3">
+             <div class="card shadow bg-light">
+                <div class="row">
+                <div class="col py-3">
+                    <svg class="bi" width="35" height="35" fill="currentColor">
+                       <use xlink:href="app/icons/bootstrap-icons.svg#person-circle"/> 
+                    </svg>
+                    <div class="py-1">
+                    <span class="fw-lighter me-2 text-center"> Usuarios</span>
+                    </div>
+                </div>
+                <div class="col py-4 ms-2">
+                  <strong class="fs-2"> <?php echo $Tusuarios; ?></strong></div>
+                </div>
+             </div>
+          </div>
+          <div class="col-sm-3 col-md-3 col-lg-3">2</div>
+          <div class="col-sm-3 col-md-3 col-lg-3">3</div>
+          <div class="col-sm-3 col-md-3 col-lg-3">4</div>
+       </div>
+       <!-- termina dasboard sistemas-->
     </div>
   </div>
   <!-- termina contenido -->
