@@ -97,9 +97,47 @@
              </div>
           </div>
        </div>
+       <div class="row text-center">
+         <!-- inicia tarjeta de dasboard -->
+          <div class="col-sm-6 col-md-6 col-lg-6 py-2">
+             <div class="card shadow bg-light">
+                <div class="row">
+                <div class="col py-3">
+                    <svg class="bi" width="35" height="35" fill="currentColor">
+                       <use xlink:href="app/icons/bootstrap-icons.svg#person-circle"/> 
+                    </svg>
+                    <div class="py-1">
+                    <span class="fw-lighter me-2 text-center"> % de Calificaciones</span>
+                    </div>
+                </div>
+                <div class="col py-4 ms-2">
+                  <strong class="fs-2"> <?php echo $Tusuarios; ?></strong></div>
+                </div>
+             </div>
+          </div>
+          <!-- termina tarjeta -->
+          <!-- inicia tarjeta de dasboard -->
+          <div class="col-sm-6 col-md-6 col-lg-6 py-2">
+          <div class="card shadow bg-light">
+                <div class="row">
+                <div class="col py-3">
+                    <svg class="bi" width="35" height="35" fill="currentColor">
+                       <use xlink:href="app/icons/bootstrap-icons.svg#briefcase-fill"/> 
+                    </svg>
+                    <div class="py-1">
+                    <span class="fw-lighter me-2 text-center"> Ofertantes</span>
+                    </div>
+                </div>
+                <div class="col py-4 ms-2">
+                  <strong class="fs-2"> <?php echo $Tsocios; ?></strong></div>
+                </div>
+             </div>
+          </div>
+       <!-- termina tarjeta -->
        <!-- termina dasboard sistemas-->
-    </div>
+       </div>
   </div>
+</div>
   <!-- termina contenido -->
   <script src="js/bootstrap.min.js"></script>
   <script src="js/dark-mode.js"></script>
