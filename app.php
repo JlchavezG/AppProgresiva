@@ -25,7 +25,8 @@
     <div class="mt-2">
       <!-- inicia dasboard sistemas -->
        <div class="row text-center">
-          <div class="col-sm-3 col-md-3 col-lg-3">
+         <!-- inicia tarjeta de dasboard -->
+          <div class="col-sm-3 col-md-3 col-lg-3 py-2">
              <div class="card shadow bg-light">
                 <div class="row">
                 <div class="col py-3">
@@ -41,9 +42,60 @@
                 </div>
              </div>
           </div>
-          <div class="col-sm-3 col-md-3 col-lg-3">2</div>
-          <div class="col-sm-3 col-md-3 col-lg-3">3</div>
-          <div class="col-sm-3 col-md-3 col-lg-3">4</div>
+          <!-- termina tarjeta -->
+          <!-- inicia tarjeta de dasboard -->
+          <div class="col-sm-3 col-md-3 col-lg-3 py-2">
+          <div class="card shadow bg-light">
+                <div class="row">
+                <div class="col py-3">
+                    <svg class="bi" width="35" height="35" fill="currentColor">
+                       <use xlink:href="app/icons/bootstrap-icons.svg#briefcase-fill"/> 
+                    </svg>
+                    <div class="py-1">
+                    <span class="fw-lighter me-2 text-center"> Ofertantes</span>
+                    </div>
+                </div>
+                <div class="col py-4 ms-2">
+                  <strong class="fs-2"> <?php echo $Tsocios; ?></strong></div>
+                </div>
+             </div>
+          </div>
+          <!-- termina tarjeta -->
+          <!-- inicia tarjeta de dasboard -->
+          <div class="col-sm-3 col-md-3 col-lg-3 py-2">
+          <div class="card shadow bg-light">
+                <div class="row">
+                <div class="col py-3">
+                    <svg class="bi" width="35" height="35" fill="currentColor">
+                       <use xlink:href="app/icons/bootstrap-icons.svg#clipboard-check"/> 
+                    </svg>
+                    <div class="py-1">
+                    <span class="fw-lighter me-2 text-center"> Solicitudes</span>
+                    </div>
+                </div>
+                <div class="col py-4 ms-2">
+                  <strong class="fs-2"> <?php echo $Tsolicitudes; ?></strong></div>
+                </div>
+             </div>
+          </div>
+          <!-- termina tarjeta -->
+          <!-- inicia tarjeta de dasboard -->
+          <div class="col-sm-3 col-md-3 col-lg-3 py-2">
+          <div class="card shadow bg-light">
+                <div class="row">
+                <div class="col py-3">
+                    <svg class="bi" width="35" height="35" fill="currentColor">
+                       <use xlink:href="app/icons/bootstrap-icons.svg#clipboard-x"/> 
+                    </svg>
+                    <div class="py-1">
+                    <span class="fw-lighter me-2 text-center"> Cancelación</span>
+                    </div>
+                </div>
+                <div class="col py-4 ms-2">
+                  <strong class="fs-2"> <?php echo $Tcancelaciones; ?></strong></div>
+                </div>
+             </div>
+          </div>
        </div>
        <!-- termina dasboard sistemas-->
     </div>
