@@ -122,10 +122,10 @@
                 <div class="row">
                 <div class="col py-3">
                     <svg class="bi" width="35" height="35" fill="currentColor">
-                       <use xlink:href="app/icons/bootstrap-icons.svg#briefcase-fill"/> 
+                       <use xlink:href="app/icons/bootstrap-icons.svg#calendar-day-fill"/> 
                     </svg>
                     <div class="py-1">
-                    <span class="fw-lighter me-2 text-center"> Ofertantes</span>
+                    <span class="fw-lighter me-2 text-center"> Fecha y Hora</span>
                     </div>
                 </div>
                 <div class="col py-4 ms-2">
