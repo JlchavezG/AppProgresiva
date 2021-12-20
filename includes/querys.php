@@ -24,4 +24,14 @@ $Tsolicitudes = $solicitudes->num_rows;
 $cancelacion = "SELECT * FROM Cancelaciones ORDER BY Id_cancelacion";
 $cancelaciones = $conect->query($cancelacion);
 $Tcancelaciones = $cancelaciones->num_rows;
+// consulta para saber el numero de tikets de soporte registrados
+$ticket = "SELECT * FROM Tiket_Sporte ORDER BY Id_Ticket";
+$tickets = $conect->query($ticket);
+$Ttickets = $tickets->num_rows;
+// consulta para saber el numero de notificaciones activas 
+$notificacion = "SELECT * FROM Notificaciones WHERE StatusN = '0'";
+$notificaciones = $conect->query($notificacion);
+$Tnotificaciones = $notificaciones->num_rows;
+// consulta iner join para obtener datos del usuario 
+
 ?>
