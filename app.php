@@ -111,7 +111,7 @@
                     </div>
                 </div>
                 <div class="col py-4 ms-2">
-                  <strong class="fs-2"> <?php echo $Tusuarios; ?></strong></div>
+                  <strong class="fs-2"> <?php echo $TOnlineUsuarios; ?></strong></div>
                 </div>
              </div>
           </div>
@@ -129,7 +129,7 @@
                     </div>
                 </div>
                 <div class="col py-4 ms-2">
-                  <strong class="fs-5"> <?php echo $DatoPerfil['UserName']; ?></strong></div>
+                  <strong class="fs-5"> <?php echo $DatoPerfil['AppTuser']; ?></strong></div>
                 </div>
              </div>
           </div>
