@@ -24,7 +24,7 @@ else if($hora > $tarde){
 else if($hora > $noche){
   $saludo = "Buenas noches";
 }
-// consulta para exraer los datos del usuario conectado
+// consulta para extraer los datos del usuario conectado
 $consulta = "SELECT * FROM Usuarios WHERE UserName = '$usuario'";
 $r = $conect->query($consulta);
 $extraer = $r->fetch_array();

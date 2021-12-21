@@ -129,7 +129,7 @@
                     </div>
                 </div>
                 <div class="col py-4 ms-2">
-                  <strong class="fs-5"> Sistemas</strong></div>
+                  <strong class="fs-5"> <?php echo $DatoPerfil['UserName']; ?></strong></div>
                 </div>
              </div>
           </div>
