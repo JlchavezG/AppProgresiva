@@ -36,12 +36,5 @@ $Ttickets = $tickets->num_rows;
 $notificacion = "SELECT * FROM Notificaciones WHERE StatusN = '0'";
 $notificaciones = $conect->query($notificacion);
 $Tnotificaciones = $notificaciones->num_rows;
-// consulta iner join para obtener datos del usuario 
-$Inner = "SELECT U.Id_Usuarios, U.Nombre, U.ApellidoP, U.ApellidoM, U.Telefono, U.Email, U.Id_Genero, U.FNac,
-U.Calle, U.Numero, U.Colonia, U.Id_Estado, U.Id_Municipio, U.Latitud, U.Longitud, U.UserName, U.Imagen, U.Estatus, U.TUser, U.Online,
-G.Id_Genero, G.NombreG, E.Id_Estado, E.NombreE, M.Id_Municipios, M.NombreM, T.Id_TuserApp, T.AppTuser, T.DescripcionT FROM Usuarios AS U INNER JOIN Genero AS G
-ON U.Id_Genero = G.Id_Genero INNER JOIN Estados AS E ON U.Id_Estado = E.Id_Estado INNER JOIN Municipios AS M ON U.Id_Municipio = M.Id_Municipios INNER JOIN TUsuario AS T ON 
-U.TUser = T.Id_TuserApp WHERE Id_Usuarios = $Online";
-$join = $conect->query($Inner);
-$DatoPerfil = $join->fetch_assoc();
+
 ?>

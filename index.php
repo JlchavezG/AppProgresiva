@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/pace.css">
+    <link rel="stylesheet" type="text/css" href="css/dark.css">
     <script src="js/jquery.js"></script>
     <title>Inicio de Sistema | ServicePlubic</title>
   </head>
@@ -155,5 +156,6 @@
     $('#pass').attr("type","password");
   }
   </script>
+  <script src="js/dark-mode.js"></script>
   </body>
 </html>

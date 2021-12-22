@@ -1,6 +1,6 @@
 
 <!-- inicia navbar -->
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color:#F3F1F1;">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:#F3F1F1;">
   <div class="container-fluid">
     <a class="navbar-brand" href="app.php">
       <img src="img/craken.png" alt="logo iscjlchavezg" style="width:50px;">
@@ -23,11 +23,11 @@
        
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="app.php"> &nbsp; 
+          <span class="nav-link" href="app.php"> &nbsp; 
             <svg class="bi" width="20" height="20" fill="currentColor">
                <use xlink:href="app/icons/bootstrap-icons.svg#speedometer"/> 
             </svg>&nbsp; Dahsboard
-          </a>
+          </span>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"> &nbsp;

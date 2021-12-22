@@ -10,6 +10,7 @@
     <title>Inicio de Sistema | IscjlchavezG</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/pace.css">
     <link rel="stylesheet" type="text/css" href="css/dark.css">
     <script scr="js/jquery.js"></script>
   </head>
@@ -21,10 +22,10 @@
   ?>
   <!-- termina sidebar -->
   <!-- inicia contenido -->
-  <div class="container pt-4">
+  <div class="container pt-4 mt-5">
     <div class="mt-2">
       <!-- inicia dasboard sistemas -->
-       <div class="row text-center">
+       <div class="row text-center mt-5">
          <!-- inicia tarjeta de dasboard -->
           <div class="col-sm-3 col-md-3 col-lg-3 py-2">
              <div class="card shadow bg-light container">
@@ -219,5 +220,6 @@
   <!-- termina contenido -->
   <script src="js/bootstrap.min.js"></script>
   <script src="js/dark-mode.js"></script>
+  <script src="js/pace.js"></script>
   </body>
 </html>
