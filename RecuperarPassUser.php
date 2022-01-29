@@ -1,10 +1,10 @@
 <?php
 error_reporting(0);
-// iniciar la conexion 
+// iniciar la conexion
 include 'includes/conection.php';
-// validar click en el boton buscar 
+// validar click en el boton buscar
 if(isset($_POST['buscar'])){
-// recuperar los datos que nos da el usuario atravez de la cajas de texto 
+// recuperar los datos que nos da el usuario atravez de la cajas de texto
 $RecuperarUsuario = $conect->real_escape_string($_POST['usuario']);
 $RecuperarEmail = $conect->real_escape_string($_POST['email']);
 // generar la consulta para buscar el usuario, email si existe y dar respuesta al passsword
@@ -18,7 +18,7 @@ if($resultado > 0){
                <strong>Datos Encontrados!</strong> Por favor ingresa el nuevo password.
                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
             </div>
-            <div class='card shadow'> 
+            <div class='card shadow'>
               <div class='container py-3'>
               <form action='ModificarPassword.php' method='get'>
                  <div class='row pt-2'>
@@ -36,13 +36,13 @@ if($resultado > 0){
               <div class='row py-2'>
                   <input type='submit' name='guardar' value='Guardar nuevo password' class='btn btn-success btn-sm'>
               </div>
-              </div>   
+              </div>
               </form>
             </div>";
 }
 else{
   $alerta.='<div class="alert alert-danger" role="alert">
-              No se en contraron datos de Usuario y/o Contraseña en la plataforma  por favor <a href="mailto:contacto@iscjoseluischavezg.mx" class="text-decoration-none text-dark">Contacta a soporte tecnico</a> 
+              No se en contraron datos de Usuario y/o Contraseña en la plataforma  por favor <a href="mailto:contacto@iscjoseluischavezg.mx" class="text-decoration-none text-dark">Contacta a soporte tecnico</a>
             </div>';
  }
 }
@@ -109,7 +109,7 @@ else{
                             <use xlink:href="app/icons/bootstrap-icons.svg#envelope"/>
                         </svg>
                      </span>
-                     <input type="text" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="Email" required>
+                     <input type="email" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="Email" required>
                      <div class="invalid-feedback">
                         Por favor ingresa un email para la busqueda
                      </div>
@@ -119,14 +119,14 @@ else{
                    </div>
                   </form>
               </div>
-        </div>            
+        </div>
     </div>
      <div class="text-center py-3">
         <?php echo $alerta; ?>
      </div>
      <div class="mb-3 text-center">
-         <span id='message'></span> 
-      </div>  
+         <span id='message'></span>
+      </div>
     </div>
     <div class="container ">
         <div class="row d-flex justify-content-center mt-2">
@@ -164,17 +164,17 @@ else{
      </li>
 </ul>
   </div>
-  
+
 <!-- termina offcanva -->
 <script src="js/bootstrap.min.js"></script>
-<script src="js/pace.js"></script> 
-<script src="js/main.js"></script>  
-<script src="js/validate.js"></script> 
+<script src="js/pace.js"></script>
+<script src="js/main.js"></script>
+<script src="js/validate.js"></script>
 <script>
   $('#password, #passwordC').on('keyup', function () {
        if ($('#password').val() == $('#passwordC').val()) {
        $('#message').html('Validacion de password').css('color', 'green');
-  } else 
+  } else
     $('#message').html('Verifica bien tu password no coincide').css('color', 'red');
 });
 </script>
