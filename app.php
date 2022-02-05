@@ -32,7 +32,7 @@
                 <div class="row">
                 <div class="col py-3">
                     <svg class="bi" width="35" height="35" fill="currentColor">
-                       <use xlink:href="app/icons/bootstrap-icons.svg#person-circle"/> 
+                       <use xlink:href="app/icons/bootstrap-icons.svg#person-circle"/>
                     </svg>
                     <div class="py-1">
                     <span class="fw-lighter me-2 text-center"> Usuarios</span>
@@ -50,7 +50,7 @@
                 <div class="row">
                 <div class="col py-3">
                     <svg class="bi" width="35" height="35" fill="currentColor">
-                       <use xlink:href="app/icons/bootstrap-icons.svg#briefcase-fill"/> 
+                       <use xlink:href="app/icons/bootstrap-icons.svg#briefcase-fill"/>
                     </svg>
                     <div class="py-1">
                     <span class="fw-lighter me-2 text-center"> Ofertantes</span>
@@ -68,7 +68,7 @@
                 <div class="row">
                 <div class="col py-3">
                     <svg class="bi" width="35" height="35" fill="currentColor">
-                       <use xlink:href="app/icons/bootstrap-icons.svg#clipboard-check"/> 
+                       <use xlink:href="app/icons/bootstrap-icons.svg#clipboard-check"/>
                     </svg>
                     <div class="py-1">
                     <span class="fw-lighter me-2 text-center"> Solicitudes</span>
@@ -86,7 +86,7 @@
                 <div class="row">
                 <div class="col py-3">
                     <svg class="bi" width="35" height="35" fill="currentColor">
-                       <use xlink:href="app/icons/bootstrap-icons.svg#clipboard-x"/> 
+                       <use xlink:href="app/icons/bootstrap-icons.svg#clipboard-x"/>
                     </svg>
                     <div class="py-1">
                     <span class="fw-lighter me-2 text-center"> Cancelación</span>
@@ -105,7 +105,7 @@
                 <div class="row">
                 <div class="col py-3">
                     <svg class="bi" width="35" height="35" fill="currentColor">
-                       <use xlink:href="app/icons/bootstrap-icons.svg#person-check-fill"/> 
+                       <use xlink:href="app/icons/bootstrap-icons.svg#person-check-fill"/>
                     </svg>
                     <div class="py-1">
                     <span class="fw-lighter me-2 text-center"> Usuarios Online</span>
@@ -123,14 +123,14 @@
                 <div class="row">
                 <div class="col py-3">
                     <svg class="bi" width="35" height="35" fill="currentColor">
-                       <use xlink:href="app/icons/bootstrap-icons.svg#person-bounding-box"/> 
+                       <use xlink:href="app/icons/bootstrap-icons.svg#person-bounding-box"/>
                     </svg>
                     <div class="py-1">
                     <span class="fw-lighter me-2 text-center"> Tipo de Usuario</span>
                     </div>
                 </div>
                 <div class="col py-4 ms-2">
-                  <strong class="fs-5"> <?php echo $DatoPerfil['AppTuser']; ?></strong></div>
+                  <strong class="fs-5"> </strong></div>
                 </div>
              </div>
           </div>
@@ -145,7 +145,7 @@
                 <div class="row">
                 <div class="col py-3">
                     <svg class="bi" width="35" height="35" fill="currentColor">
-                       <use xlink:href="app/icons/bootstrap-icons.svg#bell-fill"/> 
+                       <use xlink:href="app/icons/bootstrap-icons.svg#bell-fill"/>
                     </svg>
                     <div class="py-1">
                     <span class="fw-lighter me-2 text-center"> Notificaciones</span>
@@ -163,7 +163,7 @@
                 <div class="row">
                 <div class="col py-3">
                     <svg class="bi" width="35" height="35" fill="currentColor">
-                       <use xlink:href="app/icons/bootstrap-icons.svg#alarm-fill"/> 
+                       <use xlink:href="app/icons/bootstrap-icons.svg#alarm-fill"/>
                     </svg>
                     <div class="py-1">
                     <span class="fw-lighter me-2 text-center"> Hora:</span>
@@ -181,7 +181,7 @@
                 <div class="row">
                 <div class="col py-3">
                     <svg class="bi" width="35" height="35" fill="currentColor">
-                       <use xlink:href="app/icons/bootstrap-icons.svg#inboxes-fill"/> 
+                       <use xlink:href="app/icons/bootstrap-icons.svg#inboxes-fill"/>
                     </svg>
                     <div class="py-1">
                     <span class="fw-lighter me-2 text-center"> Tickets</span>
@@ -199,7 +199,7 @@
                 <div class="row">
                 <div class="col py-3">
                     <svg class="bi" width="35" height="35" fill="currentColor">
-                       <use xlink:href="app/icons/bootstrap-icons.svg#clipboard-x"/> 
+                       <use xlink:href="app/icons/bootstrap-icons.svg#clipboard-x"/>
                     </svg>
                     <div class="py-1">
                     <span class="fw-lighter me-2 text-center"> Cancelación</span>
@@ -210,7 +210,7 @@
                 </div>
              </div>
           </div>
-       </div>       
+       </div>
 
 
 
