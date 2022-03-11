@@ -24,7 +24,7 @@
   $Password = $conect->real_escape_string(md5($_POST['password']));
   $PasswordC = $conect->real_escape_string(md5($_POST['passwordC']));
   $Estatus = '1';
-  $Tuser = '6';
+  $Tuser = '3';
   $Online = '0';
   $actual = date("Y");
   $validar = date("Y",strtotime($fecha));

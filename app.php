@@ -1,4 +1,5 @@
 <?php
+  error_reporting();
   include 'includes/conection.php';
   include 'includes/Confing.php';
   include 'includes/querys.php';

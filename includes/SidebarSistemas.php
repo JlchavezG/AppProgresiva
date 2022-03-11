@@ -8,7 +8,7 @@
   <hr>
   <ul class="nav nav-pills flex-column mb-auto">
     <li class="nav-item items">
-      <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
+      <a href="app.php" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
          <use xlink:href="app/icons/bootstrap-icons.svg#speedometer2"/>
       </svg>&nbsp; Dashboard</a>
     </li>

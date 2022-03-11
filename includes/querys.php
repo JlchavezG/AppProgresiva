@@ -25,7 +25,7 @@ $solicitud = "SELECT * FROM Solicitud ORDER BY Id_Solicitud";
 $solicitudes = $conect->query($solicitud);
 $Tsolicitudes = $solicitudes->num_rows;
 // consulta para saber el numero de cancelaciones registrados 
-$cancelacion = "SELECT * FROM Cancelaciones ORDER BY Id_cancelacion";
+$cancelacion = "SELECT * FROM Solicitud WHERE Id_Estatus = '5'";
 $cancelaciones = $conect->query($cancelacion);
 $Tcancelaciones = $cancelaciones->num_rows;
 // consulta para saber el numero de tikets de soporte registrados
@@ -36,5 +36,4 @@ $Ttickets = $tickets->num_rows;
 $notificacion = "SELECT * FROM Notificaciones WHERE StatusN = '0'";
 $notificaciones = $conect->query($notificacion);
 $Tnotificaciones = $notificaciones->num_rows;
-
 ?>
