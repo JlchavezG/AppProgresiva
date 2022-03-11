@@ -18,7 +18,11 @@
   <!-- navbar -->
   <?php include 'includes/navbar.php'; ?>
   <!-- inicia sidebar -->
-  <?php include 'includes/SidebarSistemas.php';
+  <?php 
+   $Tsidebar = $user['TUser'];
+    if($Tsidebar == 1){
+       include 'includes/SidebarSistemas.php';
+    }
   ?>
   <!-- termina sidebar -->
   <!-- inicia contenido -->
