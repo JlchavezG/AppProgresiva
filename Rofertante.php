@@ -46,58 +46,58 @@
        </div>
        <div class="col-sm-12 col-md-12 col-lg-12 py-2">
           <div class="card shadow">
-              <div class="container">
+             <div class="container">
                  <div class="row py-3 text-center">
-                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" autocomplete="off">
-                       <div class="row">
-                          <div class="col-sm-12 col-md-12 col-lg-4">
-                              <div class="py-2">
-                                 <svg class="bi" width="15" height="15" fill="currentColor">
-                                    <use xlink:href="app/icons/bootstrap-icons.svg#person-lines-fill"/>
-                                 </svg>
-                                 <span class="text-muted">Datos Generales</span>
-                              </div>
-                              <div class="input-group mb-3">
+                   <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" autocomplete="off">
+                      <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-6">
+                           <div class="py-2">
+                              <svg class="bi" width="15" height="15" fill="currentColor">
+                                 <use xlink:href="app/icons/bootstrap-icons.svg#person-lines-fill"/>
+                              </svg>
+                              <span class="text-muted">Datos Generales</span>
+                           </div>
+                           <div class="input-group mb-3">
                                   <span class="input-group-text" id="nom">
                                     <svg class="bi" width="15" height="15" fill="currentColor">
                                        <use xlink:href="app/icons/bootstrap-icons.svg#pencil"/>
                                     </svg>
                                  </span>
                                  <input type="text" class="form-control" name="nombre" placeholder="Nombre" arial-label="Nombre" aria-describedby="basic-addon1" required>   
-                              </div>
-                              <div class="input-group mb-3">
+                           </div>
+                           <div class="input-group mb-3">
                                   <span class="input-group-text" id="apeliidop">
                                     <svg class="bi" width="15" height="15" fill="currentColor">
                                        <use xlink:href="app/icons/bootstrap-icons.svg#pencil"/>
                                     </svg>
                                  </span>
                                  <input type="text" class="form-control" name="apellidop" placeholder="Apellido Paterno" arial-label="Nombre" aria-describedby="basic-addon1" required>   
-                              </div>
-                              <div class="input-group mb-3">
+                           </div>
+                           <div class="input-group mb-3">
                                   <span class="input-group-text" id="apeliidom">
                                     <svg class="bi" width="15" height="15" fill="currentColor">
                                        <use xlink:href="app/icons/bootstrap-icons.svg#pencil"/>
                                     </svg>
                                  </span>
                                  <input type="text" class="form-control" name="apellidom" placeholder="Apellido Materno" arial-label="Nombre" aria-describedby="basic-addon1" required>   
-                              </div>
-                              <div class="input-group mb-3">
+                           </div>
+                           <div class="input-group mb-3">
                                   <span class="input-group-text" id="telefono">
                                     <svg class="bi" width="15" height="15" fill="currentColor">
                                        <use xlink:href="app/icons/bootstrap-icons.svg#telephone"/>
                                     </svg>
                                  </span>
                                  <input type="tel" class="form-control" name="telefono" placeholder="Telefono" arial-label="Nombre" aria-describedby="basic-addon1" required>   
-                              </div>
-                              <div class="input-group mb-3">
+                           </div>
+                           <div class="input-group mb-3">
                                   <span class="input-group-text" id="email">
                                     <svg class="bi" width="15" height="15" fill="currentColor">
                                        <use xlink:href="app/icons/bootstrap-icons.svg#envelope"/>
                                     </svg>
                                  </span>
                                  <input type="email" class="form-control" name="email" placeholder="Email" arial-label="Nombre" aria-describedby="basic-addon1" required>   
-                              </div>
-                              <div class="input-group mb-3">
+                           </div>
+                           <div class="input-group mb-3">
                                 <label class="input-group-text" for="genero">Genero</label> 
                                 <select class="form-select" id="genero" name="genero">
                                    <option selected> Selecciona una opción</option>
@@ -105,16 +105,16 @@
                                       <option value="<?php echo $row['Id_Genero'];?>"><?php echo $row['NombreG'];?></option> 
                                    <?php } ?>
                                 </select>
-                              </div>
-                              <div class="input-group mb-3">
+                           </div>
+                           <div class="input-group mb-3">
                                   <span class="input-group-text" id="email">
                                     <svg class="bi" width="15" height="15" fill="currentColor">
                                        <use xlink:href="app/icons/bootstrap-icons.svg#envelope"/>
                                     </svg>
                                  </span>
                                  <input type="date" class="form-control" name="fecha" placeholder="Fecha" arial-label="Fecha" aria-describedby="basic-addon1" required>   
-                              </div>
-                              <div class="input-group mb-3">
+                           </div>
+                           <div class="input-group mb-3">
                                 <label class="input-group-text" for="oficio">Tu Oficio</label> 
                                 <select class="form-select" id="oficio" name="oficio" required>
                                    <option selected> Selecciona una opción</option>
@@ -122,28 +122,28 @@
                                       <option value="<?php echo $row4['Id_Oficio'];?>"><?php echo $row4['NombreOf'];?></option> 
                                    <?php } ?>
                                 </select>
-                              </div>
+                           </div>
                           </div>
-                          <div class="col-sm-12 col-md-12 col-lg-4">
-                              <div class="py-2">
-                                  <svg class="bi" width="15" height="15" fill="currentColor">
-                                       <use xlink:href="app/icons/bootstrap-icons.svg#compass"/>
-                                  </svg>
-                                  <span class="text-muted"> Datos de Ubicación</span>
-                              </div>
-                              <div class="input-group mb-3">
+                          <div class="col-sm-12 col-md-12 col-lg-6">
+                            <div class="py-2">
+                               <svg class="bi" width="15" height="15" fill="currentColor">
+                                 <use xlink:href="app/icons/bootstrap-icons.svg#compass"/>
+                               </svg>
+                               <span class="text-muted"> Datos de Ubicación</span>
+                            </div>
+                            <div class="input-group mb-3">
                                  <textarea name="Descripcion" id="Descripcion" class="form-control" cols="30" rows="1" placeholder="Describe tus servicios Brevemente" require></textarea>
-                              </div>
-                              <div class="input-group mb-3">
+                            </div>
+                            <div class="input-group mb-3">
                                  <span class="input-group-text">Dirección</span>
                                  <input type="text" name="calle" arial-label="calle" class="form-control" placeholder="Calle" required>
                                  <input type="text" name="numero" arial-label="numero" class="form-control" placeholder="Numero" required>
-                              </div>
-                              <div class="input-group mb-3">
+                            </div>
+                            <div class="input-group mb-3">
                                <span class="input-group-text" id="colonia">Dirección2</span>
                                <input type="text" name="colonia" id="colonia" placeholder="Colonia" class="form-control" aria-label="Colonia" aria-describedby="Colonia" required>
-                              </div>
-                              <div class="input-group mb-3">
+                            </div> 
+                            <div class="input-group mb-3">
                                 <label class="input-group-text" for="Estado">Estado</label> 
                                 <select class="form-select" id="estado" name="estado">
                                    <option selected> Selecciona una opción</option>
@@ -151,64 +151,77 @@
                                       <option value="<?php echo $row1['Id_Estado'];?>"><?php echo $row1['NombreE'];?></option> 
                                    <?php } ?>
                                 </select>
-                              </div>
-                              <div class="input-group mb-3">
+                            </div>
+                            <div class="input-group mb-3">
                                 <label class="input-group-text" for="Municipio">Municipio</label> 
                                 <select class="form-select" id="municipio" name="municipio">
                                    
                                 </select>
-                              </div>
-                              <input type="hidden" name="latitud" id="latitud" required>
-                              <input type="hidden" name="longitud" id="longitud" required>
-                              <div class="input-group mb-3">
-                                  <span class="input-group-text" id="usuarios">
-                                    <svg class="bi" width="15" height="15" fill="currentColor">
-                                       <use xlink:href="app/icons/bootstrap-icons.svg#person-circle"/>
-                                    </svg>
-                                 </span>
-                                 <input type="text" class="form-control" name="usuario" placeholder="Usuario" arial-label="Usuario" aria-describedby="basic-addon1" required>   
-                              </div>
-                              <div class="input-group mb-3">
-                                  <span class="input-group-text" id="passwords">
-                                    <svg class="bi" width="15" height="15" fill="currentColor">
-                                       <use xlink:href="app/icons/bootstrap-icons.svg#key-fill"/>
-                                    </svg>
-                                 </span>
-                                 <input type="password" class="form-control" name="password" id="password" placeholder="Password" arial-label="password" aria-describedby="basic-addon1" required>   
-                              </div>
-                              <div class="input-group mb-3">
-                                  <span class="input-group-text" id="passwords">
-                                    <svg class="bi" width="15" height="15" fill="currentColor">
-                                       <use xlink:href="app/icons/bootstrap-icons.svg#key-fill"/>
-                                    </svg>
-                                 </span>
-                                 <input type="password" class="form-control" name="passwordC" id="passwordC" placeholder="Confirma tu Password" arial-label="password" aria-describedby="basic-addon1" required>   
-                              </div>
-                          </div>
-                          <div class="col-sm-12 col-md-12 col-lg-4">
-                             <div class="py-1 mt-2">
-                                 <span class="text-muted"> Confirma tu ubicación arrastrando el marcador</span>
-                             </div>
-                             <div id="map" class="mt-3"></div>
-                             <div class="py-1 d-grid gap-2 mt-2">
-                                <div class="form-check form-switch">
-                                   <input class="form-check-input" type="checkbox" role="switch" id="aviso" onclick="activar(this);">
-                                   <label class="form-check-label" for="aviso1">
-                                      <a href="#" class="text-decoration-none text-muted" data-bs-toggle="modal" data-bs-target="#Terminos">Acepto terminos y condiciones</a></label>
-                                </div>
-                                <input type="submit" id="registrar" name="Registrar" value="Registrar" class="btn btn-sm btn-success mt-2">
-                             </div>
-                          </div>
-                       </div>
-                    </form>
-                 </div>
-              </div>
-          </div>
-          <div class="mb-3 text-center mt-3">
-            <span id='message'></span> 
-          </div>
-       </div>
-    </div>
+                            </div>
+                            <input type="hidden" name="latitud" id="latitud" required>
+                            <input type="hidden" name="longitud" id="longitud" required>
+                            <div class="input-group mb-3">
+                               <span class="input-group-text" id="usuarios">
+                                 <svg class="bi" width="15" height="15" fill="currentColor">
+                                    <use xlink:href="app/icons/bootstrap-icons.svg#person-circle"/>
+                                 </svg>
+                               </span>
+                               <input type="text" class="form-control" name="usuario" placeholder="Usuario" arial-label="Usuario" aria-describedby="basic-addon1" required>   
+                            </div>
+                            <div class="input-group mb-3">
+                               <span class="input-group-text" id="passwords">
+                                  <svg class="bi" width="15" height="15" fill="currentColor">
+                                    <use xlink:href="app/icons/bootstrap-icons.svg#key-fill"/>
+                                  </svg>
+                               </span>
+                               <input type="password" class="form-control" name="password" id="password" placeholder="Password" arial-label="password" aria-describedby="basic-addon1" required>   
+                            </div>
+                            <div class="input-group mb-3">
+                               <span class="input-group-text" id="passwords">
+                                 <svg class="bi" width="15" height="15" fill="currentColor">
+                                    <use xlink:href="app/icons/bootstrap-icons.svg#key-fill"/>
+                                 </svg>
+                               </span>
+                               <input type="password" class="form-control" name="passwordC" id="passwordC" placeholder="Confirma tu Password" arial-label="password" aria-describedby="basic-addon1" required>                               
+                            </div>
+                            <div class="mb-3 text-center mt-3">
+                               <span id='message'></span> 
+                            </div>
+                        </div>  
+                     </div>                   
+                </div>  
+            </div>
+         </div>  
+      </div>
+   </div>
+   <div class="col-sm-12 col-md-12 col-lg-12 py-2">
+     <div class="container py-2">
+         <div class="row">
+            <p class="text-center">
+               <svg class="bi" width="15" height="15" fill="currentColor">
+                  <use xlink:href="app/icons/bootstrap-icons.svg#geo-fill"/>
+               </svg><strong>!importante¡</strong> Por favor Confirma la ubicación exacta de tu domicilio dentro del mapa</p>
+         </div>
+         <div class="row">
+            <div class="card shadow">
+                 <div id="map" class="mt-3"></div>
+                 <div class="py-1 d-grid gap-2 mt-2">
+                     <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="aviso" onclick="activar(this);">
+                           <label class="form-check-label" for="aviso1">
+                           <a href="#" class="text-decoration-none text-muted" data-bs-toggle="modal" data-bs-target="#Terminos">Acepto terminos y condiciones</a></label>
+                     </div>
+                     <input type="submit" id="registrar" name="Registrar" value="Registrar" class="btn btn-sm btn-success mt-2">
+                </div>
+            </div>
+         </div>
+     </div>
+   </form>
+   </div>
+   
+   
+
+       
     <div class="container ">
         <div class="row d-flex justify-content-center mt-2">
            <img src="img/craken.png" alt="logo" style="width:100px;">

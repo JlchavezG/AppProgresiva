@@ -12,11 +12,10 @@ function findMe(){
         var latitude = posicion.coords.latitude;
         var longitude = posicion.coords.longitude;
         var ventana ='<h5>Tu Domicilio</h5>'+'<p>Para servicios o envio de pagos</p>';
-
         output.innerHTML ="<p>Latitud: "+latitude+"<br> Longitud: "+longitude+"</p>";
         const myLatLng = { lat:latitude, lng: longitude };
         const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 15,
+        zoom: 18,
         center: myLatLng,
         // cambiar a terreno  mapTypeId: 'satellite',
       });
