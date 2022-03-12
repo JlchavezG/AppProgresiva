@@ -100,20 +100,20 @@
                           </div>
                       </div>
                    </div>
-                   <div class="mt-2">
-                       <?php echo $alerta; ?>
-                   </div>
+            <div class="mt-2">
+                <?php echo $alerta; ?>
             </div>
-            <div class="container ">
-              <div class="row d-flex justify-content-center mt-1 text-muted">
-                Iscjlchavezg@2021 | Webdeveloper </a>
-              </div>
-    </div>
         </div>
+        <div class="container ">
+            <div class="row d-flex justify-content-center mt-1 text-muted">
+                Iscjlchavezg@2021 | Webdeveloper </a>
+            </div>
+        </div>
+    </div>
   </div>
   <!--modal tipo de registro -->
   <div class="modal fade" id="ModalRegistro" tabindex="-1" aria-labelledby="ModalRegistroLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-sm">
+  <div class="modal-dialog modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="ModalRegistroLabel">Registro</h5>
@@ -138,9 +138,10 @@
                </div>
              </div>
          </div>
+         <span class="text-muted justificado">Selecciona el tipo de Perfil que usaras dentro de la plataforma.</span>
       </div>
       <div class="modal-footer text-center">
-        <span class="text-muted justificado">Selecciona el tipo de Perfil que usaras dentro de la plataforma.</span>
+        <p class="text-muted text-center"> Iscjlchavezg@2021 | Webdeveloper </a></p>
       </div>
     </div>
   </div>

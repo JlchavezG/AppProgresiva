@@ -50,7 +50,7 @@
                  <div class="row py-3 text-center">
                     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" autocomplete="off">
                        <div class="row">
-                          <div class="col-sm-12 col-md-12 col-lg-4">
+                          <div class="col-sm-12 col-md-12 col-lg-6">
                               <div class="py-2">
                                  <svg class="bi" width="15" height="15" fill="currentColor">
                                     <use xlink:href="app/icons/bootstrap-icons.svg#person-lines-fill"/>
@@ -115,7 +115,7 @@
                                  <input type="date" class="form-control" name="fecha" placeholder="Fecha" arial-label="Fecha" aria-describedby="basic-addon1" required>   
                               </div>
                           </div>
-                          <div class="col-sm-12 col-md-12 col-lg-4">
+                          <div class="col-sm-12 col-md-12 col-lg-6">
                               <div class="py-2">
                                   <svg class="bi" width="15" height="15" fill="currentColor">
                                        <use xlink:href="app/icons/bootstrap-icons.svg#compass"/>
@@ -170,37 +170,41 @@
                                  </span>
                                  <input type="password" class="form-control" name="passwordC" id="passwordC" placeholder="Comfirma tu Password" arial-label="password" aria-describedby="basic-addon1" required>                              
                               </div>
+                              <div class="mb-3 text-center">
+                                 <span id='message'></span> 
+                              </div>
                           </div>
-                          <div class="col-sm-12 col-md-12 col-lg-4">
-                             <div class="py-2">
-                                 <span class="text-muted"> Confirma tu ubicación arrastrando el marcador</span>
-                             </div>
-                             <div id="map"></div>
-                             <div class="py-1 d-grid gap-2">
-                                <div class="form-check form-switch">
-                                   <input class="form-check-input" type="checkbox" role="switch" id="aviso" onclick="activar(this);">
-                                   <label class="form-check-label" for="aviso1">
-                                      <a href="#" class="text-decoration-none text-muted" data-bs-toggle="modal" data-bs-target="#Terminos">Acepto terminos y condiciones</a></label>
-                                </div>
-                                <input type="submit" id="registrar" name="Registrar" value="Registrar" class="btn btn-sm btn-success">
-                             </div>
-                          </div>
-                       </div>
-                    </form>
-                 </div>
+                      </div>
+                   </div>
               </div>
+       </div>
+    </div>
+    <div class="row">
+    <p class="text-center">
+         <svg class="bi" width="15" height="15" fill="currentColor">
+            <use xlink:href="app/icons/bootstrap-icons.svg#geo-fill"/>
+         </svg><strong>!importante¡</strong> Por favor Confirma la ubicación exacta de tu domicilio dentro del mapa</p>
+       <div class="card shadow">
+          <div id="map"></div>
+          <div class="row">
+          <div class="py-1 d-grid gap-2">
+             <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="aviso" onclick="activar(this);">
+                    <label class="form-check-label" for="aviso1">
+                       <a href="#" class="text-decoration-none text-muted" data-bs-toggle="modal" data-bs-target="#Terminos">Acepto terminos y condiciones</a></label>
+             </div>
+                <input type="submit" id="registrar" name="Registrar" value="Registrar" class="btn btn-sm btn-success">
           </div>
        </div>
-       <div class="mb-3 text-center">
-         <span id='message'></span> 
-      </div>
-    </div>
-    <div class="container ">
-        <div class="row d-flex justify-content-center mt-2">
-           <img src="img/craken.png" alt="logo" style="width:100px;">
-           <span class="text-center text-muted"> Iscjlchavezg@2021 | Webdeveloper</span>
-        </div>
-    </div>
+   </div>
+   </form>  
+</div>
+<div class="container py-2">
+     <div class="row d-flex justify-content-center mt-2">
+        <img src="img/craken.png" alt="logo" style="width:100px;">
+        <span class="text-center text-muted"> Iscjlchavezg@2021 | Webdeveloper</span>
+     </div>
+   </div>
 </div>
 <!-- ofcanvas -->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="Ayuda" aria-labelledby="Ayuda">
@@ -266,3 +270,14 @@
 <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYMPGtM7VUn1aq61tkGbu99qD95c-w5zc&callback=initMap"></script>    
 </body>
 </html>
+
+
+
+
+
+<div class="col-sm-12 col-md-12 col-lg-4">
+                             
+                             
+                             
+                          </div>
+                       </div>

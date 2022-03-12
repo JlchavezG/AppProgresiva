@@ -26,7 +26,7 @@
 <body onload="findMe()";>
 <div class="container">
     <div class="row d-flex justify-content-center">
-       <h2 class="text-center display-6 mt-5">Registro de | <span class="text-warning"> Socios u Ofertante</span></h2>
+       <h2 class="text-center display-6 mt-5">Registro de | <span class="text-warning"> Socios Prestadores de Servicios</span></h2>
        <p class="text-center text-muted">Bienvenidos al registro de ofertante de nuestra plataforma. </p>
        <div class="row mt-2 text-center">
           <div class="col py-2">
@@ -218,11 +218,7 @@
      </div>
    </form>
    </div>
-   
-   
-
-       
-    <div class="container ">
+   <div class="container ">
         <div class="row d-flex justify-content-center mt-2">
            <img src="img/craken.png" alt="logo" style="width:100px;">
            <span class="text-center text-muted"> Iscjlchavezg@2021 | Webdeveloper</span>
