@@ -26,6 +26,7 @@
   $Estatus = '1';
   $Tuser = '3';
   $Online = '0';
+  $Nivel = '2';
   $actual = date("Y");
   $validar = date("Y",strtotime($fecha));
   // verificar que no existe usuario o email igual en la base de datos 
@@ -56,8 +57,8 @@
   // la consulta para insertar los datos 
   $Registro = "INSERT INTO Ofertante(NombreO, ApellidoPO, ApellidoMO, TelefonoO, EmailO, Id_GeneroO, FNacO, Id_TOficio, Descripcion,
   CalleO, NumeroO, ColoniaO, Id_EstadoO, Id_MunicipioO, LatitudO, LongitudO, UserNameO, ImagenO, PasswordO, 
-  EstatusO, TUserO, OnlineO)VALUES('$Nombre','$ApellidoP','$ApellidoM','$Telefono','$Email','$Genero', '$fecha', '$Oficio', '$Descripcion',
-  '$Calle','$Numero','$Colonia','$Estado','$Municipio','$latitud','$Longitud','$UserName','$Img','$Password','$Estatus','$Tuser','$Online')";
+  EstatusO, TUserO, OnlineO, Id_Nivel)VALUES('$Nombre','$ApellidoP','$ApellidoM','$Telefono','$Email','$Genero', '$fecha', '$Oficio', '$Descripcion',
+  '$Calle','$Numero','$Colonia','$Estado','$Municipio','$latitud','$Longitud','$UserName','$Img','$Password','$Estatus','$Tuser','$Online','$Nivel')";
   $insertar = $conect->query($Registro);
   if($insertar > 0){
      $alertas.='<div class="alert alert-success alert-dismissible fade show" role="alert">
