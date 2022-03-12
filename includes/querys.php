@@ -36,4 +36,5 @@ $Ttickets = $tickets->num_rows;
 $notificacion = "SELECT * FROM Notificaciones WHERE StatusN = '0'";
 $notificaciones = $conect->query($notificacion);
 $Tnotificaciones = $notificaciones->num_rows;
+
 ?>

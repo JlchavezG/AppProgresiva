@@ -8,7 +8,7 @@ if(isset($_POST['buscar'])){
 $RecuperarUsuario = $conect->real_escape_string($_POST['usuario']);
 $RecuperarEmail = $conect->real_escape_string($_POST['email']);
 // generar la consulta para buscar el usuario, email si existe y dar respuesta al passsword
-$buscar = "SELECT * FROM Usuarios WHERE Email = '$RecuperarEmail' || UserName = '$RecuperarUsuario'";
+$buscar = "SELECT * FROM Usuarios WHERE Email = '$RecuperarEmail' and UserName = '$RecuperarUsuario'";
 $EjecutaBusqueda = $conect->query($buscar);
 $resultado = $EjecutaBusqueda->fetch_array();
 $id = $resultado['Id_Usuarios'];
@@ -42,7 +42,7 @@ if($resultado > 0){
 }
 else{
   $alerta.='<div class="alert alert-danger" role="alert">
-              No se en contraron datos de Usuario y/o Contraseña en la plataforma  por favor <a href="mailto:contacto@iscjoseluischavezg.mx" class="text-decoration-none text-dark">Contacta a soporte tecnico</a>
+              No se en contraron datos de Usuario y/o Email en la plataforma  por favor <a href="mailto:contacto@iscjoseluischavezg.mx" class="text-decoration-none text-dark">Contacta a soporte tecnico</a>
             </div>';
  }
 }
