@@ -19,14 +19,6 @@
       </ul>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-       
-        </li>
-        <li class="nav-item">
-          <span class="nav-link" href="app.php"> &nbsp; 
-            <svg class="bi" width="20" height="20" fill="currentColor">
-               <use xlink:href="app/icons/bootstrap-icons.svg#speedometer"/> 
-            </svg>&nbsp; Dahsboard
-          </span>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"> &nbsp;

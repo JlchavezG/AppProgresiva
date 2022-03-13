@@ -8,6 +8,7 @@ $estados = $conect->query($estado);
 // consulta para extraer tipo de oficio 
 $oficio = "SELECT * FROM Oficios ORDER BY NombreOf ASC";
 $oficios = $conect->query($oficio);
+$Toficios = $oficios->num_rows;
 // consulta para saber el numero de usuarios registrados 
 $usuario = "SELECT * FROM Usuarios ORDER BY Id_Usuarios";
 $usuarios = $conect->query($usuario);

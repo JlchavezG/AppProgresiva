@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 <div class="col py-4 ms-2">
-                  <strong class="fs-5"> </strong></div>
+                  <strong class="fs-5"><?php echo $separar['AppTuser']; ?> </strong></div>
                 </div>
              </div>
           </div>
@@ -150,14 +150,50 @@
                 <div class="row">
                 <div class="col py-3">
                     <svg class="bi" width="35" height="35" fill="currentColor">
-                       <use xlink:href="app/icons/bootstrap-icons.svg#bell-fill"/>
+                       <use xlink:href="app/icons/bootstrap-icons.svg#inboxes-fill"/>
                     </svg>
                     <div class="py-1">
-                    <span class="fw-lighter me-2 text-center"> Notificaciones</span>
+                    <span class="fw-lighter me-2 text-center">Tickets</span>
                     </div>
                 </div>
                 <div class="col py-4 ms-2">
-                  <strong class="fs-2"><?php echo $Tnotificaciones; ?> </strong></div>
+                  <strong class="fs-2"><?php echo $Ttickets; ?> </strong></div>
+                </div>
+             </div>
+          </div>
+          <!-- termina tarjeta -->
+          <!-- inicia tarjeta de dasboard -->
+          <div class="col-sm-3 col-md-3 col-lg-3 py-2">
+          <div class="card shadow bg-light container">
+                <div class="row">
+                <div class="col py-3">
+                    <svg class="bi" width="35" height="35" fill="currentColor">
+                       <use xlink:href="app/icons/bootstrap-icons.svg#hammer"/>
+                    </svg>
+                    <div class="py-1">
+                    <span class="fw-lighter me-2 text-center"> Oficios</span>
+                    </div>
+                </div>
+                <div class="col py-4 ms-2">
+                  <strong class="fs-2"><?php echo $Toficios; ?> </strong></div>
+                </div>
+             </div>
+          </div>
+          <!-- termina tarjeta -->
+          <!-- inicia tarjeta de dasboard -->
+          <div class="col-sm-3 col-md-3 col-lg-3 py-2">
+          <div class="card shadow bg-light container">
+                <div class="row">
+                <div class="col py-3">
+                    <svg class="bi" width="35" height="35" fill="currentColor">
+                       <use xlink:href="app/icons/bootstrap-icons.svg#calendar-day-fill"/>
+                    </svg>
+                    <div class="py-1">
+                    <span class="fw-lighter me-2 text-center">Fecha: </span>
+                    </div>
+                </div>
+                <div class="col py-4 ms-2">
+                  <strong class="fs-2"></strong></div>
                 </div>
              </div>
           </div>
@@ -172,42 +208,6 @@
                     </svg>
                     <div class="py-1">
                     <span class="fw-lighter me-2 text-center"> Hora:</span>
-                    </div>
-                </div>
-                <div class="col py-4 ms-2">
-                  <strong class="fs-2"> </strong></div>
-                </div>
-             </div>
-          </div>
-          <!-- termina tarjeta -->
-          <!-- inicia tarjeta de dasboard -->
-          <div class="col-sm-3 col-md-3 col-lg-3 py-2">
-          <div class="card shadow bg-light container">
-                <div class="row">
-                <div class="col py-3">
-                    <svg class="bi" width="35" height="35" fill="currentColor">
-                       <use xlink:href="app/icons/bootstrap-icons.svg#inboxes-fill"/>
-                    </svg>
-                    <div class="py-1">
-                    <span class="fw-lighter me-2 text-center"> Tickets</span>
-                    </div>
-                </div>
-                <div class="col py-4 ms-2">
-                  <strong class="fs-2"><?php echo $Ttickets; ?></strong></div>
-                </div>
-             </div>
-          </div>
-          <!-- termina tarjeta -->
-          <!-- inicia tarjeta de dasboard -->
-          <div class="col-sm-3 col-md-3 col-lg-3 py-2">
-          <div class="card shadow bg-light container">
-                <div class="row">
-                <div class="col py-3">
-                    <svg class="bi" width="35" height="35" fill="currentColor">
-                       <use xlink:href="app/icons/bootstrap-icons.svg#clipboard-x"/>
-                    </svg>
-                    <div class="py-1">
-                    <span class="fw-lighter me-2 text-center"> Cancelación</span>
                     </div>
                 </div>
                 <div class="col py-4 ms-2">

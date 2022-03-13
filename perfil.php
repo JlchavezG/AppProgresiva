@@ -33,12 +33,12 @@
                  <h4 class="text-secondary text-center">Perfil de usuario</h4>
              </div>
              <div class="row">
-               <div class="col-sm-6 col-md-6 col-lg-6">
+               <div class="col-sm-12 col-md-12 col-lg-6">
                  <div class="text-center py-3">
                     <img src="img/user/<?php echo $separar['Imagen']?>" alt="Imagen de perfil" width="250px" height="250px" class="rounded-circle mt-3">  
                  </div>
                </div>
-               <div class="col-sm-6 col-md-6 col-lg-6">
+               <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="mt-5">
                     <ul class="list-group list-group-flush bg-light">
                        <li class="list-group-item bg-light"><strong>Nombre: </strong> <?php echo $separar['Nombre']; ?> <?php echo $separar['ApellidoP']; ?> <?php echo $separar['ApellidoM'];?></li>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="row py-2">
                         <div class="Container py-2 text-center">
-                          <a href="#" class="text-decoration-none text-secondary ">
+                          <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="text-decoration-none text-secondary ">
                           <svg class="bi" width="15" height="15" fill="currentColor">
                             <use xlink:href="app/icons/bootstrap-icons.svg#pencil-fill"/>
                           </svg> Editar Perfil  
@@ -60,8 +60,8 @@
                           <a href="#" class="text-decoration-none text-secondary ">
                           <svg class="bi" width="15" height="15" fill="currentColor">
                             <use xlink:href="app/icons/bootstrap-icons.svg#printer-fill"/>
-                          </svg>  Imprimir Perfil
-                          | 
+                          </svg>  Imprimir Perfil 
+                          </a> | 
                           <a href="#" class="text-decoration-none text-secondary ">
                           <svg class="bi" width="15" height="15" fill="currentColor">
                             <use xlink:href="app/icons/bootstrap-icons.svg#qr-code"/>
@@ -73,6 +73,26 @@
          </div>
      </section>
   </div>
+  <!-- modal modificar perfil -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modificar Perfil</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-sm btn-success">Modificar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- termina modal -->
   <script src="js/bootstrap.min.js"></script>
   <script src="js/dark-mode.js"></script>
   <script src="js/pace.js"></script>
