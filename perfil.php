@@ -39,17 +39,78 @@
                  </div>
                </div>
                <div class="col-sm-12 col-md-12 col-lg-6">
-                    <div class="mt-5">
-                    <ul class="list-group list-group-flush bg-light">
-                       <li class="list-group-item bg-light"><strong>Nombre: </strong> <?php echo $separar['Nombre']; ?> <?php echo $separar['ApellidoP']; ?> <?php echo $separar['ApellidoM'];?></li>
-                       <li class="list-group-item bg-light"><strong>Telefono:</strong> <?php echo $separar['Telefono']; ?></li>
-                       <li class="list-group-item bg-light"><strong>Email: </strong> <?php echo $separar['Email']; ?></li>
-                       <li class="list-group-item bg-light"><strong>Estado: </strong> <?php echo $separar['NombreE']; ?></li>
-                       <li class="list-group-item bg-light"><strong>Municipio: </strong> <?php echo $separar['NombreM']; ?></li>
-                       <li class="list-group-item bg-light"><strong>Tipo de Usuario:</strong> <?php echo $separar['AppTuser']; ?></li>
-                       <li class="list-group-item bg-light"><strong>Cuenta:</strong> <?php echo $separar['NombreNivel']; ?></li>
-                    </ul>
+                 <div class="mt-5">
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                       <div class="accordion-item">
+                           <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                              <button class="accordion-button bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                Datos de Contacto
+                              </button>
+                           </h2>
+                       <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                         <div class="accordion-body">
+                           <ul class="list-group list-group-flush bg-light">
+                             <li class="list-group-item"><strong>Nombre: </strong> <?php echo $separar['Nombre']; ?> <?php echo $separar['ApellidoP']; ?> <?php echo $separar['ApellidoM'];?></li>
+                             <li class="list-group-item"><strong>Telefono:</strong> <?php echo $separar['Telefono']; ?></li>
+                             <li class="list-group-item"><strong>Email: </strong> <?php echo $separar['Email']; ?></li>
+                           </ul>
+                         </div>
+                       </div>
+                 </div>
+                 <div class="accordion-item">
+                       <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                         <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                           Dirección
+                         </button>
+                       </h2>
+                       <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                          <div class="accordion-body">
+                            <ul class="list-group list-group-flush bg-light">
+                               <li class="list-group-item"><strong>Calle: </strong> <?php echo $separar['Calle']; ?> <?php echo $separar['ApellidoP']; ?> <?php echo $separar['ApellidoM'];?></li>
+                               <li class="list-group-item"><strong>Numero:</strong> <?php echo $separar['Numero']; ?></li>
+                               <li class="list-group-item"><strong>Colonia: </strong> <?php echo $separar['Colonia']; ?></li>
+                               <li class="list-group-item"><strong>Estado:</strong> <?php echo $separar['NombreE']; ?></li>
+                               <li class="list-group-item"><strong>Municipio:</strong> <?php echo $separar['NombreM']; ?></li>
+                            </ul>
+                          </div>
+                       </div>
+                   </div>
+                   <div class="accordion-item">
+                      <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                         <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                           Datos de la Cuenta
+                         </button>
+                       </h2>
+                       <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                          <div class="accordion-body">
+                            <ul class="list-group list-group-flush bg-light">
+                               <li class="list-group-item"><strong>Usuario:</strong> <?php echo $separar['AppTuser']; ?></li> 
+                               <li class="list-group-item"><strong>Cuenta:</strong> <?php echo $separar['NombreNivel']; ?></li>  
+                            </uk>                      
+                          </div>
+                       </div>
                     </div>
+                 </div>
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+                   
                     <div class="row py-2">
                         <div class="Container py-2 text-center">
                           <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="text-decoration-none text-secondary ">

@@ -29,7 +29,7 @@
   <!-- inicia contenido -->
   <div class="container pt-4 mt-5">
     <div class="mt-2">
-       <?php include 'includes/EscritorioSistem.php'; ?>
+       <?php include 'includes/EscritorioSistemas.php'; ?>
   </div>
 </div>
   <!-- termina contenido -->
