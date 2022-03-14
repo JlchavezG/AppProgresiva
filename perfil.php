@@ -35,7 +35,7 @@
              <div class="row">
                <div class="col-sm-12 col-md-12 col-lg-6">
                  <div class="text-center py-3">
-                    <img src="img/user/<?php echo $separar['Imagen']?>" alt="Imagen de perfil" width="250px" height="250px" class="rounded-circle mt-3">  
+                    <img src="img/user/<?php echo $separar['Imagen']?>" alt="Imagen de perfil" width="250px" height="250px" class="rounded-circle mt-3 border-light">  
                  </div>
                </div>
                <div class="col-sm-12 col-md-12 col-lg-6">
