@@ -35,7 +35,7 @@
              <div class="row">
                <div class="col-sm-12 col-md-12 col-lg-6">
                  <div class="text-center py-3">
-                    <img src="img/user/<?php echo $separar['Imagen']?>" alt="Imagen de perfil" width="250px" height="250px" class="rounded-circle mt-3 border-light">  
+                    <img src="img/user/<?php echo $separar['Imagen']?>" alt="Imagen de perfil" width="250px" height="250px" class="rounded-circle mt-3 ">  
                  </div>
                </div>
                <div class="col-sm-12 col-md-12 col-lg-6">
@@ -89,52 +89,11 @@
                             </uk>                      
                           </div>
                        </div>
-                    </div>
-                 </div>
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-                   
-                    <div class="row py-2">
-                        <div class="Container py-2 text-center">
-                          <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" class="text-decoration-none text-secondary ">
-                          <svg class="bi" width="15" height="15" fill="currentColor">
-                            <use xlink:href="app/icons/bootstrap-icons.svg#pencil-fill"/>
-                          </svg> Editar Perfil  
-                          </a>  | 
-                          <a href="#" class="text-decoration-none text-secondary ">
-                          <svg class="bi" width="15" height="15" fill="currentColor">
-                            <use xlink:href="app/icons/bootstrap-icons.svg#printer-fill"/>
-                          </svg>  Imprimir Perfil 
-                          </a> | 
-                          <a href="#" class="text-decoration-none text-secondary ">
-                          <svg class="bi" width="15" height="15" fill="currentColor">
-                            <use xlink:href="app/icons/bootstrap-icons.svg#qr-code"/>
-                          </svg>  Codigó QR
-                        </div>
-                    </div>
-               </div>
-             </div>
-         </div>
+                  </div>
+              </div>
      </section>
-  </div>
-  <!-- modal modificar perfil -->
+</div>
+<!-- modal modificar perfil -->
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
