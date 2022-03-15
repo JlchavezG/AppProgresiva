@@ -43,9 +43,6 @@
                <svg class="bi" width="20" height="20" fill="currentColor">
                   <use xlink:href="app/icons/bootstrap-icons.svg#person-square"/> 
                </svg> &nbsp; Perfil</a></li>
-            <li class="dropdown-item">
-               texto
-            </li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#CSesion">
             <svg class="bi" width="20" height="20" fill="currentColor">
@@ -74,7 +71,7 @@
         <li class="nav-item">
           <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#Soporte">
             <svg class="bi" width="20" height="20" fill="currentColor">
-               <use xlink:href="app/icons/bootstrap-icons.svg#headset"/> 
+               <use xlink:href="app/icons/bootstrap-icons.svg#gear-fill"/> 
             </svg>
           </a>
         </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

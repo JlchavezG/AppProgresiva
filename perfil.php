@@ -35,12 +35,24 @@
              <div class="row">
                <div class="col-sm-12 col-md-12 col-lg-6">
                  <div class="text-center py-3">
-                    <img src="img/user/<?php echo $separar['Imagen']?>" alt="Imagen de perfil" width="250px" height="250px" class="rounded-circle mt-3 ">  
-                 </div>
+                    <img src="img/user/<?php echo $separar['Imagen']?>" alt="Imagen de perfil" width="250px" height="250px" class="rounded shadow mt-3 ">  
+                    <div class="mt-2">
+                       <div class="row mt-3">
+                           <span class="text-center">
+                             <a href="#" class="text-decoration-none text-secondary">
+                                <svg class="bi" width="20" height="20" fill="currentColor">
+                                  <use xlink:href="app/icons/bootstrap-icons.svg#pencil-fill"/> 
+                                </svg> Editar Perfil</a> | <a href="" class="text-decoration-none text-secondary"><svg class="bi" width="20" height="20" fill="currentColor">
+                                  <use xlink:href="app/icons/bootstrap-icons.svg#printer-fill"/> 
+                                </svg> Imprimir Perfil</a> | 
+                            </span>
+                       </div>
+                    </div>
+                  </div>
                </div>
-               <div class="col-sm-12 col-md-12 col-lg-6">
+               <div class="col-sm-12 col-md-12 col-lg-6 mt-3">
                  <div class="mt-5">
-                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion shadow" id="accordionPanelsStayOpenExample">
                        <div class="accordion-item">
                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
                               <button class="accordion-button bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
