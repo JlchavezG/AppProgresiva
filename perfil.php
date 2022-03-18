@@ -78,7 +78,7 @@
                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
                           <div class="accordion-body">
                             <ul class="list-group list-group-flush bg-light">
-                               <li class="list-group-item"><strong>Calle: </strong> <?php echo $separar['Calle']; ?> <?php echo $separar['ApellidoP']; ?> <?php echo $separar['ApellidoM'];?></li>
+                               <li class="list-group-item"><strong>Calle: </strong> <?php echo $separar['Calle']; ?></li>
                                <li class="list-group-item"><strong>Numero:</strong> <?php echo $separar['Numero']; ?></li>
                                <li class="list-group-item"><strong>Colonia: </strong> <?php echo $separar['Colonia']; ?></li>
                                <li class="list-group-item"><strong>Estado:</strong> <?php echo $separar['NombreE']; ?></li>
