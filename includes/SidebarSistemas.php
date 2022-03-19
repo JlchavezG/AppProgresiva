@@ -1,7 +1,7 @@
 <div class="offcanvas offcanvas-start d-flex flex-column flex-shrink-0 p-3 bg-light" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 280px;">
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     <div class="container text-center">
-      <img src="img/user/yo.jpeg" alt="" width="50" height="50" class="rounded-circle me-4">
+      <img src="img/user/<?php echo $separar['Imagen']; ?>" alt="" width="50" height="50" class="rounded-circle me-4">
       <span class="fs-4">Sistemas</span>
     </div>
   </a>

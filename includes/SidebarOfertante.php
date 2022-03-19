@@ -25,7 +25,7 @@
     <li class="nav-item items">
       <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
          <use xlink:href="app/icons/bootstrap-icons.svg#calendar2-date"/>
-      </svg>&nbsp; Calendario</a>
+      </svg>&nbsp; Historial</a>
     </li>
     <li class="nav-item items">
       <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
