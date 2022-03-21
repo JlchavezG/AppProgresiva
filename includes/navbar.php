@@ -69,7 +69,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#Soporte">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#Soporte1">
             <svg class="bi" width="20" height="20" fill="currentColor">
                <use xlink:href="app/icons/bootstrap-icons.svg#gear-fill"/> 
             </svg>
@@ -120,8 +120,7 @@
   </div>
 </div>
 <!-- termina modal de cerrar sesion -->
-<!-- inicia modal para el calendario -->
-<!-- Modal Cerrar sesion-->
+<!-- inicia modal para soporte tecnico -->
 <div class="modal fade" id="Soporte" tabindex="-1" aria-labelledby="SoporteLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered bg-ligth">
     <div class="modal-content">
