@@ -19,10 +19,9 @@
   <?php include 'includes/navbar.php'; ?>
   <!-- inicia sidebar -->
   <?php 
-   $Tsidebar = $user['TUser'];
-    if($Tsidebar == 1){
-       include 'includes/SidebarSistemas.php';
-    }
+  $Tsidebar = $user['TUser'];
+  if($Tsidebar == 1){include 'includes/SidebarSistemas.php';}else if($Tsidebar == 2){include 'includes/SidebarSoporte.php';}
+  else if($Tsidebar == 3){include 'includes/SidebarOfertante.php';}else if($Tsidebar == 4){include 'includes/SidebarUsuario.php';}
   ?>
   <!-- termina sidebar -->
   <!-- inicia contenido -->
@@ -35,14 +34,17 @@
              <div class="row">
                <div class="col-sm-12 col-md-12 col-lg-6">
                  <div class="text-center py-3">
-                    <img src="img/user/<?php echo $separar['Imagen']?>" alt="Imagen de perfil" width="250px" height="250px" class="rounded shadow mt-3 ">  
-                    <div class="mt-2">
+                     <div class="ImgHover">
+                       <img src="img/user/<?php echo $separar['Imagen']?>" alt="Imagen de perfil" width="250px" height="250px" class="rounded shadow mt-3 ">  
+                     </div>
+                     <div class="mt-2">
                        <div class="row mt-3">
-                           <span class="text-center">
-                             <a href="#" class="text-decoration-none text-secondary">
-                                <svg class="bi" width="20" height="20" fill="currentColor">
+                           <span class="text-center py-4">
+                             <a href="#" data-bs-toggle="modal" data-bs-target="#ModificarPerfil" class="text-decoration-none text-secondary">
+                                <svg class="bi" width="15" height="15" fill="currentColor">
                                   <use xlink:href="app/icons/bootstrap-icons.svg#pencil-fill"/> 
-                                </svg> Editar Perfil</a> | <a href="" class="text-decoration-none text-secondary"><svg class="bi" width="20" height="20" fill="currentColor">
+                                </svg> Editar Perfil</a> | <a href="" class="text-decoration-none text-secondary">
+                                <svg class="bi" width="15" height="15" fill="currentColor">
                                   <use xlink:href="app/icons/bootstrap-icons.svg#printer-fill"/> 
                                 </svg> Imprimir Perfil</a> | 
                             </span>
@@ -106,16 +108,62 @@
      </section>
 </div>
 <!-- modal modificar perfil -->
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
+<div class="modal fade" id="ModificarPerfil" tabindex="-1" aria-labelledby="ModificarPerfilLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modificar Perfil</h5>
+        <h5 class="modal-title" id="ModificarPerfilLabel">
+           <svg class="bi" width="15" height="15" fill="currentColor">
+              <use xlink:href="app/icons/bootstrap-icons.svg#pencil-fill"/> 
+          </svg> Modificar Perfil
+        </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+       <div class="Container">
+          <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="Post">
+             <div class="row">
+                 <div class="col">
+                     <div class="input-group mb-3">
+                       <span class="input-group-text" id="basic-addon1">
+                          <svg class="bi" width="20" height="20" fill="currentColor">
+                             <use xlink:href="app/icons/bootstrap-icons.svg#file-person"/> 
+                          </svg>
+                       </span>
+                          <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1" value="<?php echo $separar['Nombre']; ?>" require/>
+                      </div>
+                 </div>
+                 <div class="col">
+                    <input type="text" class="form-control" name="Apellidop" id="Apellidop" placeholder="Apellido Paterno" value="<?php echo $separar['ApellidoP']; ?>" require>
+                 </div>
+                 <div class="col">
+                    <input type="text" class="form-control" name="Apellidom" id="Apellidom" placeholder="Apellido Materno" value="<?php echo $separar['ApellidoM']; ?>" require>
+                 </div>
+             </div>
+             <div class="row">
+                <div class="col">
+                  <div class="input-group mb-3">
+                       <span class="input-group-text" id="basic-addon1">
+                          <svg class="bi" width="20" height="20" fill="currentColor">
+                             <use xlink:href="app/icons/bootstrap-icons.svg#telephone-fill"/> 
+                          </svg>
+                       </span>
+                          <input type="tel" class="form-control" placeholder="Telefono" aria-label="Telefono" aria-describedby="basic-addon1" value="<?php echo $separar['Telefono']; ?>" require/>
+                    </div>
+                </div>
+                <div class="col">
+                  <div class="input-group mb-3">
+                       <span class="input-group-text" id="basic-addon1">
+                          <svg class="bi" width="20" height="20" fill="currentColor">
+                             <use xlink:href="app/icons/bootstrap-icons.svg#envelope-fill"/> 
+                          </svg>
+                       </span>
+                          <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" value="<?php echo $separar['Email']; ?>" require/>
+                    </div>
+                </div>
+             </div>
+          </form>
+       </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Cancelar</button>

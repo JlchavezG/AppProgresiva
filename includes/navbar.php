@@ -23,13 +23,6 @@
         <li class="nav-item">
           <a class="nav-link" href="#"> &nbsp;
             <svg class="bi" width="20" height="20" fill="currentColor">
-               <use xlink:href="app/icons/bootstrap-icons.svg#qr-code-scan"/> 
-            </svg>&nbsp; QR
-          </a> 
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"> &nbsp;
-            <svg class="bi" width="20" height="20" fill="currentColor">
                <use xlink:href="app/icons/bootstrap-icons.svg#plus-circle-fill"/> 
             </svg>&nbsp; Nueva Solicitud
           </a>
