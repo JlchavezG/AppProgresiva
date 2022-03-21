@@ -2,6 +2,7 @@
  include 'includes/conection.php';
  include 'includes/querys.php';
  include 'includes/Confing.php';
+ include 'includes/Acciones.php';
 ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
@@ -32,6 +33,9 @@
                  <h4 class="text-secondary text-center">Perfil de usuario</h4>
              </div>
              <div class="row">
+               <div class="container">
+                <?php echo $Mensaje; ?>
+               </div>
                <div class="col-sm-12 col-md-12 col-lg-6">
                  <div class="text-center py-3">
                      <div class="ImgHover">
@@ -123,6 +127,7 @@
        <div class="Container">
           <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="Post">
              <div class="row">
+             <input type="hidden" value="<?php echo $separar['Id_Usuarios']; ?>" name="Id" id="Id">
                  <div class="col">
                      <div class="input-group mb-3">
                        <span class="input-group-text" id="basic-addon1">
@@ -130,7 +135,7 @@
                              <use xlink:href="app/icons/bootstrap-icons.svg#file-person"/> 
                           </svg>
                        </span>
-                          <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1" value="<?php echo $separar['Nombre']; ?>" require/>
+                          <input type="text" name="Nombre" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1" value="<?php echo $separar['Nombre']; ?>" require/>
                       </div>
                  </div>
                  <div class="col">
@@ -158,23 +163,47 @@
                              <use xlink:href="app/icons/bootstrap-icons.svg#envelope-fill"/> 
                           </svg>
                        </span>
-                          <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" value="<?php echo $separar['Email']; ?>" require/>
+                          <input type="email" name="Email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" value="<?php echo $separar['Email']; ?>" require/>
                     </div>
                 </div>
              </div>
-          </form>
+             <div class="row">
+                 <div class="col">
+                    <div class="input-group mb-3">
+                          <label class="input-group-text" for="genero">Genero</label> 
+                          <select class="form-select" id="genero" name="genero">
+                              <option selected value="<?php echo $separar['Id_Genero'] ?>"><?php echo $separar['NombreG']; ?> </option>
+                              <?php while($row = $genero->fetch_assoc()){ ?>
+                               <option value="<?php echo $row['Id_Genero'];?>"><?php echo $row['NombreG'];?></option> 
+                                <?php } ?>
+                        </select>
+                      </div>
+                 </div>
+                 <div class="col">
+                   <div class="input-group mb-3">
+                      <span class="input-group-text" id="email">
+                        <svg class="bi" width="15" height="15" fill="currentColor">
+                          <use xlink:href="app/icons/bootstrap-icons.svg#calendar-fill"/>
+                        </svg>
+                      </span>
+                      <input type="date" class="form-control" name="fecha" placeholder="Fecha" arial-label="Fecha" aria-describedby="basic-addon1" value="<?php echo $separar['FNac']; ?>" required>   
+                    </div>
+                 </div>
+             </div>
        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-sm btn-success">Modificar</button>
+        <input type="submit" name="Modificar" value="Modificar" class="btn btn-sm btn-success">
       </div>
     </div>
   </div>
 </div>
-  <!-- termina modal -->
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/dark-mode.js"></script>
-  <script src="js/pace.js"></script>
+</form>
+<!-- termina modal -->
+<script src="js/main.js"></script> 
+<script src="js/bootstrap.min.js"></script>
+<script src="js/dark-mode.js"></script>
+<script src="js/pace.js"></script>
 </body>
 </html>
