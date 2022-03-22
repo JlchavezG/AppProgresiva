@@ -153,7 +153,7 @@
                              <use xlink:href="app/icons/bootstrap-icons.svg#telephone-fill"/> 
                           </svg>
                        </span>
-                          <input type="tel" class="form-control" placeholder="Telefono" aria-label="Telefono" aria-describedby="basic-addon1" value="<?php echo $separar['Telefono']; ?>" require/>
+                          <input type="tel" name="Telefono" class="form-control" placeholder="Telefono" aria-label="Telefono" aria-describedby="basic-addon1" value="<?php echo $separar['Telefono']; ?>" require/>
                     </div>
                 </div>
                 <div class="col">
