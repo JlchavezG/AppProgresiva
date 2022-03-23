@@ -39,21 +39,8 @@
                <div class="col-sm-12 col-md-12 col-lg-6">
                  <div class="text-center py-3">
                      <div class="ImgHover">
-                       <img src="img/user/<?php echo $separar['Imagen']?>" alt="Imagen de perfil" width="250px" height="250px" class="rounded shadow mt-3 ">  
+                       <a href="#" data-bs-toggle="modal" data-bs-target="#ImagenModal"><img src="img/user/<?php echo $separar['Imagen']?>" alt="Imagen de perfil" width="350px" height="350px" class="rounded shadow mt-3 "></a>  
                      </div>
-                     <div class="mt-2">
-                       <div class="row mt-3">
-                           <span class="text-center py-4">
-                             <a href="#" data-bs-toggle="modal" data-bs-target="#ModificarPerfil" class="text-decoration-none text-secondary">
-                                <svg class="bi" width="15" height="15" fill="currentColor">
-                                  <use xlink:href="app/icons/bootstrap-icons.svg#pencil-fill"/> 
-                                </svg> Editar Perfil</a> | <a href="" class="text-decoration-none text-secondary">
-                                <svg class="bi" width="15" height="15" fill="currentColor">
-                                  <use xlink:href="app/icons/bootstrap-icons.svg#printer-fill"/> 
-                                </svg> Imprimir Perfil</a> | 
-                            </span>
-                       </div>
-                    </div>
                   </div>
                </div>
                <div class="col-sm-12 col-md-12 col-lg-6 mt-3">
@@ -71,6 +58,10 @@
                              <li class="list-group-item"><strong>Nombre: </strong> <?php echo $separar['Nombre']; ?> <?php echo $separar['ApellidoP']; ?> <?php echo $separar['ApellidoM'];?></li>
                              <li class="list-group-item"><strong>Telefono:</strong> <?php echo $separar['Telefono']; ?></li>
                              <li class="list-group-item"><strong>Email: </strong> <?php echo $separar['Email']; ?></li>
+                             <li class="list-group-item text-end"><a href="#" data-bs-toggle="modal" data-bs-target="#ModificarPerfil" class="text-decoration-none text-secondary">
+                                <svg class="bi" width="15" height="15" fill="currentColor">
+                                  <use xlink:href="app/icons/bootstrap-icons.svg#pencil-fill"/> 
+                                </svg> Editar Perfil</a></li>
                            </ul>
                          </div>
                        </div>
@@ -200,6 +191,27 @@
   </div>
 </div>
 </form>
+<!-- termina modal -->
+<!-- Modal modificar imagen-->
+<div class="modal fade" id="ImagenModal" tabindex="-1" aria-labelledby="ImagenModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ImagenModalLabel">Selecciona la imagen de perfil</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+         <form action="" enctype="multipart/form-data" method="post">
+           <input id="imagen" name="imagen" size="30" type="file" class="form-control"> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Cancelar</button>
+        <input type="submit" value="Mofificar Imagen" name="Subir" class="btn btn-sm btn-success">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- termina modal -->
 <script src="js/main.js"></script> 
 <script src="js/bootstrap.min.js"></script>

@@ -14,13 +14,6 @@ error_reporting(0);
  // verificar que el email se encuentre disponible dentro de l base de datos 
  $Valida = "SELECT * FROM Usuarios WHERE Email = '$Email'";
  $Validar = $conect->query($Valida);
- if($Validar->num_rows > 0){
-   $Mensaje.="<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-                <strong>Lo sentimos!</strong> El Correo Electronico seleccionado ya se encuantra en uso en la plataforma.
-                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-              </div>";
-    }
-   else{
    // actualizar usuario
    $updateUser = "UPDATE Usuarios SET Nombre = '$Nombre', ApellidoP = '$ApellidoP', ApellidoM = '$ApellidoM', Telefono = '$Telefono', Email = '$Email',
    Id_Genero  = '$Genero', FNac = '$Fecha' WHERE Id_Usuarios = '$id'";
@@ -31,6 +24,30 @@ error_reporting(0);
                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                  </div>";
         }
-   }
+ }
+ if(isset($_POST['Subir'])){
+    if(isset($_FILES['imagen']['name'])){
+      $TipoArchivo = $_FILES['imagen']['type'];
+      $NombreArchivo = $_FILES['imagen']['name'];
+      $SizeArchivo = $_FILES['imagen']['size'];
+      $SelectImagen = fopen($_FILES['imagen']['tmp_name'],'r');
+      $ExtraerImagen = fread($SelectImagen,$SizeArchivo);
+      $ExtraerImagen = $conect->real_escape_string($ExtraerImagen);
+      $UpdateImg = "UPDATE Usuarios SET Imagen = '$ExtraerImagen' WHERE Id_Usuarios = '$id'";
+      $UpdateImagen = $conect->query($UpdateImg);
+      if($UpdateImagen > 0){
+        $Mensaje.="<div class='alert alert-success alert-dismissible fade show' role='alert'>
+                   <strong>Excelente!</strong> La Imagen de perfil se modifico de manera exitosa dentro de la plataforma.
+                   <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                 </div>";
+      }
+      else{
+        $Mensaje.="<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                   <strong>Eror!</strong> La Imagen de perfil no se modifico de manera exitosa dentro de la plataforma.
+                   <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                 </div>";
+      }
+    }
+
  }
 ?>
