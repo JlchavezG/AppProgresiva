@@ -28,7 +28,7 @@
       </svg>&nbsp; Ofertantes</a>
     </li>
     <li class="nav-item items">
-      <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
+      <a href="RegistroOficio.php" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
          <use xlink:href="app/icons/bootstrap-icons.svg#hammer"/>
       </svg>&nbsp; Oficios</a>
     </li>

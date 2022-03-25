@@ -39,3 +39,6 @@ textarea {
   opacity: 0.8;
   cursor: pointer;
 }
+textarea {
+  resize: none;
+}
