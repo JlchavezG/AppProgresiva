@@ -48,6 +48,17 @@
        <div class="row py-1 mt-2">
            <div class="card shadow bg-light">
               <p class="text-center mt-2">Registro de Oficios en la plataforma</p>
+              <div class="row mt-2">
+                    <div class="col-sm-6 col-md-6 col-lg-6"></div>
+                    <div class="col-sm-6 col-md-6 col-lg-6">
+                        <form action="">
+                        <div class="input-group mb-3">
+                             <input type="text" class="form-control" name="busqueda" placeholder="Buscar por nombre de Oficio" aria-label="Buscar" aria-describedby="button-addon2">
+                             <input type="submit" class="btn btn-outline-secondary" name="Buscar"  value="Buscar">
+                        </div>
+                        </form>
+                    </div>
+              </div>
                <table class="table table-striped table-hover">
                  <thead>
                    <tr>
