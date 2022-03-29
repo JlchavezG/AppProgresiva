@@ -22,31 +22,49 @@ error_reporting(0);
                  </div>";
         }
  }
+ // registro de oficios(sistemas)
  if(isset($_POST['Oficio'])){
     $NombreOficio = $conect->real_escape_string($_POST['NOficio']);
     $DescOficio = $conect->real_escape_string($_POST['DescOficio']);
-    // consulta para verificar que no se dupluque el oficio
-    $VOficio = "SELECT * FROM Oficios WHERE NombreOf = '$NombreOficio'";
-    $ValidaNombre = $conect->query($VOficio);
-    if($ValidaNombre > 0){
-      $Alert.="<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-                   <strong>Error al Registrar!</strong> Los datos del Nuevo Oficio no se registraron de manera exitosa dentro de la plataforma por que ya existe.
-                   <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                </div>";
+    $inserta = "INSERT INTO Oficios(NombreOf, Descripcion)VALUES('$NombreOficio','$DescOficio')";
+    $InsertaOficio = $conect->query($inserta);
+    if($InsertaOficio > 0){
+         $Alert.="<div class='alert alert-success alert-dismissible fade show' role='alert'>
+                        <strong>Excelente!</strong> El Registro del nuevo Oficio se registro exitosamente dentro de la plataforma.
+                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                    </div>";
     }
     else{
-      $InsertOficio = "INSERT INTO Oficios(NombreOf, Descripcion)VALUES('$NombreOficio','$DescOficio')";
-      $InsertOficios = $conect->query($InsertOficio);
-      if($InsertOficios > 0){
-      $Alert.="<div class='alert alert-success alert-dismissible fade show' role='alert'>
-                   <strong>Listo!</strong> Los datos del Nuevo Oficio se registraron dentro de la plataforma.
-                   <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                </div>";
-      }
-
+         $Alert.="<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                       <strong>Eror!</strong> El Registro del nuevo Oficio no se registro exitosamente dentro de la plataforma.
+                       <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                    </div>";
     }
-
-
-
  }
+// Busqueda de Oficios(Sistemas)
+$tabla = "";
+$Boficio = "SELECT * FROM Oficios ORDER BY Id_Oficio";
+// validamo el uso del imput de busqueda 
+if(isset($_POST['Oficios'])){
+  $q = $conect->real_escape_string($_POST['Oficios']);
+  $Boficio = "SELECT * FROM Oficios WHERE Id_Oficio LIKE '%".$q."%' OR NombreOf LIKE '%".$q."%' OR Descripcion LIKE '%".$q."%'";
+}
+$buscarOficio = $conect->query($Boficio);
+if($buscarOficio->num_rows > 0){
+   $tabla.='<table class="table">
+             <tr clas="bg-white">
+                <td>Nombre Oficio</td>
+                <td>Descripción</td>
+             </tr>';
+             while($rowOficio = $buscarOficio->fetch_assoc()){
+                $tabla.= '<tr>
+                             <td>'.$rowOficio['NombreOf'].'</td>
+                             <td>'.$rowOficio['Descripcion'].'</td>
+                          </tr>';
+             }
+             $tabla.='</table>'; 
+}
+else{
+    $tabla.="No se encontraron considencias  con los criterios de busqueda";
+}
 ?>

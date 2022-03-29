@@ -20,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="css/pace.css">
     <link rel="stylesheet" type="text/css" href="css/dark.css">
     <script scr="js/jquery.js"></script>
+    <script src="js/ajax.js"></script>
   </head>
   <body>
   <!-- navbar -->
@@ -52,18 +53,16 @@
               <div class="row mt-2">
                     <div class="col-sm-6 col-md-6 col-lg-6"><p class="text-center mt-2">Registro de Oficios en la plataforma</p></div>
                     <div class="col-sm-6 col-md-6 col-lg-6">
-                    
-                        <form action="">
                         <div class="input-group mb-3">
-                             <input type="text" class="form-control" name="busqueda" placeholder="Buscar por nombre de Oficio" aria-label="Buscar" aria-describedby="button-addon2">
-                             <input type="submit" class="btn btn-outline-success" name="Buscar"  value="Buscar">
+                             <input type="text" class="form-control" id="busqueda" name="busqueda" placeholder="Buscar por nombre de Oficio" aria-label="Buscar" aria-describedby="button-addon2">
                         </div>
-                        </form>
                     </div>
               </div>
            </div> 
            <div class="row py-2 mt-2">
-             
+              <section class="container" id="TablaResultado">
+                       <?php echo $tabla; ?>  
+              </section>
            </div>
        </div>
   </div>
