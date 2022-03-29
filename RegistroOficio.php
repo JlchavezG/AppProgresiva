@@ -3,6 +3,7 @@
   include 'includes/conection.php';
   include 'includes/Confing.php';
   include 'includes/querys.php';
+  include 'includes/Acciones.php';
   // validar restriccion solo a sistemas
   $validar = $user['TUser'];
   if($validar != 1){
@@ -35,46 +36,34 @@
     <div class="mt-2">
        <div class="row py-3 mt-3">
             <h4 class="text-center display-6">Registro de Oficios</h4>
+            <?php echo $Alert; ?>
        </div>
        <div class="row">
-           <form action="">
+           <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                <input type="text" name="NOficio" id="Noficio" placeholder="Nombre del Oficio" class="form-control" required>
                <textarea name="DescOficio" id="DescOficio" placeholder="Descripción del Oficio" cols="30" rows="3" class="form-control mt-3" required></textarea>
                <div class="d-grid gap-2 mt-2">
-                   <input type="submit" value="Registrar Oficio" name="ROficio" class="btn btn-sm btn-success">
+                   <input type="submit" value="Registrar Oficio" name="Oficio" class="btn btn-sm btn-success">
                </div>   
            </form>
        </div>
        <div class="row py-1 mt-2">
            <div class="card shadow bg-light">
-              <p class="text-center mt-2">Registro de Oficios en la plataforma</p>
               <div class="row mt-2">
-                    <div class="col-sm-6 col-md-6 col-lg-6"></div>
+                    <div class="col-sm-6 col-md-6 col-lg-6"><p class="text-center mt-2">Registro de Oficios en la plataforma</p></div>
                     <div class="col-sm-6 col-md-6 col-lg-6">
+                    
                         <form action="">
                         <div class="input-group mb-3">
                              <input type="text" class="form-control" name="busqueda" placeholder="Buscar por nombre de Oficio" aria-label="Buscar" aria-describedby="button-addon2">
-                             <input type="submit" class="btn btn-outline-secondary" name="Buscar"  value="Buscar">
+                             <input type="submit" class="btn btn-outline-success" name="Buscar"  value="Buscar">
                         </div>
                         </form>
                     </div>
               </div>
-               <table class="table table-striped table-hover">
-                 <thead>
-                   <tr>
-                     <th scope="col">Nombre</th>
-                     <th scope="col">Descripción</th>
-                   </tr>
-                 </thead>
-                 <tbody>
-                     <?php while($Oficios = $ROficio->fetch_assoc()){ ?>
-                      <tr>
-                        <td><?php echo $Oficios['NombreOf'];?></td>
-                        <td><?php echo $Oficios['Descripcion'];?></td>
-                      </tr>
-                     <?php } ?>
-                 </tbody> 
-               </table>
+           </div> 
+           <div class="row py-2 mt-2">
+             
            </div>
        </div>
   </div>

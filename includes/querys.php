@@ -40,5 +40,4 @@ $Tnotificaciones = $notificaciones->num_rows;
 // consulta para extraer los oficios 
 $Oficio = "SELECT * FROM Oficios ORDER BY NombreOf";
 $ROficio = $conect->query($Oficio);
-
 ?>
