@@ -42,29 +42,42 @@ error_reporting(0);
     }
  }
 // Busqueda de Oficios(Sistemas)
-$tabla = "";
-$Boficio = "SELECT * FROM Oficios ORDER BY Id_Oficio";
-// validamo el uso del imput de busqueda 
-if(isset($_POST['Oficios'])){
-  $q = $conect->real_escape_string($_POST['Oficios']);
-  $Boficio = "SELECT * FROM Oficios WHERE Id_Oficio LIKE '%".$q."%' OR NombreOf LIKE '%".$q."%' OR Descripcion LIKE '%".$q."%'";
+$tabla="";
+$query="SELECT * FROM Oficios ORDER BY Id_Oficio ";
+
+///////// LO QUE OCURRE AL TECLEAR SOBRE EL INPUT DE BUSQUEDA ////////////
+if(isset($_POST['Busqueda']))
+{
+	$q=$conect->real_escape_string($_POST['Buscar']);
+	$query="SELECT * FROM Oficios WHERE 
+		Id_Oficio LIKE '%".$q."%' OR
+		NombreOf LIKE '%".$q."%' OR
+		Descripcion LIKE '%".$q."%'";
 }
-$buscarOficio = $conect->query($Boficio);
-if($buscarOficio->num_rows > 0){
-   $tabla.='<table class="table">
-             <tr clas="bg-white">
-                <td>Nombre Oficio</td>
-                <td>Descripción</td>
-             </tr>';
-             while($rowOficio = $buscarOficio->fetch_assoc()){
-                $tabla.= '<tr>
-                             <td>'.$rowOficio['NombreOf'].'</td>
-                             <td>'.$rowOficio['Descripcion'].'</td>
-                          </tr>';
-             }
-             $tabla.='</table>'; 
-}
-else{
-    $tabla.="No se encontraron considencias  con los criterios de busqueda";
-}
+
+$buscarAlumnos=$conect->query($query);
+if ($buscarAlumnos->num_rows > 0)
+{
+	$tabla.= 
+	'<table class="table">
+		<tr class="bg-primary">
+			<td>Nombre Oficio</td>
+			<td>Descripción</td>
+		</tr>';
+
+	while($filaAlumnos= $buscarAlumnos->fetch_assoc())
+	{
+		$tabla.=
+		'<tr>
+			<td>'.$filaAlumnos['NombreOf'].'</td>
+			<td>'.$filaAlumnos['Descripcion'].'</td>
+		 </tr>
+		';
+	}
+
+	$tabla.='</table>';
+} else
+	{
+		$tabla="No se encontraron coincidencias con sus criterios de búsqueda.";
+	}
 ?>
