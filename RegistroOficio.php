@@ -14,7 +14,7 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Registro de Oficios | Sistemas-IscjlchavezG</title>
+    <title>Modulo de Oficios | Sistemas-IscjlchavezG</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/pace.css">
@@ -35,7 +35,7 @@
   <div class="container pt-4 mt-5">
     <div class="mt-2">
        <div class="row py-3 mt-3">
-            <h4 class="text-center display-6">Registro de Oficios</h4>
+            <h4 class="text-center display-6"> Oficios | Sistemas</h4>
             <?php echo $Alert; ?>
        </div>
        <div class="row">

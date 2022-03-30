@@ -56,19 +56,13 @@ if(isset($_POST['Buscar'])){
    $query = "SELECT * FROM Oficios $where ORDER BY NombreOf";
    $resultado = $conect->query($query);
    $numero = $resultado->num_rows;
-   // numero de resultados mostrados
-   $paginacion = 5;
-   // calculo de los numero de paginas 
-   $paginas = $numero/$paginacion;
-   $paginas = ceil($paginas);
-
    if($numero > 0){
-     $tabla.="<table class='table bg-white table-hover table-responsive'>
+     $tabla.="<div class='table-responsive'>
+               <table class='table bg-white table-hover table-responsive'>
                 <thead>
                     <tr>
                       <th scope='col' class='bg-white'>Nombre Oficio</th>
                       <th scope='col' class='bg-white'>Descripción</th>
-                      <th scope='col' class='bg-white'>Opciones</th>
                    </tr>
                 </thead>
                 <tbody>";
@@ -76,26 +70,15 @@ if(isset($_POST['Buscar'])){
                 $tabla.='<tr>
                          <td class="bg-white">'.$row['NombreOf'].'</td>
                          <td class="bg-white">'.$row['Descripcion'].'</td>
-                         <td class="bg-white">Editar - Eliminar</td>
-                         </tr>
-                         <div class="container">';
-               }
-               $tabla.='<nav aria-label="Page navigation example">
-                         <ul class="pagination">
-                          <li class="page-item"><a class="page-link" href="#">Anterior</a></li>';
-                          for($i=0; $i< $paginas; $i++){
-                $tabla.='<li class="page-item"><a class="page-link" href="#">'.$i.'</a></li>';
-                          }
-                $tabla.= '<li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
-                         </ul>
-                     </nav>    
-                        </div>'; 
+                         </tr>';
+               } 
             }
             else{
                $tabla.="<div class='alert alert-danger alert-dismissible fade show' role='alert'>
                            <strong>Error!</strong> No se encontraron coinsidencias en los parametros de busqueda.
                            <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                        </div>";
+                        </div>
+                     </div>";
             }   
 } 
    
