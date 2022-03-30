@@ -14,7 +14,7 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Inicio de Sistema | IscjlchavezG</title>
+    <title>Registro de Oficios | Sistemas-IscjlchavezG</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/pace.css">
@@ -50,7 +50,7 @@
        <div class="row py-1 mt-2">
            <div class="card shadow bg-light">
               <div class="row mt-2">
-                    <div class="col-sm-6 col-md-6 col-lg-6"><p class="text-center mt-2">Total de Registro de Oficios en la plataforma: <strong><?php echo $numero; ?></strong></p></div>
+                    <div class="col-sm-6 col-md-6 col-lg-6"><p class="text-center mt-2">Registros de Oficios en la plataforma:</p></div>
                     <div class="col-sm-6 col-md-6 col-lg-6">
                     <form action="<?php echo $_SERVER[''] ?>" method="POST">
                         <div class="input-group mb-3">
