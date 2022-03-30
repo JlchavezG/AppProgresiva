@@ -27,6 +27,37 @@
             </svg>&nbsp; Nueva Solicitud
           </a>
         </li>
+        &nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item">
+        <div class="form-check form-switch nav-link">
+                  <input class="form-check-input" type="checkbox" id="darkSwitch">
+                  <label class="form-check-label" for="darkSwitch">
+                  <span>
+                  <svg class="bi" width="20" height="20" fill="currentColor">
+                     <use xlink:href="app/icons/bootstrap-icons.svg#brightness-low"/> 
+                  </svg> |
+                  <svg class="bi" width="16" height="16" fill="currentColor">
+                     <use xlink:href="app/icons/bootstrap-icons.svg#moon-stars"/> 
+                  </svg>
+                  </span>
+                  </label>
+               </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#Soporte"> &nbsp;
+            <svg class="bi" width="20" height="20" fill="currentColor">
+               <use xlink:href="app/icons/bootstrap-icons.svg#headset"/> 
+            </svg>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#Soporte1">
+            <svg class="bi" width="20" height="20" fill="currentColor">
+               <use xlink:href="app/icons/bootstrap-icons.svg#gear-fill"/> 
+            </svg>
+          </a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Hola: <?php echo $user['Nombre']; ?> &nbsp;<img src="img/user/<?php echo $user['Imagen']; ?>" alt="Imagen Perfil" style="width:30px; border-radius:50%;">
@@ -53,35 +84,6 @@
                               echo $notifica;
             } ?>
           </a>
-        </li>&nbsp;&nbsp;
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#Soporte"> &nbsp;
-            <svg class="bi" width="20" height="20" fill="currentColor">
-               <use xlink:href="app/icons/bootstrap-icons.svg#headset"/> 
-            </svg>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#Soporte1">
-            <svg class="bi" width="20" height="20" fill="currentColor">
-               <use xlink:href="app/icons/bootstrap-icons.svg#gear-fill"/> 
-            </svg>
-          </a>
-        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <li class="nav-item">
-        <div class="form-check form-switch nav-link">
-                  <input class="form-check-input" type="checkbox" id="darkSwitch">
-                  <label class="form-check-label" for="darkSwitch">
-                  <span>
-                  <svg class="bi" width="20" height="20" fill="currentColor">
-                     <use xlink:href="app/icons/bootstrap-icons.svg#brightness-low"/> 
-                  </svg> |
-                  <svg class="bi" width="16" height="16" fill="currentColor">
-                     <use xlink:href="app/icons/bootstrap-icons.svg#moon-stars"/> 
-                  </svg>
-                  </span>
-                  </label>
-               </div>
         </li>
       </ul>  
     </div>
