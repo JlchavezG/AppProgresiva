@@ -50,7 +50,7 @@
        <div class="row py-1 mt-2">
            <div class="card shadow bg-light">
               <div class="row mt-2">
-                    <div class="col-sm-6 col-md-6 col-lg-6"><p class="text-center mt-2">Registro de Oficios en la plataforma</p></div>
+                    <div class="col-sm-6 col-md-6 col-lg-6"><p class="text-center mt-2">Total de Registro de Oficios en la plataforma: <strong><?php echo $numero; ?></strong></p></div>
                     <div class="col-sm-6 col-md-6 col-lg-6">
                     <form action="<?php echo $_SERVER[''] ?>" method="POST">
                         <div class="input-group mb-3">
@@ -62,7 +62,7 @@
               </div>
            </div> 
            <div class="row py-2 mt-2">
-                <?php echo $tabla; ?>
+               <?php echo $tabla; ?>
            </div>
        </div>
   </div>

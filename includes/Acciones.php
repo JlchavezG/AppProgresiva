@@ -36,48 +36,50 @@ error_reporting(0);
     }
     else{
          $Alert.="<div class='alert alert-danger alert-dismissible fade show' role='alert'>
-                       <strong>Eror!</strong> El Registro del nuevo Oficio no se registro exitosamente dentro de la plataforma.
+                       <strong>Error!</strong> El Registro del nuevo Oficio no se registro exitosamente dentro de la plataforma.
                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
                     </div>";
     }
  }
 // Busqueda de Oficios(Sistemas)
-$tabla="";
-$query="SELECT * FROM Oficios ORDER BY Id_Oficio ";
-
-///////// LO QUE OCURRE AL TECLEAR SOBRE EL INPUT DE BUSQUEDA ////////////
-if(isset($_POST['Busqueda']))
-{
-	$q=$conect->real_escape_string($_POST['Buscar']);
-	$query="SELECT * FROM Oficios WHERE 
-		Id_Oficio LIKE '%".$q."%' OR
-		NombreOf LIKE '%".$q."%' OR
-		Descripcion LIKE '%".$q."%'";
-}
-
-$buscarAlumnos=$conect->query($query);
-if ($buscarAlumnos->num_rows > 0)
-{
-	$tabla.= 
-	'<table class="table">
-		<tr class="bg-primary">
-			<td>Nombre Oficio</td>
-			<td>Descripción</td>
-		</tr>';
-
-	while($filaAlumnos= $buscarAlumnos->fetch_assoc())
-	{
-		$tabla.=
-		'<tr>
-			<td>'.$filaAlumnos['NombreOf'].'</td>
-			<td>'.$filaAlumnos['Descripcion'].'</td>
-		 </tr>
-		';
-	}
-
-	$tabla.='</table>';
-} else
-	{
-		$tabla="No se encontraron coincidencias con sus criterios de búsqueda.";
-	}
+// consulta para la busqueda de los oficios
+if(isset($_POST['Buscar'])){
+   $tabla="";
+   $where = " ";
+   if(!empty($_POST)){
+     $valor = $_POST['Buscar'];
+      if(!empty($valor)){
+         $where = "WHERE NombreOf LIKE '%$valor%' OR Descripcion LIKE '%$valor%'";
+      }
+   }
+   // consulta para extrar datos de producto
+   $query = "SELECT * FROM Oficios $where ORDER BY NombreOf";
+   $resultado = $conect->query($query);
+   $numero = $resultado->num_rows;
+   if($numero > 0){
+     $tabla.="<table class='table bg-white table-hover table-responsive'>
+                <thead>
+                    <tr>
+                      <th scope='col' class='bg-white'>Nombre Oficio</th>
+                      <th scope='col' class='bg-white'>Descripción</th>
+                      <th scope='col' class='bg-white'>Opciones</th>
+                   </tr>
+                </thead>
+                <tbody>";
+                while($row = $resultado->fetch_assoc()){
+                $tabla.='<tr>
+                         <td class="bg-white">'.$row['NombreOf'].'</td>
+                         <td class="bg-white">'.$row['Descripcion'].'</td>
+                         <td class="bg-white">Editar - Eliminar</td>
+                         </tr>';        
+               }
+            }
+            else{
+               $tabla.="<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                           <strong>Error!</strong> No se encontraron coinsidencias en los parametros de busqueda.
+                           <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                        </div>";
+            }   
+} 
+   
 ?>
