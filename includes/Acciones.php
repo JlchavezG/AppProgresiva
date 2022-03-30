@@ -51,11 +51,17 @@ if(isset($_POST['Buscar'])){
       if(!empty($valor)){
          $where = "WHERE NombreOf LIKE '%$valor%' OR Descripcion LIKE '%$valor%'";
       }
-   }
+   } 
    // consulta para extrar datos de producto
    $query = "SELECT * FROM Oficios $where ORDER BY NombreOf";
    $resultado = $conect->query($query);
    $numero = $resultado->num_rows;
+   // numero de resultados mostrados
+   $paginacion = 5;
+   // calculo de los numero de paginas 
+   $paginas = $numero/$paginacion;
+   $paginas = ceil($paginas);
+
    if($numero > 0){
      $tabla.="<table class='table bg-white table-hover table-responsive'>
                 <thead>
@@ -71,8 +77,19 @@ if(isset($_POST['Buscar'])){
                          <td class="bg-white">'.$row['NombreOf'].'</td>
                          <td class="bg-white">'.$row['Descripcion'].'</td>
                          <td class="bg-white">Editar - Eliminar</td>
-                         </tr>';        
+                         </tr>
+                         <div class="container">';
                }
+               $tabla.='<nav aria-label="Page navigation example">
+                         <ul class="pagination">
+                          <li class="page-item"><a class="page-link" href="#">Anterior</a></li>';
+                          for($i=0; $i< $paginas; $i++){
+                $tabla.='<li class="page-item"><a class="page-link" href="#">'.$i.'</a></li>';
+                          }
+                $tabla.= '<li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                         </ul>
+                     </nav>    
+                        </div>'; 
             }
             else{
                $tabla.="<div class='alert alert-danger alert-dismissible fade show' role='alert'>
