@@ -1,88 +1,101 @@
 <div class="container my-5">
-  <footer class="text-center text-lg-start text-secondary bg-white">
-    <div class="container p-4 pb-0">
-      <section class="">
-     </section>
-      <hr class="mb-4" />
-      <!-- Section: CTA -->
-      <section class="">
-        <p class="d-flex justify-content-center align-items-center">
-          <span class="me-3">Register for free</span>
-          <button type="button" class="btn btn-outline-light btn-rounded">
-            Sign up!
-          </button>
-        </p>
-      </section>
-      <!-- Section: CTA -->
+<!-- Footer -->
+<footer class="bg-white text-center text-secondary">
+  <div class="container p-4">
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
 
-      <hr class="mb-4" />
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+      ></a>
 
-      <!-- Section: Social media -->
-      <section class="mb-4 text-center">
-        <!-- Facebook -->
-        <a
-           class="btn btn-outline-light btn-floating m-1"
-           href="#!"
-           role="button"
-           ><i class="fab fa-facebook-f"></i
-          ></a>
+      <!-- Google -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-google"></i
+      ></a>
 
-        <!-- Twitter -->
-        <a
-           class="btn btn-outline-light btn-floating m-1"
-           href="#!"
-           role="button"
-           ><i class="fab fa-twitter"></i
-          ></a>
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+      ></a>
 
-        <!-- Google -->
-        <a
-           class="btn btn-outline-light btn-floating m-1"
-           href="#!"
-           role="button"
-           ><i class="fab fa-google"></i
-          ></a>
+      <!-- Linkedin -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
 
-        <!-- Instagram -->
-        <a
-           class="btn btn-outline-light btn-floating m-1"
-           href="#!"
-           role="button"
-           ><i class="fab fa-instagram"></i
-          ></a>
+      <!-- Github -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"></i
+      ></a>
+    </section>
+    <!-- Section: Social media -->
 
-        <!-- Linkedin -->
-        <a
-           class="btn btn-outline-light btn-floating m-1"
-           href="#!"
-           role="button"
-           ><i class="fab fa-linkedin-in"></i
-          ></a>
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+        <!--Grid row-->
+        <div class="row d-flex justify-content-center">
+          <!--Grid column-->
+          <div class="col-auto">
+            <p class="pt-2">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <!--Grid column-->
 
-        <!-- Github -->
-        <a
-           class="btn btn-outline-light btn-floating m-1"
-           href="#!"
-           role="button"
-           ><i class="fab fa-github"></i
-          ></a>
-      </section>
-      <!-- Section: Social media -->
-    </div>
-    <!-- Grid container -->
+          <!--Grid column-->
+          <div class="col-md-5 col-12">
+            <!-- Email input -->
+            <div class="form-outline form-white mb-4">
+              <input type="email" id="form5Example2" class="form-control" />
+              <label class="form-label" for="form5Example2">Email address</label>
+            </div>
+          </div>
+          <!--Grid column-->
 
-    <!-- Copyright -->
-    <div
-         class="text-center p-3"
-         style="background-color: rgba(0, 0, 0, 0.2)"
-         >
-      © 2020 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/"
-         >MDBootstrap.com</a
-        >
-    </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-outline-light mb-4">
+              Subscribe
+            </button>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
+
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+        eum harum corrupti dicta, aliquam sequi voluptate quas.
+      </p>
+    </section>
+    <!-- Section: Text -->
+
+    <!-- Section: Links -->
+    
+    <!-- Section: Links -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright:
+    <a class="text-white" href="https://iscjoseluischavezg.mx/">iscjoseluischavezg.mx</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+  
 </div>
 <!-- End of .container -->
