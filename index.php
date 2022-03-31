@@ -25,13 +25,13 @@
                                       <img src="img/craken.png" alt="logo" style="width:250px;">
                                       <div class="row">
                                          <div class="col">
-                                           <a href="https://www.facebook.com/iscjoseluischavezg" target="_blank"><svg class="bi text-primary" width="15" height="15" fill="currentColor">
+                                           <a href="https://www.facebook.com/iscjoseluischavezg" target="_blank"><svg class="bi text-primary" width="20" height="20" fill="currentColor">
                                               <use xlink:href="app/icons/bootstrap-icons.svg#facebook"/>
-                                           </svg></a>
-                                           <a href="https://twitter.com/iscjlchavezg" target="_blank"><svg class="bi text-info" width="15" height="15" fill="currentColor">
+                                           </svg></a>&nbsp;&nbsp;  
+                                           <a href="https://twitter.com/iscjlchavezg" target="_blank"><svg class="bi text-info" width="20" height="20" fill="currentColor">
                                               <use xlink:href="app/icons/bootstrap-icons.svg#twitter"/>
-                                           </svg></a>
-                                           <a href="https://www.instagram.com/iscjlchavezg" target="_blank"><svg class="bi" width="15" height="15" fill="currentColor">
+                                           </svg></a>&nbsp;&nbsp; 
+                                           <a href="https://www.instagram.com/iscjlchavezg" target="_blank"><svg class="bi" width="20" height="20" fill="currentColor">
                                               <use xlink:href="app/icons/bootstrap-icons.svg#instagram"/>
                                            </svg></a>
                                          </div>

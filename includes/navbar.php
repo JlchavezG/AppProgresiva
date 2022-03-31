@@ -60,7 +60,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Hola: <?php echo $user['Nombre']; ?> &nbsp;<img src="img/user/<?php echo $user['Imagen']; ?>" alt="Imagen Perfil" style="width:30px; border-radius:50%;">
+            Hola: <?php echo $user['Nombre']; ?> &nbsp;&nbsp;<img src="img/user/<?php echo $user['Imagen']; ?>" alt="Imagen Perfil" style="width:30px; border-radius:50%;">
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="perfil.php">
@@ -84,6 +84,20 @@
                               echo $notifica;
             } ?>
           </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+               <svg class="bi" width="20" height="20" fill="currentColor">
+                  <use xlink:href="app/icons/bootstrap-icons.svg#facebook"/> 
+               </svg> 
+           </a>&nbsp;
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+               <svg class="bi" width="20" height="20" fill="currentColor">
+                  <use xlink:href="app/icons/bootstrap-icons.svg#twitter"/> 
+               </svg> 
+           </a>&nbsp;
         </li>
       </ul>  
     </div>

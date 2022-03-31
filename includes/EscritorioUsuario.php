@@ -2,43 +2,8 @@
 <!-- inicia dasboard sistemas -->
 <div class="row text-center mt-2">
          <!-- inicia tarjeta de dasboard -->
-          <div class="col-sm-3 col-md-3 col-lg-3 py-2">
-             <div class="card shadow bg-light container">
-                <div class="row">
-                <div class="col py-3">
-                    <svg class="bi" width="35" height="35" fill="currentColor">
-                       <use xlink:href="app/icons/bootstrap-icons.svg#person-circle"/>
-                    </svg>
-                    <div class="py-1">
-                    <span class="fw-lighter me-2 text-center"> Usuarios</span>
-                    </div>
-                </div>
-                <div class="col py-4 ms-2">
-                  <strong class="fs-2"> <?php echo $Tusuarios; ?></strong></div>
-                </div>
-             </div>
-          </div>
-          <!-- termina tarjeta -->
           <!-- inicia tarjeta de dasboard -->
-          <div class="col-sm-3 col-md-3 col-lg-3 py-2">
-          <div class="card shadow bg-light container">
-                <div class="row">
-                <div class="col py-3">
-                    <svg class="bi" width="35" height="35" fill="currentColor">
-                       <use xlink:href="app/icons/bootstrap-icons.svg#briefcase-fill"/>
-                    </svg>
-                    <div class="py-1">
-                    <span class="fw-lighter me-2 text-center"> Ofertantes</span>
-                    </div>
-                </div>
-                <div class="col py-4 ms-2">
-                  <strong class="fs-2"> <?php echo $Tsocios; ?></strong></div>
-                </div>
-             </div>
-          </div>
-          <!-- termina tarjeta -->
-          <!-- inicia tarjeta de dasboard -->
-          <div class="col-sm-3 col-md-3 col-lg-3 py-2">
+          <div class="col-sm-6 col-md-6 col-lg-6 py-2">
           <div class="card shadow bg-light container">
                 <div class="row">
                 <div class="col py-3">
@@ -56,7 +21,7 @@
           </div>
           <!-- termina tarjeta -->
           <!-- inicia tarjeta de dasboard -->
-          <div class="col-sm-3 col-md-3 col-lg-3 py-2">
+          <div class="col-sm-6 col-md-6 col-lg-6 py-2">
           <div class="card shadow bg-light container">
                 <div class="row">
                 <div class="col py-3">
@@ -115,7 +80,7 @@
       <!-- inicia dasboard sistemas -->
        <div class="row text-center">
          <!-- inicia tarjeta de dasboard -->
-          <div class="col-sm-3 col-md-3 col-lg-3 py-2">
+          <div class="col-sm-4 col-md-4 col-lg-4 py-2">
              <div class="card shadow bg-light container">
                 <div class="row">
                 <div class="col py-3">
@@ -133,25 +98,7 @@
           </div>
           <!-- termina tarjeta -->
           <!-- inicia tarjeta de dasboard -->
-          <div class="col-sm-3 col-md-3 col-lg-3 py-2">
-          <div class="card shadow bg-light container">
-                <div class="row">
-                <div class="col py-3">
-                    <svg class="bi" width="35" height="35" fill="currentColor">
-                       <use xlink:href="app/icons/bootstrap-icons.svg#hammer"/>
-                    </svg>
-                    <div class="py-1">
-                    <span class="fw-lighter me-2 text-center"> Oficios</span>
-                    </div>
-                </div>
-                <div class="col py-4 ms-2">
-                  <strong class="fs-2"><?php echo $Toficios; ?> </strong></div>
-                </div>
-             </div>
-          </div>
-          <!-- termina tarjeta -->
-          <!-- inicia tarjeta de dasboard -->
-          <div class="col-sm-3 col-md-3 col-lg-3 py-2">
+          <div class="col-sm-4 col-md-4 col-lg-4 py-2">
           <div class="card shadow bg-light container">
                 <div class="row">
                 <div class="col py-3">
@@ -170,7 +117,7 @@
           </div>
           <!-- termina tarjeta -->
           <!-- inicia tarjeta de dasboard -->
-          <div class="col-sm-3 col-md-3 col-lg-3 py-2">
+          <div class="col-sm-4 col-md-4 col-lg-4 py-2">
           <div class="card shadow bg-light container">
                 <div class="row">
                 <div class="col py-3">

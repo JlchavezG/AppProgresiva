@@ -28,9 +28,14 @@
   <!-- inicia contenido -->
   <div class="container pt-4 mt-5">
     <div class="mt-2">
-       <?php include 'includes/EscritorioSistemas.php'; ?>
+    <?php 
+    $TsEscritorio = $user['TUser'];
+    if($TsEscritorio == 1){include 'includes/EscritorioSistemas.php';}else if($TsEscritorio == 2){include 'includes/EscritorioSoporte.php';}
+    else if($TsEscritorio == 3){include 'includes/EscritorioOfertante.php';}else if($TsEscritorio == 4){include 'includes/EscritorioUsuario.php';}
+    ?>
   </div>
 </div>
+<?php include 'includes/footer.php'; ?>
   <!-- termina contenido -->
   <script src="js/bootstrap.min.js"></script>
   <script src="js/dark-mode.js"></script>

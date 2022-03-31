@@ -1,4 +1,4 @@
-<div class="offcanvas offcanvas-start d-flex flex-column flex-shrink-0 p-3 bg-light" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 280px;">
+<div class="offcanvas offcanvas-start  d-flex flex-column flex-shrink-0 p-3 bg-light" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 280px;">
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     <div class="container text-center">
       <img src="img/user/<?php echo $separar['Imagen']; ?>" alt="" width="50" height="50" class="rounded-circle me-4">
