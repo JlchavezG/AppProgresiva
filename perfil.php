@@ -124,6 +124,7 @@
               </div>
      </section>
 </div>
+<?php include 'includes/footer.php'; ?>
 <!-- modal modificar perfil -->
 <?php include 'includes/ModalMPerfil.php'; ?>
 <!-- termina modal -->
