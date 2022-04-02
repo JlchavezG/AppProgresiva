@@ -32,6 +32,19 @@
              <div class="row py-3">
                  <h4 class="text-secondary text-center display-5">Perfil de usuario</h4>
              </div>
+             <div class="row mt-2 text-center">
+          <div class="col py-2">
+                <a href="app.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="20" height="20" fill="currentColor">
+                     <use xlink:href="app/icons/bootstrap-icons.svg#arrow-left-circle-fill"/>
+                </svg> Regresar </a>
+          </div>
+          <div class="col"></div>
+          <div class="col">
+          <a href="#" data-bs-toggle="offcanvas" data-bs-target="#Ayuda" class="text-decoration-none text-muted"><svg class="bi text-warning" width="20" height="20" fill="currentColor">
+                     <use xlink:href="app/icons/bootstrap-icons.svg#lightbulb"/>
+                </svg> Ayuda </a>
+          </div>
+       </div>
              <div class="row">
                <div class="container">
                 <?php echo $Mensaje; ?>
