@@ -4,25 +4,25 @@
   <div class="container p-4">
     <section class="mb-4">
       <!-- Facebook -->
-      <a class="text-secondary text-decoration-none m-1" href="#!">
+      <a class="text-secondary text-decoration-none m-1" href="https://www.facebook.com/iscjoseluischavezg">
         <svg class='bi' width='20' height='20' fill='currentColor'>
           <use xlink:href='app/icons/bootstrap-icons.svg#facebook'/> 
         </svg>
       </a>
       <!-- Twitter -->
-      <a class="text-secondary text-decoration-none m-1" href="#!">
+      <a class="text-secondary text-decoration-none m-1" href="https://twitter.com/daerblack">
         <svg class='bi' width='20' height='20' fill='currentColor'>
           <use xlink:href='app/icons/bootstrap-icons.svg#twitter'/> 
         </svg>
       </a>
       <!-- Google -->
-      <a class="text-secondary text-decoration-none m-1" href="#!">
+      <a class="text-secondary text-decoration-none m-1" href="https://www.google.com/search?q=jose+luis+chavez+gomez&rlz=1C5CHFA_enMX934MX935&oq=jose+luis+chavez+gomez&aqs=chrome..69i57j69i61j69i60j69i61.5208j0j7&sourceid=chrome&ie=UTF-8">
         <svg class='bi' width='20' height='20' fill='currentColor'>
           <use xlink:href='app/icons/bootstrap-icons.svg#google'/> 
         </svg>
       </a>
       <!-- Instagram -->
-      <a class="text-secondary text-decoration-none m-1" href="#!">
+      <a class="text-secondary text-decoration-none m-1" href="https://www.instagram.com/iscjlchavezg/?hl=es">
         <svg class='bi' width='20' height='20' fill='currentColor'>
           <use xlink:href='app/icons/bootstrap-icons.svg#instagram'/> 
         </svg>
@@ -34,7 +34,7 @@
         </svg>
       </a>
       <!-- Github -->
-      <a class="text-secondary text-decoration-none m-1" href="#!">
+      <a class="text-secondary text-decoration-none m-1" href="https://github.com/JlchavezG">
         <svg class='bi' width='20' height='20' fill='currentColor'>
           <use xlink:href='app/icons/bootstrap-icons.svg#github'/> 
         </svg>
@@ -67,9 +67,7 @@
     </section>
     <section class="mb-4">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-        eum harum corrupti dicta, aliquam sequi voluptate quas.
+        Suscribete a nuestro boletin y enterate de las promociones, beneficios, servicios y actualizaciones de nuestra plataforma.
       </p>
     </section>
   </div>
