@@ -14,7 +14,7 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Modulo de Oficios | Sistemas-IscjlchavezG</title>
+    <title>Busqueda de Oficios | Sistemas-IscjlchavezG</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/pace.css">
@@ -35,8 +35,13 @@
   <div class="container pt-4 mt-5">
     <div class="mt-2">
        <div class="row py-3 mt-3">
-            <h4 class="text-center display-6"> Oficios | Sistemas</h4>
-            <?php echo $Alert; ?>
+            <h4 class="text-center display-6"> Regitro de | Oficios</h4>
+         <div class="row my-3">
+         <div class="col-sm-4 col-md-4 col-lg-4"></div>
+         <div class="col-sm-4 col-md-4 col-lg-4 text-end">
+             <span>Usuario: <?php echo $separar['AppTuser']; ?> </span>
+         </div>
+       <?php echo $Alert; ?>
        </div>
        <div class="row">
            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
@@ -47,27 +52,7 @@
                </div>   
            </form>
        </div>
-       <div class="row py-1 mt-2">
-           <div class="card shadow bg-light">
-              <div class="row mt-2">
-                    <div class="col-sm-6 col-md-6 col-lg-6"><p class="text-center mt-2">Registros de Oficios en la plataforma:</p></div>
-                    <div class="col-sm-6 col-md-6 col-lg-6">
-                    <form action="<?php echo $_SERVER[''] ?>" method="POST">
-                        <div class="input-group mb-3">
-                             <input type="text" class="form-control" name="Buscar" placeholder="Buscar Oficio" aria-label="Buscar Oficio" aria-describedby="Buscar Oficio">
-                             <button class="btn btn-outline-success" type="submit" name="Busqueda" id="Buscar">Buscar</button>
-                        </div>
-                    </div>
-                    </form>
-              </div>
-           </div> 
-           <div class="row py-2 mt-2">
-               <?php echo $tabla; ?>
-           </div>
-       </div>
-  </div>
-</div>
-  <!-- termina contenido -->
+         <!-- termina contenido -->
   <script src="js/bootstrap.min.js"></script>
   <script src="js/dark-mode.js"></script>
   <script src="js/pace.js"></script>

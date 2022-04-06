@@ -32,7 +32,7 @@
              <div class="row py-3">
                  <h4 class="text-secondary text-center display-5">Perfil de usuario</h4>
              </div>
-             <div class="row mt-2 text-center">
+          <div class="row mt-2 text-center">
           <div class="col py-2">
                 <a href="app.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="20" height="20" fill="currentColor">
                      <use xlink:href="app/icons/bootstrap-icons.svg#arrow-left-circle-fill"/>

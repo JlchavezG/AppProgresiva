@@ -36,7 +36,13 @@
     <div class="mt-2">
        <div class="row py-3 mt-3">
             <h4 class="text-center display-6"> Modulo Oficios</h4>
+            <div class="row my-3">
+         <div class="col-sm-6 col-md-6 col-lg-6"></div>
+         <div class="col-sm-6 col-md-6 col-lg-6 text-end">
+             <span>Usuario: <?php echo $separar['AppTuser']; ?> </span>
+         </div>
             <?php echo $Alert; ?>
+       </div>
        </div>
        <div class="row py-1 mt-2">
            <div class="col-sm-4 col-md-4 col-lg-4 my-2">
@@ -49,7 +55,7 @@
                                </svg>
                            </div>
                            <div class="col my-3">
-                           <a href="#" class="text-decoration-none text-secondary"><strong>Buscar</strong></a>
+                           <a href="BuscarOficioS.php" class="text-decoration-none text-secondary"><strong>Buscar</strong></a>
                            </div>
                        </div>
                    </div>
@@ -65,7 +71,7 @@
                                </svg>
                            </div>
                            <div class="col my-3">
-                               <a href="#" class="text-decoration-none text-secondary"><strong>Agregar</strong></a>
+                               <a href="RegistroOficio.php" class="text-decoration-none text-secondary"><strong>Agregar</strong></a>
                            </div>
                        </div>
                    </div>

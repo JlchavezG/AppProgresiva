@@ -70,6 +70,11 @@ if(isset($_POST['Buscar'])){
                 $tabla.='<tr>
                          <td class="bg-white">'.$row['NombreOf'].'</td>
                          <td class="bg-white">'.$row['Descripcion'].'</td>
+                         <td class="bg-white">
+                             <svg class="bi text-success" width="20" height="20" fill="currentColor">
+                                 <use xlink:href="app/icons/bootstrap-icons.svg#box-arrow-in-right"/>
+                             </svg>
+                         </td>
                          </tr>';
                } 
             }
