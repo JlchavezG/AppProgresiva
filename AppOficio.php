@@ -39,7 +39,7 @@
             <?php echo $Alert; ?>
        </div>
        <div class="row py-1 mt-2">
-           <div class="col-sm-4 col-md-4 col-lg-4">
+           <div class="col-sm-4 col-md-4 col-lg-4 my-2">
               <div class="card shadow bg-light">
                    <div class="container text-center">
                        <div class="row">
@@ -49,13 +49,13 @@
                                </svg>
                            </div>
                            <div class="col my-3">
-                               <strong>Buscar</strong> Oficios
+                           <a href="#" class="text-decoration-none text-secondary"><strong>Buscar</strong></a>
                            </div>
                        </div>
                    </div>
               </div>
            </div> 
-           <div class="col-sm-4 col-md-4 col-lg-4">
+           <div class="col-sm-4 col-md-4 col-lg-4 my-2">
               <div class="card shadow bg-light">
                    <div class="container text-center">
                        <div class="row">
@@ -65,23 +65,23 @@
                                </svg>
                            </div>
                            <div class="col my-3">
-                               <strong>Buscar</strong> Oficios
+                               <a href="#" class="text-decoration-none text-secondary"><strong>Agregar</strong></a>
                            </div>
                        </div>
                    </div>
               </div>
            </div> 
-           <div class="col-sm-4 col-md-4 col-lg-4">
+           <div class="col-sm-4 col-md-4 col-lg-4 my-2">
               <div class="card shadow bg-light">
                    <div class="container text-center">
                        <div class="row">
                            <div class="col my-3">
                                <svg class="bi" width="33" height="33" fill="currentColor">
-                                 <use xlink:href="app/icons/bootstrap-icons.svg#search"/>
+                                 <use xlink:href="app/icons/bootstrap-icons.svg#pencil-fill"/>
                                </svg>
                            </div>
                            <div class="col my-3">
-                               <strong>Buscar</strong> Oficios
+                              <a href="#" class="text-decoration-none text-secondary"><strong>Administrar</strong></a>
                            </div>
                        </div>
                    </div>
