@@ -28,7 +28,7 @@
                        <use xlink:href="app/icons/bootstrap-icons.svg#briefcase-fill"/>
                     </svg>
                     <div class="py-1">
-                    <span class="fw-lighter me-2 text-center"> Ofertantes</span>
+                    <span class="fw-lighter me-2 text-center"> Socios</span>
                     </div>
                 </div>
                 <div class="col py-4 ms-2">

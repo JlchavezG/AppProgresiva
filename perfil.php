@@ -26,7 +26,7 @@
   ?>
   <!-- termina sidebar -->
   <!-- inicia contenido -->
-  <div class="container pt-4 mt-5">
+  <div class="container pt-4 mt-5" id="myPrintArea">
      <section id="Perfil">
          <div class="container py-3">
              <div class="row py-3">
@@ -39,11 +39,7 @@
                 </svg> Regresar </a>
           </div>
           <div class="col"></div>
-          <div class="col">
-          <a href="#" data-bs-toggle="offcanvas" data-bs-target="#Ayuda" class="text-decoration-none text-muted"><svg class="bi text-warning" width="20" height="20" fill="currentColor">
-                     <use xlink:href="app/icons/bootstrap-icons.svg#lightbulb"/>
-                </svg> Ayuda </a>
-          </div>
+          
        </div>
              <div class="row">
                <div class="container">
@@ -64,9 +60,9 @@
                         </svg> Generar
                     </div>
                     <div class="col">
-                        <svg class="bi" width="20" height="20" fill="currentColor">
+                        <a href="#" class="text-decoration-none text-secondary"><svg class="bi" width="20" height="20" fill="currentColor">
                           <use xlink:href="app/icons/bootstrap-icons.svg#printer-fill"/> 
-                        </svg> Imprimir
+                        </svg> Imprimir</a>
                     </div>
                     <div class="col">
                         <svg class="bi" width="20" height="20" fill="currentColor">
