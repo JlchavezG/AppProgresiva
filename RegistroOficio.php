@@ -36,11 +36,16 @@
     <div class="mt-2">
        <div class="row py-3 mt-3">
             <h4 class="text-center display-6"> Regitro de | Oficios</h4>
-         <div class="row my-3">
-         <div class="col-sm-4 col-md-4 col-lg-4"></div>
-         <div class="col-sm-4 col-md-4 col-lg-4 text-end">
-             <span>Usuario: <?php echo $separar['AppTuser']; ?> </span>
-         </div>
+            <div class="row mt-2 text-center">
+          <div class="col py-2">
+                <a href="appOficio.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="20" height="20" fill="currentColor">
+                     <use xlink:href="app/icons/bootstrap-icons.svg#arrow-left-circle-fill"/>
+                </svg> Regresar </a>
+          </div>
+    <div class="col"></div>
+    </div>    
+       <div class="row my-3">
+       <div class="col-sm-4 col-md-4 col-lg-4"></div>
        <?php echo $Alert; ?>
        </div>
        <div class="row">

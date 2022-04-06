@@ -44,4 +44,4 @@ function findMe(){
       }
      navigator.geolocation.getCurrentPosition(localizacion,error);
    }
-   
+  

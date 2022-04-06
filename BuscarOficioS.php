@@ -32,13 +32,10 @@
         <h2 class="display-6 text-center">Buscar Oficios</h2>
         <div class="row my-3">
          <div class="col-sm-4 col-md-4 col-lg-4"></div>
-         <div class="col-sm-4 col-md-4 col-lg-4 text-end">
-             <span>Usuario: <?php echo $separar['AppTuser']; ?> </span>
-         </div>
     </div>  
     <div class="row mt-2 text-center">
           <div class="col py-2">
-                <a href="app.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="20" height="20" fill="currentColor">
+                <a href="appOficio.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="20" height="20" fill="currentColor">
                      <use xlink:href="app/icons/bootstrap-icons.svg#arrow-left-circle-fill"/>
                 </svg> Regresar </a>
           </div>
