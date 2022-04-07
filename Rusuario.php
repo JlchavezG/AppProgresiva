@@ -97,14 +97,28 @@
                                  </span>
                                  <input type="email" class="form-control" name="email" placeholder="Email" arial-label="Nombre" aria-describedby="basic-addon1" required>   
                               </div>
+                              <div class="row">
+                              <div class="col">
                               <div class="input-group mb-3">
                                 <label class="input-group-text" for="genero">Genero</label> 
                                 <select class="form-select" id="genero" name="genero">
-                                   <option selected> Selecciona una opción</option>
+                                   <option selected> Opción</option>
                                    <?php while($row = $genero->fetch_assoc()){ ?>
                                       <option value="<?php echo $row['Id_Genero'];?>"><?php echo $row['NombreG'];?></option> 
                                    <?php } ?>
                                 </select>
+                              </div>
+                              </div>
+                               <div class="col">
+                               <div class="input-group mb-3">
+                                  <label class="input-group-text" for="inputGroupSelect01">Tipo de Usuario</label>
+                                     <select class="form-select" id="inputGroupSelect01" name="Tuser">
+                                       <option selected>Opción</option>
+                                          <option value="4">Cliente</option>
+                                          <option value="3">Socio</option>
+                                     </select>
+                                 </div>
+                               </div>
                               </div>
                               <div class="input-group mb-3">
                                   <span class="input-group-text" id="email">

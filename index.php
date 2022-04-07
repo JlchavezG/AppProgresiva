@@ -116,30 +116,22 @@
   <div class="modal-dialog modal-dialog-centered modal-md">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="ModalRegistroLabel">Registro</h5>
+        <h5 class="modal-title" id="ModalRegistroLabel">Registro de Usuarios</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
          <div class="row py-3 text-center">
              <div class="col">
-               <a href="Rusuario.php" class="text-decoration-none"><svg class='bi' width='40' height='40' role='img' aria-label='Tools'>
-                 <use xlink:href='app/icons/bootstrap-icons.svg#person-workspace'/>
+               <a href="Rusuario.php" class="text-decoration-none"><svg class='bi' width='60' height='60' role='img' aria-label='Tools'>
+                 <use xlink:href='app/icons/bootstrap-icons.svg#person-plus-fill'/>
                </svg>
                <div class="mt-2">
-                  <span class="text-info">Usuario</span></a>
+                  <span class="text-info">Crear Nueva Cuenta</span></a>
                </div>
              </div>
-             <div class="col">
-               <a href="Rofertante.php" class="text-decoration-none"><svg class='bi text-danger' width='40' height='40' role='img' aria-label='Tools'>
-                 <use xlink:href='app/icons/bootstrap-icons.svg#tools'/>
-               </svg>
-               <div class="mt-2">
-                  <span class="text-warning">Socio</span></a>
-               </div>
-             </div>
+             
          </div>
-         <span class="text-muted justificado">Selecciona el tipo de Perfil que usaras dentro de la plataforma.</span>
-      </div>
+       </div>
       <div class="modal-footer text-center">
         <p class="text-muted text-center"> Iscjlchavezg@2021 | Webdeveloper </a></p>
       </div>

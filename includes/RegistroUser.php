@@ -22,7 +22,7 @@
   $Password = $conect->real_escape_string(md5($_POST['password']));
   $PasswordC = $conect->real_escape_string(md5($_POST['passwordC']));
   $Estatus = '1';
-  $Tuser = '4';
+  $Tuser = $conect->real_escape_string($_POST['Tuser']);
   $Online = '0';
   $Nivel = '2';
   $actual = date("Y");
