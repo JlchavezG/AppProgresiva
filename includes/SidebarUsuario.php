@@ -13,7 +13,7 @@
       </svg>&nbsp; Dashboard</a>
     </li>
     <li class="nav-item items">
-      <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
+      <a href="perfil.php" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
          <use xlink:href="app/icons/bootstrap-icons.svg#person-circle"/>
       </svg>&nbsp; Perfil</a>
     </li>

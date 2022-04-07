@@ -25,7 +25,7 @@
     <li class="nav-item items">
       <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
          <use xlink:href="app/icons/bootstrap-icons.svg#person-square"/>
-      </svg>&nbsp; Ofertantes</a>
+      </svg>&nbsp; Socios</a>
     </li>
     <li class="nav-item items">
       <a href="AppOficio.php" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
