@@ -27,7 +27,7 @@
   <!-- inicia sidebar -->
   <?php 
    $Tsidebar = $user['TUser'];
-    if($Tsidebar == 1){include 'includes/SidebarSistemas.php';}else if($Tsidebar == 2){include 'includes/SidebarSoporte.php';}
+    if($Tsidebar == 1){include 'includes/SidebarSuperUser.php';}else if($Tsidebar == 2){include 'includes/SidebarSoporte.php';}
     else if($Tsidebar == 3){include 'includes/SidebarOfertante.php';}else if($Tsidebar == 4){include 'includes/SidebarUsuario.php';}
   ?>
   <!-- termina sidebar -->

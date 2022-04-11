@@ -21,7 +21,7 @@
   <!-- inicia sidebar -->
   <?php 
    $Tsidebar = $user['TUser'];
-    if($Tsidebar == 1){include 'includes/SidebarSistemas.php';}else if($Tsidebar == 2){include 'includes/SidebarSoporte.php';}
+    if($Tsidebar == 1){include 'includes/SidebarSuperUser.php';}else if($Tsidebar == 2){include 'includes/SidebarSoporte.php';}
     else if($Tsidebar == 3){include 'includes/SidebarOfertante.php';}else if($Tsidebar == 4){include 'includes/SidebarUsuario.php';}
   ?>
   <!-- termina sidebar -->
@@ -30,7 +30,7 @@
     <div class="mt-2">
     <?php 
     $TsEscritorio = $user['TUser'];
-    if($TsEscritorio == 1){include 'includes/EscritorioSistemas.php';}else if($TsEscritorio == 2){include 'includes/EscritorioSoporte.php';}
+    if($TsEscritorio == 1){include 'includes/EscritorioSuperUser.php';}else if($TsEscritorio == 2){include 'includes/EscritorioSoporte.php';}
     else if($TsEscritorio == 3){include 'includes/EscritorioOfertante.php';}else if($TsEscritorio == 4){include 'includes/EscritorioUsuario.php';}
     ?>
   </div>

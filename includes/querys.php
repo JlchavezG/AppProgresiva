@@ -9,16 +9,36 @@ $estados = $conect->query($estado);
 $oficio = "SELECT * FROM Oficios ORDER BY NombreOf ASC";
 $oficios = $conect->query($oficio);
 $Toficios = $oficios->num_rows;
-// consulta para saber el numero de usuarios registrados 
-$usuario = "SELECT * FROM Usuarios ORDER BY Id_Usuarios";
-$usuarios = $conect->query($usuario);
-$Tusuarios = $usuarios->num_rows;
+// consulta para extraer el numero de super usuarios
+$SuperUsuario = "SELECT * FROM Usuarios WHERE TUser = '1'";
+$SuperUsuarios = $conect->query($SuperUsuario);
+$TSuperUsuarios = $SuperUsuarios->num_rows;
+// consulta para extraer el numero de usuarios gerenciales
+$UserGerente = "SELECT * FROM Usuarios WHERE TUser = '2'";
+$UserGerentes = $conect->query($UserGerente);
+$TUserGerentes = $UserGerentes->num_rows;
+// consulta para extraer el numero de socios premium 
+$SocioP = "SELECT * FROM Usuarios WHERE TUser = '3'";
+$SociosP = $conect->query($SocioP);
+$TSociosP = $SociosP->num_rows;
+// consulta para extraer el numero de socios free
+$SocioF = "SELECT * FROM Usuarios WHERE TUser = '5'";
+$SociosF = $conect->query($SocioF);
+$TSociosF = $SociosF->num_rows;
+// consulta para extraer el numero de usuarios premium
+$UsuarioP = "SELECT * FROM Usuarios WHERE TUser = '4'";
+$UsuariosP = $conect->query($UsuarioP);
+$TUsuariosP = $UsuariosP->num_rows;
+// consulta para extraer el numero de usuarios Free
+$UsuarioF = "SELECT * FROM Usuarios WHERE TUser = '6'";
+$UsuariosF = $conect->query($UsuarioF);
+$TUsuariosF = $UsuariosF->num_rows;
 // consulta para extraer el numero de usuarios conectados 
 $OnlineUsuario = "SELECT * FROM Usuarios WHERE Online = '1'";
 $OnlineUsuarios = $conect->query($OnlineUsuario);
 $TOnlineUsuarios = $OnlineUsuarios->num_rows;
 // consulta para saber el numero de socios registrados 
-$socio = "SELECT * FROM Ofertante ORDER BY Id_Ofertante";
+$socio = "SELECT * FROM Usuarios WHERE TUser = '5'";
 $socios = $conect->query($socio);
 $Tsocios = $socios->num_rows;
 // consulta para saber el numero de solicitudes registrados 

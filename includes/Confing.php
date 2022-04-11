@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 // guardar la sesion
 session_start();
 //validar al usuario
@@ -26,9 +27,9 @@ else if($hora > $noche){
 }
 // consulta cruzda para extrar todos los datos del usuario 
 $unir = "SELECT U.Id_Usuarios, U.Nombre, U.ApellidoP, U.ApellidoM, U.Telefono, U.Email, U.Id_Genero, U.FNac, U.Calle,
-U.Numero, U.Colonia, U.Id_Estado, U.Id_Municipio, U.Latitud, U.Longitud, U.UserName, U.Imagen, U.Password, U.Estatus, U.TUser, U.Online, U.Id_Nivel,
-G.Id_Genero, G.NombreG, E.Id_Estado, E.NombreE, M.Id_Municipios, M.NombreM, TU.Id_TuserApp, TU.AppTuser, TU.DescripcionT, N.Id_Nivel, N.NombreNivel FROM Usuarios U INNER JOIN Genero G ON  U.Id_Genero = G.Id_Genero 
-INNER JOIN Estados E ON U.Id_Estado = E.Id_Estado INNER JOIN Municipios M ON U.Id_Municipio = M.Id_Municipios INNER JOIN TUsuario TU ON U.TUser = TU.Id_TuserApp INNER JOIN Nivel N ON U.Id_Nivel = N.Id_Nivel WHERE UserName = '$usuario'";
+U.Numero, U.Colonia, U.Id_Estado, U.Id_Municipio, U.Latitud, U.Longitud, U.UserName, U.Imagen, U.Password, U.Estatus, U.TUser, U.Online,
+G.Id_Genero, G.NombreG, E.Id_Estado, E.NombreE, M.Id_Municipios, M.NombreM, TU.Id_TuserApp, TU.AppTuser, TU.DescripcionT FROM Usuarios U INNER JOIN Genero G ON  U.Id_Genero = G.Id_Genero 
+INNER JOIN Estados E ON U.Id_Estado = E.Id_Estado INNER JOIN Municipios M ON U.Id_Municipio = M.Id_Municipios INNER JOIN TUsuario TU ON U.TUser = TU.Id_TuserApp  WHERE UserName = '$usuario'";
 $verificar = $conect->query($unir);
 $separar = $verificar->fetch_array();
 // consulta para extraer los datos del usuario conectado

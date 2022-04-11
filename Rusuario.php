@@ -231,14 +231,3 @@
 <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYMPGtM7VUn1aq61tkGbu99qD95c-w5zc&callback=initMap"></script>    
 </body>
 </html>
-
-
-
-
-
-<div class="col-sm-12 col-md-12 col-lg-4">
-                             
-                             
-                             
-                          </div>
-                       </div>
