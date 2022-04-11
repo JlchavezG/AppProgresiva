@@ -147,6 +147,14 @@
                               <input type="hidden" name="latitud" id="latitud" required>
                               <input type="hidden" name="longitud" id="longitud" required>
                               <div class="input-group mb-3">
+                                 <label class="input-group-text" for="inputGroupSelect01">Tipo de Usuario</label>
+                                    <select class="form-select" id="Tusuario" name="Tuser" required>
+                                       <option selected>Selecciona una Opcion</option>
+                                       <option value="5">Socio</option>
+                                       <option value="6">Usuario</option>
+                                   </select>
+                               </div>
+                              <div class="input-group mb-3">
                                   <span class="input-group-text" id="usuarios">
                                     <svg class="bi" width="15" height="15" fill="currentColor">
                                        <use xlink:href="app/icons/bootstrap-icons.svg#person-circle"/>
@@ -154,21 +162,27 @@
                                  </span>
                                  <input type="text" class="form-control" name="usuario" placeholder="Usuario" arial-label="Usuario" aria-describedby="basic-addon1" required>   
                               </div>
-                              <div class="input-group mb-3">
-                                  <span class="input-group-text" id="passwords">
-                                    <svg class="bi" width="15" height="15" fill="currentColor">
-                                       <use xlink:href="app/icons/bootstrap-icons.svg#key-fill"/>
-                                    </svg>
-                                 </span>
-                                 <input type="password" class="form-control" name="password" id="password" placeholder="Password" arial-label="password" aria-describedby="basic-addon1" required>   
-                              </div>
-                              <div class="input-group mb-3">
-                                  <span class="input-group-text" id="passwords">
-                                    <svg class="bi" width="15" height="15" fill="currentColor">
-                                       <use xlink:href="app/icons/bootstrap-icons.svg#key-fill"/>
-                                    </svg>
-                                 </span>
-                                 <input type="password" class="form-control" name="passwordC" id="passwordC" placeholder="Comfirma tu Password" arial-label="password" aria-describedby="basic-addon1" required>                              
+                              <div class="row">
+                                 <div class="col">
+                                    <div class="input-group mb-3">
+                                       <span class="input-group-text" id="passwords">
+                                       <svg class="bi" width="15" height="15" fill="currentColor">
+                                          <use xlink:href="app/icons/bootstrap-icons.svg#key-fill"/>
+                                       </svg>
+                                       </span>
+                                       <input type="password" class="form-control" name="password" id="password" placeholder="Password" arial-label="password" aria-describedby="basic-addon1" required>   
+                                   </div>
+                                 </div>
+                                 <div class="col">
+                                    <div class="input-group mb-3">
+                                       <span class="input-group-text" id="passwords">
+                                       <svg class="bi" width="15" height="15" fill="currentColor">
+                                         <use xlink:href="app/icons/bootstrap-icons.svg#key-fill"/>
+                                       </svg>
+                                       </span>
+                                       <input type="password" class="form-control" name="passwordC" id="passwordC" placeholder="Comfirma tu Password" arial-label="password" aria-describedby="basic-addon1" required>                              
+                                   </div>
+                                 </div>
                               </div>
                               <div class="mb-3 text-center">
                                  <span id='message'></span> 

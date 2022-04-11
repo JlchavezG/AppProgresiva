@@ -2,7 +2,7 @@
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     <div class="container text-center">
       <img src="img/user/<?php echo $separar['Imagen']; ?>" alt="" width="50" height="50" class="rounded-circle me-4">
-      <span class="fs-4">Usuarios</span>
+      <span class="fs-4"><?php echo $separar['Nombre']; ?></span>
     </div>
   </a>
   <hr>
@@ -26,11 +26,6 @@
       <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
          <use xlink:href="app/icons/bootstrap-icons.svg#clipboard-check"/>
       </svg>&nbsp; Nueva Solicitud</a>
-    </li>
-    <li class="nav-item items">
-      <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
-         <use xlink:href="app/icons/bootstrap-icons.svg#calendar2-date"/>
-      </svg>&nbsp; Calendario</a>
     </li>
     <li class="nav-item items">
       <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">

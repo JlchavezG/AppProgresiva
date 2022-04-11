@@ -20,9 +20,10 @@
   <?php include 'includes/navbar.php'; ?>
   <!-- inicia sidebar -->
   <?php 
-  $Tsidebar = $user['TUser'];
-  if($Tsidebar == 1){include 'includes/SidebarSuperUser.php';}else if($Tsidebar == 2){include 'includes/SidebarSoporte.php';}
-  else if($Tsidebar == 3){include 'includes/SidebarOfertante.php';}else if($Tsidebar == 4){include 'includes/SidebarUsuario.php';}
+   $Tsidebar = $user['TUser'];
+    if($Tsidebar == 1){include 'includes/SidebarSuperUser.php';}else if($Tsidebar == 2){include 'includes/SidebarGerente.php';}
+    else if($Tsidebar == 3){include 'includes/SidebarSocioP.php';}else if($Tsidebar == 4){include 'includes/SidebarUsuarioP.php';}
+    else if($Tsidebar == 5){include 'includes/SidebarSocioF.php';}else if($Tsidebar == 6){include 'includes/SidebarUsuarioF.php';}
   ?>
   <!-- termina sidebar -->
   <!-- inicia contenido -->
