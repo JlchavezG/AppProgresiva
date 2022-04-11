@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/dark.css">
     <script scr="js/jquery.js"></script>
   </head>
-  <body>
+  <body onload="findMe()">
   <!-- navbar -->
   <?php include 'includes/navbar.php'; ?>
   <!-- inicia sidebar -->
@@ -112,6 +112,10 @@
                                <li class="list-group-item"><strong>Colonia: </strong> <?php echo $separar['Colonia']; ?></li>
                                <li class="list-group-item"><strong>Estado:</strong> <?php echo $separar['NombreE']; ?></li>
                                <li class="list-group-item"><strong>Municipio:</strong> <?php echo $separar['NombreM']; ?></li>
+                               <li class="list-group-item text-end"><a href="#" data-bs-toggle="modal" data-bs-target="#ModificarDireccion" class="text-decoration-none text-secondary">
+                                <svg class="bi" width="15" height="15" fill="currentColor">
+                                  <use xlink:href="app/icons/bootstrap-icons.svg#pencil-fill"/> 
+                                </svg> Editar Dirección</a></li>
                             </ul>
                           </div>
                        </div>
@@ -137,6 +141,9 @@
 <!-- modal modificar perfil -->
 <?php include 'includes/ModalMPerfil.php'; ?>
 <!-- termina modal -->
+<!-- modal modificar dirección -->
+<?php include 'includes/ModalMDireccion.php' ;?>
+<!-- termina modal -->
 <!-- Modal modificar imagen-->
 <?php include 'includes/ModalImgPerfil.php'; ?>
 <!-- termina modal -->
@@ -144,6 +151,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/dark-mode.js"></script>
 <script src="js/pace.js"></script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYMPGtM7VUn1aq61tkGbu99qD95c-w5zc&callback=initMap"></script>
 <script>
   function print() {
 	printJS({
