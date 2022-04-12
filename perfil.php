@@ -14,6 +14,18 @@
     <link rel="stylesheet" type="text/css" href="css/pace.css">
     <link rel="stylesheet" type="text/css" href="css/dark.css">
     <script scr="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+				$("#estado").change(function () {					
+					$("#estado option:selected").each(function () {
+						   Id_Estado  = $(this).val();
+						$.post("includes/getMunicipio.php", { Id_Estado: Id_Estado  }, function(data){
+							$("#municipio").html(data);
+						});            
+					});
+				})
+			});
+</script>
   </head>
   <body onload="findMe()">
   <!-- navbar -->
@@ -142,7 +154,7 @@
 <?php include 'includes/ModalMPerfil.php'; ?>
 <!-- termina modal -->
 <!-- modal modificar dirección -->
-<?php include 'includes/ModalMDireccion.php' ;?>
+
 <!-- termina modal -->
 <!-- Modal modificar imagen-->
 <?php include 'includes/ModalImgPerfil.php'; ?>
@@ -151,7 +163,6 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/dark-mode.js"></script>
 <script src="js/pace.js"></script>
-<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYMPGtM7VUn1aq61tkGbu99qD95c-w5zc&callback=initMap"></script>
 <script>
   function print() {
 	printJS({

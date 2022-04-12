@@ -3,6 +3,8 @@ error_reporting(0);
 session_start();
 include 'conection.php';
 if(isset($_POST['ingresar'])){
+  $Accion = "Ingreso a la plataforma";
+  $Accion1 = "Salida de la plataforma";
   $usuario = $conect->real_escape_string($_POST['usuario']);
   $password = $conect->real_escape_string(md5($_POST['password']));
   $q = "SELECT * FROM Usuarios WHERE UserName = '$usuario' and Password = '$password' and Estatus = '1'";

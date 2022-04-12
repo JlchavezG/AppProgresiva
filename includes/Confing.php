@@ -16,6 +16,8 @@ $dia = 7;
 $tarde = 13;
 $noche = 20;
 $saludo = "";
+$Accion = "Ingreso a la plataforma";
+$Accion1 = "Salida de la plataforma";
 if($hora > $tarde){
   $saludo = "Buenos dias";
 }
@@ -45,7 +47,7 @@ if($extraer > 0){
 // validacion de tiempo expirado dentro de la sesion
 if(isset($_SESSION['time'])){
   // damos el timepo e segundos para determinar cuando expira la sesion
-  $inactivo = 300; // 15 minutos
+  $inactivo = 500; // 15 minutos
   // calculo tiempo y se resta lo inactivo
   $tiempo = time() - $_SESSION['time'];
   // verificar el tiempo inactivo dentro del aplicativo
@@ -53,6 +55,9 @@ if(isset($_SESSION['time'])){
     // actualizar el campo online
     $on = "UPDATE Usuarios SET Online = '0' WHERE Id_Usuarios = $Online";
     $line = $conect->query($on);
+    // registrar dentro del historial 
+    $historialS = "INSERT INTO Historial(Id_Usuario, FechaH, Accion, HoraH)VALUES('$Online','$fecha','$Accion1','$tiempo')";
+    $insertHistoS = $conect->query($historialS);
     // olvidar la sesion
     session_unset();
     // destruyo la sesion
