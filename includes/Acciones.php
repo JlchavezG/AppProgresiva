@@ -86,5 +86,31 @@ if(isset($_POST['Buscar'])){
                      </div>";
             }   
 } 
-   
+// consulta para modificar datos perfil direccion 
+if(isset($_POST['ModificaDirecc'])){
+$IdM = $conect->real_escape_string($_POST['Md_id']);
+$MCalle = $conect->real_escape_string($_POST['MCalle']);
+$MNumero = $conect->real_escape_string($_POST['MNumero']);
+$MColonia = $conect->real_escape_string($_POST['MColonia']);
+$estado = $conect->real_escape_string($_POST['estado']);
+$municipio = $conect->real_escape_string($_POST['municipio']);
+$latitud = $conect->real_escape_string($_POST['latitud']);
+$longitud = $conect->real_escape_string($_POST['longitud']);
+// consulta para actualizar los datos 
+$MDir = "UPDATE Usuarios SET Calle = '$MCalle', Numero = '$MNumero', Colonia = '$MColonia', Id_Estado = '$estado',
+Id_Municipio = '$municipio', Latitud = '$latitud', Longitud = '$longitud'";
+$Up = $conect->query($MDir);
+  if($Up > 0){
+   $Mensaje.="<div class='alert alert-success alert-dismissible fade show' role='alert'>
+                 <strong>Excelente!</strong> Los datos de la dirección se modificaron de manera exitosa dentro de la plataforma.
+                 <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+              </div>";
+  }
+  else{
+   $Mensaje.="<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                 <strong>Error!</strong> Los datos de la dirección no se modificaron de manera exitosa dentro de la plataforma.
+                 <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+              </div>";   
+  }
+}   
 ?>

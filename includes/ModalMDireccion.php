@@ -13,19 +13,20 @@
                       <div class="col">
                         <div class="input-group">
                            <span class="input-group-text" id="basic-addon1">Calle</span>
-                           <input type="text" class="form-control" value="<?php echo $separar['Calle']; ?>" aria-label="Calle" required>
+                           <input type="hidden" value="<?php echo $separar['Id_Usuarios']; ?>" name="Md_id">
+                           <input type="text" class="form-control" name="MCalle" value="<?php echo $separar['Calle']; ?>" aria-label="Calle" required>
                         </div>
                       </div>
                       <div class="col">
                        <div class="input-group">
                            <span class="input-group-text" id="basic-addon1">Numero</span>
-                           <input type="text" class="form-control" value="<?php echo $separar['Numero']; ?>" aria-label="Numero" required>
+                           <input type="text" class="form-control" name="MNumero" value="<?php echo $separar['Numero']; ?>" aria-label="Numero" required>
                         </div>
                       </div>
                       <div class="col">
                          <div class="input-group">
                            <span class="input-group-text" id="basic-addon1">Colonia</span>
-                           <input type="text" class="form-control" value="<?php echo $separar['Colonia']; ?>" aria-label="Colonia" required>
+                           <input type="text" class="form-control" name="MColonia" value="<?php echo $separar['Colonia']; ?>" aria-label="Colonia" required>
                          </div>
                       </div>
                  </div> 
