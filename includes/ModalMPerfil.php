@@ -5,7 +5,7 @@
         <h5 class="modal-title" id="ModificarPerfilLabel">
            <svg class="bi" width="15" height="15" fill="currentColor">
               <use xlink:href="app/icons/bootstrap-icons.svg#pencil-fill"/> 
-          </svg> Modificar Perfil
+          </svg> Modificar Perfil de Usuario
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>

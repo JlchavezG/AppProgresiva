@@ -41,7 +41,7 @@
   <!-- inicia contenido -->
   <div class="container pt-4 mt-5" id="printElement">
      <section id="Perfil">
-         <div class="container py-3">
+         <div class="container py-3 mt-4">
              <div class="row py-3">
                  <h4 class="text-secondary text-center display-5">Perfil de usuario</h4>
              </div>
@@ -83,9 +83,10 @@
                         </svg> Historial
                     </div>
                     <div class="col">
+                        <a href="#" data-bs-toggle="offcanvas" data-bs-target="#AyudaMPerfil" class="text-decoration-none text-secondary">
                         <svg class="bi" width="20" height="20" fill="currentColor">
                           <use xlink:href="app/icons/bootstrap-icons.svg#lightbulb"/> 
-                        </svg> Ayuda
+                        </svg> Ayuda</a>
                     </div>
                  </div>
                  <div class="mt-2">
@@ -149,13 +150,7 @@
               </div>
      </section>
 </div>
-<div class="container py-2">
-     <div class="row d-flex justify-content-center mt-2">
-        <img src="img/craken.png" alt="logo" style="width:100px;">
-        <span class="text-center text-muted"> Iscjlchavezg@2021 | Webdeveloper</span>
-     </div>
-   </div>
-</div>
+<?php include 'includes/footer.php';?>
 <!-- modal modificar perfil -->
 <?php include 'includes/ModalMPerfil.php'; ?>
 <!-- termina modal -->
@@ -164,6 +159,9 @@
 <!-- termina modal -->
 <!-- Modal modificar imagen-->
 <?php include 'includes/ModalImgPerfil.php'; ?>
+<!-- termina modal -->
+<!-- modal ayuda modificar perfil -->
+<?php include 'ayuda/AyudaRegMPerfil.php'; ?>
 <!-- termina modal -->
 <script src="js/main.js"></script> 
 <script src="js/bootstrap.min.js"></script>
