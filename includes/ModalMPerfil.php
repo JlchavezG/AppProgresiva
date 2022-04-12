@@ -1,6 +1,6 @@
 <div class="modal fade" id="ModificarPerfil" tabindex="-1" aria-labelledby="ModificarPerfilLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-light">
       <div class="modal-header">
         <h5 class="modal-title" id="ModificarPerfilLabel">
            <svg class="bi" width="15" height="15" fill="currentColor">
