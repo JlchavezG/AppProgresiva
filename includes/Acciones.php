@@ -86,7 +86,7 @@ if(isset($_POST['Buscar'])){
                      </div>";
             }   
 } 
-// consulta para modificar datos perfil direccion 
+// acciones para modificar datos perfil direccion 
 if(isset($_POST['ModificaDirecc'])){
 $IdM = $conect->real_escape_string($_POST['Md_id']);
 $MCalle = $conect->real_escape_string($_POST['MCalle']);
@@ -98,7 +98,7 @@ $latitud = $conect->real_escape_string($_POST['latitud']);
 $longitud = $conect->real_escape_string($_POST['longitud']);
 // consulta para actualizar los datos 
 $MDir = "UPDATE Usuarios SET Calle = '$MCalle', Numero = '$MNumero', Colonia = '$MColonia', Id_Estado = '$estado',
-Id_Municipio = '$municipio', Latitud = '$latitud', Longitud = '$longitud'";
+Id_Municipio = '$municipio', Latitud = '$latitud', Longitud = '$longitud' WHERE Id_Usuarios = '$IdM'";
 $Up = $conect->query($MDir);
   if($Up > 0){
    $Mensaje.="<div class='alert alert-success alert-dismissible fade show' role='alert'>
@@ -112,5 +112,62 @@ $Up = $conect->query($MDir);
                  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
               </div>";   
   }
-}   
+}  
+//  acciones para modificar password 
+if(isset($_POST['MoPassword'])){
+ $IdPass = $conect->real_escape_string($_POST['IdPass']);
+ $PassActual = $conect->real_escape_string(md5($_POST['PasswordAc']));
+ $NewPass = $conect->real_escape_string($_POST['NewPassword']);
+ $NewPassC = md5($NewPass);
+ $CPassN = $conect->real_escape_string(md5($_POST['PasswordCon']));
+ // consulta para extraer el password actual 
+ $PassVerif = "SELECT * FROM Usuarios WHERE  Password = '$PassActual' and Id_Usuarios = '$IdPass'";
+  if ($PassResultado = $conect->query($PassVerif)) {
+    while ($rowPass = $PassResultado->fetch_array()) {
+      $NPassok = $rowPass['Password'];
+    }
+  }
+   if(isset($PassActual)) {
+   if ($PassActual  == $NPassok) {
+        if($NewPassC == $CPassN){
+           // realizar la actualización de password al usuario 
+           $ActualizaPassword = "UPDATE Usuarios SET Password = '$NewPassC' WHERE Id_Usuarios = '$IdPass'";
+           $Actualizado = $conect->query($ActualizaPassword);
+             if($Actualizado > 0){
+               $Mensaje.="<div class='alert alert-success alert-dismissible fade show' role='alert'>
+                             <strong>Excelente! </strong> El password se modifico de manera exitosa dentro de la plataforma los cambios se daran al cerrar la sesión.
+                             <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                          </div>";   
+             }
+             else{
+               $Mensaje.="<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                              <strong>Error! </strong> El password no se modifico de manera exitosa dentro de la plataforma.
+                              <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                          </div>";
+             }
+
+        }
+        else{
+            $Mensaje.="<div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                           <strong>Error! </strong> La confirmación de los password no coinciden por favor verifica tus credenciales.
+                           <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                       </div>";
+        }
+
+      }
+    else {
+       $Mensaje.="<div class='alert alert-danger alert-dismissible fade show shadow' role='alert'>
+                    <svg class='bi text-danger' width='20' height='20' role='img' aria-label='Tools'>
+                      <use xlink:href='library/icons/bootstrap-icons.svg#x-circle-fill'/>
+                    </svg>
+                    <strong> Password Actual invalido</strong> Por favor verifica tus credenciales o contacta a soporte.
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                 </div>";
+         }
+      }
+  else {
+    $Mensaje.="No hay datos que buscar";
+   }
+}
+
 ?>

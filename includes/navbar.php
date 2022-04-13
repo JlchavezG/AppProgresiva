@@ -85,20 +85,6 @@
             } ?>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-               <svg class="bi" width="20" height="20" fill="currentColor">
-                  <use xlink:href="app/icons/bootstrap-icons.svg#facebook"/> 
-               </svg> 
-           </a>&nbsp;
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-               <svg class="bi" width="20" height="20" fill="currentColor">
-                  <use xlink:href="app/icons/bootstrap-icons.svg#twitter"/> 
-               </svg> 
-           </a>&nbsp;
-        </li>
       </ul>  
     </div>
   </div>
