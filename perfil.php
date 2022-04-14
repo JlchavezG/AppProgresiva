@@ -3,6 +3,7 @@
  include 'includes/querys.php';
  include 'includes/Confing.php';
  include 'includes/Acciones.php';
+ include 'includes/generarQr.php';
 ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
@@ -37,24 +38,16 @@
     else if($Tsidebar == 3){include 'includes/SidebarSocioP.php';}else if($Tsidebar == 4){include 'includes/SidebarUsuarioP.php';}
     else if($Tsidebar == 5){include 'includes/SidebarSocioF.php';}else if($Tsidebar == 6){include 'includes/SidebarUsuarioF.php';}
   ?>
-  <!-- termina sidebar -->
-  <!-- inicia contenido -->
+<!-- termina sidebar -->
+<!-- inicia contenido -->
 <?php include 'includes/perfil.php'; ?>  
 <?php include 'includes/footer.php';?>
-<!-- modal modificar perfil -->
 <?php include 'includes/ModalMPerfil.php'; ?>
-<!-- termina modal -->
-<!-- modal modificar password -->
 <?php include 'includes/ModalMPassword.php'; ?>
-<!-- termina modal -->
-<!-- modal modificar dirección -->
 <?php include 'includes/ModalMDireccion.php';?>
-<!-- termina modal -->
-<!-- Modal modificar imagen-->
 <?php include 'includes/ModalImgPerfil.php'; ?>
-<!-- termina modal -->
-<!-- modal ayuda modificar perfil -->
 <?php include 'ayuda/AyudaRegMPerfil.php'; ?>
+<?php include 'includes/ModalQr.php';?>
 <!-- termina modal -->
 <script src="js/main.js"></script> 
 <script src="js/bootstrap.min.js"></script>

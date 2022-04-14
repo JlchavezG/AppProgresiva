@@ -28,9 +28,10 @@
                <div class="col-sm-12 col-md-12 col-lg-6 mt-3">
                  <div class="row py-3 text-center">
                     <div class="col">
-                        <svg class="bi" width="20" height="20" fill="currentColor">
+                     <a href="#" class="text-decoration-none text-secondary" data-bs-toggle="modal" data-bs-target="#QrModal">
+                      <svg class="bi" width="20" height="20" fill="currentColor">
                           <use xlink:href="app/icons/bootstrap-icons.svg#qr-code"/> 
-                        </svg> Generar
+                        </svg> Generar </a>
                     </div>
                     <div class="col">
                         <a href="#" class="text-decoration-none text-secondary" id="printButton"><svg class="bi" width="20" height="20" fill="currentColor">
