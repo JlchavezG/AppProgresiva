@@ -3,7 +3,6 @@
  include 'includes/querys.php';
  include 'includes/Confing.php';
  include 'includes/Acciones.php';
- include 'includes/generarQr.php';
 ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">

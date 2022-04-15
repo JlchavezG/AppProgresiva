@@ -95,6 +95,7 @@
     </div>
   </div>
 </div>
+<?php include 'includes/footer.php'; ?>
   <!-- termina contenido -->
   <script src="js/bootstrap.min.js"></script>
   <script src="js/dark-mode.js"></script>

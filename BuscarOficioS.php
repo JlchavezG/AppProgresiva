@@ -60,11 +60,13 @@
            <div class="row py-2 mt-2">
                <?php echo $tabla; ?>
            </div>
+           
        </div>
   </div>
 </div>
 </div>
   <!-- termina contenido -->
+  
   <script src="js/bootstrap.min.js"></script>
   <script src="js/dark-mode.js"></script>
   <script src="js/pace.js"></script>
