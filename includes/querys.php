@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 // consulta para extrar los datos de genero 
 $g = "SELECT * FROM Genero ORDER BY Id_Genero";
 $genero = $conect->query($g);
@@ -11,10 +12,10 @@ $oficios = $conect->query($oficio);
 $Toficios = $oficios->num_rows;
 // consulta para la paginación de oficios en administración
 $Tpaginas = '5';
-$oficioP = "SELECT * FROM Oficios ORDER BY NombreOf ASC LIMIT 0,5";
+$inicioP = ($_GET['pagina']-1)*$Tpaginas;
+$oficioP = "SELECT * FROM Oficios ORDER BY NombreOf ASC LIMIT ".$inicioP.",".$Tpaginas;
 $oficiosP = $conect->query($oficioP);
 $ToficiosP = $oficiosP->num_rows;
-
 $paginacion = $Toficios/$Tpaginas;
 $paginacion = ceil($paginacion);
 

@@ -53,7 +53,7 @@
                                </svg>
                            </div>
                            <div class="col my-3">
-                           <a href="BuscarOficioS.php" class="text-decoration-none text-secondary"><strong>Buscar</strong></a>
+                           <a href="AppBuscarOficioS.php" class="text-decoration-none text-secondary"><strong>Buscar</strong></a>
                            </div>
                        </div>
                    </div>
@@ -69,7 +69,7 @@
                                </svg>
                            </div>
                            <div class="col my-3">
-                               <a href="RegistroOficio.php" class="text-decoration-none text-secondary"><strong>Agregar</strong></a>
+                               <a href="AppRegistroOficio.php" class="text-decoration-none text-secondary"><strong>Agregar</strong></a>
                            </div>
                        </div>
                    </div>
@@ -85,7 +85,7 @@
                                </svg>
                            </div>
                            <div class="col my-3">
-                              <a href="AdminOficios.php" class="text-decoration-none text-secondary"><strong>Administrar</strong></a>
+                              <a href="AppAdminOficios.php" class="text-decoration-none text-secondary"><strong>Administrar</strong></a>
                            </div>
                        </div>
                    </div>

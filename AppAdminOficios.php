@@ -4,7 +4,7 @@
   include 'includes/Confing.php';
   include 'includes/querys.php';
   if(!$_GET){
-     header("location:AdminOficios.php?pagina=1");
+     header("location:AppAdminOficios.php?pagina=1");
   }
  ?>
 <!DOCTYPE html>
@@ -74,11 +74,23 @@
      <div class="row">
        <nav aria-label="Page navigation">
            <ul class="pagination">
-              <li class="page-item <?php echo $_GET['pagina']<=1? 'disabled' : '' ?>"><a class="page-link" href="AdminOficios.php?pagina=<?php echo $_GET['pagina']-1 ?>">Anterior</a></li>
+              <li class="page-item <?php echo $_GET['pagina']<=1? 'disabled' : '' ?>">
+                 <a class="page-link" href="AppAdminOficios.php?pagina=<?php echo $_GET['pagina']-1 ?>">
+                    Anterior
+                 </a>
+              </li>
               <?php for($i=0; $i<$paginacion; $i++ ){ ?>
-              <li class="page-item <?php echo $_GET['pagina']==$i+1 ?'active' : '' ?>"><a class="page-link" href="AdminOficios.php?pagina=<?php echo $i+1; ?>"><?php echo $i+1; ?></a></li>
+              <li class="page-item <?php echo $_GET['pagina']==$i+1 ?'active' : '' ?>">
+                  <a class="page-link" href="AppAdminOficios.php?pagina=<?php echo $i+1; ?>">
+                    <?php echo $i+1; ?>
+                  </a>
+             </li>
               <?php } ?>
-              <li class="page-item <?php echo $_GET['pagina']>=$paginacion? 'disabled' : '' ?>"><a class="page-link" href="AdminOficios.php?pagina=<?php echo $_GET['pagina']+1 ?>">Siguiente</a></li>
+              <li class="page-item <?php echo $_GET['pagina']>=$paginacion? 'disabled' : '' ?>">
+                  <a class="page-link" href="AppAdminOficios.php?pagina=<?php echo $_GET['pagina']+1 ?>">
+                     Siguiente
+                  </a>
+             </li>
            </ul>
        </nav>
      </div>
