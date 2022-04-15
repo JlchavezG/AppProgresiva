@@ -65,11 +65,10 @@
   </div>
 </div>
 </div>
-  <!-- termina contenido -->
-  
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/dark-mode.js"></script>
-  <script src="js/pace.js"></script>
-  </body>
+<!-- termina contenido -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/dark-mode.js"></script>
+<script src="js/pace.js"></script>
+</body>
 </html>
 

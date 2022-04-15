@@ -9,6 +9,15 @@ $estados = $conect->query($estado);
 $oficio = "SELECT * FROM Oficios ORDER BY NombreOf ASC";
 $oficios = $conect->query($oficio);
 $Toficios = $oficios->num_rows;
+// consulta para la paginación de oficios en administración
+$Tpaginas = '5';
+$oficioP = "SELECT * FROM Oficios ORDER BY NombreOf ASC LIMIT 0,5";
+$oficiosP = $conect->query($oficioP);
+$ToficiosP = $oficiosP->num_rows;
+
+$paginacion = $Toficios/$Tpaginas;
+$paginacion = ceil($paginacion);
+
 // consulta para extraer el numero de super usuarios
 $SuperUsuario = "SELECT * FROM Usuarios WHERE TUser = '1'";
 $SuperUsuarios = $conect->query($SuperUsuario);

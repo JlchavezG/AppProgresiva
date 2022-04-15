@@ -85,7 +85,7 @@
                                </svg>
                            </div>
                            <div class="col my-3">
-                              <a href="#" class="text-decoration-none text-secondary"><strong>Administrar</strong></a>
+                              <a href="AdminOficios.php" class="text-decoration-none text-secondary"><strong>Administrar</strong></a>
                            </div>
                        </div>
                    </div>
