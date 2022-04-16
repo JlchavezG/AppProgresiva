@@ -6,6 +6,9 @@
   if(!$_GET){
      header("location:AppAdminOficios.php?pagina=1");
   }
+  if($_GET['pagina']>$Tpaginas || $_GET['pagina'] <= 0){
+    header("location:AppAdminOficios.php?pagina=1");
+  }
  ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
@@ -62,10 +65,10 @@
                  <td>
                     <svg class="bi" width="15" height="15" fill="currentColor">
                       <use xlink:href="app/icons/bootstrap-icons.svg#pencil-fill"/>
-                    </svg> -
+                    </svg> - <a onclick="return confirm('Deceas Eliminar el Oficio');" href="./includes/EliminarOficio.php?Id_Oficio=<?php echo $rowOficio['Id_Oficio']; ?>">
                     <svg class="bi" width="15" height="15" fill="currentColor">
                       <use xlink:href="app/icons/bootstrap-icons.svg#trash-fill"/>
-                    </svg> 
+                    </svg></a> 
                  </td>
                </tr>
             <?php } ?>
