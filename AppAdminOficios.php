@@ -49,7 +49,7 @@
     </div>
     <section id="Tabla">
      <div class="row mt-3 py-2 container">
-        <table class="table table-hover table-responsive bg-white">
+        <table class="table  table-responsive bg-white">
            <thead>
               <tr>
                 <th scope="col">Oficio</th>
@@ -63,9 +63,11 @@
                  <td><?php echo $rowOficio['NombreOf']; ?></td>
                  <td><?php echo $rowOficio['Descripcion']; ?></td>
                  <td>
-                    <svg class="bi" width="15" height="15" fill="currentColor">
+                    <a href="" data-bs-toggle="modal" data-bs-target="#ModificarOficio" class="text-decoration-none text-secondary">
+                      <svg class="bi" width="15" height="15" fill="currentColor">
                       <use xlink:href="app/icons/bootstrap-icons.svg#pencil-fill"/>
-                    </svg> - <a onclick="return confirm('Deceas Eliminar el Oficio');" href="./includes/EliminarOficio.php?Id_Oficio=<?php echo $rowOficio['Id_Oficio']; ?>">
+                      </svg>
+                    </a> - <a onclick="return confirm('¿Deceas Eliminar el Oficio?');" href="./includes/EliminarOficio.php?Id_Oficio=<?php echo $rowOficio['Id_Oficio']; ?>" class="text-decoration-none text-secondary">
                     <svg class="bi" width="15" height="15" fill="currentColor">
                       <use xlink:href="app/icons/bootstrap-icons.svg#trash-fill"/>
                     </svg></a> 
@@ -100,7 +102,33 @@
  </section>       
  </div>
 </div>
-  <!-- termina contenido -->
+<!-- termina contenido -->
+<!-- modal modificar oficio -->
+<!-- Modal -->
+<div class="modal fade" id="ModificarOficio" tabindex="-1" aria-labelledby="ModificarOficioLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-light">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modificar datos de oficio</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+        <div class="container">
+              <input type="text" class="form-control" value="<?php echo $rowOficio['NombreOf'];?>">
+        </div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Cancelar</button>
+          <input type="submit" class="btn btn-sm btn-success" value="Modificar Datos" name="ModOficio">
+      
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+<!-- termina modal -->
+  <?php include 'includes/footer.php'; ?>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/dark-mode.js"></script>
   <script src="js/pace.js"></script>
