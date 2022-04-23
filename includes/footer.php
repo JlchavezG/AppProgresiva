@@ -19,13 +19,13 @@
            </svg>
       </a>
       <!-- Linkedin -->
-      <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+      <a class="btn btn-outline-dark btn-floating m-1" href="https://www.linkedin.com/in/j%C3%B3se-luis-ch%C3%A1vez-g%C3%B3mez-b0a6a5218/" target="_blank" role="button">
           <svg class="bi" width="15" height="15" fill="currentColor">
              <use xlink:href="app/icons/bootstrap-icons.svg#linkedin"/>
            </svg>
       </a>
       <!-- Github -->
-      <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+      <a class="btn btn-outline-dark btn-floating m-1" href="https://github.com/JlchavezG" target="_blank" role="button">
            <svg class="bi" width="15" height="15" fill="currentColor">
              <use xlink:href="app/icons/bootstrap-icons.svg#github"/>
            </svg>
