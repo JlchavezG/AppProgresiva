@@ -37,7 +37,8 @@
                  <h2 class="text-center display-6"> Moficación de datos de Oficio</h2>
              </div>
              <div class="row mt-2 text-center">
-                <div class="col py-2">
+               <?php echo  $Alert; ?>
+                 <div class="col py-2">
                      <a href="AppAdminOficios.php" class="text-decoration-none text-muted">
                         <svg class="bi text-danger" width="20" height="20" fill="currentColor">
                           <use xlink:href="app/icons/bootstrap-icons.svg#door-open-fill"/>
@@ -54,6 +55,9 @@
                          </div>
                          <div class="mt-2">
                              <textarea name="DescOficio" cols="30" rows="5" class="form-control"><?php echo $separarOf['Descripcion']; ?> </textarea>
+                         </div>
+                         <div class="mt-2 text-end">
+                           <input type="submit" name="Btn_Moficio" class="btn btn-sm btn-success" value="Modificar Datos">
                          </div>
                       </form>    
                   </div>

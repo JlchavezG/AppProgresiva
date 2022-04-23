@@ -1,25 +1,19 @@
 <div class="container py-2 mt-5">
      <div class="row text-center">
      <section class="mb-4 mt-2">
-      <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+      <a class="btn btn-outline-dark btn-floating m-1" href="https://www.facebook.com/iscjoseluischavezg" target="_blank" role="button">
           <svg class="bi" width="15" height="15" fill="currentColor">
              <use xlink:href="app/icons/bootstrap-icons.svg#facebook"/>
            </svg>
       </a>
       <!-- Twitter -->
-      <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+      <a class="btn btn-outline-dark btn-floating m-1" href="https://twitter.com/daerblack" target="_blank" role="button">
           <svg class="bi" width="15" height="15" fill="currentColor">
              <use xlink:href="app/icons/bootstrap-icons.svg#twitter"/>
            </svg>
       </a>
-      <!-- Google -->
-      <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
-          <svg class="bi" width="15" height="15" fill="currentColor">
-             <use xlink:href="app/icons/bootstrap-icons.svg#google"/>
-           </svg>
-      </a>
       <!-- Instagram -->
-      <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button">
+      <a class="btn btn-outline-dark btn-floating m-1" href="https://www.instagram.com/iscjlchavezg/" target="_blank" role="button">
           <svg class="bi" width="15" height="15" fill="currentColor">
              <use xlink:href="app/icons/bootstrap-icons.svg#instagram"/>
            </svg>

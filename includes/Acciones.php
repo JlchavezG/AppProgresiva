@@ -52,7 +52,7 @@ if(isset($_POST['Buscar'])){
          $where = "WHERE NombreOf LIKE '%$valor%' OR Descripcion LIKE '%$valor%'";
       }
    } 
-   // consulta para extrar datos de producto
+   // consulta para extrar datos de oficio
    $query = "SELECT * FROM Oficios $where ORDER BY NombreOf";
    $resultado = $conect->query($query);
    $numero = $resultado->num_rows;
