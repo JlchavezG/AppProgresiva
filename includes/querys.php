@@ -6,6 +6,11 @@ $genero = $conect->query($g);
 // consulta para extraer los datos de estado 
 $estado = "SELECT * FROM Estados ORDER BY NombreE ASC";
 $estados = $conect->query($estado);
+// consulta para estraer el oficio a modificar 
+$Id_Of = $_GET['Id_Oficio'];
+$OficioM = "SELECT * FROM Oficios WHERE Id_Oficio = '$Id_Of'";
+$OficiosM = $conect->query($OficioM);
+$separarOf = $OficiosM->fetch_array();
 // consulta para extraer tipo de oficio 
 $oficio = "SELECT * FROM Oficios ORDER BY NombreOf ASC";
 $oficios = $conect->query($oficio);

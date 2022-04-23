@@ -1,3 +1,30 @@
+<?php
+  $dir = 'img/qr/';
+  if (!file_exists($dir))
+  mkdir($dir);
+  {
+        $filename = $dir.'user'.$separar['Id_Usuarios'].'png';
+        $tam = 4;
+        $lavel = 'H';
+        $frameSize = '3';
+        $Qrnom = $separar['Nombre'];
+        $Qrnom1 = $separar['ApellidoP'];
+        $Qrnom2 = $separar['ApellidoM'];
+        $Qrtele = $separar['Telefono'];
+        $Qrcorreo = $separar['Email'];
+        $Tperfil = $separar['AppTuser'];
+        $Qrcontenido = 'BEGIN:VCARD'."\n"
+        . 'VERSION:2.1'."\n"
+        . 'FN:'.$Qrnom. $Qrnom1."\n"
+        .'TEL;WORK;VOICE:'.$Qrtele."\n"
+        .'TITLE:'.$Tperfil."\n"
+        .'EMAIL:'.$Qrcorreo."\n"
+        . "END:VCARD";
+        QRcode::png($Qrcontenido,$filename,$lavel,$tam,$frameSize);
+  
+  }
+
+?>
 <div class="container pt-4 mt-5" id="printElement">
      <section id="Perfil">
          <div class="container py-3 mt-4">
@@ -96,13 +123,17 @@
                    <div class="accordion-item">
                       <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                          <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                           Datos de la Cuenta
+                           Codigo QR de la Cuenta
                          </button>
                        </h2>
                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
                           <div class="accordion-body">
                             <ul class="list-group list-group-flush bg-light">
                                <li class="list-group-item"><strong>Usuario:</strong> <?php echo $separar['AppTuser']; ?></li> 
+                               <li class="list-group-item"> 
+                                  <?php echo '<img src="'.$filename.'"class="rounded mx-auto d-block img-thumbnail">';?>
+                                  <div class="container text-center">Codigo Qr de usuario</div>
+                                </li>
                             </uk>                      
                           </div>
                        </div>

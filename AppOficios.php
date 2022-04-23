@@ -3,6 +3,10 @@
   include 'includes/conection.php';
   include 'includes/Confing.php';
   include 'includes/querys.php';
+  $validar = $user['TUser'];
+  if($validar != 1){
+    header("location:app.php");
+  }
  ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
