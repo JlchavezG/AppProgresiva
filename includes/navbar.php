@@ -12,7 +12,7 @@
         <li class="nav-item">
           <a class="nav-link active" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" class="text-decoration-none">
               <svg class="bi" width="25" height="25" fill="currentColor">
-                  <use xlink:href="app/icons/bootstrap-icons.svg#box-arrow-in-right"/> 
+                  <use xlink:href="library/icons/bootstrap-icons.svg#box-arrow-in-right"/> 
               </svg> Menu
           </a>
         </li>
@@ -23,7 +23,7 @@
         <li class="nav-item">
           <a class="nav-link" href="#"> &nbsp;
             <svg class="bi" width="20" height="20" fill="currentColor">
-               <use xlink:href="app/icons/bootstrap-icons.svg#plus-circle-fill"/> 
+               <use xlink:href="library/icons/bootstrap-icons.svg#plus-circle-fill"/> 
             </svg>&nbsp; Nueva Solicitud
           </a>
         </li>
@@ -35,10 +35,10 @@
                   <label class="form-check-label" for="darkSwitch">
                   <span>
                   <svg class="bi" width="20" height="20" fill="currentColor">
-                     <use xlink:href="app/icons/bootstrap-icons.svg#brightness-low"/> 
+                     <use xlink:href="library/icons/bootstrap-icons.svg#brightness-low"/> 
                   </svg> |
                   <svg class="bi" width="16" height="16" fill="currentColor">
-                     <use xlink:href="app/icons/bootstrap-icons.svg#moon-stars"/> 
+                     <use xlink:href="library/icons/bootstrap-icons.svg#moon-stars"/> 
                   </svg>
                   </span>
                   </label>
@@ -47,14 +47,14 @@
         <li class="nav-item">
           <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#Soporte"> &nbsp;
             <svg class="bi" width="20" height="20" fill="currentColor">
-               <use xlink:href="app/icons/bootstrap-icons.svg#headset"/> 
+               <use xlink:href="library/icons/bootstrap-icons.svg#headset"/> 
             </svg>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#Soporte1">
             <svg class="bi" width="20" height="20" fill="currentColor">
-               <use xlink:href="app/icons/bootstrap-icons.svg#gear-fill"/> 
+               <use xlink:href="library/icons/bootstrap-icons.svg#gear-fill"/> 
             </svg>
           </a>
         </li>
@@ -65,19 +65,19 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="Appperfil.php">
                <svg class="bi" width="20" height="20" fill="currentColor">
-                  <use xlink:href="app/icons/bootstrap-icons.svg#person-square"/> 
+                  <use xlink:href="library/icons/bootstrap-icons.svg#person-square"/> 
                </svg> &nbsp; Perfil</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#CSesion">
             <svg class="bi" width="20" height="20" fill="currentColor">
-                  <use xlink:href="app/icons/bootstrap-icons.svg#power"/> 
+                  <use xlink:href="library/icons/bootstrap-icons.svg#power"/> 
                </svg> &nbsp;Cerrar Sesión</a></li>
           </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"> &nbsp;
                 <svg class='bi' width='20' height='20' fill='currentColor'>
-                  <use xlink:href='app/icons/bootstrap-icons.svg#bell-fill'/> 
+                  <use xlink:href='library/icons/bootstrap-icons.svg#bell-fill'/> 
                 </svg>
             <?php error_reporting(0); if($Tnotificaciones > 0){
                   $notifica.= "<span class='badge rounded-pill position-absolute start-10 top-70 bg-danger'>$Tnotificaciones</span>";
@@ -108,7 +108,7 @@
         <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cancelar</button>
         <a href="includes/CerrarS.php" class="btn btn-sm btn-danger">
           <svg class="bi" width="20" height="20" fill="currentColor">
-               <use xlink:href="app/icons/bootstrap-icons.svg#power"/> 
+               <use xlink:href="library/icons/bootstrap-icons.svg#power"/> 
           </svg> Cerrar Sesión</a>
       </div>
     </div>
@@ -129,13 +129,13 @@
                 <div class="col">
                   <a href="mailto:sopoarte@iscjoseluischavezg.mx" class="text-decoration-none link-secondary">
                     <svg class="bi" width="20" height="20" fill="currentColor">
-                     <use xlink:href="app/icons/bootstrap-icons.svg#mailbox2"/> 
+                     <use xlink:href="library/icons/bootstrap-icons.svg#mailbox2"/> 
                   </svg> &nbsp;Contacto via Email</a>
                 </div>
                 <div class="col">
                   <a href="tel:5611099054" class="text-decoration-none link-secondary">
                   <svg class="bi" width="20" height="20" fill="currentColor">
-                     <use xlink:href="app/icons/bootstrap-icons.svg#telephone-forward-fill"/> 
+                     <use xlink:href="library/icons/bootstrap-icons.svg#telephone-forward-fill"/> 
                   </svg> &nbsp; Contacto via Telefonica</a>
                 </div>
            </div>

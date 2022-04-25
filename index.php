@@ -26,13 +26,13 @@
                                       <div class="row">
                                          <div class="col">
                                            <a href="https://www.facebook.com/iscjoseluischavezg" target="_blank"><svg class="bi text-primary" width="20" height="20" fill="currentColor">
-                                              <use xlink:href="app/icons/bootstrap-icons.svg#facebook"/>
+                                              <use xlink:href="library/icons/bootstrap-icons.svg#facebook"/>
                                            </svg></a>&nbsp;&nbsp;  
                                            <a href="https://twitter.com/iscjlchavezg" target="_blank"><svg class="bi text-info" width="20" height="20" fill="currentColor">
-                                              <use xlink:href="app/icons/bootstrap-icons.svg#twitter"/>
+                                              <use xlink:href="library/icons/bootstrap-icons.svg#twitter"/>
                                            </svg></a>&nbsp;&nbsp; 
                                            <a href="https://www.instagram.com/iscjlchavezg" target="_blank"><svg class="bi" width="20" height="20" fill="currentColor">
-                                              <use xlink:href="app/icons/bootstrap-icons.svg#instagram"/>
+                                              <use xlink:href="library/icons/bootstrap-icons.svg#instagram"/>
                                            </svg></a>
                                          </div>
                                       </div>
@@ -44,23 +44,23 @@
                                             Por favor ingresa tus credenciales para ingresar a la aplicación.
                                           </span><hr>
                                           <div class="input-group flex-nowrap mt-2">
-                                             <span class="input-group-text" id="addon-wrapping">
+                                             <span class="input-group-text" id="addon-wrlibrarying">
                                                <svg class="bi" width="20" height="20" fill="currentColor">
-                                                  <use xlink:href="app/icons/bootstrap-icons.svg#person-fill"/>
+                                                  <use xlink:href="library/icons/bootstrap-icons.svg#person-fill"/>
                                                </svg>
                                              </span>
-                                                <input type="text" class="form-control" name="usuario" placeholder="Usuario" aria-label="Usuario" aria-describedby="addon-wrapping" required>
+                                                <input type="text" class="form-control" name="usuario" placeholder="Usuario" aria-label="Usuario" aria-describedby="addon-wrlibrarying" required>
                                                 <div class="invalid-feedback">
                                                     Ingresa un usuario
                                                 </div>
                                           </div>
                                           <div class="input-group flex-nowrap mt-2">
-                                             <span class="input-group-text" id="addon-wrapping">
+                                             <span class="input-group-text" id="addon-wrlibrarying">
                                                <svg class="bi" width="20" height="20" fill="currentColor">
-                                                  <use xlink:href="app/icons/bootstrap-icons.svg#key-fill"/>
+                                                  <use xlink:href="library/icons/bootstrap-icons.svg#key-fill"/>
                                                </svg>
                                              </span>
-                                                <input type="password" name="password" id="pass" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping" required>
+                                                <input type="password" name="password" id="pass" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="addon-wrlibrarying" required>
                                                 <div class="invalid-feedback">
                                                     Ingresa un Email
                                                 </div>
@@ -81,14 +81,14 @@
                                                 <span class="text-primary">
                                                     <a href="#" data-bs-toggle="modal" data-bs-target="#ModalRegistro" class="text-decoration-none text-muted">
                                                       <svg class="bi" width="20" height="20" fill="currentColor">
-                                                      <use xlink:href="app/icons/bootstrap-icons.svg#person-plus-fill"/>
+                                                      <use xlink:href="library/icons/bootstrap-icons.svg#person-plus-fill"/>
                                                     </svg> Registrate </a>
                                                 </span>
                                              </div>
                                              <div class="col-auto">
                                                 <span class="text-primary">
                                                    <a href="RecuperarPassUser.php" class="text-decoration-none text-muted"><svg class="bi" width="20" height="20" fill="currentColor">
-                                                      <use xlink:href="app/icons/bootstrap-icons.svg#gear-fill"/>
+                                                      <use xlink:href="library/icons/bootstrap-icons.svg#gear-fill"/>
                                                    </svg> Perdiste tu Password </a>
                                                  </span>
                                              </div>
@@ -122,8 +122,8 @@
       <div class="modal-body">
          <div class="row py-3 text-center">
              <div class="col">
-               <a href="AppRusuario.php" class="text-decoration-none"><svg class='bi' width='60' height='60' role='img' aria-label='Tools'>
-                 <use xlink:href='app/icons/bootstrap-icons.svg#person-plus-fill'/>
+               <a href="libraryRusuario.php" class="text-decoration-none"><svg class='bi' width='60' height='60' role='img' aria-label='Tools'>
+                 <use xlink:href='library/icons/bootstrap-icons.svg#person-plus-fill'/>
                </svg>
                <div class="mt-2">
                   <span class="text-info">Crear Nueva Cuenta</span></a>

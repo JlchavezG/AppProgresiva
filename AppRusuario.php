@@ -31,13 +31,13 @@
        <div class="row mt-2 text-center">
           <div class="col py-2">
                 <a href="index.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="20" height="20" fill="currentColor">
-                     <use xlink:href="app/icons/bootstrap-icons.svg#arrow-left-circle-fill"/>
+                     <use xlink:href="library/icons/bootstrap-icons.svg#arrow-left-circle-fill"/>
                 </svg> Regresar </a>
           </div>
           <div class="col"></div>
           <div class="col">
           <a href="#" data-bs-toggle="offcanvas" data-bs-target="#Ayuda" class="text-decoration-none text-muted"><svg class="bi text-warning" width="20" height="20" fill="currentColor">
-                     <use xlink:href="app/icons/bootstrap-icons.svg#lightbulb"/>
+                     <use xlink:href="library/icons/bootstrap-icons.svg#lightbulb"/>
                 </svg> Ayuda </a>
           </div>
        </div>
@@ -53,14 +53,14 @@
                           <div class="col-sm-12 col-md-12 col-lg-6">
                               <div class="py-2">
                                  <svg class="bi" width="15" height="15" fill="currentColor">
-                                    <use xlink:href="app/icons/bootstrap-icons.svg#person-lines-fill"/>
+                                    <use xlink:href="library/icons/bootstrap-icons.svg#person-lines-fill"/>
                                  </svg>
                                  <span class="text-muted">Datos Generales</span>
                               </div>
                               <div class="input-group mb-3">
                                   <span class="input-group-text" id="nom">
                                     <svg class="bi" width="15" height="15" fill="currentColor">
-                                       <use xlink:href="app/icons/bootstrap-icons.svg#pencil"/>
+                                       <use xlink:href="library/icons/bootstrap-icons.svg#pencil"/>
                                     </svg>
                                  </span>
                                  <input type="text" class="form-control" name="nombre" placeholder="Nombre" arial-label="Nombre" aria-describedby="basic-addon1" required>   
@@ -68,7 +68,7 @@
                               <div class="input-group mb-3">
                                   <span class="input-group-text" id="apeliidop">
                                     <svg class="bi" width="15" height="15" fill="currentColor">
-                                       <use xlink:href="app/icons/bootstrap-icons.svg#pencil"/>
+                                       <use xlink:href="library/icons/bootstrap-icons.svg#pencil"/>
                                     </svg>
                                  </span>
                                  <input type="text" class="form-control" name="apellidop" placeholder="Apellido Paterno" arial-label="Nombre" aria-describedby="basic-addon1" required>   
@@ -76,7 +76,7 @@
                               <div class="input-group mb-3">
                                   <span class="input-group-text" id="apeliidom">
                                     <svg class="bi" width="15" height="15" fill="currentColor">
-                                       <use xlink:href="app/icons/bootstrap-icons.svg#pencil"/>
+                                       <use xlink:href="library/icons/bootstrap-icons.svg#pencil"/>
                                     </svg>
                                  </span>
                                  <input type="text" class="form-control" name="apellidom" placeholder="Apellido Materno" arial-label="Nombre" aria-describedby="basic-addon1" required>   
@@ -84,7 +84,7 @@
                               <div class="input-group mb-3">
                                   <span class="input-group-text" id="telefono">
                                     <svg class="bi" width="15" height="15" fill="currentColor">
-                                       <use xlink:href="app/icons/bootstrap-icons.svg#telephone"/>
+                                       <use xlink:href="library/icons/bootstrap-icons.svg#telephone"/>
                                     </svg>
                                  </span>
                                  <input type="tel" class="form-control" name="telefono" placeholder="Telefono" arial-label="Nombre" aria-describedby="basic-addon1" required>   
@@ -92,7 +92,7 @@
                               <div class="input-group mb-3">
                                   <span class="input-group-text" id="email">
                                     <svg class="bi" width="15" height="15" fill="currentColor">
-                                       <use xlink:href="app/icons/bootstrap-icons.svg#envelope"/>
+                                       <use xlink:href="library/icons/bootstrap-icons.svg#envelope"/>
                                     </svg>
                                  </span>
                                  <input type="email" class="form-control" name="email" placeholder="Email" arial-label="Nombre" aria-describedby="basic-addon1" required>   
@@ -109,7 +109,7 @@
                               <div class="input-group mb-3">
                                   <span class="input-group-text" id="email">
                                     <svg class="bi" width="15" height="15" fill="currentColor">
-                                       <use xlink:href="app/icons/bootstrap-icons.svg#envelope"/>
+                                       <use xlink:href="library/icons/bootstrap-icons.svg#envelope"/>
                                     </svg>
                                  </span>
                                  <input type="date" class="form-control" name="fecha" placeholder="Fecha" arial-label="Fecha" aria-describedby="basic-addon1" required>   
@@ -118,7 +118,7 @@
                           <div class="col-sm-12 col-md-12 col-lg-6">
                               <div class="py-2">
                                   <svg class="bi" width="15" height="15" fill="currentColor">
-                                       <use xlink:href="app/icons/bootstrap-icons.svg#compass"/>
+                                       <use xlink:href="library/icons/bootstrap-icons.svg#compass"/>
                                   </svg>
                                   <span class="text-muted"> Datos de Servicio</span>
                               </div>
@@ -157,7 +157,7 @@
                               <div class="input-group mb-3">
                                   <span class="input-group-text" id="usuarios">
                                     <svg class="bi" width="15" height="15" fill="currentColor">
-                                       <use xlink:href="app/icons/bootstrap-icons.svg#person-circle"/>
+                                       <use xlink:href="library/icons/bootstrap-icons.svg#person-circle"/>
                                     </svg>
                                  </span>
                                  <input type="text" class="form-control" name="usuario" placeholder="Usuario" arial-label="Usuario" aria-describedby="basic-addon1" required>   
@@ -167,7 +167,7 @@
                                     <div class="input-group mb-3">
                                        <span class="input-group-text" id="passwords">
                                        <svg class="bi" width="15" height="15" fill="currentColor">
-                                          <use xlink:href="app/icons/bootstrap-icons.svg#key-fill"/>
+                                          <use xlink:href="library/icons/bootstrap-icons.svg#key-fill"/>
                                        </svg>
                                        </span>
                                        <input type="password" class="form-control" name="password" id="password" placeholder="Password" arial-label="password" aria-describedby="basic-addon1" required>   
@@ -177,7 +177,7 @@
                                     <div class="input-group mb-3">
                                        <span class="input-group-text" id="passwords">
                                        <svg class="bi" width="15" height="15" fill="currentColor">
-                                         <use xlink:href="app/icons/bootstrap-icons.svg#key-fill"/>
+                                         <use xlink:href="library/icons/bootstrap-icons.svg#key-fill"/>
                                        </svg>
                                        </span>
                                        <input type="password" class="form-control" name="passwordC" id="passwordC" placeholder="Comfirma tu Password" arial-label="password" aria-describedby="basic-addon1" required>                              
@@ -196,7 +196,7 @@
     <div class="row">
     <p class="text-center">
          <svg class="bi" width="15" height="15" fill="currentColor">
-            <use xlink:href="app/icons/bootstrap-icons.svg#geo-fill"/>
+            <use xlink:href="library/icons/bootstrap-icons.svg#geo-fill"/>
          </svg><strong>!importante¡</strong> Por favor Confirma la ubicación exacta de tu domicilio dentro del mapa</p>
        <div class="card shadow">
           <div id="map"></div>

@@ -11,7 +11,7 @@
             <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping">
                    <svg class="bi" width="15" height="15" fill="currentColor">
-                      <use xlink:href="app/icons/bootstrap-icons.svg#lock-fill"/> 
+                      <use xlink:href="library/icons/bootstrap-icons.svg#lock-fill"/> 
                    </svg>
                 </span>
                    <input type="password" class="form-control" name="PasswordAc" placeholder="Password Actual" aria-label="Password" required>
@@ -19,7 +19,7 @@
              <div class="input-group flex-nowrap mt-2">
                 <span class="input-group-text" id="addon-wrapping">
                    <svg class="bi" width="15" height="15" fill="currentColor">
-                      <use xlink:href="app/icons/bootstrap-icons.svg#key-fill"/> 
+                      <use xlink:href="library/icons/bootstrap-icons.svg#key-fill"/> 
                    </svg>
                 </span>
                    <input type="password" class="form-control" name="NewPassword" placeholder="Nuevo Password" aria-label="Password" required>
@@ -27,7 +27,7 @@
              <div class="input-group flex-nowrap mt-2">
                 <span class="input-group-text" id="addon-wrapping">
                    <svg class="bi" width="15" height="15" fill="currentColor">
-                      <use xlink:href="app/icons/bootstrap-icons.svg#key-fill"/> 
+                      <use xlink:href="library/icons/bootstrap-icons.svg#key-fill"/> 
                    </svg>
                 </span>
                    <input type="password" class="form-control" name="PasswordCon" placeholder="Confirma tu Password" aria-label="Password" required>

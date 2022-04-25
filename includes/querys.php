@@ -56,6 +56,9 @@ $TOnlineUsuarios = $OnlineUsuarios->num_rows;
 $socio = "SELECT * FROM Usuarios WHERE TUser = '5'";
 $socios = $conect->query($socio);
 $Tsocios = $socios->num_rows;
+//consulta usuarios registrados en la plataforma
+$Usuario = "SELECT * FROM Usuarios ORDER BY Nombre ASC";
+$Usuarios = $conect->query($Usuario);
 // consulta para saber el numero de solicitudes registrados 
 $solicitud = "SELECT * FROM Solicitud ORDER BY Id_Solicitud";
 $solicitudes = $conect->query($solicitud);

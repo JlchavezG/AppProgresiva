@@ -9,37 +9,37 @@
   <ul class="nav nav-pills flex-column mb-auto">
     <li class="nav-item items">
       <a href="app.php" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
-         <use xlink:href="app/icons/bootstrap-icons.svg#speedometer2"/>
+         <use xlink:href="library/icons/bootstrap-icons.svg#speedometer2"/>
       </svg>&nbsp; Dashboard</a>
     </li>
     <li class="nav-item items">
       <a href="Appperfil.php" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
-         <use xlink:href="app/icons/bootstrap-icons.svg#person-circle"/>
+         <use xlink:href="library/icons/bootstrap-icons.svg#person-circle"/>
       </svg>&nbsp; Perfil</a>
     </li>
     <li class="nav-item items">
       <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
-         <use xlink:href="app/icons/bootstrap-icons.svg#clipboard-check"/>
+         <use xlink:href="library/icons/bootstrap-icons.svg#clipboard-check"/>
       </svg>&nbsp; Ver Solicitudes</a>
     </li>
     <li class="nav-item items">
       <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
-         <use xlink:href="app/icons/bootstrap-icons.svg#calendar2-date"/>
+         <use xlink:href="library/icons/bootstrap-icons.svg#calendar2-date"/>
       </svg>&nbsp; Historial</a>
     </li>
     <li class="nav-item items">
       <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
-         <use xlink:href="app/icons/bootstrap-icons.svg#calendar2-date"/>
+         <use xlink:href="library/icons/bootstrap-icons.svg#calendar2-date"/>
       </svg>&nbsp; Portafolio</a>
     </li>
     <li class="nav-item items">
       <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
-         <use xlink:href="app/icons/bootstrap-icons.svg#calendar2-date"/>
+         <use xlink:href="library/icons/bootstrap-icons.svg#calendar2-date"/>
       </svg>&nbsp; Publicidad</a>
     </li>
     <li class="nav-item items">
       <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
-         <use xlink:href="app/icons/bootstrap-icons.svg#mailbox2"/>
+         <use xlink:href="library/icons/bootstrap-icons.svg#mailbox2"/>
       </svg>&nbsp; Notificaciones</a>
     </li>
   </ul>

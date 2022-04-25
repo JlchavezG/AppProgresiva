@@ -3,7 +3,7 @@
  include 'includes/querys.php';
  include 'includes/Confing.php';
  include 'includes/Acciones.php';
- include 'app/phpqrcode/qrlib.php';
+ include 'library/phpqrcode/qrlib.php';
 ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">

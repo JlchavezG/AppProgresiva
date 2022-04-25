@@ -4,7 +4,7 @@
       <div class="modal-header">
         <h5 class="modal-title" id="ModificarPerfilLabel">
            <svg class="bi" width="15" height="15" fill="currentColor">
-              <use xlink:href="app/icons/bootstrap-icons.svg#pencil-fill"/> 
+              <use xlink:href="library/icons/bootstrap-icons.svg#pencil-fill"/> 
           </svg> Modificar Perfil de Usuario
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -18,7 +18,7 @@
                      <div class="input-group mb-3">
                        <span class="input-group-text" id="basic-addon1">
                           <svg class="bi" width="20" height="20" fill="currentColor">
-                             <use xlink:href="app/icons/bootstrap-icons.svg#file-person"/> 
+                             <use xlink:href="library/icons/bootstrap-icons.svg#file-person"/> 
                           </svg>
                        </span>
                           <input type="text" name="Nombre" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1" value="<?php echo $separar['Nombre']; ?>" require/>
@@ -36,7 +36,7 @@
                   <div class="input-group mb-3">
                        <span class="input-group-text" id="basic-addon1">
                           <svg class="bi" width="20" height="20" fill="currentColor">
-                             <use xlink:href="app/icons/bootstrap-icons.svg#telephone-fill"/> 
+                             <use xlink:href="library/icons/bootstrap-icons.svg#telephone-fill"/> 
                           </svg>
                        </span>
                           <input type="tel" name="Telefono" class="form-control" placeholder="Telefono" aria-label="Telefono" aria-describedby="basic-addon1" value="<?php echo $separar['Telefono']; ?>" require/>
@@ -46,7 +46,7 @@
                   <div class="input-group mb-3">
                        <span class="input-group-text" id="basic-addon1">
                           <svg class="bi" width="20" height="20" fill="currentColor">
-                             <use xlink:href="app/icons/bootstrap-icons.svg#envelope-fill"/> 
+                             <use xlink:href="library/icons/bootstrap-icons.svg#envelope-fill"/> 
                           </svg>
                        </span>
                           <input type="email" name="Email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" value="<?php echo $separar['Email']; ?>" require/>
@@ -69,7 +69,7 @@
                    <div class="input-group mb-3">
                       <span class="input-group-text" id="email">
                         <svg class="bi" width="15" height="15" fill="currentColor">
-                          <use xlink:href="app/icons/bootstrap-icons.svg#calendar-fill"/>
+                          <use xlink:href="library/icons/bootstrap-icons.svg#calendar-fill"/>
                         </svg>
                       </span>
                       <input type="date" class="form-control" name="fecha" placeholder="Fecha" arial-label="Fecha" aria-describedby="basic-addon1" value="<?php echo $separar['FNac']; ?>" required>   

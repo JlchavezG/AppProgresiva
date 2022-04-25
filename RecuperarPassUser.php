@@ -21,14 +21,14 @@
         <div class="col-sm-6 col-md-6 col-lg-6 mt-3">
                 <a href="index.php" class="text-decoration-none">
                 <svg class="bi text-danger" width="20" height="20" fill="currentColor">
-                     <use xlink:href="app/icons/bootstrap-icons.svg#arrow-left-circle-fill"/>
+                     <use xlink:href="library/icons/bootstrap-icons.svg#arrow-left-circle-fill"/>
                 </svg> Regresar
                 </a>
         </div>
          <div class="col-sm-6 col-md-6 col-lg-6 mt-3">
          <a href="#" class="text-decoration-none" data-bs-toggle="offcanvas" data-bs-target="#AyudaPass" aria-controls="AyudaPass">
                 <svg class="bi text-warning" width="20" height="20" fill="currentColor">
-                     <use xlink:href="app/icons/bootstrap-icons.svg#lightbulb"/>
+                     <use xlink:href="library/icons/bootstrap-icons.svg#lightbulb"/>
                 </svg> Ayuda
                 </a>
          </div>
@@ -37,7 +37,7 @@
         <div class="card shadow">
               <span class="text-muted text-center mt-3">
               <svg class="bi" width="20" height="20" fill="currentColor">
-                     <use xlink:href="app/icons/bootstrap-icons.svg#pencil"/>
+                     <use xlink:href="library/icons/bootstrap-icons.svg#pencil"/>
                 </svg> Ingresa tu nombre de usuario junto con tu email registrado</span><hr>
               <div class="row container justify-content-center">
               <div class="col-sm-6 col-md-6 col-lg-6 text-center py-2">
@@ -48,7 +48,7 @@
                    <div class="input-group mb-3">
                      <span class="input-group-text" id="basic-addon1">
                         <svg class="bi" width="20" height="20" fill="currentColor">
-                            <use xlink:href="app/icons/bootstrap-icons.svg#person-fill"/>
+                            <use xlink:href="library/icons/bootstrap-icons.svg#person-fill"/>
                         </svg>
                      </span>
                      <input type="text" class="form-control" name="usuario" placeholder="Usuario" aria-label="Usuario" aria-describedby="usuario" required>
@@ -59,7 +59,7 @@
                    <div class="input-group mb-3">
                      <span class="input-group-text" id="basic-addon1">
                         <svg class="bi" width="20" height="20" fill="currentColor">
-                            <use xlink:href="app/icons/bootstrap-icons.svg#envelope"/>
+                            <use xlink:href="library/icons/bootstrap-icons.svg#envelope"/>
                         </svg>
                      </span>
                      <input type="email" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="Email" required>

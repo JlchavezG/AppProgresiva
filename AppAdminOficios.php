@@ -33,7 +33,7 @@
   ?>
   <!-- termina sidebar -->
 <!-- inicia contenido -->
-<?php include 'includes/AdminOficios.php'; ?>
+<?php include 'includes/AdminOficios.php';?>
 <!-- termina contenido -->
   <?php include 'includes/footer.php'; ?>
   <script src="js/bootstrap.min.js"></script>

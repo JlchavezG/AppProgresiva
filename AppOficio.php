@@ -6,8 +6,8 @@
   include 'includes/Acciones.php';
   // validar restriccion solo a sistemas
   $validar = $user['TUser'];
-  if($validar != 1){
-    header("location:app.php");
+  if($validar != 1 || $validar == 2){
+    header("location:library.php");
   }
  ?>
 <!DOCTYPE html>
@@ -49,7 +49,7 @@
                        <div class="row">
                            <div class="col my-3">
                                <svg class="bi" width="33" height="33" fill="currentColor">
-                                 <use xlink:href="app/icons/bootstrap-icons.svg#search"/>
+                                 <use xlink:href="library/icons/bootstrap-icons.svg#search"/>
                                </svg>
                            </div>
                            <div class="col my-3">
@@ -65,7 +65,7 @@
                        <div class="row">
                            <div class="col my-3">
                                <svg class="bi" width="33" height="33" fill="currentColor">
-                                 <use xlink:href="app/icons/bootstrap-icons.svg#clipboard-plus"/>
+                                 <use xlink:href="library/icons/bootstrap-icons.svg#clipboard-plus"/>
                                </svg>
                            </div>
                            <div class="col my-3">
@@ -81,7 +81,7 @@
                        <div class="row">
                            <div class="col my-3">
                                <svg class="bi" width="33" height="33" fill="currentColor">
-                                 <use xlink:href="app/icons/bootstrap-icons.svg#pencil-fill"/>
+                                 <use xlink:href="library/icons/bootstrap-icons.svg#pencil-fill"/>
                                </svg>
                            </div>
                            <div class="col my-3">

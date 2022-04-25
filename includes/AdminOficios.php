@@ -1,4 +1,4 @@
-   <div class="container pt-4 mt-5">
+   <div class="container pt-4 mt-5 col-sm-10 col-md-10 col-lg-10">
    <div class="mt-2">
         <div class="row text-center mt-4">
             <h2 class="display-6"> Administrar Oficios</h2>
@@ -7,10 +7,20 @@
           <div class="col py-2">
                 <a href="appOficio.php" class="text-decoration-none text-muted">
                   <svg class="bi text-danger" width="20" height="20" fill="currentColor">
-                     <use xlink:href="app/icons/bootstrap-icons.svg#arrow-left-circle-fill"/>
+                     <use xlink:href="library/icons/bootstrap-icons.svg#arrow-left-circle-fill"/>
                   </svg> Regresar</a>
           </div>
-    <div class="col"></div>
+    <div class="col-sm-12 col-md-4 col-lg-3">
+            <div class="card shadow py-2 bg-light">
+            <div class="container">
+              <a href="includes/Reporte_Oficios.php" target="_blank" class="text-decoration-none text-primary">
+                <svg class="bi" width="20" height="20" fill="currentColor">
+                  <use xlink:href="library/icons/bootstrap-icons.svg#file-earmark-pdf-fill"/>
+                </svg> Generar PDF 
+              </a>
+            </div>
+       </div>
+    </div>
     </div>
     <section id="Tabla">
      <div class="row mt-3 py-2 container">
@@ -30,11 +40,11 @@
                  <td class="text-center">
                     <a href="MoficaOffApp.php?Id_Oficio=<?php echo $rowOficio['Id_Oficio']; ?>" class="text-decoration-none text-secondary text-center">
                       <svg class="bi" width="15" height="15" fill="currentColor">
-                      <use xlink:href="app/icons/bootstrap-icons.svg#pencil-fill"/>
+                      <use xlink:href="library/icons/bootstrap-icons.svg#pencil-fill"/>
                       </svg>
                     </a> - <a onclick="return confirm('¿Deceas Eliminar el Oficio?');" href="./includes/EliminarOficio.php?Id_Oficio=<?php echo $rowOficio['Id_Oficio']; ?>" class="text-decoration-none text-secondary">
                     <svg class="bi" width="15" height="15" fill="currentColor">
-                      <use xlink:href="app/icons/bootstrap-icons.svg#trash-fill"/>
+                      <use xlink:href="library/icons/bootstrap-icons.svg#trash-fill"/>
                     </svg></a> 
                  </td>
                </tr>
@@ -50,7 +60,7 @@
                  </a>
               </li>
               <?php for($i=0; $i<$paginacion; $i++ ){ ?>
-              <li class="page-item <?php echo $_GET['pagina']==$i+1 ?'active' : '' ?>">
+              <li class="page-item  <?php echo $_GET['pagina']==$i+1 ?'active' : '' ?>">
                   <a class="page-link" href="AppAdminOficios.php?pagina=<?php echo $i+1; ?>">
                     <?php echo $i+1; ?>
                   </a>

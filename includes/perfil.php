@@ -34,7 +34,7 @@
           <div class="row mt-2 text-center">
           <div class="col py-2">
                 <a href="app.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="20" height="20" fill="currentColor">
-                     <use xlink:href="app/icons/bootstrap-icons.svg#arrow-left-circle-fill"/>
+                     <use xlink:href="library/icons/bootstrap-icons.svg#arrow-left-circle-fill"/>
                 </svg> Regresar </a>
           </div>
           <div class="col"></div>
@@ -52,26 +52,26 @@
                      </div>
                   </div>
                </div>
-               <div class="col-sm-12 col-md-12 col-lg-6 mt-3">
-                 <div class="row py-3 text-center">
+               <div class="col-sm-10 col-md-10 col-lg-6 mt-3">
+                 <div class="row py-3 text-center mt-3">
                     <div class="col">
                         <a href="#" class="text-decoration-none text-secondary" id="printButton"><svg class="bi" width="20" height="20" fill="currentColor">
-                          <use xlink:href="app/icons/bootstrap-icons.svg#printer-fill"/> 
+                          <use xlink:href="library/icons/bootstrap-icons.svg#printer-fill"/> 
                         </svg> Imprimir</a>
                     </div>
                     <div class="col">
                         <svg class="bi" width="20" height="20" fill="currentColor">
-                          <use xlink:href="app/icons/bootstrap-icons.svg#clock-history"/> 
+                          <use xlink:href="library/icons/bootstrap-icons.svg#clock-history"/> 
                         </svg> Historial
                     </div>
                     <div class="col">
                         <a href="#" data-bs-toggle="offcanvas" data-bs-target="#AyudaMPerfil" class="text-decoration-none text-secondary">
                         <svg class="bi" width="20" height="20" fill="currentColor">
-                          <use xlink:href="app/icons/bootstrap-icons.svg#lightbulb"/> 
+                          <use xlink:href="library/icons/bootstrap-icons.svg#lightbulb"/> 
                         </svg> Ayuda</a>
                     </div>
                  </div>
-                 <div class="mt-2">
+                 <div class="mt-2 col-sm-12 col-md-12 col-lg-10">
                     <div class="accordion shadow" id="accordionPanelsStayOpenExample">
                        <div class="accordion-item">
                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -88,10 +88,10 @@
                              <li class="list-group-item text-end">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#MPassword" class="text-decoration-none text-secondary">
                                 <svg class="bi" width="15" height="15" fill="currentColor">
-                                  <use xlink:href="app/icons/bootstrap-icons.svg#pencil-fill"/> 
+                                  <use xlink:href="library/icons/bootstrap-icons.svg#pencil-fill"/> 
                                 </svg> Modificar Password</a>&nbsp;&nbsp;<a href="#" data-bs-toggle="modal" data-bs-target="#ModificarPerfil" class="text-decoration-none text-secondary">
                                 <svg class="bi" width="15" height="15" fill="currentColor">
-                                  <use xlink:href="app/icons/bootstrap-icons.svg#pencil-fill"/> 
+                                  <use xlink:href="library/icons/bootstrap-icons.svg#pencil-fill"/> 
                                 </svg> Editar Perfil</a>
                              </li>
                            </ul>
@@ -114,7 +114,7 @@
                                <li class="list-group-item"><strong>Municipio:</strong> <?php echo $separar['NombreM']; ?></li>
                                <li class="list-group-item text-end"><a href="#" data-bs-toggle="modal" data-bs-target="#ModificarDireccion" class="text-decoration-none text-secondary">
                                 <svg class="bi" width="15" height="15" fill="currentColor">
-                                  <use xlink:href="app/icons/bootstrap-icons.svg#pencil-fill"/> 
+                                  <use xlink:href="library/icons/bootstrap-icons.svg#pencil-fill"/> 
                                 </svg> Editar Dirección</a></li>
                             </ul>
                           </div>

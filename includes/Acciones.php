@@ -72,7 +72,7 @@ if(isset($_POST['Buscar'])){
                          <td class="bg-white">'.$row['Descripcion'].'</td>
                          <td class="bg-white">
                              <svg class="bi text-success" width="20" height="20" fill="currentColor">
-                                 <use xlink:href="app/icons/bootstrap-icons.svg#box-arrow-in-right"/>
+                                 <use xlink:href="library/icons/bootstrap-icons.svg#box-arrow-in-right"/>
                              </svg>
                          </td>
                          </tr>';
