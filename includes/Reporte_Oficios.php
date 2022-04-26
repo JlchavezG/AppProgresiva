@@ -31,6 +31,7 @@ function Footer()
     $this->Cell(480,10,'Pagina: '.$this->PageNo().'/{nb}',0,0,'C');
 }
 }
+session_start();
 require 'conection.php';
 require 'querys.php';
 session_start();
@@ -45,7 +46,7 @@ $pdf->SetFont('Arial','',9);
 $pdf->SetTopMargin(30);
 $pdf->Cell(40,5,'Hora del reporte: '.$tiempo,0,0,'C');
 $pdf->Cell(390,5,'Fecha: '.$fecha,0,1,'C');
-$pdf->Cell(20,5,'Usuario: ',0,1,'C');
+$pdf->Cell(20,5,'Usuario:',0,1,'C');
 $pdf->Ln();
 $pdf->SetFillColor(227, 234, 240);
 $pdf->SetDrawColor(61,61,61);
@@ -61,9 +62,9 @@ $pdf->Cell(32,6,'Calle','B',0,'',1);
 $pdf->Cell(20,6,'Numero','B',0,'',1);
 $pdf->Cell(32,6,'Colonia','B',1,'',1);
 while($row = $Usuarios->fetch_assoc()){
-$pdf->Cell(20,6,$row['Nombre'],'B',0,'J');
-$pdf->Cell(26,6,$row['ApellidoP'],'B',0,'J');
-$pdf->Cell(26,6,$row['ApellidoM'],'B',0,'J');
+$pdf->Cell(20,6,iconv('UTF-8','ISO-8859-2',$row['Nombre']),'B',0,'J');
+$pdf->Cell(26,6,iconv('UTF-8','ISO-8859-2',$row['ApellidoP']),'B',0,'J');
+$pdf->Cell(26,6,iconv('UTF-8','ISO-8859-2',$row['ApellidoM']),'B',0,'J');
 $pdf->Cell(26,6,$row['Telefono'],'B',0,'J');
 $pdf->Cell(47,6,$row['Email'],'B',0,'J');
 $pdf->Cell(23,6,$row['FNac'],'B',0,'J');
@@ -71,7 +72,7 @@ $pdf->Cell(32,6,$row['Calle'],'B',0,'J');
 $pdf->Cell(20,6,$row['Numero'],'B',0,'J');
 $pdf->Cell(32,6,$row['Colonia'],'B',1,'J');                   
 }
-
+$pdf->Ln();
 
 $pdf->Output();
 ?>

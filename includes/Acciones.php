@@ -169,5 +169,10 @@ if(isset($_POST['MoPassword'])){
     $Mensaje.="No hay datos que buscar";
    }
 }
-
+// modificar  imagen de perfil 
+if(isset($_POST['Subir'])){
+   $type = 'jpeg';
+   $IdImg = $conect->real_escape_string($_POST['imgId']);
+  
+   }
 ?>
