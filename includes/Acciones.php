@@ -171,8 +171,68 @@ if(isset($_POST['MoPassword'])){
 }
 // modificar  imagen de perfil 
 if(isset($_POST['Subir'])){
-   $type = 'jpeg';
    $IdImg = $conect->real_escape_string($_POST['imgId']);
-  
-   }
+   $imgFile = $_FILES['imagen']['name'];
+   $tmp_dir = $_FILES['imagen']['tmp_name'];
+   $imgSize = $_FILES['imagen']['size'];
+   if(empty($imgFile)){
+      $Mensaje.="<div class='alert alert-danger alert-dismissible fade show shadow' role='alert'>
+                    <svg class='bi text-danger' width='20' height='20' role='img' aria-label='Tools'>
+                      <use xlink:href='library/icons/bootstrap-icons.svg#x-circle-fill'/>
+                    </svg>
+                    <strong> Error</strong> Por favor selecciona un archivo de imagen.
+                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                 </div>";
+    } 
+    else{
+    $upload_dir = './img/user/'; // upload directory
+    $imgExt = strtolower(pathinfo($imgFile,PATHINFO_EXTENSION)); // get image extension
+    // validando imagen y extensiones
+      $valid_extensions = array('jpeg', 'jpg', 'png', 'gif'); // valid extensions
+      // renombrando uploading imagen
+      $userpic = rand(1000,1000000).".".$imgExt;
+      // permitir formatos de archivo de imagen válidos
+      if(in_array($imgExt, $valid_extensions)){     
+        // Comprobando el tamaño del archivo '1 MB'
+        if($imgSize < 1000000)       {
+          move_uploaded_file($tmp_dir,$upload_dir.$userpic);
+        }
+        else{
+         $Mensaje.="<div class='alert alert-danger alert-dismissible fade show shadow' role='alert'>
+                       <svg class='bi text-danger' width='20' height='20' role='img' aria-label='Tools'>
+                          <use xlink:href='library/icons/bootstrap-icons.svg#x-circle-fill'/>
+                       </svg>
+                       <strong> Error</strong> El archivo de la imagen es muy grande.
+                       <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                    </div>";
+        }
+      }
+      else{
+         $Mensaje.="<div class='alert alert-danger alert-dismissible fade show shadow' role='alert'>
+                       <svg class='bi text-danger' width='20' height='20' role='img' aria-label='Tools'>
+                         <use xlink:href='library/icons/bootstrap-icons.svg#x-circle-fill'/>
+                       </svg>
+                       <strong> Error</strong> Solo archivos JPG, JPEG, PNG & GIF son permitidos.
+                       <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                   </div>";   
+      }
+    }
+    if(!isset($Mensaje)){
+       $ImgUpdate = "UPDATE Usuarios SET Imagen = '$userpic' WHERE Id_Usuarios = '$IdImg'";
+       $ImgUpdateOk = $conect->query($ImgUpdate);
+       
+      if($ImgUpdateOk > 0)
+      {
+         $Mensaje.="<div class='alert alert-success alert-dismissible fade show' role='alert'>
+                       <strong>Excelente! </strong> La Imagen de perfil se modifico de manera exitosa dentro de la plataforma en breve se refrescara la pagina.
+                       <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                    </div>";     
+        header("refresh:3;Appperfil.php"); // redirects image view page after 5 seconds.
+      }
+      else
+      {
+        $errMSG = "Error al insertar ...";
+      }
+    }
+  }
 ?>

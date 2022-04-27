@@ -1,5 +1,5 @@
 <!-- inicia navbar -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color:#F3F1F1;">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:rgba(0,0,0,.5);">
   <div class="container-fluid">
     <a class="navbar-brand" href="app.php">
       <img src="img/craken.png" alt="logo iscjlchavezg" style="width:50px;">

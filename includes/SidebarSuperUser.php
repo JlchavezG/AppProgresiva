@@ -18,7 +18,7 @@
       </svg>&nbsp; Perfil</a>
     </li>
     <li class="nav-item items">
-      <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
+      <a href="AppUsuarios.php" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
          <use xlink:href="library/icons/bootstrap-icons.svg#people"/>
       </svg>&nbsp; Usuarios</a>
     </li>

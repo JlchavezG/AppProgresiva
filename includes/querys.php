@@ -48,6 +48,12 @@ $TUsuariosP = $UsuariosP->num_rows;
 $UsuarioF = "SELECT * FROM Usuarios WHERE TUser = '6'";
 $UsuariosF = $conect->query($UsuarioF);
 $TUsuariosF = $UsuariosF->num_rows;
+// consulta cruzda para extrar todos los datos del usuario 
+$unirUser = "SELECT U.Id_Usuarios, U.Nombre, U.ApellidoP, U.ApellidoM, U.Telefono, U.Email, U.Id_Genero, U.FNac, U.Calle,
+U.Numero, U.Colonia, U.Id_Estado, U.Id_Municipio, U.Latitud, U.Longitud, U.UserName, U.Imagen, U.Password, U.Estatus, U.TUser, U.Online,
+G.Id_Genero, G.NombreG, E.Id_Estado, E.NombreE, M.Id_Municipios, M.NombreM, TU.Id_TuserApp, TU.AppTuser, TU.DescripcionT FROM Usuarios U INNER JOIN Genero G ON  U.Id_Genero = G.Id_Genero 
+INNER JOIN Estados E ON U.Id_Estado = E.Id_Estado INNER JOIN Municipios M ON U.Id_Municipio = M.Id_Municipios INNER JOIN TUsuario TU ON U.TUser = TU.Id_TuserApp";
+$verificarUser = $conect->query($unirUser);
 // consulta para extraer el numero de usuarios conectados 
 $OnlineUsuario = "SELECT * FROM Usuarios WHERE Online = '1'";
 $OnlineUsuarios = $conect->query($OnlineUsuario);

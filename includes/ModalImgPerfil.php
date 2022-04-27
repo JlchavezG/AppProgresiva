@@ -6,7 +6,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-         <form action="" method="post" enctype="multipart/form-data">
+         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
            <input type="hidden" name="imgId" value="<?php echo $separar['Id_Usuarios']; ?>">
            <input type="file"  name="imagen" id="imagen" size="30" class="form-control" required> 
       </div>

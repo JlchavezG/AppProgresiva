@@ -14,7 +14,7 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Modulo de Oficios | Sistemas-IscjlchavezG</title>
+    <title>Modulo de Usuarios | Sistemas-IscjlchavezG</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/pace.css">
@@ -36,7 +36,7 @@
   <div class="container pt-4 mt-5">
     <div class="mt-2">
        <div class="row py-3 mt-3">
-            <h4 class="text-center display-6"> Modulo Oficios</h4>
+            <h4 class="text-center display-6"> Modulo Usuarios</h4>
             <div class="row my-3">
          <div class="col-sm-6 col-md-6 col-lg-6"></div>
        <?php echo $Alert; ?>
@@ -53,7 +53,7 @@
                                </svg>
                            </div>
                            <div class="col my-3">
-                           <a href="AppBuscarOficioS.php" class="text-decoration-none text-secondary"><strong>Buscar</strong></a>
+                           <a href="AppBuscarUsuarios.php" class="text-decoration-none text-secondary"><strong>Buscar</strong></a>
                            </div>
                        </div>
                    </div>
@@ -69,7 +69,7 @@
                                </svg>
                            </div>
                            <div class="col my-3">
-                               <a href="AppRegistroOficio.php" class="text-decoration-none text-secondary"><strong>Agregar</strong></a>
+                               <a href="AppRegistroUsuarios.php" class="text-decoration-none text-secondary"><strong>Agregar</strong></a>
                            </div>
                        </div>
                    </div>
@@ -85,7 +85,7 @@
                                </svg>
                            </div>
                            <div class="col my-3">
-                              <a href="AppAdminOficios.php" class="text-decoration-none text-secondary"><strong>Administrar</strong></a>
+                              <a href="AppAdminUsuarios.php" class="text-decoration-none text-secondary"><strong>Administrar</strong></a>
                            </div>
                        </div>
                    </div>
