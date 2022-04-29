@@ -122,7 +122,7 @@
       <div class="modal-body">
          <div class="row py-3 text-center">
              <div class="col">
-               <a href="libraryRusuario.php" class="text-decoration-none"><svg class='bi' width='60' height='60' role='img' aria-label='Tools'>
+               <a href="AppRusuario.php" class="text-decoration-none"><svg class='bi' width='60' height='60' role='img' aria-label='Tools'>
                  <use xlink:href='library/icons/bootstrap-icons.svg#person-plus-fill'/>
                </svg>
                <div class="mt-2">

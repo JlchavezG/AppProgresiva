@@ -1,7 +1,7 @@
    <div class="container pt-4 mt-5 col-sm-10 col-md-10 col-lg-10">
    <div class="mt-2">
         <div class="row text-center mt-4">
-            <h2 class="display-6"> Administrar Oficios</h2>
+            <h2 class="display-6"> Administrar Usuarios</h2>
         </div> 
         <div class="row mt-2">
           <div class="col py-2">
