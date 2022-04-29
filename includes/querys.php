@@ -15,6 +15,12 @@ $separarOf = $OficiosM->fetch_array();
 $oficio = "SELECT * FROM Oficios ORDER BY NombreOf ASC";
 $oficios = $conect->query($oficio);
 $Toficios = $oficios->num_rows;
+// consulta cruzda para extrar todos los datos del usuario 
+$unirUser = "SELECT U.Id_Usuarios, U.Nombre, U.ApellidoP, U.ApellidoM, U.Telefono, U.Email, U.Id_Genero, U.FNac, U.Calle,
+U.Numero, U.Colonia, U.Id_Estado, U.Id_Municipio, U.Latitud, U.Longitud, U.UserName, U.Imagen, U.Password, U.Estatus, U.TUser, U.Online,
+G.Id_Genero, G.NombreG, E.Id_Estado, E.NombreE, M.Id_Municipios, M.NombreM, TU.Id_TuserApp, TU.AppTuser, TU.DescripcionT FROM Usuarios U INNER JOIN Genero G ON  U.Id_Genero = G.Id_Genero 
+INNER JOIN Estados E ON U.Id_Estado = E.Id_Estado INNER JOIN Municipios M ON U.Id_Municipio = M.Id_Municipios INNER JOIN TUsuario TU ON U.TUser = TU.Id_TuserApp";
+$verificarUser = $conect->query($unirUser);
 // consulta para la paginación de oficios en administración
 $Tpaginas = '5';
 $inicioP = ($_GET['pagina']-1)*$Tpaginas;
@@ -23,7 +29,14 @@ $oficiosP = $conect->query($oficioP);
 $ToficiosP = $oficiosP->num_rows;
 $paginacion = $Toficios/$Tpaginas;
 $paginacion = ceil($paginacion);
-
+// consulta para la paginacion de usuarios en administracion 
+$TpaginasUser = '5';
+$inicioPUser = ($_GET['paginaUser']-1)*$TpaginasUser;
+$UserP = "SELECT * FROM Usuarios ORDER BY Nombre ASC LIMIT ".$inicioPUser.",".$TpaginasUser;
+$UsuariosP = $conect->query($UserP);
+$TUserP = $UsuariosP->num_rows;
+$paginacionUser = $TUserP/$TpaginasUser;
+$paginacionUser = ceil($paginacionUser);
 // consulta para extraer el numero de super usuarios
 $SuperUsuario = "SELECT * FROM Usuarios WHERE TUser = '1'";
 $SuperUsuarios = $conect->query($SuperUsuario);
@@ -48,12 +61,6 @@ $TUsuariosP = $UsuariosP->num_rows;
 $UsuarioF = "SELECT * FROM Usuarios WHERE TUser = '6'";
 $UsuariosF = $conect->query($UsuarioF);
 $TUsuariosF = $UsuariosF->num_rows;
-// consulta cruzda para extrar todos los datos del usuario 
-$unirUser = "SELECT U.Id_Usuarios, U.Nombre, U.ApellidoP, U.ApellidoM, U.Telefono, U.Email, U.Id_Genero, U.FNac, U.Calle,
-U.Numero, U.Colonia, U.Id_Estado, U.Id_Municipio, U.Latitud, U.Longitud, U.UserName, U.Imagen, U.Password, U.Estatus, U.TUser, U.Online,
-G.Id_Genero, G.NombreG, E.Id_Estado, E.NombreE, M.Id_Municipios, M.NombreM, TU.Id_TuserApp, TU.AppTuser, TU.DescripcionT FROM Usuarios U INNER JOIN Genero G ON  U.Id_Genero = G.Id_Genero 
-INNER JOIN Estados E ON U.Id_Estado = E.Id_Estado INNER JOIN Municipios M ON U.Id_Municipio = M.Id_Municipios INNER JOIN TUsuario TU ON U.TUser = TU.Id_TuserApp";
-$verificarUser = $conect->query($unirUser);
 // consulta para extraer el numero de usuarios conectados 
 $OnlineUsuario = "SELECT * FROM Usuarios WHERE Online = '1'";
 $OnlineUsuarios = $conect->query($OnlineUsuario);
@@ -65,6 +72,7 @@ $Tsocios = $socios->num_rows;
 //consulta usuarios registrados en la plataforma
 $Usuario = "SELECT * FROM Usuarios ORDER BY Nombre ASC";
 $Usuarios = $conect->query($Usuario);
+$TotalRow = $Usuarios->num_rows;
 // consulta para saber el numero de solicitudes registrados 
 $solicitud = "SELECT * FROM Solicitud ORDER BY Id_Solicitud";
 $solicitudes = $conect->query($solicitud);
