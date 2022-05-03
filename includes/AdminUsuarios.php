@@ -64,11 +64,11 @@
                  <td scope="col"><?php echo $separarUser['AppTuser']; ?></td>
                  <td scope="col"><?php echo $separarUser['UserName']; ?></td>
                  <td class="text-center">
-                    <a href="MoficaOffApp.php?Id_Usuarios=<?php echo $separarUser['Id_Usuarios']; ?>" class="text-decoration-none text-secondary text-center">
+                    <a href="MoficaUserApp.php?Id_Usuarios=<?php echo $separarUser['Id_Usuarios']; ?>" class="text-decoration-none text-secondary text-center">
                       <svg class="bi text-secondary" width="15" height="15" fill="currentColor">
                       <use xlink:href="library/icons/bootstrap-icons.svg#pencil-fill"/>
                       </svg>
-                    </a> - <a onclick="return confirm('¿Deceas Eliminar al usuario?');" href="./includes/EliminarUsuario.php?Id_Usuario=<?php echo $separarUser['Id_Usuarios']; ?>" class="text-decoration-none text-secondary">
+                    </a> - <a onclick="return confirm('¿Deceas Eliminar al usuario?');" href="./includes/EliminarUsuario.php?Id_Usuarios=<?php echo $separarUser['Id_Usuarios']; ?>" class="text-decoration-none text-secondary">
                     <svg class="bi text-danger" width="15" height="15" fill="currentColor">
                       <use xlink:href="library/icons/bootstrap-icons.svg#trash-fill"/>
                     </svg></a> 
