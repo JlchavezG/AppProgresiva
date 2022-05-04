@@ -15,6 +15,9 @@ $separarOf = $OficiosM->fetch_array();
 $oficio = "SELECT * FROM Oficios ORDER BY NombreOf ASC";
 $oficios = $conect->query($oficio);
 $Toficios = $oficios->num_rows;
+// consulta para extraer los tipos de usario de la tabla Tuser 
+$TipoUsuarios = "SELECT * FROM TUsuario ORDER BY Id_TuserApp";
+$TUsuariosQuery = $conect->query($TipoUsuarios);
 // consulta cruzda para extrar todos los datos del usuario 
 $unirUser = "SELECT U.Id_Usuarios, U.Nombre, U.ApellidoP, U.ApellidoM, U.Telefono, U.Email, U.Id_Genero, U.FNac, U.Calle,
 U.Numero, U.Colonia, U.Id_Estado, U.Id_Municipio, U.Latitud, U.Longitud, U.UserName, U.Imagen, U.Password, U.Estatus, U.TUser, U.Online,
