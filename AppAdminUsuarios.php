@@ -4,7 +4,7 @@
   include 'includes/Confing.php';
   include 'includes/querys.php';
   if(!$_GET){
-     header("location:AppAdminOficios.php?pagina=1");
+     header("location:AppAdminUsuarios.php?pagina=1");
   }
   if($_GET['pagina']>$Tpaginas || $_GET['pagina'] <= 0){
     header("location:AppAdminUsuarios.php?pagina=1");

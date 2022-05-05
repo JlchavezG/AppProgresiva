@@ -1,4 +1,4 @@
-<?php include 'includes/RegistroUser.php'; 
+<?php 
 include 'includes/conection.php';
 include 'includes/Confing.php';
 include 'includes/querys.php';
@@ -230,7 +230,7 @@ include 'includes/Acciones.php';
                     <label class="form-check-label" for="aviso1">
                        <a href="#" class="text-decoration-none text-muted" data-bs-toggle="modal" data-bs-target="#Terminos">Aceptar terminos y condiciones</a></label>
              </div>
-                <input type="submit" id="registrar" name="Registrar" value="Registrar" class="btn btn-sm btn-success">
+                <input type="submit" id="registrar" name="RegistrarSuper" value="Registrar" class="btn btn-sm btn-success">
           </div>
        </div>
    </div>
