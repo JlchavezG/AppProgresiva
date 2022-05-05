@@ -17,6 +17,7 @@ include 'includes/Acciones.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/pace.css">
+    <link rel="stylesheet" type="text/css" href="css/dark.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="js/jquery.js"></script>
     <script>
@@ -263,6 +264,7 @@ include 'includes/Acciones.php';
 </script>
 <script src="js/main.js"></script> 
 <script src="js/pace.js"></script>   
+<script src="js/dark-mode.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYMPGtM7VUn1aq61tkGbu99qD95c-w5zc&callback=initMap"></script>    
 </body>
