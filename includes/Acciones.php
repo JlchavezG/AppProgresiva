@@ -236,6 +236,7 @@ if(isset($_POST['Subir'])){
     }
   }
   // registrar usuario desde perfil de super Usuario 
+
   if(isset($_POST['RegistrarSuper'])){
     $Nombre = $conect->real_escape_string($_POST['nombre']);
     $ApellidoP = $conect->real_escape_string($_POST['apellidop']);
@@ -279,7 +280,7 @@ if(isset($_POST['Subir'])){
     }
     elseif(($actual - $validar) < 18){
       $alertas.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                   <strong>Error al registrar al Usuario!</strong> No eres mayor de edad para poder ofrecer servicios en nuestra plataforma .
+                   <strong>Error al registrar al Usuario!</strong> El usuario a registrar no es mayor de edad para poder ofrecer servicios en nuestra plataforma .
                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                   </button>
                 </div>';
@@ -293,7 +294,7 @@ if(isset($_POST['Subir'])){
     $insertar = $conect->query($Registro);
     if($insertar > 0){
        $alertas.='<div class="alert alert-success alert-dismissible fade show" role="alert">
-                     <strong>Registro exitoso!</strong> Bienvenido a nuestra platafoma ya puedes iniciar sesión con tu usuario y password solo da <a href="index.php" class="text-danger text-decoration-none"> Aqui</a>.
+                     <strong>Registro exitoso!</strong> El Nuevo Usuario se registro dentro de la plataforma puede comerzar a solicitar o brindar servicios.
                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                      </button>
                   </div>';
