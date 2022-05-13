@@ -32,7 +32,7 @@
     <?php 
     $TsEscritorio = $user['TUser'];
     if($TsEscritorio == 1){include 'includes/EscritorioSuperUser.php';}else if($TsEscritorio == 2){include 'includes/EscritorioSoporte.php';}
-    else if($TsEscritorio == 3){include 'includes/EscritorioOfertante.php';}else if($TsEscritorio == 4){include 'includes/EscritorioUsuario.php';}
+    else if($TsEscritorio == 3){include 'includes/EscritorioSocioPremium.php';}else if($TsEscritorio == 4){include 'includes/EscritorioUsuario.php';}
     ?>
   </div>
 </div>
