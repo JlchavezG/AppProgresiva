@@ -1,4 +1,3 @@
-<script src="../library/push/push.min.js"></script>
 <?php
 error_reporting(0);
 include 'conection.php';
