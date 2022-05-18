@@ -1,6 +1,7 @@
+<script src="../library/push/push.min.js"></script>
 <?php
 error_reporting(0);
- include 'conection.php';
+include 'conection.php';
  // modificar datos de usuario 
  if(isset($_POST['Modificar'])){    
  $id = $conect->real_escape_string($_POST['Id']);
@@ -309,5 +310,28 @@ if(isset($_POST['Subir'])){
     }
   
    }
+  }
+  // registro de notificaciones 
+  if(isset($_POST['NotiUsers'])){
+     $IdUsers = $separar['Id_Usuarios'];
+     $MensajeNoti = $conect->real_escape_string($_POST['MensajeNoti']);
+     $Estatus = '0';
+     $FechaNotifica = date('Y-m-d');
+     $HoraNotifica = date('H:m:s');
+     $NewNoti = "INSERT INTO Notificaciones(Id_UsuarioN, MensajeN, StatusN, FechaN, HoraN)VALUES('$IdUsers','$MensajeNoti','$Estatus','$FechaNotifica','$HoraNotifica')";
+     $NweEj = $conect->query($NewNoti);
+     if($NweEj > 0){
+      $NotificaPuhs.='<script>
+                       Push.create("Notificación AppWork",{
+                       body: .$MensajeNoti." ",
+                       icon: "../img/craken.png",
+                       timeout: 4000,
+                       onClick: function(){
+                        window.location="AdminNotificacion.php";
+                        this.close(); 
+                      }
+                      });
+                      </script>'; 
+     }
   }
 ?>

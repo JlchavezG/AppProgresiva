@@ -32,22 +32,8 @@ $oficiosP = $conect->query($oficioP);
 $ToficiosP = $oficiosP->num_rows;
 $paginacion = $Toficios/$Tpaginas;
 $paginacion = ceil($paginacion);
-// consulta para extraer datos de usuario 
-// consulta cruzda para extrar todos los datos del usuario 
-$TpaginasU = '5';
-$inicioPU = ($_GET['pagina']-1)*$TpaginasU;
-$unirUserP = "SELECT U.Id_Usuarios, U.Nombre, U.ApellidoP, U.ApellidoM, U.Telefono, U.Email, U.Id_Genero, U.FNac, U.Calle,
-U.Numero, U.Colonia, U.Id_Estado, U.Id_Municipio, U.Latitud, U.Longitud, U.UserName, U.Imagen, U.Password, U.Estatus, U.TUser, U.Online,
-G.Id_Genero, G.NombreG, E.Id_Estado, E.NombreE, M.Id_Municipios, M.NombreM, TU.Id_TuserApp, TU.AppTuser, TU.DescripcionT FROM Usuarios U INNER JOIN Genero G ON  U.Id_Genero = G.Id_Genero 
-INNER JOIN Estados E ON U.Id_Estado = E.Id_Estado INNER JOIN Municipios M ON U.Id_Municipio = M.Id_Municipios INNER JOIN TUsuario TU ON U.TUser = TU.Id_TuserApp ASC LIMIT ".$inicioPU.",".$TpaginasU;
-$verificarUP = $conect->query($unirUserP);
-// consulta para la paginacion de usuarios en administracion 
 
-$TUP = "SELECT * FROM Usuarios ORDER BY Nombre ASC LIMIT ".$inicioPU.",".$TpaginasU;
-$UP = $conect->query($TUP);
-$TotalUP = $UP->num_rows;
-$paginacion = $TotalUP/$TpaginasU;
-$paginacion = ceil($paginacion);
+
 // consulta para extraer el numero de super usuarios
 $SuperUsuario = "SELECT * FROM Usuarios WHERE TUser = '1'";
 $SuperUsuarios = $conect->query($SuperUsuario);

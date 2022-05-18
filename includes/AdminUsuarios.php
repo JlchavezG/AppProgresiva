@@ -81,20 +81,20 @@
      <div class="row">
        <nav aria-label="Page navigation">
            <ul class="pagination">
-              <li class="page-item <?php echo $_GET['pagina']<=1? 'disabled' : '' ?>">
-                 <a class="page-link" href="AppAdminUsuarios.php?pagina=<?php echo $_GET['pagina']-1 ?>">
+              <li class="page-item <?php echo $_GET['paginas']<=1? 'disabled' : '' ?>">
+                 <a class="page-link" href="AppAdminUsuarios.php?pagina=<?php echo $_GET['paginas']-1 ?>">
                     Anterior
                  </a>
               </li>
               <?php for($i=0; $i<$paginacion; $i++ ){ ?>
-              <li class="page-item  <?php echo $_GET['pagina']==$i+1 ?'active' : '' ?>">
+              <li class="page-item  <?php echo $_GET['paginas']==$i+1 ?'active' : '' ?>">
                   <a class="page-link" href="AppAdminUsuarios.php?pagina=<?php echo $i+1; ?>">
                     <?php echo $i+1; ?>
                   </a>
               </li>
               <?php } ?>
               <li class="page-item <?php echo $_GET['pagina']>=$paginacion? 'disabled' : '' ?>">
-                  <a class="page-link" href="AppAdminUsuarios.php?pagina=<?php echo $_GET['pagina']+1 ?>">
+                  <a class="page-link" href="AppAdminUsuarios.php?pagina=<?php echo $_GET['paginas']+1 ?>">
                      Siguiente
                   </a>
               </li>
