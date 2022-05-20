@@ -13,7 +13,7 @@
     <div class="col-sm-12 col-md-4 col-lg-3">
             <div class="py-2">
             <div class="container">
-              <a href="includes/Reporte_Oficios.php" target="_blank" class="text-decoration-none text-primary">
+              <a href="includes/Reporte_Usuarios.php" target="_blank" class="text-decoration-none text-primary">
                 <svg class="bi" width="20" height="20" fill="currentColor">
                   <use xlink:href="library/icons/bootstrap-icons.svg#file-earmark-pdf-fill"/>
                 </svg> Generar PDF 

@@ -324,9 +324,9 @@ if(isset($_POST['Subir'])){
       Push.create('Notificación AppWork',{
       body:'$MensajeNoti',
       icon: 'img/craken.png',
-      timeout: 4000,
+      timeout: 90000,
       onClick: function(){
-       window.location='AdminNotificacion.php';
+       window.location='AdminNotificacion.php?Id_Usuario=$IdUsers';
        this.close(); 
      }
      });
