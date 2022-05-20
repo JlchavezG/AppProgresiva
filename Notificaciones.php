@@ -54,6 +54,20 @@
       <?php echo $NotificaPuhs; ?>
   </div>
 </div>
+<?php 
+  $ms = ' <script>
+  Push.create("Notificación AppWork",{
+  body: "Notificacion",
+  icon: "img/craken.png",
+  timeout: 4000,
+  onClick: function(){
+   window.location="AdminNotificacion.php";
+   this.close(); 
+ }
+ });
+ </script>';
+ echo $ms;
+?>
 <!-- termina contenido -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/dark-mode.js"></script>
