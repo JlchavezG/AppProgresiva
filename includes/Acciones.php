@@ -320,17 +320,17 @@ if(isset($_POST['Subir'])){
      $NewNoti = "INSERT INTO Notificaciones(Id_UsuarioN, MensajeN, StatusN, FechaN, HoraN)VALUES('$IdUsers','$MensajeNoti','$Estatus','$FechaNotifica','$HoraNotifica')";
      $NweEj = $conect->query($NewNoti);
      if($NweEj > 0){
-      $NotificaPuhs.='<script>
-                       Push.create("Notificación AppWork",{
-                       body: .$MensajeNoti." ",
-                       icon: "../img/craken.png",
-                       timeout: 4000,
-                       onClick: function(){
-                        window.location="AdminNotificacion.php";
-                        this.close(); 
-                      }
-                      });
-                      </script>'; 
+      $NotificaPuhs.="<script>
+      Push.create('Notificación AppWork',{
+      body:'$MensajeNoti',
+      icon: 'img/craken.png',
+      timeout: 4000,
+      onClick: function(){
+       window.location='AdminNotificacion.php';
+       this.close(); 
+     }
+     });
+     </script>";
      }
   }
 ?>
