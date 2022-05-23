@@ -80,9 +80,18 @@
                   <use xlink:href='library/icons/bootstrap-icons.svg#bell-fill'/> 
                 </svg>
             <?php error_reporting(0); if($Tnotificaciones > 0){
-                  $notifica.= "<span class='badge rounded-pill position-absolute start-10 top-70 bg-danger'>$Tnotificaciones</span>";
-                              echo $notifica;
-            } ?>
+                $notifica.= "<span class='badge rounded-pill position-absolute start-10 top-70 bg-danger'>$Tnotificaciones</span>";    
+                echo $notifica; ?>
+                <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:rgba(255,255,255,.5);">
+              <?php while($linea = $notificaciones->fetch_array()){  ?>  
+                 <li><a class="dropdown-item" href="VerNotificaciones.php?Id_Notificación=<?php echo $linea['Id_Notificación']; ?>"><?php echo $linea['MensajeN']; ?></a></li>
+                 <li><hr class="dropdown-divider"></li>
+               <?php } ?>
+          </ul>
+          <?php  }  ?>
+        </li>  
           </a>
         </li>
       </ul>  

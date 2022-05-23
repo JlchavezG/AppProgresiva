@@ -39,12 +39,12 @@
       <div class="container mt-3">
              <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                 <div class="row  mt-5">
-                      <div class="col-sm-6 col-md-6 col-lg-6 justify-content-center">
+                      <div class="col-sm-12 col-md-6 col-lg-6 justify-content-center">
                       <div class="text-justify">
                               <p>
                                  <svg class="bi" width="15" height="15" fill="currentColor">
                                    <use xlink:href="library/icons/bootstrap-icons.svg#pencil-fill"/>
-                                 </svg>  Ingresa la norificación para los usuarios de la plataforma
+                                 </svg>  Ingresa el mensaje ó la norificación para los usuarios de la plataforma
                               </p>
                             </div>
                           <div class="form-floating">
