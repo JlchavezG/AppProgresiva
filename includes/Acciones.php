@@ -313,11 +313,12 @@ if(isset($_POST['Subir'])){
   // registro de notificaciones 
   if(isset($_POST['NotiUsers'])){
      $IdUsers = $separar['Id_Usuarios'];
+     $TituloN = $conect->real_escape_string($_POST['TituloNoti']);
      $MensajeNoti = $conect->real_escape_string($_POST['MensajeNoti']);
      $Estatus = '0';
      $FechaNotifica = date('Y-m-d');
      $HoraNotifica = date('H:m:s');
-     $NewNoti = "INSERT INTO Notificaciones(Id_UsuarioN, MensajeN, StatusN, FechaN, HoraN)VALUES('$IdUsers','$MensajeNoti','$Estatus','$FechaNotifica','$HoraNotifica')";
+     $NewNoti = "INSERT INTO Notificaciones(Id_UsuarioN,TituloN, MensajeN, StatusN, FechaN, HoraN)VALUES('$IdUsers','$TituloN','$MensajeNoti','$Estatus','$FechaNotifica','$HoraNotifica')";
      $NweEj = $conect->query($NewNoti);
      if($NweEj > 0){
       $NotificaPuhs.="<script>

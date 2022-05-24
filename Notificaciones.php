@@ -36,37 +36,70 @@
   <div class="container pt-4 mt-5">
     <div class="mt-2">
       <h2 class="text-center mt-4 display-6 text-muted"> Notificaciones</h2>
-      <div class="container mt-3">
-             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+        <div class="container mt-3">
+          <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                 <div class="row  mt-5">
-                      <div class="col-sm-12 col-md-6 col-lg-6 justify-content-center">
+                    <div class="col-sm-12 col-md-12 col-lg-12 justify-content-center">
                       <div class="text-justify">
-                              <p>
-                                 <svg class="bi" width="15" height="15" fill="currentColor">
-                                   <use xlink:href="library/icons/bootstrap-icons.svg#pencil-fill"/>
-                                 </svg>  Ingresa el mensaje ó la norificación para los usuarios de la plataforma
-                              </p>
-                            </div>
-                          <div class="form-floating">
-                             <textarea class="form-control" placeholder="Mensaje a enviar" id="floatingTextarea" name="MensajeNoti" required></textarea>
-                             <label for="floatingTextarea">Mensaje:</label>
-                           </div>
-                           <div class="d-grid gap-2 mt-3">
-                              <input type="submit" name="NotiUsers" class="btn btn-sm btn-success" value="Enviar Notificación">
-                           </div>
+                         <p><svg class="bi" width="15" height="15" fill="currentColor">
+                               <use xlink:href="library/icons/bootstrap-icons.svg#pencil-fill"/>
+                            </svg>  Ingresa el mensaje ó la norificación para los usuarios de la plataforma</p>
+                       </div>
+                        <div class="form-floating">
+                         <input type="text" class="form-control bg-light" placeholder="Titulo de la Notificacion" id="floatingTitulo" name="TituloNoti" required>
+                          <label for="floatingTitulo">Titulo:</label>
+                        </div>
+                        <div class="form-floating mt-2">
+                          <textarea class="form-control bg-light" placeholder="Mensaje a enviar" id="floatingTextarea" name="MensajeNoti" required></textarea>
+                          <label for="floatingTextarea">Mensaje:</label>
+                        </div>
+                        <div class="d-grid gap-2 mt-3">
+                          <input type="submit" name="NotiUsers" class="btn btn-sm btn-success" value="Enviar Notificación">
+                        </div>
                       </div>
-                      <div class="col">
-                        2
-                      </div>
-                </div>
+                  </div>
              </form>
-      </div>
-      <?php echo $NotificaPuhs; ?>
-  </div>
-</div>
-<?php 
- echo $NotificaPuhs;
-?>
+         </div>
+   </div>
+   <div class="row mt-3">
+     <div class="container">
+         <div class="card shadow">
+             <div class="card-header bg-white">Tus Notificaciones</div>
+             <div class="card-body">
+                <div class="Container">
+                   <div class="table-responsive"> 
+                    <table class="table table-sm">
+                      <thead class="text-center">
+                        <tr>
+                          <th scope="col">Titulo</th>
+                          <th scope="col">Mensaje</th>
+                          <th scope="col">FechaDeEmición</th>
+                          <th scope="col">Horario</th>
+                          <th scope="col">Más_Opciones</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <?php while($Lineas = $Ej->fetch_assoc()) { ?>
+                        <tr>
+                          <td scope="col"><?php echo $Lineas['TituloN']; ?></td>
+                          <td scope="col"><?php echo $Lineas['MensajeN']; ?></td>
+                          <?php $fedit = $Lineas['FechaN'];
+                          $fedit = date('d-m-Y'); ?>
+                          <td scope="col"><?php echo $fedit; ?></td>
+                          <td scope="col"><?php echo $Lineas['HoraN']; ?></td>
+                          <td scope="col">Editar - Borrar</td>
+                        </tr>
+                        <?php } ?>
+                     </tbody>
+                    </table>
+                    </div>
+                </div>
+             </div>
+         </div>
+     </div>
+   </div>
+</div>         
+   <?php echo $NotificaPuhs; ?>
 <!-- termina contenido -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/dark-mode.js"></script>

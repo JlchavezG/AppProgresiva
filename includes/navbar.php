@@ -86,7 +86,7 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:rgba(255,255,255,.5);">
               <?php while($linea = $notificaciones->fetch_array()){  ?>  
-                 <li><a class="dropdown-item" href="VerNotificaciones.php?Id_Notificación=<?php echo $linea['Id_Notificación']; ?>"><?php echo $linea['MensajeN']; ?></a></li>
+                 <li><a class="dropdown-item" href="includes/LeerNotifica.php?Id_Notificación=<?php echo $linea['Id_Notificación']; ?>"><?php echo $linea['TituloN']; ?></a></li>
                  <li><hr class="dropdown-divider"></li>
                <?php } ?>
           </ul>
