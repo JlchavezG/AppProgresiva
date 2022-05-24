@@ -7,7 +7,7 @@
           <div class="card shadow bg-light container">
                 <div class="row">
                 <div class="col py-3">
-                    <svg class="bi" width="35" height="35" fill="currentColor">
+                    <svg class="bi text-success" width="35" height="35" fill="currentColor">
                        <use xlink:href="library/icons/bootstrap-icons.svg#clipboard-check"/>
                     </svg>
                     <div class="py-1">
@@ -25,7 +25,7 @@
           <div class="card shadow bg-light container">
                 <div class="row">
                 <div class="col py-3">
-                    <svg class="bi" width="35" height="35" fill="currentColor">
+                    <svg class="bi text-danger" width="35" height="35" fill="currentColor">
                        <use xlink:href="library/icons/bootstrap-icons.svg#clipboard-x"/>
                     </svg>
                     <div class="py-1">
@@ -44,7 +44,7 @@
              <div class="card shadow bg-light container">
                 <div class="row">
                 <div class="col py-3">
-                    <svg class="bi" width="35" height="35" fill="currentColor">
+                    <svg class="bi text-info" width="35" height="35" fill="currentColor">
                        <use xlink:href="library/icons/bootstrap-icons.svg#person-check-fill"/>
                     </svg>
                     <div class="py-1">
@@ -62,7 +62,7 @@
           <div class="card shadow bg-light container">
                 <div class="row">
                 <div class="col py-3">
-                    <svg class="bi" width="35" height="35" fill="currentColor">
+                    <svg class="bi text-warning" width="35" height="35" fill="currentColor">
                        <use xlink:href="library/icons/bootstrap-icons.svg#person-bounding-box"/>
                     </svg>
                     <div class="py-1">
@@ -84,7 +84,7 @@
              <div class="card shadow bg-light container">
                 <div class="row">
                 <div class="col py-3">
-                    <svg class="bi" width="35" height="35" fill="currentColor">
+                    <svg class="bi text-secondary" width="35" height="35" fill="currentColor">
                        <use xlink:href="library/icons/bootstrap-icons.svg#inboxes-fill"/>
                     </svg>
                     <div class="py-1">
@@ -102,7 +102,7 @@
           <div class="card shadow bg-light container">
                 <div class="row">
                 <div class="col py-3">
-                    <svg class="bi" width="35" height="35" fill="currentColor">
+                    <svg class="bi text-primary" width="35" height="35" fill="currentColor">
                        <use xlink:href="library/icons/bootstrap-icons.svg#calendar-day-fill"/>
                     </svg>
                     <div class="py-1">
@@ -121,7 +121,7 @@
           <div class="card shadow bg-light container">
                 <div class="row">
                 <div class="col py-3">
-                    <svg class="bi" width="35" height="35" fill="currentColor">
+                    <svg class="bi text-info" width="35" height="35" fill="currentColor">
                        <use xlink:href="library/icons/bootstrap-icons.svg#alarm-fill"/>
                     </svg>
                     <div class="py-1">

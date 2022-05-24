@@ -58,7 +58,7 @@
       </svg>&nbsp; Informes</a>
     </li>
     <li class="nav-item items">
-      <a href="Notificaciones.php" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
+      <a href="NotificacioneSist.php" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
          <use xlink:href="library/icons/bootstrap-icons.svg#mailbox2"/>
       </svg>&nbsp; Notificaciones</a>
     </li>

@@ -6,7 +6,7 @@
   include 'includes/Acciones.php';
   $validar = $user['TUser'];
   if($validar != 1 || $validar == 2){
-    header("location:library.php");
+    header("location:app.php");
   }
  ?>
 <!DOCTYPE html>
@@ -43,7 +43,7 @@
                       <div class="text-justify">
                          <p><svg class="bi" width="15" height="15" fill="currentColor">
                                <use xlink:href="library/icons/bootstrap-icons.svg#pencil-fill"/>
-                            </svg>  Ingresa el mensaje ó la norificación para los usuarios de la plataforma</p>
+                            </svg>  Ingresa el titulo y mensaje para los usuarios de la plataforma</p>
                        </div>
                         <div class="form-floating">
                          <input type="text" class="form-control bg-light" placeholder="Titulo de la Notificacion" id="floatingTitulo" name="TituloNoti" required>
@@ -62,9 +62,13 @@
          </div>
    </div>
    <div class="row mt-3">
-     <div class="container">
-         <div class="card shadow">
-             <div class="card-header bg-white">Tus Notificaciones</div>
+     <div class="col-sm-12 col-md-6 col-lg-6">
+         <?php if($Ej->num_rows > 0) { ?>
+          <div class="card shadow">
+             <div class="card-header bg-white"> 
+               <svg class="bi" width="20" height="20" fill="currentColor">
+                  <use xlink:href="library/icons/bootstrap-icons.svg#envelope-fill"/> 
+               </svg> &nbsp; Tus Mensajes Globales</div>
              <div class="card-body">
                 <div class="Container">
                    <div class="table-responsive"> 
@@ -72,7 +76,7 @@
                       <thead class="text-center">
                         <tr>
                           <th scope="col">Titulo</th>
-                          <th scope="col">Mensaje</th>
+                          <th scope="col">MensajeDeNotificación</th>
                           <th scope="col">FechaDeEmición</th>
                           <th scope="col">Horario</th>
                           <th scope="col">Más_Opciones</th>
@@ -97,9 +101,16 @@
              </div>
          </div>
      </div>
+     <?php } else {?>
+       <div class="alert alert-danger alert-dismissible fade show" role="alert">
+         <strong>Aun no hay mensajes!</strong> No tienes Mensajes de los Administradores de la plataforma.
+         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+       </div>
+      <?php } ?>
    </div>
 </div>         
    <?php echo $NotificaPuhs; ?>
+<?php include 'includes/footer.php'; ?>   
 <!-- termina contenido -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/dark-mode.js"></script>

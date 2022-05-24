@@ -77,7 +77,7 @@
         <li class="nav-item">
           <a class="nav-link" href="#"> &nbsp;
                 <svg class='bi' width='20' height='20' fill='currentColor'>
-                  <use xlink:href='library/icons/bootstrap-icons.svg#bell-fill'/> 
+                  <use xlink:href='library/icons/bootstrap-icons.svg#envelope-fill'/> 
                 </svg>
             <?php error_reporting(0); if($Tnotificaciones > 0){
                 $notifica.= "<span class='badge rounded-pill position-absolute start-10 top-70 bg-danger'>$Tnotificaciones</span>";    
@@ -86,7 +86,7 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:rgba(255,255,255,.5);">
               <?php while($linea = $notificaciones->fetch_array()){  ?>  
-                 <li><a class="dropdown-item" href="includes/LeerNotifica.php?Id_Notificación=<?php echo $linea['Id_Notificación']; ?>"><?php echo $linea['TituloN']; ?></a></li>
+                 <li><a class="dropdown-item" href="includes/LeerNotifica.php?Id_Mensajes=<?php echo $linea['Id_Mensajes']; ?>"><?php echo $linea['TituloN']; ?></a></li>
                  <li><hr class="dropdown-divider"></li>
                <?php } ?>
           </ul>
@@ -94,6 +94,13 @@
         </li>  
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"> 
+              <svg class='bi' width='20' height='20' fill='currentColor'>
+                <use xlink:href='library/icons/bootstrap-icons.svg#bell-fill'/> 
+              </svg>
+          </a>
+        </li>         
       </ul>  
     </div>
   </div>

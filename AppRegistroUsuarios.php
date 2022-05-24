@@ -19,6 +19,7 @@ include 'includes/Acciones.php';
     <link rel="stylesheet" type="text/css" href="css/pace.css">
     <link rel="stylesheet" type="text/css" href="css/dark.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="library/push/push.min.js"></script>
     <script src="js/jquery.js"></script>
     <script>
         $(document).ready(function(){

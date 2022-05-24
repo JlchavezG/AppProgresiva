@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/pace.css">
     <link rel="stylesheet" type="text/css" href="css/dark.css">
+    <script src="library/push/push.min.js"></script>
     <script src="js/jquery.js"></script>
     <title>Inicio de Sistema | ServicePlubic</title>
   </head>

@@ -6,7 +6,7 @@
   include 'includes/Acciones.php';
   // validar restriccion solo a sistemas
   $validar = $user['TUser'];
-  if($validar != 1){
+  if($validar != 1 || $validar == 2){
     header("location:app.php");
   }
  ?>
@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/pace.css">
     <link rel="stylesheet" type="text/css" href="css/dark.css">
+    <script src="library/push/push.min.js"></script>
     <script scr="js/jquery.js"></script>
   </head>
   <body>

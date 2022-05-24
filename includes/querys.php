@@ -83,11 +83,11 @@ $ticket = "SELECT * FROM Tiket_Sporte ORDER BY Id_Ticket";
 $tickets = $conect->query($ticket);
 $Ttickets = $tickets->num_rows;
 // consulta para saber el numero de notificaciones activas 
-$notificacion = "SELECT * FROM Notificaciones WHERE StatusN = '0'";
+$notificacion = "SELECT * FROM Mensajes WHERE StatusN = '0'";
 $notificaciones = $conect->query($notificacion);
 $Tnotificaciones = $notificaciones->num_rows;
 // consulta para extraer todas las notificaciones
-$E = "SELECT * FROM Notificaciones ORDER BY FechaN";
+$E = "SELECT * FROM Mensajes ORDER BY FechaN";
 $Ej = $conect->query($E);
 // consulta para extraer los oficios 
 $Oficio = "SELECT * FROM Oficios ORDER BY NombreOf";

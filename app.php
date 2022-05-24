@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/pace.css">
     <link rel="stylesheet" type="text/css" href="css/dark.css">
+    <script src="library/push/push.min.js"></script>
     <script scr="js/jquery.js"></script>
   </head>
   <body>
@@ -41,5 +42,6 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/dark-mode.js"></script>
   <script src="js/pace.js"></script>
+  <script src="js/action.js"></script>
   </body>
 </html>

@@ -318,7 +318,7 @@ if(isset($_POST['Subir'])){
      $Estatus = '0';
      $FechaNotifica = date('Y-m-d');
      $HoraNotifica = date('H:m:s');
-     $NewNoti = "INSERT INTO Notificaciones(Id_UsuarioN,TituloN, MensajeN, StatusN, FechaN, HoraN)VALUES('$IdUsers','$TituloN','$MensajeNoti','$Estatus','$FechaNotifica','$HoraNotifica')";
+     $NewNoti = "INSERT INTO Mensajes(Id_UsuarioN,TituloN, MensajeN, StatusN, FechaN, HoraN)VALUES('$IdUsers','$TituloN','$MensajeNoti','$Estatus','$FechaNotifica','$HoraNotifica')";
      $NweEj = $conect->query($NewNoti);
      if($NweEj > 0){
       $NotificaPuhs.="<script>
