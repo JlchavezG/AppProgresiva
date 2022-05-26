@@ -23,6 +23,7 @@
     </div>
     </div>
     <section id="Tabla">
+    <?php if($oficiosP->num_rows > 0) { ?>   
      <div class="row mt-3 py-2 container">
         <table class="table  table-responsive bg-white">
            <thead>
@@ -74,6 +75,12 @@
            </ul>
        </nav>
      </div>
+ <?php } else { ?>
+   <div class="alert alert-danger alert-dismissible fade show" role="alert">
+         <strong>Aun no hay Oficios Registrados!</strong> No se tiene registro de ningun oficio en la plataforma.
+         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+   </div>  
+ <?php } ?>      
  </section>       
 </div>
 </div>
