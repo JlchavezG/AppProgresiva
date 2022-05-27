@@ -21,7 +21,7 @@
         <li class="nav-item">
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"> &nbsp;
+          <a class="nav-link" href="AppNSolicitud.php"> &nbsp;
             <svg class="bi" width="20" height="20" fill="currentColor">
                <use xlink:href="library/icons/bootstrap-icons.svg#plus-circle-fill"/> 
             </svg>&nbsp; Nueva Solicitud
