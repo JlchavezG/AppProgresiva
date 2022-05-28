@@ -62,7 +62,7 @@
                     <div class="col">
                         <svg class="bi" width="20" height="20" fill="currentColor">
                           <use xlink:href="library/icons/bootstrap-icons.svg#clock-history"/> 
-                        </svg> Historial
+                        </svg> Historial</a>
                     </div>
                     <div class="col">
                         <a href="#" data-bs-toggle="offcanvas" data-bs-target="#AyudaMPerfil" class="text-decoration-none text-secondary">
@@ -70,8 +70,14 @@
                           <use xlink:href="library/icons/bootstrap-icons.svg#lightbulb"/> 
                         </svg> Ayuda</a>
                     </div>
+                    <div class="col">
+                        <a href="AppExpediente.php" class="text-decoration-none text-secondary">
+                        <svg class="bi" width="20" height="20" fill="currentColor">
+                          <use xlink:href="library/icons/bootstrap-icons.svg#folder-plus"/> 
+                        </svg> Expediente</a>
+                    </div>
                  </div>
-                 <div class="mt-2 col-sm-12 col-md-12 col-lg-10">
+                 <div class="mt-2 col-sm-12 col-md-12 col-lg-12">
                     <div class="accordion shadow" id="accordionPanelsStayOpenExample">
                        <div class="accordion-item">
                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">

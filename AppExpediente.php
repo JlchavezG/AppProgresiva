@@ -8,7 +8,7 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Nueva Solicitud de Servicio | IscjlchavezG</title>
+    <title>Inicio de Sistema | IscjlchavezG</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/pace.css">
@@ -16,7 +16,7 @@
     <script src="library/push/push.min.js"></script>
     <script scr="js/jquery.js"></script>
   </head>
-  <body onload="findMe()";>
+  <body>
   <!-- navbar -->
   <?php include 'includes/navbar.php'; ?>
   <!-- inicia sidebar -->
@@ -30,16 +30,14 @@
   <!-- inicia contenido -->
   <div class="container pt-4 mt-5">
     <div class="mt-2">
-        <?php include 'includes/NSolicitud.php'; ?>
-        
+      <?php include 'includes/Expediente.php'; ?>
   </div>
 </div>
+<?php include 'includes/footer.php'; ?>
   <!-- termina contenido -->
   <script src="js/bootstrap.min.js"></script>
   <script src="js/dark-mode.js"></script>
   <script src="js/pace.js"></script>
-  <script src="js/main.js"></script> 
-  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXY_Ny4kf1tpW6JMl7MmX5IRcokAQSVjM&callback=initMap"></script> 
-</body>
+  </body>
 </html>
 

@@ -32,8 +32,6 @@ $oficiosP = $conect->query($oficioP);
 $ToficiosP = $oficiosP->num_rows;
 $paginacion = $Toficios/$Tpaginas;
 $paginacion = ceil($paginacion);
-
-
 // consulta para extraer el numero de super usuarios
 $SuperUsuario = "SELECT * FROM Usuarios WHERE TUser = '1'";
 $SuperUsuarios = $conect->query($SuperUsuario);
@@ -86,10 +84,21 @@ $Ttickets = $tickets->num_rows;
 $notificacion = "SELECT * FROM Mensajes WHERE StatusN = '0'";
 $notificaciones = $conect->query($notificacion);
 $Tnotificaciones = $notificaciones->num_rows;
+// consulta para extraer los bancos
+$Banco = "SELECT * FROM Bancos ORDER BY NombreBanco ASC";
+$Bancos = $conect->query($Banco);
+// Consulta para extraer los tipos de pago 
+$Tpago = "SELECT * FROM TPago ORDER BY DescripcionPago ASC";
+$Tpagos = $conect->query($Tpago);
 // consulta para extraer todas las notificaciones
 $E = "SELECT * FROM Mensajes ORDER BY FechaN";
 $Ej = $conect->query($E);
 // consulta para extraer los oficios 
 $Oficio = "SELECT * FROM Oficios ORDER BY NombreOf";
 $ROficio = $conect->query($Oficio);
+// consultar si el usuario cuanta con cuenta con un expediente
+$TipoDUsuarios = $user['TUser'];
+$Expediente = "SELECT * FROM Expediente WHERE Id_UserExp = '$TipoDUsuarios'";
+$Expedientes = $conect->query($Expediente);
+$TExpedientes = $Expedientes->num_rows;
 ?>
