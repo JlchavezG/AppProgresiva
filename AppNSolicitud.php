@@ -16,7 +16,7 @@
     <script src="library/push/push.min.js"></script>
     <script scr="js/jquery.js"></script>
   </head>
-  <body onload="findMe()";>
+  <body>
   <!-- navbar -->
   <?php include 'includes/navbar.php'; ?>
   <!-- inicia sidebar -->
