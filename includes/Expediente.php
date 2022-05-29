@@ -39,6 +39,9 @@
                           <?php }?>
                     </select>
                     </div>
+                    <div class="row mt-2">
+                        <input type="text" class="form-control" name="NCuenta" placeholder="Numero de cuenta">
+                    </div>
                     <div class="row mt-2 mb-2">
                     <select name="Tpago" class="form-select form-select-sm" required>    
                               <option value="">Selecciona El tipo de Pago</option>
@@ -50,8 +53,8 @@
                 </div>
          </div>
     </div>   
-         <div class="col-sm-12 col-md-6 col.lg-6">
-          2
+         <div class="col-sm-12 col-md-6 col-lg-6 mt-3">
+          
         </div>
     </div>
 </div>
