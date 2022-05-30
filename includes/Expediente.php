@@ -1,7 +1,7 @@
 <?php if($TExpedientes == 0) { ?>
 <div class="container">
     <div class="row mt-3">
-         <div class="col-sm-12 col-md-12 col-lg-6 mt-5">
+         <div class="col-sm-12 col-md-12 col-lg-12 mt-5">
              <div class="card shadow mt-2 bg-light">
                     <p class="text-center mt-3">Datos para tu expediente</p><hr>
                     <div class="container">
@@ -53,16 +53,13 @@
                 </div>
          </div>
     </div>   
-         <div class="col-sm-12 col-md-6 col-lg-6 mt-3">
-          
-        </div>
-    </div>
+</div>
 </div>
 <?php } else { ?>
   <div class="row">
        <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="alert alert-danger" role="alert">
-                  Su expediente esta completado dentro de la plataforma ¿Necesitas Actualizarlo?
+                  Su expediente esta completado dentro de la plataforma <a href="ActulizarExp?Id_Expediente=<?php echo $$Expediente['Id_Expediente'] ?>">¿Necesitas Actualizarlo?</a>
             </div>
        </div>
   </div>

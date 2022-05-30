@@ -100,5 +100,4 @@ $ROficio = $conect->query($Oficio);
 $TipoDUsuarios = $user['TUser'];
 $Expediente = "SELECT * FROM Expediente WHERE Id_UserExp = '$TipoDUsuarios'";
 $Expedientes = $conect->query($Expediente);
-$TExpedientes = $Expedientes->num_rows;
 ?>
