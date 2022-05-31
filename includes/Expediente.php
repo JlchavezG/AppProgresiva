@@ -3,9 +3,12 @@
     <div class="row mt-3">
          <div class="col-sm-12 col-md-12 col-lg-12 mt-5">
              <div class="card shadow mt-2 bg-light">
-                    <p class="text-center mt-3">Datos para tu expediente</p><hr>
+                    <p class="text-center mt-3">
+                        <svg class="bi" width="20" height="20" fill="currentColor">
+                             <use xlink:href="library/icons/bootstrap-icons.svg#folder-plus"/> 
+                        </svg> Datos para tu expediente</p><hr>
                     <div class="container">
-                    <form action="">    
+                    <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST" enctype="multipart/form-data">    
                        <div class="row">
                         <select name="TUsuario" class="form-select form-select-sm" required>
                            <?php $Option = $user['TUser'];?>    
@@ -18,7 +21,6 @@
                               <option value="0">Socio</option>
                          <?php }?>
                        </select>
-                    </form>
                     </div>
                     <div class="row mt-2">
                       <input type="text" name="NCredencial" placeholder="Nº de Credencial de elector" class="form-control" required>
@@ -50,6 +52,10 @@
                           <?php }?>
                     </select>
                     </div>
+                    <div class="row py-4">
+                      <input type="submit" name="RegistrarExp" value="Registrar" class="btn btn-success btn-sm">
+                    </div>
+                    </form>
                 </div>
          </div>
     </div>   

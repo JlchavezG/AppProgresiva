@@ -62,7 +62,7 @@
          </div>
    </div>
    <div class="row mt-3">
-     <div class="col-sm-12 col-md-6 col-lg-6">
+     <div class="col-sm-12 col-md-12 col-lg-12">
          <?php if($Ej->num_rows > 0) { ?>
           <div class="card shadow">
              <div class="card-header bg-white"> 

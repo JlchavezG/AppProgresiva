@@ -332,6 +332,12 @@ if(isset($_POST['Subir'])){
      }
      });
      </script>";
+     header("refresh:3;NotificacioneSist.php");
      }
   }
+  
+  if(isset($_POST['RegistrarExp'])){
+     echo "datos";
+ 
+  }  
 ?>

@@ -3,6 +3,7 @@
   include 'includes/conection.php';
   include 'includes/Confing.php';
   include 'includes/querys.php';
+  include 'includes/Acciones.php';
  ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">

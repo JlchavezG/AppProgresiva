@@ -42,3 +42,18 @@ textarea {
 textarea {
   resize: none;
 }
+/*boton ir arriba*/
+.ir-arriba {
+	display:none;
+	padding:15px;
+	background:rgba(255, 102, 52,0.8);
+	font-size:10px;
+	color:#fff;
+	cursor:pointer;
+	position: fixed;
+  border-radius: 5px;
+	bottom:20px;
+	right:20px;
+  z-index: 10000;
+
+}
