@@ -23,7 +23,7 @@
                        </select>
                     </div>
                     <div class="row mt-2">
-                      <input type="text" name="NCredencial" placeholder="Nº de Credencial de elector" class="form-control" required>
+                      <input type="text" maxlength="20" name="NCredencial" id="credencial" placeholder="Nº de Credencial de elector" class="form-control" onkeypress="return VNumeros(event)" onpaste="return false" required>
                     </div>
                     <div class="row mt-2">
                       <label for="ImgCredencial">Sube tu Credencial de Elector</label>  
@@ -42,7 +42,7 @@
                     </select>
                     </div>
                     <div class="row mt-2">
-                        <input type="text" class="form-control" name="NCuenta" placeholder="Numero de cuenta">
+                        <input type="text" class="form-control" name="NCuenta" placeholder="Numero de cuenta" onkeypress="return VNumeros(event)" onpaste="return false">
                     </div>
                     <div class="row mt-2 mb-2">
                     <select name="Tpago" class="form-select form-select-sm" required>    

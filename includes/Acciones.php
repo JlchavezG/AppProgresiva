@@ -337,7 +337,17 @@ if(isset($_POST['Subir'])){
   }
   
   if(isset($_POST['RegistrarExp'])){
-     echo "datos";
- 
+    $TuserExp = $conect->real_escape_string($_POST['TUsuario']);
+    $Ncredencial = $conect->real_escape_string($_POST['NCredencial']);
+    
+    
+    
+    
+    
+    
+    $ImgComprobante = $conect->real_escape_string($_POST['Cdomicilio']);
+    $Banco = $conect->real_escape_string($_POST['Banco']);
+    $Ncuenta = $conect->real_escape_string($_POST['NCuenta']);
+    $Tpago = $conect->real_escape_string($_POST['Tpago']);
   }  
 ?>
