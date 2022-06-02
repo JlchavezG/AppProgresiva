@@ -340,12 +340,48 @@ if(isset($_POST['Subir'])){
     $TuserExp = $conect->real_escape_string($_POST['TUsuario']);
     $Ncredencial = $conect->real_escape_string($_POST['NCredencial']);
     
-    
-    
-    
-    
-    
-    $ImgComprobante = $conect->real_escape_string($_POST['Cdomicilio']);
+    $folder = "../doc/Expedientes/";
+    $archivo = $folder.basename($_FILES['ImgCredencial']['name']);
+    $typeFile = strtolower(pathinfo($archivo, PATHINFO_EXTENSION));
+    // validandando que sea una imagen
+    $validarImg = getimagesize($_FILES['ImgCredencial']['tmp_name']);
+    if($validarImg != false){
+         // Validando el tamaño de la imagen
+         $size= $_FILES['ImgCredencial']['size'];
+         if($size > 500000){
+            $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                             <strong>Error al subir el archivo!</strong> para poder subor el archivo debe de sr menor a 500 kb.
+                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                             </button>
+                         </div>';
+         }
+         else{
+              if($typeFile == "jpg" || $typeFile = "jpeg"){ 
+               // si se valido el archivo a la extencion correcta 
+                  if(move_uploaded_file($_FILES['ImgCredencial']['tmp_name'],$archivo)){
+                         $AlertFile.='<div class="alert alert-success alert-dismissible fade show" role="alert">
+                                         <strong>Excelente!</strong> La imagen se cargo Correctamente.
+                                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                                         </button>
+                                      </div>';     
+                  }
+              }
+               else{
+                $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <strong>Error al subir el archivo!</strong> Solo se aceptan archivos JPG y JPEG.
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                                </button>
+                             </div>';
+               }
+         }
+    }
+   else {
+        $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                         <strong>Error al subir el archivo!</strong> El archivo de la credencial INE no es una imagen.
+                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                         </button>
+                      </div>';
+    }
     $Banco = $conect->real_escape_string($_POST['Banco']);
     $Ncuenta = $conect->real_escape_string($_POST['NCuenta']);
     $Tpago = $conect->real_escape_string($_POST['Tpago']);

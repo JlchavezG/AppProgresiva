@@ -1,7 +1,7 @@
 <?php if($TExpedientes == 0) { ?>
 <div class="container">
     <div class="row mt-3">
-         <div class="col-sm-12 col-md-12 col-lg-12 mt-5">
+         <div class="col-sm-12 col-md-12 col-lg-12 mt-2">
              <div class="card shadow mt-2 bg-light">
                     <p class="text-center mt-3">
                         <svg class="bi" width="20" height="20" fill="currentColor">
