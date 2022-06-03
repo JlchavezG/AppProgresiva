@@ -186,9 +186,9 @@ if(isset($_POST['Subir'])){
     } 
     else{
     $upload_dir = './img/user/'; // upload directory
-    $imgExt = strtolower(pathinfo($imgFile,PATHINFO_EXTENSION)); // get image extension
+    $imgExt = strtolower(pathinfo($imgFile,PATHINFO_EXTENSION)); // extencion de la imagen
     // validando imagen y extensiones
-      $valid_extensions = array('jpeg', 'jpg', 'png', 'gif'); // valid extensions
+      $valid_extensions = array('jpeg', 'jpg', 'png'); // extenciones validas
       // renombrando uploading imagen
       $userpic = rand(1000,1000000).".".$imgExt;
       // permitir formatos de archivo de imagen válidos
@@ -337,53 +337,83 @@ if(isset($_POST['Subir'])){
   }
   
   if(isset($_POST['RegistrarExp'])){
+    $IdUserExp = $user['Id_Usuarios'];
+    $FechaExp = date('Y-m-d');
     $TuserExp = $conect->real_escape_string($_POST['TUsuario']);
     $Ncredencial = $conect->real_escape_string($_POST['NCredencial']);
+    $FolderExp = './doc/Exp/';  
+    opendir($FolderExp);
+    $Destino = $FolderExp.$_FILES['ImgCredencial']['name'];
+    $DocumentoCredencial = $_FILES['ImgCredencial']['name'];
+    $PesoArchivo = $_FILES['ImgCredencial']['size']/1000;
+    $TipoArchivo = $_FILES['ImgCredencial']['type'];
+    $ext = explode(".", $_FILES['ImgCredencial']['name']);
+                if (strtolower($ext[1]) == "pdf") {
+                  copy($_FILES['ImgCredencial']['tmp_name'],$Destino);
+                }
+                else if($PesoArchivo > 500){
+                  $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                   <strong>Error al subir el archivo!</strong> El archivo es muy pesado.
+                                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                                   </button>
+                               </div>';
+                }
+                else {
+                  $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                  <strong>Error al subir el archivo!</strong> El archivo adjunto para la credencial solo acepta pdf.
+                                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                                  </button>
+                               </div>';
+                }
+     $Destino1 = $FolderExp.$_FILES['Docdomicilio']['name'];
+     $DocumentoDomicilio = $_FILES['Docdomicilio']['name'];
+     $PesoArchivoD = $_FILES['Docdomicilio']['size']/1000;
+     $TipoArchivoD = $_FILES['Docdomicilio']['type'];
+     $extD = explode(".", $_FILES['Docdomicilio']['name']);
+                if (strtolower($extD[1]) == "pdf") {
+                  copy($_FILES['Docdomicilio']['tmp_name'],$Destino1);
+                }
+                else if($PesoArchivoD > 500){
+                  $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                   <strong>Error al subir el archivo!</strong> El archivo es muy pesado.
+                                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                                   </button>
+                               </div>';
+                }
+                else {
+                  $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                  <strong>Error al subir el archivo!</strong> El archivo adjunto para comprobante de domicilio solo acepta pdf.
+                                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                                  </button>
+                               </div>';
+                }   
     
-    $folder = "../doc/Expedientes/";
-    $archivo = $folder.basename($_FILES['ImgCredencial']['name']);
-    $typeFile = strtolower(pathinfo($archivo, PATHINFO_EXTENSION));
-    // validandando que sea una imagen
-    $validarImg = getimagesize($_FILES['ImgCredencial']['tmp_name']);
-    if($validarImg != false){
-         // Validando el tamaño de la imagen
-         $size= $_FILES['ImgCredencial']['size'];
-         if($size > 500000){
-            $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                             <strong>Error al subir el archivo!</strong> para poder subor el archivo debe de sr menor a 500 kb.
-                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                             </button>
-                         </div>';
-         }
-         else{
-              if($typeFile == "jpg" || $typeFile = "jpeg"){ 
-               // si se valido el archivo a la extencion correcta 
-                  if(move_uploaded_file($_FILES['ImgCredencial']['tmp_name'],$archivo)){
-                         $AlertFile.='<div class="alert alert-success alert-dismissible fade show" role="alert">
-                                         <strong>Excelente!</strong> La imagen se cargo Correctamente.
-                                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                                         </button>
-                                      </div>';     
-                  }
-              }
-               else{
-                $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                <strong>Error al subir el archivo!</strong> Solo se aceptan archivos JPG y JPEG.
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                                </button>
-                             </div>';
-               }
-         }
-    }
-   else {
-        $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                         <strong>Error al subir el archivo!</strong> El archivo de la credencial INE no es una imagen.
-                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                         </button>
-                      </div>';
-    }
     $Banco = $conect->real_escape_string($_POST['Banco']);
     $Ncuenta = $conect->real_escape_string($_POST['NCuenta']);
     $Tpago = $conect->real_escape_string($_POST['Tpago']);
+    $EsTatusExpediente = '1';
+    // insercion de datos en el expediente 
+    $InsertarExp = "INSERT INTO Expediente(Id_UserExp,FechaExp,Id_OficioUser,NumCredencial,DocCredencial,
+    DocDomicilio,Id_Banco,NCuenta,Id_FPago,Id_EstaExp)VALUES
+    ('$IdUserExp','$FechaExp','$TuserExp',' $Ncredencial','$DocumentoCredencial','$DocumentoDomicilio','$Banco','$Ncuenta','$Tpago','$EsTatusExpediente')";
+    $InsertaOficios = $conect->query($InsertarExp);
+    if($InsertaOficios->num_rows > 0){
+          $AlertFile.='<div class="alert alert-success alert-dismissible fade show" role="alert">
+                          <strong>El registro de tu expediente se realizo con exito!</strong>.
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                          </button>
+                       </div>';
+                       header("refresh:3;AppExpediente.php");
+
+    }
+    else {
+          $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                          <strong>Error al Registrar su expediente!</strong> Por favor intentalo más tarde o comunicate con soporte.
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                          </button>
+                       </div>';
+    }
+   
   }  
+
 ?>

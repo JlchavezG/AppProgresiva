@@ -30,8 +30,8 @@
                       <input type="file" name="ImgCredencial" placeholder="Selecciona la imagen" class="form-control" required>
                     </div>
                     <div class="row mt-2">
-                    <label for="Cdomicilio">Sube tu comprobante de domicilio</label>  
-                      <input type="file" name="Cdomicilio" placeholder="Selecciona un archivo" class="form-control" required>
+                    <label for="Docdomicilio">Sube tu comprobante de domicilio</label>  
+                      <input type="file" name="Docdomicilio" placeholder="Selecciona un archivo" class="form-control" required>
                     </div>
                     <div class="row mt-2">
                     <select name="Banco" class="form-select form-select-sm" required>    
