@@ -1,6 +1,17 @@
-<?php if($TExpedientes == 0) { ?>
-<div class="container">
+<?php if($EjecExpediente->num_rows > 0){ ?>
+  <div class="row">
+       <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="alert alert-danger" role="alert">
+                  Su expediente esta completado dentro de la plataforma <a href="ActulizarExp?Id_Expediente=<?php echo $$Expediente['Id_Expediente'] ?>">¿Necesitas Actualizarlo?</a>
+            </div>
+       </div>
+  </div>
+<?php } else { ?>
+  <div class="container">
     <div class="row mt-3">
+         <div class="row mt-2">
+            <h3 class="text-muted  text-center">Registro de Expediente de Usuario/Socio de la plataforma.</h3>
+         </div>
          <div class="col-sm-12 col-md-12 col-lg-12 mt-2">
              <div class="card shadow mt-2 bg-light">
                     <p class="text-center mt-3">
@@ -18,7 +29,7 @@
                               <option value="<?php echo $Opciones['Id_Oficio'];?>"><?php echo $Opciones['NombreOf'];?></option>
                           <?php }?>
                           <?php } else { ?>
-                              <option value="0">Socio</option>
+                              <option value="19">Usuario del Aplicativo</option>
                          <?php }?>
                        </select>
                     </div>
@@ -26,11 +37,11 @@
                       <input type="text" maxlength="20" name="NCredencial" id="credencial" placeholder="Nº de Credencial de elector" class="form-control" onkeypress="return VNumeros(event)" onpaste="return false" required>
                     </div>
                     <div class="row mt-2">
-                      <label for="ImgCredencial">Sube tu Credencial de Elector</label>  
+                      <label for="ImgCredencial">Sube tu Credencial de Elector en formato Pdf</label>  
                       <input type="file" name="ImgCredencial" placeholder="Selecciona la imagen" class="form-control" required>
                     </div>
                     <div class="row mt-2">
-                    <label for="Docdomicilio">Sube tu comprobante de domicilio</label>  
+                    <label for="Docdomicilio">Sube tu comprobante de domicilio en Formato Pdf</label>  
                       <input type="file" name="Docdomicilio" placeholder="Selecciona un archivo" class="form-control" required>
                     </div>
                     <div class="row mt-2">
@@ -61,12 +72,9 @@
     </div>   
 </div>
 </div>
-<?php } else { ?>
-  <div class="row">
-       <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="alert alert-danger" role="alert">
-                  Su expediente esta completado dentro de la plataforma <a href="ActulizarExp?Id_Expediente=<?php echo $$Expediente['Id_Expediente'] ?>">¿Necesitas Actualizarlo?</a>
-            </div>
-       </div>
-  </div>
 <?php } ?>
+
+
+
+
+

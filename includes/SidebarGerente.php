@@ -43,6 +43,11 @@
       </svg>&nbsp; Tipo de Pago</a>
     </li>
     <li class="nav-item items">
+      <a href="Catalogo.php" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
+         <use xlink:href="library/icons/bootstrap-icons.svg#box2-fill"/>
+      </svg>&nbsp; Catalogo de Oficios</a>
+    </li>
+    <li class="nav-item items">
       <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
          <use xlink:href="library/icons/bootstrap-icons.svg#calendar2-date"/>
       </svg>&nbsp; Calendario</a>

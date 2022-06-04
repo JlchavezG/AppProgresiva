@@ -97,7 +97,8 @@ $Ej = $conect->query($E);
 $Oficio = "SELECT * FROM Oficios ORDER BY NombreOf";
 $ROficio = $conect->query($Oficio);
 // consultar si el usuario cuanta con cuenta con un expediente
-$TipoDUsuarios = $user['TUser'];
-$Expediente = "SELECT * FROM Expediente WHERE Id_UserExp = '$TipoDUsuarios'";
-$Expedientes = $conect->query($Expediente);
+$IdUserExpediente = $user['TUser'];
+$rowExpediente = "SELECT * FROM Expediente WHERE Id_UserExp = $IdUserExpediente";
+$EjecExpediente = $conect->query($rowExpediente);
+
 ?>

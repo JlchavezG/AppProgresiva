@@ -18,6 +18,11 @@
       </svg>&nbsp; Perfil</a>
     </li>
     <li class="nav-item items">
+      <a href="Catalogo.php" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
+         <use xlink:href="library/icons/bootstrap-icons.svg#hand-index"/>
+      </svg>&nbsp; Catalogo de Oficios</a>
+    </li>
+    <li class="nav-item items">
       <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
          <use xlink:href="library/icons/bootstrap-icons.svg#hammer"/>
       </svg>&nbsp;Buscar Oficios</a>

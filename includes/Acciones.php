@@ -392,28 +392,24 @@ if(isset($_POST['Subir'])){
     $Ncuenta = $conect->real_escape_string($_POST['NCuenta']);
     $Tpago = $conect->real_escape_string($_POST['Tpago']);
     $EsTatusExpediente = '1';
-    // insercion de datos en el expediente 
-    $InsertarExp = "INSERT INTO Expediente(Id_UserExp,FechaExp,Id_OficioUser,NumCredencial,DocCredencial,
-    DocDomicilio,Id_Banco,NCuenta,Id_FPago,Id_EstaExp)VALUES
-    ('$IdUserExp','$FechaExp','$TuserExp',' $Ncredencial','$DocumentoCredencial','$DocumentoDomicilio','$Banco','$Ncuenta','$Tpago','$EsTatusExpediente')";
-    $InsertaOficios = $conect->query($InsertarExp);
-    if($InsertaOficios->num_rows > 0){
-          $AlertFile.='<div class="alert alert-success alert-dismissible fade show" role="alert">
-                          <strong>El registro de tu expediente se realizo con exito!</strong>.
-                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                          </button>
+    // insercion de datos en el expediente
+    $InsertExp = "INSERT INTO Expediente(Id_UserExp,FechaExp,Id_OficioUser,NumCredencial,DocCredencial,DocDomicilio,Id_Banco,NCuenta,Id_FPago,Id_EstaExp)VALUES
+    ('$IdUserExp','$FechaExp','$TuserExp','$Ncredencial','$DocumentoCredencial','$DocumentoDomicilio','$Banco','$Ncuenta','$Tpago','$EsTatusExpediente')";
+    $InsertExpE = $conect->query($InsertExp);
+    if($InsertExpE > 0 ){
+           $AlertFile.='<div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Excelente tu Expediente a quedado completo!</strong> .
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                            </button>
                        </div>';
-                       header("refresh:3;AppExpediente.php");
-
+                       header("refresh:3;AppExpediente.php"); // redirects image view page after 5 seconds.
     }
-    else {
-          $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                          <strong>Error al Registrar su expediente!</strong> Por favor intentalo más tarde o comunicate con soporte.
-                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                          </button>
-                       </div>';
+    else{
+           $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Eror al registrar tu expediente!</strong> Existe un error al revisar tus documentos por favor intentalo más tarde o contactaa soporte.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                            </button>
+                        </div>';
     }
-   
   }  
-
 ?>
