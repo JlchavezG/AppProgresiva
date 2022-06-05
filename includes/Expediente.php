@@ -24,10 +24,24 @@
                  <input type="text" class="form-control" id="TuserDis" placeholder="Oficio / Usuario" aria-label="TuserDis" id="NomDis" value="<?php echo $DatosExp['NombreOf'];?>" aria-describedby="basic-addon1">
                </div>
           </div>
-          <div class="col-sm-3 col-md-3 col-lg-3">
-            <input type="text" class="form-control" value="<?php echo $DatosExp['NumCredencial'];?>">
+       </div>
+       <div class="row mt-2">
+          <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="input-group mb-3">
+                 <span class="input-group-text" id="basic-addon1">No Credencial Oficial</span>
+                 <input type="text" class="form-control" id="Ncredencial" placeholder="No Credencial" aria-label="Ncorencial" value="<?php echo $DatosExp['NumCredencial'];?>" aria-describedby="basic-addon1">
+               </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="input-group mb-3">
+                 <span class="input-group-text" id="basic-addon1">Institución Bancaria</span>
+                 <input type="text" class="form-control" id="Nbanco" placeholder="Institución Bancaria" aria-label="Nbanco" value="<?php echo $DatosExp['NombreBanco'];?>" aria-describedby="basic-addon1">
+               </div>  
+          
+          
           </div>
        </div>
+
   </div>
 <?php } else { ?>
   <div class="container">
