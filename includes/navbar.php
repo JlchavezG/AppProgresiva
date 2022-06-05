@@ -27,23 +27,7 @@
             </svg>&nbsp; Nueva Solicitud
           </a>
         </li>
-        &nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <li class="nav-item">
-        <div class="form-check form-switch nav-link">
-                  <input class="form-check-input" type="checkbox" id="darkSwitch">
-                  <label class="form-check-label" for="darkSwitch">
-                  <span>
-                  <svg class="bi" width="20" height="20" fill="currentColor">
-                     <use xlink:href="library/icons/bootstrap-icons.svg#brightness-low"/> 
-                  </svg> |
-                  <svg class="bi" width="16" height="16" fill="currentColor">
-                     <use xlink:href="library/icons/bootstrap-icons.svg#moon-stars"/> 
-                  </svg>
-                  </span>
-                  </label>
-               </div>
-        </li>
+        
         <li class="nav-item">
           <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#Soporte"> &nbsp;
             <svg class="bi" width="20" height="20" fill="currentColor">
@@ -100,7 +84,24 @@
                 <use xlink:href='library/icons/bootstrap-icons.svg#bell-fill'/> 
               </svg>
           </a>
-        </li>         
+        </li> 
+        &nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <li class="nav-item">
+        <div class="form-check form-switch nav-link">
+                  <input class="form-check-input" type="checkbox" id="darkSwitch">
+                  <label class="form-check-label" for="darkSwitch">
+                  <span>
+                  <svg class="bi" width="20" height="20" fill="currentColor">
+                     <use xlink:href="library/icons/bootstrap-icons.svg#brightness-low"/> 
+                  </svg> |
+                  <svg class="bi" width="16" height="16" fill="currentColor">
+                     <use xlink:href="library/icons/bootstrap-icons.svg#moon-stars"/> 
+                  </svg>
+                  </span>
+                  </label>
+               </div>
+        </li>        
       </ul>  
     </div>
   </div>

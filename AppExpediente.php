@@ -39,6 +39,14 @@
 </div>
 <?php include 'includes/footer.php'; ?>
   <!-- termina contenido -->
+  <script>
+    // funcion para desabilitar los input de expediente 
+  window.onload=function() {
+  document.getElementById('NomDis').disabled = true;
+  document.getElementById('FechaDis').disabled = true;
+  document.getElementById('TuserDis').disabled = true;
+}
+  </script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/dark-mode.js"></script>
   <script src="js/pace.js"></script>

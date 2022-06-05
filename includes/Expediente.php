@@ -1,9 +1,32 @@
 <?php if($EjecExpediente->num_rows > 0){ ?>
   <div class="row">
        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="alert alert-danger" role="alert">
-                  Su expediente esta completado dentro de la plataforma <a href="ActulizarExp?Id_Expediente=<?php echo $$Expediente['Id_Expediente'] ?>">¿Necesitas Actualizarlo?</a>
+            <div class="alert alert-info" role="alert">
+                  Su expediente esta completado dentro de la plataforma <a href="ActulizarExp?Id_Expediente=<?php echo $DatosExp['Id_Expediente'] ?>" class="text-decoration-none link-secondary">¿Necesitas Actualizarlo?</a>
             </div>
+       </div>
+       <div class="row mt-3">
+          <div class="col-sm-12 col-md-4 col-lg-4 mt-2">
+             <div class="input-group mb-3">
+                 <span class="input-group-text" id="basic-addon1">Nombre:</span>
+                 <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" id="NomDis" value="<?php echo $DatosExp['Nombre']." ".$DatosExp['ApellidoP']." ".$DatosExp['ApellidoM']; ?>" aria-describedby="basic-addon1">
+             </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-4 mt-2">
+             <div class="input-group mb-3">
+                 <span class="input-group-text" id="basic-addon1">Fecha de Exp:</span>
+                 <input type="text" class="form-control" id="FechaDis" placeholder="Fecha" aria-label="Fecha" id="FechaDis" value="<?php $FechExp = $DatosExp['FechaExp']; $FechExp = date('d-m-Y'); echo $FechExp;?>" aria-describedby="basic-addon1">
+             </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-4 mt-2">
+               <div class="input-group mb-3">
+                 <span class="input-group-text" id="basic-addon1">Oficio / TUsuario</span>
+                 <input type="text" class="form-control" id="TuserDis" placeholder="Oficio / Usuario" aria-label="TuserDis" id="NomDis" value="<?php echo $DatosExp['NombreOf'];?>" aria-describedby="basic-addon1">
+               </div>
+          </div>
+          <div class="col-sm-3 col-md-3 col-lg-3">
+            <input type="text" class="form-control" value="<?php echo $DatosExp['NumCredencial'];?>">
+          </div>
        </div>
   </div>
 <?php } else { ?>
@@ -34,7 +57,7 @@
                        </select>
                     </div>
                     <div class="row mt-2">
-                      <input type="text" maxlength="20" name="NCredencial" id="credencial" placeholder="Nº de Credencial de elector" class="form-control" onkeypress="return VNumeros(event)" onpaste="return false" required>
+                      <input type="text" maxlength="13" name="NCredencial" id="credencial" placeholder="Nº de Credencial de elector" class="form-control" onkeypress="return VNumeros(event)" onpaste="return false" required>
                     </div>
                     <div class="row mt-2">
                       <label for="ImgCredencial">Sube tu Credencial de Elector en formato Pdf</label>  
@@ -53,7 +76,7 @@
                     </select>
                     </div>
                     <div class="row mt-2">
-                        <input type="text" class="form-control" name="NCuenta" placeholder="Numero de cuenta" onkeypress="return VNumeros(event)" onpaste="return false">
+                        <input type="text" class="form-control" maxlength="20" name="NCuenta" placeholder="Numero de cuenta" onkeypress="return VNumeros(event)" onpaste="return false">
                     </div>
                     <div class="row mt-2 mb-2">
                     <select name="Tpago" class="form-select form-select-sm" required>    
