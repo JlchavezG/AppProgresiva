@@ -35,13 +35,8 @@
           <div class="col-sm-3 col-md-3 col-lg-3 py-3">
               <a href="ListaSociosOficio.php?Id_Oficio=<?php echo $LinkOficio['Id_Oficio'];?>" class="text-decoration-none text-secondary">
                 <div class="card shadow bg-light">
-                  <div class="container text-center">
+                  <div class="container text-center">  
                      <div class="row py-3">
-                        <svg class="bi" width="23" height="23" fill="currentColor">
-                          <use xlink:href="library/icons/bootstrap-icons.svg#tools"/>
-                         </svg>
-                     </div>  
-                     <div class="row">
                          <div class="text-center"><?php echo $LinkOficio['NombreOf']; ?></div>
                      </div> 
                   </div>

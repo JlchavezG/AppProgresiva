@@ -43,8 +43,11 @@
        <?php echo $Alert; ?>
        </div>
        </div>
-       <div class="row py-1 mt-2">
-           <div class="col-sm-4 col-md-4 col-lg-4 my-2">
+       <div class="row mt-3">
+         <span class="text-center">Total de Usuarios en la plataforma: <b><?php echo $TotalRow ; ?></b></span>
+       </div>
+       <div class="row py-1 mt-2 justify-content-center">
+           <div class="col-sm-12 col-md-2 col-lg-2 my-2">
               <div class="card shadow bg-light">
                    <div class="container text-center">
                        <div class="row">
@@ -54,13 +57,13 @@
                                </svg>
                            </div>
                            <div class="col my-3">
-                           <a href="AppBuscarUsuarios.php" class="text-decoration-none text-secondary"><strong>Buscar</strong></a>
+                           <a href="AppBuscarUsuarios.php" class="text-decoration-none text-secondary"><strong>Buscar Usuarios</strong></a>
                            </div>
                        </div>
                    </div>
               </div>
            </div> 
-           <div class="col-sm-4 col-md-4 col-lg-4 my-2">
+           <div class="col-sm-12 col-md-2 col-lg-2 my-2">
               <div class="card shadow bg-light">
                    <div class="container text-center">
                        <div class="row">
@@ -70,13 +73,13 @@
                                </svg>
                            </div>
                            <div class="col my-3">
-                               <a href="AppRegistroUsuarios.php" class="text-decoration-none text-secondary"><strong>Agregar</strong></a>
+                               <a href="AppRegistroUsuarios.php" class="text-decoration-none text-secondary"><strong>Agregar Usuarios</strong></a>
                            </div>
                        </div>
                    </div>
               </div>
            </div> 
-           <div class="col-sm-4 col-md-4 col-lg-4 my-2">
+           <div class="col-sm-2 col-md-2 col-lg-2 my-2">
               <div class="card shadow bg-light">
                    <div class="container text-center">
                        <div class="row">
@@ -86,14 +89,13 @@
                                </svg>
                            </div>
                            <div class="col my-3">
-                              <a href="AppAdminUsuarios.php" class="text-decoration-none text-secondary"><strong>Administrar</strong></a>
+                              <a href="AppAdminUsuarios.php" class="text-decoration-none text-secondary"><strong>Administrar Usuarios</strong></a>
                            </div>
                        </div>
                    </div>
-              </div>
-           </div> 
-       </div> 
-    </div>
+              </div>        
+         </div> 
+      </div>
   </div>
 </div>
 <?php include 'includes/footer.php'; ?>

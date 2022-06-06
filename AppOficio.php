@@ -7,7 +7,7 @@
   // validar restriccion solo a sistemas
   $validar = $user['TUser'];
   if($validar != 1 || $validar == 2){
-    header("location:app.php");
+    header("location:library.php");
   }
  ?>
 <!DOCTYPE html>
@@ -43,8 +43,11 @@
        <?php echo $Alert; ?>
        </div>
        </div>
-       <div class="row py-1 mt-2">
-           <div class="col-sm-4 col-md-4 col-lg-4 my-2">
+       <div class="row mt-3">
+         <span class="text-center">Total de Oficios dentro de plataforma: <b><?php echo $ToficiosRow ; ?></b></span>
+       </div>
+       <div class="row py-1 mt-2 justify-content-center">
+           <div class="col-sm-12 col-md-2 col-lg-2 my-2">
               <div class="card shadow bg-light">
                    <div class="container text-center">
                        <div class="row">
@@ -54,13 +57,13 @@
                                </svg>
                            </div>
                            <div class="col my-3">
-                           <a href="AppBuscarOficioS.php" class="text-decoration-none text-secondary"><strong>Buscar</strong></a>
+                           <a href="AppBuscarOficioS.php" class="text-decoration-none text-secondary"><strong>Buscar Oficios.</strong></a>
                            </div>
                        </div>
                    </div>
               </div>
            </div> 
-           <div class="col-sm-4 col-md-4 col-lg-4 my-2">
+           <div class="col-sm-12 col-md-2 col-lg-2 my-2">
               <div class="card shadow bg-light">
                    <div class="container text-center">
                        <div class="row">
@@ -70,13 +73,13 @@
                                </svg>
                            </div>
                            <div class="col my-3">
-                               <a href="AppRegistroOficio.php" class="text-decoration-none text-secondary"><strong>Agregar</strong></a>
+                               <a href="AppRegistroOficio.php" class="text-decoration-none text-secondary"><strong>Agregar Oficios.</strong></a>
                            </div>
                        </div>
                    </div>
               </div>
            </div> 
-           <div class="col-sm-4 col-md-4 col-lg-4 my-2">
+           <div class="col-sm-2 col-md-2 col-lg-2 my-2">
               <div class="card shadow bg-light">
                    <div class="container text-center">
                        <div class="row">
@@ -86,14 +89,13 @@
                                </svg>
                            </div>
                            <div class="col my-3">
-                              <a href="AppAdminOficios.php" class="text-decoration-none text-secondary"><strong>Administrar</strong></a>
+                              <a href="AppAdminOficios.php" class="text-decoration-none text-secondary"><strong>Administrar Oficios.</strong></a>
                            </div>
                        </div>
                    </div>
-              </div>
-           </div> 
-       </div> 
-    </div>
+              </div>        
+         </div> 
+      </div>
   </div>
 </div>
 <?php include 'includes/footer.php'; ?>

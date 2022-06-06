@@ -5,6 +5,30 @@
                   Su expediente esta completado dentro de la plataforma <a href="ActulizarExp?Id_Expediente=<?php echo $DatosExp['Id_Expediente'] ?>" class="text-decoration-none link-secondary">¿Necesitas Actualizarlo?</a>
             </div>
        </div>
+       <div class="row">
+          <div class="col-sm-4 col-md-4 col-lg-4 mt-3 py-2">
+            <span>Estatus del Expediente: <?php echo $DatosExp['NomEstatus'];?></span>
+          </div>
+          <div class="col-sm-8 col-md-8 col-lg-8 mt-4">
+               <span> 
+                  <svg class="bi" width="30" height="30" fill="currentColor">
+                     <use xlink:href="library/icons/bootstrap-icons.svg#file-earmark-person"/> 
+                  </svg>
+                  <a href="./doc/Exp/<?php echo $DatosExp['DocCredencial'];?>" target="_blank" class="text-decoration-none text-muted">
+                      Documento Credencial Oficial
+                  </a>
+               </span>
+               <span> 
+                  <svg class="bi" width="30" height="30" fill="currentColor">
+                     <use xlink:href="library/icons/bootstrap-icons.svg#file-pdf-fill"/> 
+                  </svg>
+                  <a href="./doc/Exp/<?php echo $DatosExp['DocDomicilio'];?>" target="_blank" class="text-decoration-none text-muted">
+                      Documento Comprobante domicilio
+                  </a>
+               </span>
+          </div>
+       </div>   
+  </div>
        <div class="row mt-3">
           <div class="col-sm-12 col-md-4 col-lg-4 mt-2">
              <div class="input-group mb-3">
@@ -38,6 +62,22 @@
                  <input type="text" class="form-control" id="Nbanco" placeholder="Institución Bancaria" aria-label="Nbanco" value="<?php echo $DatosExp['NombreBanco'];?>" aria-describedby="basic-addon1">
                </div>  
           
+          </div>
+       </div>
+
+
+       <div class="row mt-2">
+          <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="input-group mb-3">
+                 <span class="input-group-text" id="basic-addon1">No de Cuenta</span>
+                 <input type="text" class="form-control" id="Numcuenta" placeholder="No Cuenta" aria-label="Ncuenta" value="<?php echo $DatosExp['NCuenta'];?>" aria-describedby="basic-addon1">
+               </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="input-group mb-3">
+                 <span class="input-group-text" id="basic-addon1">Forma de Pago: </span>
+                 <input type="text" class="form-control" id="Tpago" placeholder="Tipo de pago" aria-label="Tpago" value="<?php echo $DatosExp['DescripcionPago'];?>" aria-describedby="basic-addon1">
+               </div>  
           
           </div>
        </div>

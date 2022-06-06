@@ -96,6 +96,7 @@ $Ej = $conect->query($E);
 // consulta para extraer los oficios 
 $Oficio = "SELECT * FROM Oficios ORDER BY NombreOf";
 $ROficio = $conect->query($Oficio);
+$ToficiosRow = $ROficio->num_rows;
 // consultar si el usuario cuanta con cuenta con un expediente
 $IdUserExpediente = $user['TUser'];
 // consulta inner join de expediente
@@ -107,7 +108,5 @@ $DatosExp = $EjecExpediente->fetch_array();
 
 
 
-//$rowExpediente = "SELECT * FROM Expediente WHERE Id_UserExp = $IdUserExpediente";
-//$EjecExpediente = $conect->query($rowExpediente);
-//$DatosExp = $EjecExpediente->fetch_array();
+
 ?>

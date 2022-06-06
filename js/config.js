@@ -5,4 +5,6 @@
     document.getElementById('TuserDis').disabled = true;
     document.getElementById('Ncredencial').disabled = true;
     document.getElementById('Nbanco').disabled = true;
+    document.getElementById('Numcuenta').disabled = true;
+    document.getElementById('Tpago').disabled = true;
   }
