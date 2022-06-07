@@ -1,12 +1,12 @@
-<div class="container">
+<div class="container mt-5">
     <div class="row d-flex justify-content-center mt-4">
        <h2 class="text-center display-6 mt-5">Registro de | <span class="text-warning"> Usuarios</span></h2>
        <p class="text-center text-muted">Bienvenidos al registro de usuarios Nivel Sistemas. </p>
        <div class="row mt-2 text-center">
           <div class="col py-2">
                 <a href="AppUsuarios.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="20" height="20" fill="currentColor">
-                     <use xlink:href="library/icons/bootstrap-icons.svg#arrow-left-circle-fill"/>
-                </svg> Regresar </a>
+                     <use xlink:href="library/icons/bootstrap-icons.svg#arrow-bar-left"/>
+                </svg> Salir </a>
           </div>
           <div class="col"></div>
           <div class="col">

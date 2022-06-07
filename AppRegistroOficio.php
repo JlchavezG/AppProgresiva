@@ -28,8 +28,9 @@
   <!-- inicia sidebar -->
   <?php 
    $Tsidebar = $user['TUser'];
-    if($Tsidebar == 1){include 'includes/SidebarSistemas.php';}else if($Tsidebar == 2){include 'includes/SidebarSoporte.php';}
-    else if($Tsidebar == 3){include 'includes/SidebarOfertante.php';}else if($Tsidebar == 4){include 'includes/SidebarUsuario.php';}
+    if($Tsidebar == 1){include 'includes/SidebarSuperUser.php';}else if($Tsidebar == 2){include 'includes/SidebarGerente.php';}
+    else if($Tsidebar == 3){include 'includes/SidebarSocioP.php';}else if($Tsidebar == 4){include 'includes/SidebarUsuarioP.php';}
+    else if($Tsidebar == 5){include 'includes/SidebarSocioF.php';}else if($Tsidebar == 6){include 'includes/SidebarUsuarioF.php';}
   ?>
   <!-- termina sidebar -->
   <!-- inicia contenido -->
@@ -40,8 +41,8 @@
           <div class="row mt-2 text-center">
           <div class="col py-2">
                 <a href="appOficio.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="20" height="20" fill="currentColor">
-                     <use xlink:href="library/icons/bootstrap-icons.svg#arrow-left-circle-fill"/>
-                </svg> Regresar </a>
+                     <use xlink:href="library/icons/bootstrap-icons.svg#arrow-bar-left"/>
+                </svg> Salir </a>
           </div>
     <div class="col"></div>
     </div>

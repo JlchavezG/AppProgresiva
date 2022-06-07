@@ -3,6 +3,9 @@
   include 'includes/conection.php';
   include 'includes/Confing.php';
   include 'includes/querys.php';
+  if(!$_GET){
+      header("location:AppCatalogo.php?paginaOf=1");
+  }
  ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
@@ -28,8 +31,12 @@
   ?>
   <!-- termina sidebar -->
   <!-- inicia contenido -->
-  <div class="container pt-4 mt-5">
-    <div class="mt-2"> 
+  <div class="container pt-4 mt-5"> 
+        <div class="col py-2 mt-3">
+                <a href="app.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="30" height="30" fill="currentColor">
+                     <use xlink:href="library/icons/bootstrap-icons.svg#arrow-bar-left"/>
+                </svg> Salir </a>
+          </div>
       <div class="row mt-3 py-3">
       <?php while($LinkOficio = $ROficio->fetch_array()){ ?>  
           <div class="col-sm-3 col-md-3 col-lg-3 py-3">
@@ -44,13 +51,26 @@
           </div></a>
           <?php } ?>
       </div>
+  </div> 
+  <div class="container">
+      <div class="row justify-content-center">
+          <nav aria-label="Page navigation example">
+             <ul class="pagination">
+               <li class="page-item <?php echo $_GET['paginaOf'] <= 1 ? 'disabled' : '' ?>"><a class="page-link" href="AppCatalogo.php?paginaOf=<?php echo $_GET['paginaOf']-1 ?>">Anterior</a></li>
+               <?php for($i=0; $i < $PaginasOficio; $i++) {?>
+               <li class="page-item <?php echo $_GET['paginaOf']==$i+1 ? 'active' : ''   ?>"><a class="page-link" href="AppCatalogo.php?paginaOf=<?php echo $i+1; ?>"><?php echo $i+1; ?></a></li>
+               <?php } ?>
+               <li class="page-item <?php echo $_GET['paginaOf'] >= $PaginasOficio ? 'disabled' : '' ?>"><a class="page-link" href="AppCatalogo.php?paginaOf=<?php echo $_GET['paginaOf']+1 ?>">Siguiente</a></li>
+             </ul>
+           </nav>
+      </div>
   </div>
 </div>
   <!-- termina contenido -->
 <?php include 'includes/footer.php';?>  
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/dark-mode.js"></script>
-  <script src="js/pace.js"></script>
-  </body>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/dark-mode.js"></script>
+<script src="js/pace.js"></script>
+</body>
 </html>
 

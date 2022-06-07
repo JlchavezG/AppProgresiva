@@ -43,6 +43,14 @@
        <?php echo $Alert; ?>
        </div>
        </div>
+       <div class="row mt-2 text-center">
+          <div class="col py-2">
+                <a href="app.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="30" height="30" fill="currentColor">
+                     <use xlink:href="library/icons/bootstrap-icons.svg#arrow-bar-left"/>
+                </svg> Salir </a>
+          </div>
+          <div class="col"></div>
+       </div>  
        <div class="row mt-3">
          <span class="text-center">Total de Usuarios en la plataforma: <b><?php echo $TotalRow ; ?></b></span>
        </div>

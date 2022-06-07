@@ -93,10 +93,15 @@ $Tpagos = $conect->query($Tpago);
 // consulta para extraer todas las notificaciones
 $E = "SELECT * FROM Mensajes ORDER BY FechaN";
 $Ej = $conect->query($E);
-// consulta para extraer los oficios 
+// consulta para el paginador de oficios
+$Oficios_x_pagina = 12; 
+// consulta para extraer los oficios
 $Oficio = "SELECT * FROM Oficios ORDER BY NombreOf";
 $ROficio = $conect->query($Oficio);
-$ToficiosRow = $ROficio->num_rows;
+$ToficiosRow = $ROficio->num_rows; 
+$PaginasOficio = $ToficiosRow / $Oficios_x_pagina;
+$PaginasOficio = ceil($PaginasOficio);
+echo $PaginasOficio;
 // consultar si el usuario cuanta con cuenta con un expediente
 $IdUserExpediente = $user['TUser'];
 // consulta inner join de expediente

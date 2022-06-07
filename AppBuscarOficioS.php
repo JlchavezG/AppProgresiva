@@ -38,8 +38,8 @@
     <div class="row mt-2 text-center">
           <div class="col py-2">
                 <a href="appOficio.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="20" height="20" fill="currentColor">
-                     <use xlink:href="library/icons/bootstrap-icons.svg#arrow-left-circle-fill"/>
-                </svg> Regresar </a>
+                     <use xlink:href="library/icons/bootstrap-icons.svg#arrow-bar-left"/>
+                </svg> Salir </a>
           </div>
     <div class="col"></div>
     </div>      
@@ -51,7 +51,7 @@
                     <div class="col-sm-6 col-md-6 col-lg-6">
                     <form action="<?php echo $_SERVER[''] ?>" method="POST">
                         <div class="input-group mb-3">
-                             <input type="text" class="form-control" name="Buscar" placeholder="Buscar Oficio" aria-label="Buscar Oficio" aria-describedby="Buscar Oficio">
+                             <input type="text" class="form-control" name="Buscar" placeholder="Buscar Oficio" aria-label="Buscar Oficio" aria-describedby="Buscar Oficio" required>
                              <button class="btn btn-outline-success" type="submit" name="Busqueda" id="Buscar">Buscar</button>
                         </div>
                     </div>
