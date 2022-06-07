@@ -18,10 +18,9 @@
              <?php echo $mensaje; ?>
          </div>
          <div class="col-sm-10 col-md-10 col-lg-10 py-5">
-                  <div class="card shadow bg-light">
                       <div class="row">
                           <div class="container">
-                             <div class="row py-2">
+                             <div class="row py-2 justify-content-center">
                                   <div class="col-sm-6 col-md-6 col-lg-6 text-center mt-3">
                                       <img src="img/craken.png" alt="logo" style="width:250px;">
                                       <div class="row">
@@ -38,7 +37,8 @@
                                          </div>
                                       </div>
                                   </div>
-                                  <div class="col-sm-6 col-md-6 col-lg-6">
+                                  <div class="col-sm-10 col-md-6 col-lg-6 mt-2">
+                                  <div class="card shadow bg-light">
                                       <div class="container mt-3">
                                         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="needs-validation" novalidate method="post">
                                           <span>

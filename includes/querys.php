@@ -11,10 +11,6 @@ $Id_Of = $_GET['Id_Oficio'];
 $OficioM = "SELECT * FROM Oficios WHERE Id_Oficio = '$Id_Of'";
 $OficiosM = $conect->query($OficioM);
 $separarOf = $OficiosM->fetch_array();
-// consulta para extraer tipo de oficio 
-$oficio = "SELECT * FROM Oficios ORDER BY NombreOf ASC";
-$oficios = $conect->query($oficio);
-$Toficios = $oficios->num_rows;
 // consulta para extraer los tipos de usario de la tabla Tuser 
 $TipoUsuarios = "SELECT * FROM TUsuario ORDER BY Id_TuserApp";
 $TUsuariosQuery = $conect->query($TipoUsuarios);
@@ -24,8 +20,12 @@ U.Numero, U.Colonia, U.Id_Estado, U.Id_Municipio, U.Latitud, U.Longitud, U.UserN
 G.Id_Genero, G.NombreG, E.Id_Estado, E.NombreE, M.Id_Municipios, M.NombreM, TU.Id_TuserApp, TU.AppTuser, TU.DescripcionT FROM Usuarios U INNER JOIN Genero G ON  U.Id_Genero = G.Id_Genero 
 INNER JOIN Estados E ON U.Id_Estado = E.Id_Estado INNER JOIN Municipios M ON U.Id_Municipio = M.Id_Municipios INNER JOIN TUsuario TU ON U.TUser = TU.Id_TuserApp";
 $verificarUser = $conect->query($unirUser);
+// consulta para extraer tipo de oficio 
+$oficio = "SELECT * FROM Oficios ORDER BY NombreOf ASC";
+$oficios = $conect->query($oficio);
+$Toficios = $oficios->num_rows;
 // consulta para la paginación de oficios en administración
-$Tpaginas = '5';
+$Tpaginas = '12';
 $inicioP = ($_GET['pagina']-1)*$Tpaginas;
 $oficioP = "SELECT * FROM Oficios ORDER BY NombreOf ASC LIMIT ".$inicioP.",".$Tpaginas;
 $oficiosP = $conect->query($oficioP);
@@ -94,14 +94,8 @@ $Tpagos = $conect->query($Tpago);
 $E = "SELECT * FROM Mensajes ORDER BY FechaN";
 $Ej = $conect->query($E);
 // consulta para el paginador de oficios
-$Oficios_x_pagina = 12; 
-// consulta para extraer los oficios
-$Oficio = "SELECT * FROM Oficios ORDER BY NombreOf";
-$ROficio = $conect->query($Oficio);
-$ToficiosRow = $ROficio->num_rows; 
-$PaginasOficio = $ToficiosRow / $Oficios_x_pagina;
-$PaginasOficio = ceil($PaginasOficio);
-echo $PaginasOficio;
+
+
 // consultar si el usuario cuanta con cuenta con un expediente
 $IdUserExpediente = $user['TUser'];
 // consulta inner join de expediente

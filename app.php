@@ -19,11 +19,6 @@
   <body>
   <!-- navbar -->
   <?php include 'includes/navbar.php'; ?>
-  <span class="ir-arriba">
-       <svg class="bi" width="15" height="15" role="img" aria-label="Tools">
-           <use xlink:href="library/icons/bootstrap-icons.svg#arrow-up-circle-fill"/>
-       </svg>
-     </span>
   <!-- inicia sidebar -->
   <?php 
    $Tsidebar = $user['TUser'];
