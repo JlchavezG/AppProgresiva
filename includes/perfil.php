@@ -29,13 +29,13 @@
      <section id="Perfil">
          <div class="container py-3 mt-4">
              <div class="row py-3">
-                 <h4 class="text-secondary text-center display-5">Perfil de usuario</h4>
+                 <h4 class="text-secondary text-center display-5">Perfil de <span class="text-warning">usuario</span></h4>
              </div>
           <div class="row mt-2 text-center">
           <div class="col py-2">
-                <a href="app.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="20" height="20" fill="currentColor">
-                     <use xlink:href="library/icons/bootstrap-icons.svg#arrow-left-circle-fill"/>
-                </svg> Regresar </a>
+                <a href="app.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="35" height="35" fill="currentColor">
+                     <use xlink:href="library/icons/bootstrap-icons.svg#arrow-bar-left"/>
+                </svg> Salir </a>
           </div>
           <div class="col"></div>
           <div class="row container">
@@ -46,8 +46,8 @@
                <div class="container">
                </div>
                <div class="col-sm-12 col-md-12 col-lg-6">
-                 <div class="text-center py-3">
-                     <div class="ImgHover">
+                 <div class="text-center py-3 mt-5">
+                     <div class="ImgHover mt-5">
                        <a href="#" data-bs-toggle="modal" data-bs-target="#ImagenModal"><img src="img/user/<?php echo $separar['Imagen']?>" alt="Imagen de perfil" width="280px" height="280px" class="rounded shadow mt-3 "></a>  
                      </div>
                   </div>

@@ -4,7 +4,7 @@
                 </svg> Salir </a>
           </div>
       <div class="row mt-3 py-3">
-          <h3 class="text-muted text-center display-6">Catalogo de servisios dentro de la plataforma</h3>
+          <h3 class="text-muted text-center display-6">Catalogo de servisios dentro de <span class="text-warning">Iscjlchavezg</span></h3>
       </div>    
       <div class="row mt-3 py-3">
       <?php while($DatoOf = $oficiosP->fetch_array()){ ?>  

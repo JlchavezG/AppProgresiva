@@ -1,5 +1,13 @@
 <?php if($EjecExpediente->num_rows > 0){ ?>
-  <div class="row">
+   <div class="row mt-2 text-center mt-3">
+          <div class="col py-2 mt-2">
+                <a href="app.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="35" height="35" fill="currentColor">
+                     <use xlink:href="library/icons/bootstrap-icons.svg#arrow-bar-left"/>
+                </svg> Salir </a>
+          </div>
+          <div class="col"></div>
+  </div>         
+  <div class="row mt-3">
        <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="alert alert-info" role="alert">
                   Su expediente esta completado dentro de la plataforma <a href="ActulizarExp?Id_Expediente=<?php echo $DatosExp['Id_Expediente'] ?>" class="text-decoration-none link-secondary">¿Necesitas Actualizarlo?</a>

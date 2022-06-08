@@ -37,7 +37,7 @@
     </div>  
     <div class="row mt-2 text-center">
           <div class="col py-2">
-                <a href="appOficio.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="20" height="20" fill="currentColor">
+                <a href="appOficio.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="35" height="35" fill="currentColor">
                      <use xlink:href="library/icons/bootstrap-icons.svg#arrow-bar-left"/>
                 </svg> Salir </a>
           </div>

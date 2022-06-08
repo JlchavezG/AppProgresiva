@@ -45,7 +45,7 @@
                <?php echo  $Alert; ?>
                  <div class="col py-2">
                      <a href="AppAdminOficios.php" class="text-decoration-none text-muted">
-                        <svg class="bi text-danger" width="20" height="20" fill="currentColor">
+                        <svg class="bi text-danger" width="35" height="35" fill="currentColor">
                           <use xlink:href="library/icons/bootstrap-icons.svg#arrow-bar-left"/>
                         </svg> Salir</a>
                 </div>

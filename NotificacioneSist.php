@@ -35,9 +35,17 @@
   <!-- inicia contenido -->
   <div class="container pt-4 mt-5">
     <div class="mt-2">
-      <h2 class="text-center mt-4 display-6 text-muted"> Notificaciones</h2>
+      <h2 class="text-center mt-4 display-6 text-muted"> Mensajes</h2>
         <div class="container mt-3">
           <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+          <div class="row mt-2 text-center">
+              <div class="col py-2">
+                  <a href="appOficio.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="35" height="35" fill="currentColor">
+                  <use xlink:href="library/icons/bootstrap-icons.svg#arrow-bar-left"/>
+                  </svg> Salir </a>
+               </div>
+               <div class="col"></div>
+            </div>
                 <div class="row  mt-5">
                     <div class="col-sm-12 col-md-12 col-lg-12 justify-content-center">
                       <div class="text-justify">

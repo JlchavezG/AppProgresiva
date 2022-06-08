@@ -38,7 +38,7 @@
                                       </div>
                                   </div>
                                   <div class="col-sm-10 col-md-6 col-lg-6 mt-2">
-                                  <div class="card shadow bg-light">
+                                  <div>
                                       <div class="container mt-3">
                                         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" class="needs-validation" novalidate method="post">
                                           <span>
@@ -94,7 +94,7 @@
                                                  </span>
                                              </div>
                                           </div>
-                                        </form><hr>
+                                        </form>
                                       </div>
                                   </div>
                              </div>

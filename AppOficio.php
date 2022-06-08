@@ -37,7 +37,7 @@
   <div class="container pt-4 mt-5">
     <div class="mt-2">
        <div class="row py-3 mt-3">
-            <h4 class="text-center display-6"> Modulo Oficios</h4>
+            <h4 class="text-center display-6"> Modulo <span class="text-warning">Oficios</span></h4>
             <div class="row my-3">
          <div class="col-sm-6 col-md-6 col-lg-6"></div>
        <?php echo $Alert; ?>
