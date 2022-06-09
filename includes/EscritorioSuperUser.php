@@ -1,4 +1,3 @@
-<?php include 'includes/slider_Escritorio.php'; ?>
 <!-- inicia dasboard sistemas -->
 <div class="row text-center mt-2">
          <!-- inicia tarjeta de dasboard -->

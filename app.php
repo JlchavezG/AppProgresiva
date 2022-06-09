@@ -29,6 +29,11 @@
   <!-- termina sidebar -->
   <!-- inicia contenido -->
   <div class="container pt-4 mt-5">
+  <?php $Tsidebar = $user['TUser'];
+    if($Tsidebar == 1){include 'includes/Slider_SpUsuario.php';}else if($Tsidebar == 2){include 'includes/Slider_SpUsuario.php';}
+    else if($Tsidebar == 3){include 'includes/SliderSocioP.php';}else if($Tsidebar == 4){include 'includes/SliderUsuarioP.php';}
+    else if($Tsidebar == 5){include 'includes/SliderSFree.php';}else if($Tsidebar == 6){include 'includes/SliderUsuarioFree.php';}
+  ?>  
     <div class="mt-2">
     <?php 
     $TsEscritorio = $user['TUser'];

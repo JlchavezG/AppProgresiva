@@ -3,13 +3,13 @@
        <div id="carouselExampleFade" class="carousel slide carousel-fade rounded" data-bs-ride="carousel">
            <div class="carousel-inner">
               <div class="carousel-item active">
-                 <img src="img/Slider1.png" class="d-block w-100 img-fluid rounded" alt="Slider1">
+                 <img src="img/slider1_SuperUser.png" class="d-block w-100 img-fluid rounded" alt="Slider1">
               </div>
               <div class="carousel-item">
-                 <img src="img/Slider2.png" class="d-block w-100 img-fluid rounded" alt="Slider2">
+                 <img src="img/slider2_SuperUser.png" class="d-block w-100 img-fluid rounded" alt="Slider2">
               </div>
               <div class="carousel-item">
-                 <img src="img/Slider3.png" class="d-block w-100 img-fluid rounded" alt="Slider3">
+                 <img src="img/slider3_SuperUser.png" class="d-block w-100 img-fluid rounded" alt="Slider3">
               </div>
            </div>
            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
