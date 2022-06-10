@@ -42,3 +42,8 @@ textarea {
 textarea {
   resize: none;
 }
+.btn-slider{
+  background-color: rgba(218, 170, 20,.8);
+  padding: 15px;
+  border-radius: 50%;
+}

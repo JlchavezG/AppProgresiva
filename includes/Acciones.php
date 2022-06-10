@@ -341,57 +341,57 @@ if(isset($_POST['Subir'])){
     $FechaExp = date('Y-m-d');
     $TuserExp = $conect->real_escape_string($_POST['TUsuario']);
     $Ncredencial = $conect->real_escape_string($_POST['NCredencial']);
+    // Validar la imagen y la ruta a donde se guardaran los datos
     $FolderExp = './doc/Exp/';  
     opendir($FolderExp);
-    $Destino = $FolderExp.$_FILES['ImgCredencial']['name'];
+    // recuperar los datos del documento de la credencial 
+    $DestinoCredencial = $FolderExp.$_FILES['ImgCredencial']['name'];
     $DocumentoCredencial = $_FILES['ImgCredencial']['name'];
     $PesoArchivo = $_FILES['ImgCredencial']['size']/1000;
     $TipoArchivo = $_FILES['ImgCredencial']['type'];
     $ext = explode(".", $_FILES['ImgCredencial']['name']);
-                if (strtolower($ext[1]) == "pdf") {
-                  copy($_FILES['ImgCredencial']['tmp_name'],$Destino);
-                }
-                else if($PesoArchivo > 500){
-                  $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                   <strong>Error al subir el archivo!</strong> El archivo es muy pesado.
-                                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                                   </button>
-                               </div>';
-                }
-                else {
-                  $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                  <strong>Error al subir el archivo!</strong> El archivo adjunto para la credencial solo acepta pdf.
-                                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                                  </button>
-                               </div>';
-                }
-     $Destino1 = $FolderExp.$_FILES['Docdomicilio']['name'];
-     $DocumentoDomicilio = $_FILES['Docdomicilio']['name'];
-     $PesoArchivoD = $_FILES['Docdomicilio']['size']/1000;
-     $TipoArchivoD = $_FILES['Docdomicilio']['type'];
-     $extD = explode(".", $_FILES['Docdomicilio']['name']);
-                if (strtolower($extD[1]) == "pdf") {
-                  copy($_FILES['Docdomicilio']['tmp_name'],$Destino1);
-                }
-                else if($PesoArchivoD > 500){
-                  $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                   <strong>Error al subir el archivo!</strong> El archivo es muy pesado.
-                                   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                                   </button>
-                               </div>';
-                }
-                else {
-                  $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                  <strong>Error al subir el archivo!</strong> El archivo adjunto para comprobante de domicilio solo acepta pdf.
-                                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-                                  </button>
-                               </div>';
-                }   
-    
+    // recuperar datos del documento de comprobante de domicilio
+    $DestinoComprobante = $FolderExp.$_FILES['Docdomicilio']['name'];
+    $DocumentoDomicilio = $_FILES['Docdomicilio']['name'];
+    $PesoArchivoD = $_FILES['Docdomicilio']['size']/1000;
+    $TipoArchivoD = $_FILES['Docdomicilio']['type'];
+    $extD = explode(".", $_FILES['Docdomicilio']['name']);
+    // recuperer los datos bancarios 
     $Banco = $conect->real_escape_string($_POST['Banco']);
     $Ncuenta = $conect->real_escape_string($_POST['NCuenta']);
     $Tpago = $conect->real_escape_string($_POST['Tpago']);
-    $EsTatusExpediente = '1';
+    $EsTatusExpediente = '1';  
+    if(strtolower($ext[1]) != "pdf"){
+         $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                         <strong>Error al subir el archivo!</strong> El archivo adjunto para la credencial solo acepta pdf.
+                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                         </button>
+                      </div>';
+    }
+    else if(strtolower($extD[1]) != "pdf"){
+          $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                          <strong>Error al subir el archivo!</strong> El archivo adjunto para el Comprobante de domicilio solo acepta pdf.
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                          </button>
+                       </div>';
+    }
+    else if($PesoArchivo > 500){
+          $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                          <strong>Error al subir el archivo!</strong> El archivo adjunto para la credencial es muy pesado.
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                          </button>
+                       </div>';
+    
+    }
+    else if($PesoArchivo > 500){
+          $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                          <strong>Error al subir el archivo!</strong> El archivo adjunto para el comprobante es muy pesado.
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                          </button>
+                       </div>';
+
+    }
+  else{
     // insercion de datos en el expediente
     $InsertExp = "INSERT INTO Expediente(Id_UserExp,FechaExp,Id_OficioUser,NumCredencial,DocCredencial,DocDomicilio,Id_Banco,NCuenta,Id_FPago,Id_EstaExp)VALUES
     ('$IdUserExp','$FechaExp','$TuserExp','$Ncredencial','$DocumentoCredencial','$DocumentoDomicilio','$Banco','$Ncuenta','$Tpago','$EsTatusExpediente')";
@@ -402,14 +402,18 @@ if(isset($_POST['Subir'])){
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                             </button>
                        </div>';
+                       copy($_FILES['ImgCredencial']['tmp_name'],$DestinoCredencial);
+                       copy($_FILES['Docdomicilio']['tmp_name'],$DestinoComprobante);
                        header("refresh:3;AppExpediente.php"); // redirects image view page after 5 seconds.
     }
     else{
-           $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
+            $AlertFile.='<div class="alert alert-danger alert-dismissible fade show" role="alert">
                             <strong>Eror al registrar tu expediente!</strong> Existe un error al revisar tus documentos por favor intentalo más tarde o contactaa soporte.
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                             </button>
                         </div>';
     }
-  }  
+    
+  } 
+}  
 ?>

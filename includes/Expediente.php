@@ -13,6 +13,73 @@
                   Su expediente esta completado dentro de la plataforma <a href="ActulizarExp?Id_Expediente=<?php echo $DatosExp['Id_Expediente'] ?>" class="text-decoration-none link-secondary">¿Necesitas Actualizarlo?</a>
             </div>
        </div>
+ </div>
+ <div class="row">
+          <div class="col-sm-12 col-md-2 col-lg-2 mt-3 py-2">
+             <div class="card shadow bg-light">
+                  <div class="row">
+                       <div class="col text-center py-4">
+                            <svg class="bi" width="30" height="30" fill="currentColor">
+                                <use xlink:href="library/icons/bootstrap-icons.svg#cup-fill"/> 
+                            </svg>
+                       </div>
+                       <div class="col mt-4">
+                          <?php $badage = $DatosExp['Id_EstatusExp'];
+                          if($badage == 1){ ?>
+                               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
+                               <?php echo $DatosExp['NomEstatus'];?><span class="visually-hidden"></span>
+                               </span>
+                          <?php } else if($badage == 2) { ?>
+                               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                               <?php echo $DatosExp['NomEstatus'];?><span class="visually-hidden"></span>
+                               </span>
+                           <?php } ?>
+                          <span>Estatus</span>
+                       </div>
+                  </div>
+             </div>
+          </div>
+          <div class="col-sm-8 col-md-8 col-lg-8 mt-4 ms-3">
+             <div class="card shadow bg-secondary">
+                  nombre:
+             </div>             
+         
+          </div>
+
+
+          <div class="col-sm-8 col-md-8 col-lg-8 mt-4">
+               <span> 
+                  <svg class="bi" width="30" height="30" fill="currentColor">
+                     <use xlink:href="library/icons/bootstrap-icons.svg#file-earmark-person"/> 
+                  </svg>
+                  <a href="./doc/Exp/<?php echo $DatosExp['DocCredencial'];?>" target="_blank" class="text-decoration-none text-muted">
+                      Documento Credencial Oficial
+                  </a>
+               </span>
+               <span> 
+                  <svg class="bi" width="30" height="30" fill="currentColor">
+                     <use xlink:href="library/icons/bootstrap-icons.svg#file-pdf-fill"/> 
+                  </svg>
+                  <a href="./doc/Exp/<?php echo $DatosExp['DocDomicilio'];?>" target="_blank" class="text-decoration-none text-muted">
+                      Documento Comprobante domicilio
+                  </a>
+               </span>
+          </div>
+       </div>   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
        <div class="row">
           <div class="col-sm-4 col-md-4 col-lg-4 mt-3 py-2">
             <span>Estatus del Expediente: <?php echo $DatosExp['NomEstatus'];?></span>
@@ -72,8 +139,6 @@
           
           </div>
        </div>
-
-
        <div class="row mt-2">
           <div class="col-sm-12 col-md-6 col-lg-6">
               <div class="input-group mb-3">
@@ -93,42 +158,54 @@
   </div>
 <?php } else { ?>
   <div class="container">
-    <div class="row mt-3">
+    <div class="row mt-3 justify-content-center">
          <div class="row mt-2">
             <h3 class="text-muted  text-center">Registro de Expediente de Usuario/Socio de la plataforma.</h3>
          </div>
-         <div class="col-sm-12 col-md-12 col-lg-12 mt-2">
+         <div class="col-sm-10 col-md-10 col-lg-10 mt-2">
+               <div class="card shadow mt-2 bg-light">
+                   <p class="text-center mt-3">
+                        <svg class="bi" width="20" height="20" fill="currentColor">
+                             <use xlink:href="library/icons/bootstrap-icons.svg#folder-plus"/> 
+                        </svg> Datos para tu expediente
+                   </p>
+                   <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST" enctype="multipart/form-data">
+                   <div class="container py-3 mt-3">
+                       <div class="row">
+                            <select name="TUsuario" class="form-select form-select-sm" required>
+                                <?php $Option = $user['TUser'];?>    
+                                <option value="">Selecciona Oficio o Tipo de usuario</option>
+                                <?php  if($Option == '3'|| $Option == '5') { ?>
+                                <?php while($Opciones = $oficios->fetch_assoc()){ ?>
+                                   <option value="<?php echo $Opciones['Id_Oficio'];?>"><?php echo $Opciones['NombreOf'];?></option>
+                               <?php }?>
+                              <?php } else { ?>
+                                  <option value="19">Usuario del Aplicativo</option>
+                              <?php }?>
+                              </select>  
+                       </div>
+                       <div class="row mt-2">
+                          <input type="text" maxlength="13" name="NCredencial" id="credencial" placeholder="Nº de Credencial de elector" class="form-control" onkeypress="return VNumeros(event)" onpaste="return false" required>
+                       </div>
+                       <div class="row mt-2">
+                          <label for="ImgCredencial">Sube tu Credencial de Elector en formato Pdf</label>  
+                          <input type="file" name="ImgCredencial" placeholder="Selecciona la imagen" class="form-control" required>
+                       </div>
+                       <div class="row mt-2">
+                           <label for="Docdomicilio">Sube tu comprobante de domicilio en Formato Pdf</label>  
+                           <input type="file" name="Docdomicilio" placeholder="Selecciona un archivo" class="form-control" required>
+                       </div>
+                   </div>
+              </div>
+         </div>
+         <div class="col-sm-10 col-md-10 col-lg-10 mt-4">
              <div class="card shadow mt-2 bg-light">
                     <p class="text-center mt-3">
                         <svg class="bi" width="20" height="20" fill="currentColor">
                              <use xlink:href="library/icons/bootstrap-icons.svg#folder-plus"/> 
-                        </svg> Datos para tu expediente</p><hr>
+                        </svg> Datos Bancarios</p>
                     <div class="container">
-                    <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST" enctype="multipart/form-data">    
-                       <div class="row">
-                        <select name="TUsuario" class="form-select form-select-sm" required>
-                           <?php $Option = $user['TUser'];?>    
-                              <option value="">Selecciona Oficio o Tipo de usuario</option>
-                              <?php  if($Option == '3'|| $Option == '5') { ?>
-                              <?php while($Opciones = $oficios->fetch_assoc()){ ?>
-                              <option value="<?php echo $Opciones['Id_Oficio'];?>"><?php echo $Opciones['NombreOf'];?></option>
-                          <?php }?>
-                          <?php } else { ?>
-                              <option value="19">Usuario del Aplicativo</option>
-                         <?php }?>
-                       </select>
-                    </div>
-                    <div class="row mt-2">
-                      <input type="text" maxlength="13" name="NCredencial" id="credencial" placeholder="Nº de Credencial de elector" class="form-control" onkeypress="return VNumeros(event)" onpaste="return false" required>
-                    </div>
-                    <div class="row mt-2">
-                      <label for="ImgCredencial">Sube tu Credencial de Elector en formato Pdf</label>  
-                      <input type="file" name="ImgCredencial" placeholder="Selecciona la imagen" class="form-control" required>
-                    </div>
-                    <div class="row mt-2">
-                    <label for="Docdomicilio">Sube tu comprobante de domicilio en Formato Pdf</label>  
-                      <input type="file" name="Docdomicilio" placeholder="Selecciona un archivo" class="form-control" required>
-                    </div>
+                        <div class="row"></div>
                     <div class="row mt-2">
                     <select name="Banco" class="form-select form-select-sm" required>    
                               <option value="">Selecciona tu institucion bancaria</option>
@@ -148,14 +225,14 @@
                           <?php }?>
                     </select>
                     </div>
-                    <div class="row py-4">
-                      <input type="submit" name="RegistrarExp" value="Registrar" class="btn btn-success btn-sm">
-                    </div>
-                    </form>
                 </div>
-         </div>
-    </div>   
-</div>
+            </div>
+            <div class="row py-4">
+               <input type="submit" name="RegistrarExp" value="Registrar" class="btn btn-success btn-sm">        
+               </form>
+            </div>
+        </div>   
+    </div>
 </div>
 <?php } ?>
 
