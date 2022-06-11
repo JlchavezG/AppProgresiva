@@ -39,6 +39,7 @@
 </div>
 <?php include 'includes/footer.php'; ?>
   <!-- termina contenido -->
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYMPGtM7VUn1aq61tkGbu99qD95c-w5zc&callback=initMap"></script>  
   <script src="js/config.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/dark-mode.js"></script>

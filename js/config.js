@@ -8,3 +8,4 @@
     document.getElementById('Numcuenta').disabled = true;
     document.getElementById('Tpago').disabled = true;
   }
+  

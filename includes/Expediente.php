@@ -1,5 +1,5 @@
 <?php if($EjecExpediente->num_rows > 0){ ?>
-   <div class="row mt-2 text-center mt-3">
+   <div class="row mt-2 text-center mt-3 justify content-center">
           <div class="col py-2 mt-2">
                 <a href="app.php" class="text-decoration-none text-muted"><svg class="bi text-danger" width="35" height="35" fill="currentColor">
                      <use xlink:href="library/icons/bootstrap-icons.svg#arrow-bar-left"/>
@@ -9,152 +9,205 @@
   </div>         
   <div class="row mt-3">
        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="alert alert-info" role="alert">
+            <div class="alert alert-info text-center" role="alert">
                   Su expediente esta completado dentro de la plataforma <a href="ActulizarExp?Id_Expediente=<?php echo $DatosExp['Id_Expediente'] ?>" class="text-decoration-none link-secondary">¿Necesitas Actualizarlo?</a>
             </div>
        </div>
- </div>
- <div class="row">
-          <div class="col-sm-12 col-md-2 col-lg-2 mt-3 py-2">
-             <div class="card shadow bg-light">
-                  <div class="row">
-                       <div class="col text-center py-4">
-                            <svg class="bi" width="30" height="30" fill="currentColor">
-                                <use xlink:href="library/icons/bootstrap-icons.svg#cup-fill"/> 
-                            </svg>
-                       </div>
-                       <div class="col mt-4">
-                          <?php $badage = $DatosExp['Id_EstatusExp'];
-                          if($badage == 1){ ?>
-                               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
-                               <?php echo $DatosExp['NomEstatus'];?><span class="visually-hidden"></span>
-                               </span>
-                          <?php } else if($badage == 2) { ?>
-                               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
-                               <?php echo $DatosExp['NomEstatus'];?><span class="visually-hidden"></span>
-                               </span>
-                           <?php } ?>
-                          <span>Estatus</span>
-                       </div>
-                  </div>
-             </div>
-          </div>
-          <div class="col-sm-8 col-md-8 col-lg-8 mt-4 ms-3">
-             <div class="card shadow bg-secondary">
-                  nombre:
-             </div>             
-         
-          </div>
-
-
-          <div class="col-sm-8 col-md-8 col-lg-8 mt-4">
-               <span> 
-                  <svg class="bi" width="30" height="30" fill="currentColor">
-                     <use xlink:href="library/icons/bootstrap-icons.svg#file-earmark-person"/> 
-                  </svg>
-                  <a href="./doc/Exp/<?php echo $DatosExp['DocCredencial'];?>" target="_blank" class="text-decoration-none text-muted">
-                      Documento Credencial Oficial
-                  </a>
-               </span>
-               <span> 
-                  <svg class="bi" width="30" height="30" fill="currentColor">
-                     <use xlink:href="library/icons/bootstrap-icons.svg#file-pdf-fill"/> 
-                  </svg>
-                  <a href="./doc/Exp/<?php echo $DatosExp['DocDomicilio'];?>" target="_blank" class="text-decoration-none text-muted">
-                      Documento Comprobante domicilio
-                  </a>
-               </span>
-          </div>
-       </div>   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       <div class="row">
-          <div class="col-sm-4 col-md-4 col-lg-4 mt-3 py-2">
-            <span>Estatus del Expediente: <?php echo $DatosExp['NomEstatus'];?></span>
-          </div>
-          <div class="col-sm-8 col-md-8 col-lg-8 mt-4">
-               <span> 
-                  <svg class="bi" width="30" height="30" fill="currentColor">
-                     <use xlink:href="library/icons/bootstrap-icons.svg#file-earmark-person"/> 
-                  </svg>
-                  <a href="./doc/Exp/<?php echo $DatosExp['DocCredencial'];?>" target="_blank" class="text-decoration-none text-muted">
-                      Documento Credencial Oficial
-                  </a>
-               </span>
-               <span> 
-                  <svg class="bi" width="30" height="30" fill="currentColor">
-                     <use xlink:href="library/icons/bootstrap-icons.svg#file-pdf-fill"/> 
-                  </svg>
-                  <a href="./doc/Exp/<?php echo $DatosExp['DocDomicilio'];?>" target="_blank" class="text-decoration-none text-muted">
-                      Documento Comprobante domicilio
-                  </a>
-               </span>
-          </div>
-       </div>   
   </div>
-       <div class="row mt-3">
-          <div class="col-sm-12 col-md-4 col-lg-4 mt-2">
-             <div class="input-group mb-3">
-                 <span class="input-group-text" id="basic-addon1">Nombre:</span>
-                 <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" id="NomDis" value="<?php echo $DatosExp['Nombre']." ".$DatosExp['ApellidoP']." ".$DatosExp['ApellidoM']; ?>" aria-describedby="basic-addon1">
-             </div>
-          </div>
-          <div class="col-sm-12 col-md-4 col-lg-4 mt-2">
-             <div class="input-group mb-3">
-                 <span class="input-group-text" id="basic-addon1">Fecha de Exp:</span>
-                 <input type="text" class="form-control" id="FechaDis" placeholder="Fecha" aria-label="Fecha" id="FechaDis" value="<?php $FechExp = $DatosExp['FechaExp']; $FechExp = date('d-m-Y'); echo $FechExp;?>" aria-describedby="basic-addon1">
-             </div>
-          </div>
-          <div class="col-sm-12 col-md-4 col-lg-4 mt-2">
-               <div class="input-group mb-3">
-                 <span class="input-group-text" id="basic-addon1">Oficio / TUsuario</span>
-                 <input type="text" class="form-control" id="TuserDis" placeholder="Oficio / Usuario" aria-label="TuserDis" id="NomDis" value="<?php echo $DatosExp['NombreOf'];?>" aria-describedby="basic-addon1">
+  <div class="container justify-content-center">
+    <!-- inicia una linea -->
+    <div class="row mt-3 text-center">
+        <!-- inicia una columna -->
+        <div class="col-sm-12 col-md-3 col-lg-4">
+             <div class="card shadow bg-light mt-2">
+                 <!-- inicia la linea dentrop de la card-->
+                  <div class="row">
+                     <div class="col mt-2 py-4">
+                         <svg class='bi' width='30' height='30' fill='currentColor'>
+                            <use xlink:href='library/icons/bootstrap-icons.svg#flag-fill'/> 
+                         </svg>
+                     </div>
+                     <div class="col mt-2 py-4">
+                     <?php $Badage = $DatosExp['Id_EstatusExp']; if($Badage == 1){?>
+                         <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-info">
+                             <?php echo $DatosExp['NomEstatus']; ?><span class="visually-hidden">unread messages</span>
+                         </span>
+                      <?php } else if($Badage == 2){ ?>
+                         <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-success">
+                             <?php echo $DatosExp['NomEstatus']; ?><span class="visually-hidden">unread messages</span>
+                         </span>
+                      <?php } else if($Badage == 3){ ?>
+                         <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-warning">
+                             <?php echo $DatosExp['NomEstatus']; ?><span class="visually-hidden">unread messages</span>
+                         </span>
+                      <?php } ?>     
+                     <span>Estatus Expediente</span>
+                     </div>
+                  </div>
+                  <!-- termina la line denro de la card -->
+             </div>   
+        </div>
+        <!-- termina una columna -->
+        <!-- inicia una columna -->
+        <div class="col-sm-12 col-md-5 col-lg-5">
+           <div class="card shadow bg-light mt-2">
+            <!-- inicia la linea dentro de la card -->
+            <div class="row">
+               <div class="col mt-2 py-4">
+                   <svg class='bi' width='30' height='30' fill='currentColor'>
+                     <use xlink:href='library/icons/bootstrap-icons.svg#person-circle'/> 
+                  </svg>
                </div>
-          </div>
-       </div>
-       <div class="row mt-2">
-          <div class="col-sm-12 col-md-6 col-lg-6">
-              <div class="input-group mb-3">
-                 <span class="input-group-text" id="basic-addon1">No Credencial Oficial</span>
-                 <input type="text" class="form-control" id="Ncredencial" placeholder="No Credencial" aria-label="Ncorencial" value="<?php echo $DatosExp['NumCredencial'];?>" aria-describedby="basic-addon1">
+               <div class="col mt-2 py-4">
+                    <span><?php echo  $DatosExp['Nombre']." ".$DatosExp['ApellidoP']; ?></span>
                </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-6">
-              <div class="input-group mb-3">
-                 <span class="input-group-text" id="basic-addon1">Institución Bancaria</span>
-                 <input type="text" class="form-control" id="Nbanco" placeholder="Institución Bancaria" aria-label="Nbanco" value="<?php echo $DatosExp['NombreBanco'];?>" aria-describedby="basic-addon1">
-               </div>  
-          
-          </div>
-       </div>
-       <div class="row mt-2">
-          <div class="col-sm-12 col-md-6 col-lg-6">
-              <div class="input-group mb-3">
-                 <span class="input-group-text" id="basic-addon1">No de Cuenta</span>
-                 <input type="text" class="form-control" id="Numcuenta" placeholder="No Cuenta" aria-label="Ncuenta" value="<?php echo $DatosExp['NCuenta'];?>" aria-describedby="basic-addon1">
+            </div>
+            <!-- termina la linea dentro de la card -->
+           </div>
+        </div>
+        <!-- termina una columna -->
+         <!-- termina una columna -->
+        <div class="col-sm-12 col-md-4 col-lg-3">
+           <div class="card shadow bg-light mt-2">
+               <!-- inicia la linea dentro de la card -->
+               <div class="row">
+                  <div class="col mt-2 py-4">
+                     <svg class='bi' width='30' height='30' fill='currentColor'>
+                       <use xlink:href='library/icons/bootstrap-icons.svg#calendar-fill'/> 
+                     </svg>
+                  </div>
+                  <div class="col mt-2 py-4">
+                     <?php $dateExp = $DatosExp['FechaExp'];
+                            $dataExp = date('d-m-Y') ?>
+                       <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-primary">
+                           <span>Fecha de Registro</span><span class="visually-hidden">unread messages</span>
+                      </span>        
+                      <span><?php echo $dataExp; ?></span>
+                  </div>
                </div>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-6">
-              <div class="input-group mb-3">
-                 <span class="input-group-text" id="basic-addon1">Forma de Pago: </span>
-                 <input type="text" class="form-control" id="Tpago" placeholder="Tipo de pago" aria-label="Tpago" value="<?php echo $DatosExp['DescripcionPago'];?>" aria-describedby="basic-addon1">
-               </div>  
-          
-          </div>
-       </div>
-
+               <!-- inicia la linea dentro de la card -->
+           </div> 
+        </div>
+        <!-- termina una columna -->
+    </div>
+    <!-- termina la linea -->
+    <div class="row mt-3 text-center">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card shadow bg-light mt-2">
+                 <div class="row">
+                     <div class="col mt-2 py-4">
+                        <svg class='bi' width='30' height='30' fill='currentColor'>
+                          <use xlink:href='library/icons/bootstrap-icons.svg#tools'/> 
+                        </svg>
+                     </div>
+                     <div class="col mt-2 py-4">
+                          <?php echo $DatosExp['NombreOf']; ?>
+                     </div>
+                 </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="card shadow bg-light mt-2">
+                 <div class="row">
+                     <div class="col mt-2 py-4">
+                        <svg class='bi' width='30' height='30' fill='currentColor'>
+                          <use xlink:href='library/icons/bootstrap-icons.svg#card-heading'/> 
+                        </svg>
+                     </div>
+                     <div class="col mt-2 py-4">
+                       <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary">
+                           <span>Numero de Identificación</span><span class="visually-hidden">unread messages</span>
+                       </span>
+                          <?php echo $DatosExp['NumCredencial']; ?>
+                     </div>
+                 </div>
+            </div>
+        </div>
+   </div>
+   <div class="row mt-3 text-center">
+      <div class="col-sm-12 col-md-3 col-lg-3">
+         <div class="card shadow bg-light mt-2">
+            <div class="row">
+                <div class="col mt-2 py-4">
+                    <svg class='bi' width='30' height='30' fill='currentColor'>
+                       <use xlink:href='library/icons/bootstrap-icons.svg#safe-fill'/> 
+                    </svg>
+                </div>
+                <div class="col mt-2 py-4">
+                  <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-secondary">
+                           <span>Tu Banco</span><span class="visually-hidden">unread messages</span>
+                   </span>
+                   <span><?php echo $DatosExp['NombreBanco'];  ?></span>
+                </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-sm-12 col-md-3 col-lg-3">
+      <div class="card shadow bg-light mt-2">
+            <div class="row">
+                <div class="col mt-2 py-4">
+                    <svg class='bi' width='30' height='30' fill='currentColor'>
+                       <use xlink:href='library/icons/bootstrap-icons.svg#credit-card-2-back-fill'/> 
+                    </svg>
+                </div>
+                <div class="col mt-2 py-4">
+                  <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-dark">
+                           <span>No de Cuenta</span><span class="visually-hidden">unread messages</span>
+                   </span>
+                   <span><?php echo $DatosExp['NCuenta'];  ?></span>
+                </div>
+            </div>
+      </div>
+      </div>
+      <div class="col-sm-12 col-md-3 col-lg-3">
+      <a href="./doc/Exp/<?php echo $DatosExp['DocDomicilio']; ?>" class="text-decoration-none text-warning" target="_blank"><div class="card shadow bg-light mt-2">
+             <div class="row">
+               <div class="col mt-2 py-4">
+                    <svg class='bi' width='30' height='30' fill='currentColor'>
+                       <use xlink:href='library/icons/bootstrap-icons.svg#file-earmark-pdf-fill'/> 
+                    </svg>
+                </div>
+                <div class="col mt-2 py-4">
+                   <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-dark">
+                           <span>Comprobante</span></span><span class="visually-hidden">unread messages</span>
+                   </span>
+                    <span>PDF</span>
+                </div>
+             </div> 
+          </div></a>
+      </div>
+      <div class="col-sm-12 col-md-3 col-lg-3">
+          <a href="./doc/Exp/<?php echo $DatosExp['DocCredencial']; ?>" class="text-decoration-none text-warning" target="_blank"><div class="card shadow bg-light mt-2">
+             <div class="row">
+               <div class="col mt-2 py-4">
+                    <svg class='bi' width='30' height='30' fill='currentColor'>
+                       <use xlink:href='library/icons/bootstrap-icons.svg#file-earmark-pdf-fill'/> 
+                    </svg>
+                </div>
+                <div class="col mt-2 py-4">
+                   <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-dark">
+                           <span>Identificación</span></span><span class="visually-hidden">unread messages</span>
+                   </span>
+                    <span>PDF</span>
+                </div>
+             </div> 
+          </div></a>
+      </div>
+      <div class="row mt-3">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="card shadow bg-light mt-2 py-4">
+                <div class="col">
+                    <span>Tipo de Pago: <?php echo $DatosExp['DescripcionPago']; ?> </span>
+                </div>
+            </div>
+        </div>
+      </div>   
+    </div>
+  </div> 
+  <div class="row mt-3">
+    <div class="container justify-content-center">
+        <div id="mapa"></div>
+    </div>
   </div>
 <?php } else { ?>
   <div class="container">
@@ -162,8 +215,12 @@
          <div class="row mt-2">
             <h3 class="text-muted  text-center">Registro de Expediente de Usuario/Socio de la plataforma.</h3>
          </div>
-         <div class="col-sm-10 col-md-10 col-lg-10 mt-2">
-               <div class="card shadow mt-2 bg-light">
+         <div class="col-sm
+         -10 col-md-1   <div class="col">1</div>
+         <div class="col">2</div>
+         <div class="col">3</div>
+         <div class="col">4</div>0 col-lg-10 mt-2">
+               <div class="card shadow light">
                    <p class="text-center mt-3">
                         <svg class="bi" width="20" height="20" fill="currentColor">
                              <use xlink:href="library/icons/bootstrap-icons.svg#folder-plus"/> 
@@ -235,7 +292,31 @@
     </div>
 </div>
 <?php } ?>
-
+<?php $Lat = $DatosExp['Latitud']; $Log = $DatosExp['Longitud']; ?>
+<style>
+    #mapa {
+  height: 300px;
+  width: 100%;
+}
+</style>
+<script>
+function initMap() {
+  // Mapa y ubicación
+  const ubicacion = { lat: <?php echo $Lat ?> , lng: <?php echo $Log ?> };
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.getElementById("mapa"), {
+    zoom: 15,
+    center: ubicacion,
+  });
+  // marcador
+  const marker = new google.maps.Marker({
+    position: ubicacion,
+    map: map,
+    title: "Tu dirección dentro de la Plataforma",
+  });
+}
+window.initMap = initMap;
+</script>
 
 
 

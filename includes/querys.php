@@ -100,7 +100,7 @@ $Ej = $conect->query($E);
 $IdUserExpediente = $user['TUser'];
 // consulta inner join de expediente
 $rowExpediente = "SELECT Ex.Id_Expediente, Ex.Id_UserExp, Ex.FechaExp, Ex.Id_OficioUser, Ex.NumCredencial, Ex.DocCredencial, Ex.DocDomicilio, Ex.Id_Banco, Ex.NCuenta, Ex.Id_FPago, Ex.Id_EstaExp,
-User.Id_Usuarios, User.Nombre, User.ApellidoP, User.ApellidoM, Of.Id_Oficio, Of.NombreOf, Bank.Id_Bancos, Bank.NombreBanco, Pago.Id_TPago, Pago.DescripcionPago, Ext.Id_EstatusExp, Ext.NomEstatus FROM Expediente Ex INNER JOIN Usuarios User ON Ex.Id_UserExp = User.Id_Usuarios 
+User.Id_Usuarios, User.Nombre, User.ApellidoP, User.ApellidoM, User.Telefono, User.Email, User.Id_Genero, User.FNac, User.Latitud, User.Longitud, Of.Id_Oficio, Of.NombreOf, Bank.Id_Bancos, Bank.NombreBanco, Pago.Id_TPago, Pago.DescripcionPago, Ext.Id_EstatusExp, Ext.NomEstatus FROM Expediente Ex INNER JOIN Usuarios User ON Ex.Id_UserExp = User.Id_Usuarios 
 INNER JOIN Oficios Of ON Ex.Id_OficioUser = Of.Id_Oficio INNER JOIN Bancos Bank ON  Ex.Id_Banco = Bank.Id_Bancos INNER JOIN TPago Pago ON Ex.Id_FPago = Pago.Id_TPago INNER JOIN EstatusExp Ext On Ex.Id_EstaExp = Ext.Id_EstatusExp WHERE Id_UserExp = '$IdUserExpediente'";
 $EjecExpediente = $conect->query($rowExpediente);
 $DatosExp = $EjecExpediente->fetch_array();
