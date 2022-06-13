@@ -25,7 +25,7 @@ $oficio = "SELECT * FROM Oficios ORDER BY NombreOf ASC";
 $oficios = $conect->query($oficio);
 $Toficios = $oficios->num_rows;
 // consulta para la paginación de oficios en administración
-$Tpaginas = '12';
+$Tpaginas = '10';
 $inicioP = ($_GET['pagina']-1)*$Tpaginas;
 $oficioP = "SELECT * FROM Oficios ORDER BY NombreOf ASC LIMIT ".$inicioP.",".$Tpaginas;
 $oficiosP = $conect->query($oficioP);
@@ -93,9 +93,6 @@ $Tpagos = $conect->query($Tpago);
 // consulta para extraer todas las notificaciones
 $E = "SELECT * FROM Mensajes ORDER BY FechaN";
 $Ej = $conect->query($E);
-// consulta para el paginador de oficios
-
-
 // consultar si el usuario cuanta con cuenta con un expediente
 $IdUserExpediente = $user['TUser'];
 // consulta inner join de expediente
@@ -104,7 +101,8 @@ User.Id_Usuarios, User.Nombre, User.ApellidoP, User.ApellidoM, User.Telefono, Us
 INNER JOIN Oficios Of ON Ex.Id_OficioUser = Of.Id_Oficio INNER JOIN Bancos Bank ON  Ex.Id_Banco = Bank.Id_Bancos INNER JOIN TPago Pago ON Ex.Id_FPago = Pago.Id_TPago INNER JOIN EstatusExp Ext On Ex.Id_EstaExp = Ext.Id_EstatusExp WHERE Id_UserExp = '$IdUserExpediente'";
 $EjecExpediente = $conect->query($rowExpediente);
 $DatosExp = $EjecExpediente->fetch_array();
-
+// consultas para extrar la información de los expedientes con paginadores
+// consulta para el paginador de oficios
 
 
 

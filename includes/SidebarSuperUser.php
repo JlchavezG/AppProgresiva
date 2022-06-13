@@ -23,9 +23,9 @@
       </svg>&nbsp; Usuarios</a>
     </li>
     <li class="nav-item items">
-      <a href="#" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
-         <use xlink:href="library/icons/bootstrap-icons.svg#person-square"/>
-      </svg>&nbsp; Socios</a>
+      <a href="AppAdminExpedientes.php" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
+         <use xlink:href="library/icons/bootstrap-icons.svg#folder-fill"/>
+      </svg>&nbsp; Expedientes</a>
     </li>
     <li class="nav-item items">
       <a href="AppOficio.php" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
@@ -61,6 +61,11 @@
       <a href="NotificacioneSist.php" class="nav-link fuente"><svg class="bi" width="23" height="23" fill="currentColor">
          <use xlink:href="library/icons/bootstrap-icons.svg#mailbox2"/>
       </svg>&nbsp; Notificaciones</a>
+    </li>
+    <li class="nav-item items">
+      <a href="#" class="nav-link fuente" data-bs-toggle="modal" data-bs-target="#CSesion"><svg class="bi" width="23" height="23" fill="currentColor">
+         <use xlink:href="library/icons/bootstrap-icons.svg#power"/>
+      </svg>&nbsp; Cerrar Sesion</a>
     </li>
   </ul>
 </div>

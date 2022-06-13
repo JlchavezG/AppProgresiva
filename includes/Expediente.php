@@ -321,6 +321,7 @@ function initMap() {
     map: map,
     title: "Tu dirección dentro de la Plataforma",
   });
+  
 }
 window.initMap = initMap;
 </script>

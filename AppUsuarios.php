@@ -101,8 +101,24 @@
                            </div>
                        </div>
                    </div>
+              </div>       
+         </div>
+         <div class="col-sm-2 col-md-2 col-lg-2 my-2">
+              <div class="card shadow bg-light">
+                   <div class="container text-center">
+                       <div class="row">
+                           <div class="col my-3">
+                               <svg class="bi text-info" width="33" height="33" fill="currentColor">
+                                 <use xlink:href="library/icons/bootstrap-icons.svg#folder-fill"/>
+                               </svg>
+                           </div>
+                           <div class="col my-3">
+                              <a href="AppExpedientes.php" class="text-decoration-none text-secondary"><strong>Admin Expedientes</strong></a>
+                           </div>
+                       </div>
+                   </div>
               </div>        
-         </div> 
+ 
       </div>
   </div>
 </div>
