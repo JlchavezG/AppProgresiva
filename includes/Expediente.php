@@ -192,11 +192,12 @@
                 </div>
              </div> 
           </div></a>
+        </div>
       </div>
       <div class="row mt-3">
         <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="card shadow bg-light mt-2 py-4">
-                <div class="col">
+                <div class="col text-center">
                     <span>Tipo de Pago: <?php echo $DatosExp['DescripcionPago']; ?> </span>
                 </div>
             </div>
@@ -206,21 +207,28 @@
   </div> 
   <div class="row mt-3">
     <div class="container justify-content-center">
-        <div id="mapa"></div>
-    </div>
-  </div>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOne">
+           <button class="accordion-button collapsed bg-light shadow" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Ubicación registrada en la plataforma
+           </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+         <div class="accordion-body">
+            <div id="mapa"></div>
+         </div>
+      </div>
+   </div>    
+</div>
 <?php } else { ?>
   <div class="container">
     <div class="row mt-3 justify-content-center">
          <div class="row mt-2">
             <h3 class="text-muted  text-center">Registro de Expediente de Usuario/Socio de la plataforma.</h3>
          </div>
-         <div class="col-sm
-         -10 col-md-1   <div class="col">1</div>
-         <div class="col">2</div>
-         <div class="col">3</div>
-         <div class="col">4</div>0 col-lg-10 mt-2">
-               <div class="card shadow light">
+         <div class="col-sm-10 col-md-10 col-lg-10">   
+               <div class="card shadow bg-light">
                    <p class="text-center mt-3">
                         <svg class="bi" width="20" height="20" fill="currentColor">
                              <use xlink:href="library/icons/bootstrap-icons.svg#folder-plus"/> 
@@ -290,7 +298,6 @@
             </div>
         </div>   
     </div>
-</div>
 <?php } ?>
 <?php $Lat = $DatosExp['Latitud']; $Log = $DatosExp['Longitud']; ?>
 <style>
@@ -305,7 +312,7 @@ function initMap() {
   const ubicacion = { lat: <?php echo $Lat ?> , lng: <?php echo $Log ?> };
   // The map, centered at Uluru
   const map = new google.maps.Map(document.getElementById("mapa"), {
-    zoom: 15,
+    zoom: 14,
     center: ubicacion,
   });
   // marcador
