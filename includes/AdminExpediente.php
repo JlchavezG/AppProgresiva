@@ -62,7 +62,7 @@
 </div>
 <div class="container justify-content-center mt-3">
 <nav aria-label="Page navigation example">
-  <ul class="pagination">
+  <ul class="pagination pagination-sm">
     <li class="page-item <?php echo $_GET['pagina']<=1? 'disabled' : '' ?>">
         <a class="page-link" href="AppAdminExpedientes?pagina<?php echo $_GET['pagina']-1 ?>">Anterior</a>
     </li>

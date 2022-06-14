@@ -22,7 +22,7 @@
       </div>
       <div class="row">
        <nav aria-label="Page navigation">
-           <ul class="pagination">
+           <ul class="pagination pagination-sm">
               <li class="page-item <?php echo $_GET['pagina']<=1? 'disabled' : '' ?>">
                  <a class="page-link" href="AppCatalogo.php?pagina=<?php echo $_GET['pagina']-1 ?>">
                     Anterior

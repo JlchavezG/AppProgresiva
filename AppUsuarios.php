@@ -113,7 +113,7 @@
                                </svg>
                            </div>
                            <div class="col my-3">
-                              <a href="AppExpedientes.php" class="text-decoration-none text-secondary"><strong>Admin Expedientes</strong></a>
+                              <a href="AppAdminExpedientes.php" class="text-decoration-none text-secondary"><strong>Admin Expedientes</strong></a>
                            </div>
                        </div>
                    </div>
