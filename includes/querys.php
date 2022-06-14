@@ -95,6 +95,9 @@ $E = "SELECT * FROM Mensajes ORDER BY FechaN";
 $Ej = $conect->query($E);
 // consultar si el usuario cuanta con cuenta con un expediente
 $IdUserExpediente = $user['TUser'];
+$q = "SELECT * FROM Expediente ORDER BY Id_Expediente";
+$r = $conect->query($q);
+$PEx = $r->num_rows;
 // consulta inner join de expediente
 $rowExpediente = "SELECT Ex.Id_Expediente, Ex.Id_UserExp, Ex.FechaExp, Ex.Id_OficioUser, Ex.NumCredencial, Ex.DocCredencial, Ex.DocDomicilio, Ex.Id_Banco, Ex.NCuenta, Ex.Id_FPago, Ex.Id_EstaExp,
 User.Id_Usuarios, User.Nombre, User.ApellidoP, User.ApellidoM, User.Telefono, User.Email, User.Id_Genero, User.FNac, User.Latitud, User.Longitud, Of.Id_Oficio, Of.NombreOf, Bank.Id_Bancos, Bank.NombreBanco, Pago.Id_TPago, Pago.DescripcionPago, Ext.Id_EstatusExp, Ext.NomEstatus FROM Expediente Ex INNER JOIN Usuarios User ON Ex.Id_UserExp = User.Id_Usuarios 
@@ -103,7 +106,12 @@ $EjecExpediente = $conect->query($rowExpediente);
 $DatosExp = $EjecExpediente->fetch_array();
 // consultas para extrar la información de los expedientes con paginadores
 // consulta para el paginador de oficios
-
-
-
+$TExpedietesxpag = '10';
+$inicioPExp = ($_GET['paginaExp']-1)*$Tpaginas;
+$PExpediente = "SELECT E.Id_Expediente,E.Id_UserExp,E.FechaExp,E.Id_OficioUser,E.NumCredencial,E.DocCredencial,E.DocDomicilio,E.Id_Banco,E.NCuenta,E.Id_FPago,E.Id_EstaExp,
+U.Id_Usuarios,U.Nombre,U.ApellidoP,U.ApellidoM,U.Telefono,U.Email,U.Id_Genero,U.FNac,U.Calle,U.Numero,U.Colonia,U.Id_Estado,U.Id_Municipio,U.Latitud,U.Longitud,U.UserName,U.Imagen,U.Estatus,U.TUser,U.Online,G.Id_Genero,G.NombreG,Es.Id_Estado,Es.NombreE,Mu.Id_Municipios,Mu.NombreM,TUser.Id_TuserApp,TUser.AppTuser,O.Id_Oficio,O.NombreOf,B.Id_Bancos,B.NombreBanco,P.Id_TPago,P.DescripcionPago,EstEx.Id_EstatusExp,EstEx.NomEstatus
+FROM Expediente E INNER JOIN Usuarios U  ON E.Id_UserExp = U.Id_Usuarios INNER JOIN Genero G ON U.Id_Genero = G.Id_Genero INNER JOIN Estados Es ON U.Id_Estado =  Es.Id_Estado INNER JOIN Municipios Mu ON U.Id_Municipio = Mu.Id_Municipios INNER JOIN TUsuario TUser ON U.TUser = TUser.Id_TuserApp INNER JOIN Oficios O ON E.Id_OficioUser = O.Id_Oficio INNER JOIN Bancos B ON E.Id_Banco = B.Id_Bancos INNER JOIN TPago P ON E.Id_FPago = P.Id_TPago INNER JOIN EstatusExp EstEx ON E.Id_EstaExp = EstEx.Id_EstatusExp";
+$EjExpedientes = $conect->query($PExpediente);
+$TExpedientesP = $EjExpedientes->num_rows;
+$paginacionEx = $PEx/$TExpedietesxpag;
 ?>

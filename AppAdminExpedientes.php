@@ -7,7 +7,12 @@
   if($validar != 1 || $validar == 2){
     header("location:app.php");
   }
-
+  if(!$_GET){
+    header("location:AppAdminExpedientes.php?pagina=1");
+ }
+ if($_GET['pagina']>$Tpaginas || $_GET['pagina'] <= 0){
+   header("location:AppAdminExpedientes.php?pagina=1");
+ }
  ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">

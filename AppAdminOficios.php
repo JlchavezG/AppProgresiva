@@ -10,7 +10,7 @@
   if(!$_GET){
      header("location:AppAdminOficios.php?pagina=1");
   }
-  if($_GET['pagina']>$Tpaginas || $_GET['pagina'] <= 0){
+  if($_GET['pagina']>$TExpedietesxpag || $_GET['pagina'] <= 0){
     header("location:AppAdminOficios.php?pagina=1");
   }
  ?>
