@@ -49,11 +49,8 @@
                     <td scope="col"><?php echo $Lineas['DescripcionPago']; ?></td>
                     <td scope="col"><?php echo $Lineas['NomEstatus']; ?></td>
                     <td scope="col">
-                        <div class="form-check form-switch">
-                           <input class="form-check-input" type="checkbox" id="update" name="Cambio" >
-                        </div>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#ValidarModal">Validar</a>
                     </td>
-                    
                 </tr>
                 <?php } ?>
           </tbody>
@@ -78,4 +75,22 @@
     </li>
   </ul>
 </nav>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="ValidarModal" tabindex="-1" aria-labelledby="ValidarModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ValidarModalLabel">Validacion de expediente</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Validar</button>
+      </div>
+    </div>
+  </div>
 </div>
