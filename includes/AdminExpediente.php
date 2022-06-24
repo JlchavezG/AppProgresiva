@@ -49,7 +49,7 @@
                     <td scope="col"><?php echo $Lineas['DescripcionPago']; ?></td>
                     <td scope="col"><?php echo $Lineas['NomEstatus']; ?></td>
                     <td scope="col">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#ValidarModal">Validar</a>
+                        <a href="AdminExpediente.php?Id_Expediente=<?php echo $Lineas['Id_Expediente'];  ?>" data-bs-toggle="modal" data-bs-target="#ValidarModal">Validar</a>
                     </td>
                 </tr>
                 <?php } ?>
@@ -77,6 +77,7 @@
 </nav>
 </div>
 <!-- Modal -->
+<?php  $ir = $_GET['Id_Expediente']; ?>
 <div class="modal fade" id="ValidarModal" tabindex="-1" aria-labelledby="ValidarModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -85,7 +86,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        <?php echo $ir; ?>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
