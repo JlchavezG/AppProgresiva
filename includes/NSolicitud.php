@@ -6,9 +6,9 @@
        <div class="card shadow py-3 bg-light">
           <ul class="nav nav-tabs">
             <li class="nav-item">
-              <a class="nav-link active bg-white" aria-current="page" href="#">Datos de trabajo</a>
+              <a class="nav-link active bg-light" aria-current="page">Datos de trabajo</a>
             </li>
-           </uL>
+           </ul>
            <div class="row mt-2">
               <div class="col-sm-12 col-md-6 col-lg-6">
                  <form action="<?php echo $_SERVER['PHP_SELF']; ?>">
@@ -20,13 +20,45 @@
                 <label for="HorarioT" class="text-muted">Horario de trabajo</label>
                 <input type="time" name="FechaT" class="form-control">
               </div>
-           </div>     
-                </form>
+           </div>        
         </div>
     </div>
+    <div class="row mt-3">
+         <div class="card shadow py-3 bg-light">
+           <ul class="nav nav-tabs">
+              <li class="nav-item">
+               <a class="nav-link active bg-light" aria-current="page">Ubicación</a>
+              </li>
+           </ul>
+           <div class="row mt-2">
+              <div class="col-ms-12 col-md-6 col-lg-6">
+                 <input type="text" name="Calle" placeholder="Calle" class="form-control" require>
+                 <input type="text" name="Numero" placeholder="Numero" class="form-control mt-2" require>
+                 <input type="text" name="Colonia" placeholder="Colonia" class="form-control mt-2" require>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="input-group mb-3">
+                                <label class="input-group-text" for="Estado">Estado</label> 
+                                <select class="form-select" id="estado" name="estado">
+                                   <option selected> Selecciona una opción</option>
+                                   <?php while($row1 = $estados->fetch_assoc()){ ?>
+                                      <option value="<?php echo $row1['Id_Estado'];?>"><?php echo $row1['NombreE'];?></option> 
+                                   <?php } ?>
+                                </select>
+                              </div>
+                              <div class="input-group mb-3">
+                                <label class="input-group-text" for="Municipio">Municipio</label> 
+                                <select class="form-select" id="municipio" name="municipio"></select>
+                              </div>
+              </div>
+           </div>
+         </div>
+        </div>
+
+
 </div>
 
-
+</form>
 
 
 

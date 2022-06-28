@@ -15,6 +15,18 @@
     <link rel="stylesheet" type="text/css" href="css/dark.css">
     <script src="library/push/push.min.js"></script>
     <script scr="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+				$("#estado").change(function () {					
+					$("#estado option:selected").each(function () {
+						   Id_Estado  = $(this).val();
+						$.post("includes/getMunicipio.php", { Id_Estado: Id_Estado  }, function(data){
+							$("#municipio").html(data);
+						});            
+					});
+				})
+			});
+    </script>
   </head>
   <body onload="findMe()";>
   <!-- navbar -->
