@@ -38,18 +38,18 @@
               </div>
               <div class="col-sm-12 col-md-6 col-lg-6">
               <div class="input-group mb-3">
-                                <label class="input-group-text" for="Estado">Estado</label> 
-                                <select class="form-select" id="estado" name="estado">
-                                   <option selected> Selecciona una opción</option>
-                                   <?php while($row1 = $estados->fetch_assoc()){ ?>
-                                      <option value="<?php echo $row1['Id_Estado'];?>"><?php echo $row1['NombreE'];?></option> 
-                                   <?php } ?>
-                                </select>
-                              </div>
-                              <div class="input-group mb-3">
-                                <label class="input-group-text" for="Municipio">Municipio</label> 
-                                <select class="form-select" id="municipio" name="municipio"></select>
-                              </div>
+                 <label class="input-group-text" for="Estado">Estado</label> 
+                   <select class="form-select" id="estado" name="estado">
+                        <option selected> Selecciona una opción</option>
+                        <?php while($row1 = $estados->fetch_assoc()){ ?>
+                        <option value="<?php echo $row1['Id_Estado'];?>"><?php echo $row1['NombreE'];?></option> 
+                        <?php } ?>
+                  </select>
+               </div>
+               <div class="input-group mb-3">
+                  <label class="input-group-text" for="Municipio">Municipio</label> 
+                  <select class="form-select" id="municipio" name="municipio"></select>
+               </div>
               </div>
            </div>
          </div>
