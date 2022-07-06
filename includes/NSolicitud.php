@@ -14,9 +14,10 @@
                  <form action="<?php echo $_SERVER['PHP_SELF']; ?>">
                  <textarea name="DescripcionT" id="Descripcion" cols="30" rows="5" class="form-control" placeholder="Descripción del trabajo" required></textarea>
               </div>
+              <?php $FechaSol = date('Y-m-d'); ?>
               <div class="col-sm-12 col-md-6 col-lg-6">
                 <label for="FechaT" class="text-muted">Selecciona la fecha</label>
-                <input type="date" name="FechaT" class="form-control"/>
+                <input type="date" name="FechaT" class="form-control" value="<?php echo $FechaSol; ?>"/>
                 <label for="HorarioT" class="text-muted">Horario de trabajo</label>
                 <input type="time" name="FechaT" class="form-control">
               </div>
@@ -37,7 +38,7 @@
                  <input type="text" name="Colonia" placeholder="Colonia" class="form-control mt-2" require>
               </div>
               <div class="col-sm-12 col-md-6 col-lg-6">
-              <div class="input-group mb-3">
+              <div class="input-group mb-1">
                  <label class="input-group-text" for="Estado">Estado</label> 
                    <select class="form-select" id="estado" name="estado">
                         <option selected> Selecciona una opción</option>
@@ -46,10 +47,16 @@
                         <?php } ?>
                   </select>
                </div>
-               <div class="input-group mb-3">
+               <div class="input-group mb-2">
                   <label class="input-group-text" for="Municipio">Municipio</label> 
                   <select class="form-select" id="municipio" name="municipio"></select>
                </div>
+                <input type="hidden" name="latitud" id="latitud" required>
+                <input type="hidden" name="longitud" id="longitud" required>
+                <div class="input-group">
+                  <label class="input-group-text" for="Municipio">Fecha</label> 
+                  <input type="date" name="fecha" id="fecha" placeholder="Fecha" required class="form-control">
+                </div>
               </div>
            </div>
          </div>
@@ -69,6 +76,5 @@
 
 
 
-<input type="text" name="latitud" id="latitud" required>
-<input type="text" name="longitud" id="longitud" required>
+
 <div id="map"></div>
