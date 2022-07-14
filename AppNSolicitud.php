@@ -43,7 +43,6 @@
   <div class="container pt-4 mt-5">
     <div class="mt-2">
         <?php include 'includes/NSolicitud.php'; ?>
-        
   </div>
 </div>
   <!-- termina contenido -->
