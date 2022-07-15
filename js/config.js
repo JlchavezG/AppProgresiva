@@ -7,5 +7,6 @@
     document.getElementById('Nbanco').disabled = true;
     document.getElementById('Numcuenta').disabled = true;
     document.getElementById('Tpago').disabled = true;
+    document.getElementById('Solicitante').disabled = true;
   }
   

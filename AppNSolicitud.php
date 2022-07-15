@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/dark.css">
     <script src="library/push/push.min.js"></script>
     <script scr="js/jquery.js"></script>
+    <script src="js/config.js"></script> 
     <script>
         $(document).ready(function(){
 				$("#estado").change(function () {					
@@ -49,7 +50,7 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/dark-mode.js"></script>
   <script src="js/pace.js"></script>
-  <script src="js/main.js"></script> 
+  <script src="js/main.js"></script>
   <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXY_Ny4kf1tpW6JMl7MmX5IRcokAQSVjM&callback=initMap"></script> 
 </body>
 </html>
