@@ -20,7 +20,7 @@
         $(document).ready(function(){
 				$("#estado").change(function () {					
 					$("#estado option:selected").each(function () {
-						   Id_Estado  = $(this).val();
+					   Id_Estado  = $(this).val();
 						$.post("includes/getMunicipio.php", { Id_Estado: Id_Estado  }, function(data){
 							$("#municipio").html(data);
 						});            
