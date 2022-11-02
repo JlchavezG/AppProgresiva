@@ -60,7 +60,7 @@
                     <div class="form-check form-switch ">
                        <?php if($Lineas['Id_EstaExp'] == '1'){ ?>
                         <div class="form-check form-switch">
-                           <input class="form-check-input" type="checkbox" id="flexSwitchCheckValidar">
+                           <input class="form-check-input" type="checkbox" id="validar" onclick="validar(this);">
                         </div> 
                        <?php } ?>
                        <?php if($Lineas['Id_EstaExp'] == '2'){ ?>
@@ -113,3 +113,11 @@
   </div>
      </div>
 </div>
+<script>
+  function validar(cb){
+    if(cb.checked)
+      alert("¿Deceas validar el expediente?")
+    else
+     return false;
+  }
+</script>
