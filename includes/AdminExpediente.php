@@ -2,8 +2,16 @@
      <div class="row mt-3">
         <h2 class="display-6 text-muted text-center mt-3">Administración de Expedientes</h2>
      </div>
+     <div class="container">
+     <div class="row mt-2">
+          <div class="col py-2">
+                <a href="AppUsuarios.php" class="text-decoration-none text-muted">
+                  <svg class="bi text-danger" width="35" height="35" fill="currentColor">
+                     <use xlink:href="library/icons/bootstrap-icons.svg#arrow-bar-left"/>
+                  </svg> Salir</a>
+          </div>
      <div class="row mt-3 table-responsive">
-         <table class="table bg-white table-sm">
+         <table class="table bg-white table-sm text-center">
             <thead>
                <tr>
                    <th scope="col">Imagen</th>               
@@ -42,14 +50,23 @@
                     <td scope="col"><?php echo $Lineas['NombreE']; ?></td>
                     <td scope="col"><?php echo $Lineas['NombreM']; ?></td>
                     <td scope="col"><?php echo $Lineas['AppTuser']; ?></td>
-                    <td scope="col"><a href="./doc/Exp/<?php echo $Lineas['DocCredencial']; ?>" target="_blank" class="text-decoration-none"><span>Ver Identificación</span></a></td>
-                    <td scope="col"><a href="./doc/Exp/<?php echo $Lineas['DocDomicilio']; ?>" target="_blank" class="text-decoration-none"><span>Ver Documento</span></a></td>
+                    <td scope="col"><a href="./doc/Exp/<?php echo $Lineas['DocCredencial']; ?>" target="_blank" class="text-decoration-none text-info"><span>Ver Identificación</span></a></td>
+                    <td scope="col"><a href="./doc/Exp/<?php echo $Lineas['DocDomicilio']; ?>" target="_blank" class="text-decoration-none text-info"><span>Ver Documento</span></a></td>
                     <td scope="col"><?php echo $Lineas['NombreBanco']; ?></td>
                     <td scope="col"><?php echo $Lineas['NCuenta']; ?></td>
                     <td scope="col"><?php echo $Lineas['DescripcionPago']; ?></td>
                     <td scope="col"><?php echo $Lineas['NomEstatus']; ?></td>
                     <td scope="col">
-                        <a href="AdminExpediente.php?Id_Expediente=<?php echo $Lineas['Id_Expediente'];  ?>" data-bs-toggle="modal" data-bs-target="#ValidarModal">Validar</a>
+                    <div class="form-check form-switch ">
+                       <?php if($Lineas['Id_EstaExp'] == '1'){ ?>
+                        <div class="form-check form-switch">
+                           <input class="form-check-input" type="checkbox" id="flexSwitchCheckValidar">
+                        </div> 
+                       <?php } ?>
+                       <?php if($Lineas['Id_EstaExp'] == '2'){ ?>
+                         <span class="text-success">Validado</span>
+                       <?php } ?>   
+                    </div>
                     </td>
                 </tr>
                 <?php } ?>
@@ -94,4 +111,5 @@
       </div>
     </div>
   </div>
+     </div>
 </div>

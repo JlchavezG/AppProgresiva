@@ -4,5 +4,5 @@
  // consulta para eliminar el oficio 
  $DropUser = "DELETE FROM Usuarios WHERE Id_Usuarios = '$DropUsuariosId'";
  $DropUsuarios = $conect->query($DropUser);
- header("location:../AppAdminOficios.php");
+ header("location:../AppAdminUsuarios.php");
 ?>
