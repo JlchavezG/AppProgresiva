@@ -57,10 +57,14 @@
                     <td scope="col"><?php echo $Lineas['DescripcionPago']; ?></td>
                     <td scope="col"><?php echo $Lineas['NomEstatus']; ?></td>
                     <td scope="col">
-                    <div class="form-check form-switch ">
+                    <div class="text-center">
                        <?php if($Lineas['Id_EstaExp'] == '1'){ ?>
-                        <div class="form-check form-switch">
-                           <input class="form-check-input" type="checkbox" id="validar" onclick="validar(this);">
+                        <div class="d-flex p-2">
+                           <span>
+                              <a href="./includes/validarExpediente.php?Id_Expediente=<?php echo $Lineas['Id_Expediente']; ?>" alt="Validar expediente"><svg class="bi text-warning" width="25" height="25" fill="currentColor">
+                                 <use xlink:href="library/icons/bootstrap-icons.svg#check2-circle"/> 
+                              </svg></a>
+                           </span>    
                         </div> 
                        <?php } ?>
                        <?php if($Lineas['Id_EstaExp'] == '2'){ ?>
@@ -93,31 +97,4 @@
   </ul>
 </nav>
 </div>
-<!-- Modal -->
-<?php  $ir = $_GET['Id_Expediente']; ?>
-<div class="modal fade" id="ValidarModal" tabindex="-1" aria-labelledby="ValidarModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="ValidarModalLabel">Validacion de expediente</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <?php echo $ir; ?>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Validar</button>
-      </div>
-    </div>
-  </div>
-     </div>
 </div>
-<script>
-  function validar(cb){
-    if(cb.checked)
-      alert("¿Deceas validar el expediente?")
-    else
-     return false;
-  }
-</script>
