@@ -61,14 +61,19 @@
                        <?php if($Lineas['Id_EstaExp'] == '1'){ ?>
                         <div class="d-flex p-2">
                            <span>
-                              <a href="./includes/validarExpediente.php?Id_Expediente=<?php echo $Lineas['Id_Expediente']; ?>" alt="Validar expediente"><svg class="bi text-warning" width="25" height="25" fill="currentColor">
-                                 <use xlink:href="library/icons/bootstrap-icons.svg#check2-circle"/> 
+                              <a href="./includes/validarExpediente.php?Id_Expediente=<?php echo $Lineas['Id_Expediente']; ?>">
+                              <svg class="bi text-dark" width="25" height="25" fill="currentColor">
+                                 <use xlink:href="library/icons/bootstrap-icons.svg#binoculars-fill"/> 
                               </svg></a>
                            </span>    
                         </div> 
                        <?php } ?>
                        <?php if($Lineas['Id_EstaExp'] == '2'){ ?>
-                         <span class="text-success">Validado</span>
+                         <span class="text-success">
+                         <svg class="bi text-success" width="25" height="25" fill="currentColor">
+                                 <use xlink:href="library/icons/bootstrap-icons.svg#check2-circle"/> 
+                              </svg>
+                         </span>
                        <?php } ?>   
                     </div>
                     </td>
