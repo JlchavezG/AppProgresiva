@@ -68,7 +68,7 @@
                            </span>    
                         </div> 
                        <?php } ?>
-                       <?php if($Lineas['Id_EstaExp'] == '2'){ ?>
+                       <?php if($Lineas['Id_EstaExp'] e     2== '2'){ ?>
                          <span class="text-success">
                          <svg class="bi text-success" width="25" height="25" fill="currentColor">
                                  <use xlink:href="library/icons/bootstrap-icons.svg#check2-circle"/> 
