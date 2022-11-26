@@ -35,7 +35,10 @@
   <!-- inicia contenido -->
   <div class="container pt-4 mt-5">
     <div class="mt-2">
-      <h2 class="text-center mt-4 display-6 text-muted"> Mensajes</h2>
+      <h2 class="text-center mt-4 display-6 text-warning"> Mensajes 
+        <svg class="bi text-secondary" width="30" height="30" fill="currentColor">
+            <use xlink:href="library/icons/bootstrap-icons.svg#envelope"/>
+        </svg></h2>
         <div class="container mt-3">
           <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
           <div class="row mt-2 text-center">
@@ -87,19 +90,25 @@
                           <th scope="col">MensajeDeNotificación</th>
                           <th scope="col">FechaDeEmición</th>
                           <th scope="col">Horario</th>
-                          <th scope="col">Más_Opciones</th>
+                          <th scope="col">Opciones</th>
                         </tr>
                       </thead>
                       <tbody>
                         <?php while($Lineas = $Ej->fetch_assoc()) { ?>
-                        <tr>
+                        <tr class="">
                           <td scope="col"><?php echo $Lineas['TituloN']; ?></td>
                           <td scope="col"><?php echo $Lineas['MensajeN']; ?></td>
                           <?php $fedit = $Lineas['FechaN'];
                           $fedit = date('d-m-Y'); ?>
                           <td scope="col"><?php echo $fedit; ?></td>
                           <td scope="col"><?php echo $Lineas['HoraN']; ?></td>
-                          <td scope="col">Editar - Borrar</td>
+                          <td scope="col text-center">
+                             <a href="includes/EliminarMensaje.php?Id_Mensajes=<?php echo $Lineas['Id_Mensajes'] ?>">
+                                <svg class="bi text-danger" width="20" height="20" fill="currentColor">
+                                  <use xlink:href="library/icons/bootstrap-icons.svg#trash-fill"/>
+                                </svg>                     
+                             </a>
+                          </td>
                         </tr>
                         <?php } ?>
                      </tbody>
