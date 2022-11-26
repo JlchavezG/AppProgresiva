@@ -31,11 +31,11 @@
   <!-- inicia contenido -->
   <div class="container pt-4 mt-5">
     <div class="mt-2">
-      <h2 class="text-center mt-4 display-6 text-muted"> Notificaciones</h2>
+      <h2 class="text-center mt-4 display-6 text-muted"> Mensajes Globales</h2>
         
    </div>
    <div class="row mt-3">
-     <div class="col-sm-12 col-md-6 col-lg-6">
+     <div class="col-sm-12 col-md-12 col-lg-12">
          <?php if($Ej->num_rows > 0) { ?>
           <div class="card shadow">
              <div class="card-header bg-white"> 
