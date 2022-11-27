@@ -10,7 +10,7 @@
       <?php while($DatoOf = $oficiosP->fetch_array()){ ?>  
           <div class="col-sm-3 col-md-3 col-lg-3 py-3">
               <a href="ListaSociosOficio.php?Id_Oficio=<?php echo $DatoOf['Id_Oficio'];?>" class="text-decoration-none text-secondary">
-                <div class="card shadow bg-light CardHover">
+                <div class="card shadow bg-light CardHover rounded-pill">
                   <div class="container text-center">  
                      <div class="row py-3">
                          <div class="text-center"><?php echo $DatoOf['NombreOf']; ?></div>

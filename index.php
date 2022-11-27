@@ -75,7 +75,7 @@
                                             </div>
                                           </div>
                                           <div class="d-grid gap-2 mt-2">
-                                             <input type="submit" name="ingresar" value="Ingresar" class="btn btn-sm btn-success bg-gradient">
+                                             <input type="submit" name="ingresar" value="Ingresar" class="btn btn-sm btn-primary bg-gradient rounded-pill">
                                           </div>
                                           <div class="row mt-3">
                                              <div class="col-auto">

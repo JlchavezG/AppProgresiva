@@ -79,8 +79,8 @@
        </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Cancelar</button>
-        <input type="submit" name="Modificar" value="Modificar" class="btn btn-sm btn-success">
+        <button type="button" class="btn btn-sm btn-danger rounded-pill bg-gradient" data-bs-dismiss="modal">Cancelar</button>
+        <input type="submit" name="Modificar" value="Modificar" class="btn btn-sm btn-primary bg-gradient rounded-pill">
       </div>
     </div>
   </div>

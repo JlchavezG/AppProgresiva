@@ -60,7 +60,7 @@
             </div>
          </div>
          <div class="modal-footer">
-           <input type="submit" name="ModificaDirecc" value="Modificar Dirección" class="btn btn-sm btn-success">
+           <input type="submit" name="ModificaDirecc" value="Modificar Dirección" class="btn btn-sm btn-primary bg-gradient rounded-pill">
          </div>
       </form>
     </div>

@@ -34,7 +34,7 @@
              </div>
          </div>
          <div class="modal-footer">
-           <input type="submit" name="MoPassword" value="Modificar" class="btn btn-sm btn-success">
+           <input type="submit" name="MoPassword" value="Modificar" class="btn btn-sm btn-primary bg-gradient rounded-pill">
          </div>
          </form>   
     </div>

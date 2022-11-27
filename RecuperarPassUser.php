@@ -21,8 +21,8 @@
         </div>
         <div class="col-sm-6 col-md-6 col-lg-6 mt-3">
                 <a href="index.php" class="text-decoration-none">
-                <svg class="bi text-danger" width="20" height="20" fill="currentColor">
-                     <use xlink:href="library/icons/bootstrap-icons.svg#arrow-left-circle-fill"/>
+                <svg class="bi text-danger" width="35" height="35" fill="currentColor">
+                     <use xlink:href="library/icons/bootstrap-icons.svg#arrow-bar-left"/>
                 </svg> Regresar
                 </a>
         </div>
@@ -69,7 +69,7 @@
                      </div>
                    </div>
                    <div class="py-2 d-grid gap-2 py-3">
-                       <input type="submit" name="buscar" value="Buscar" class="btn btn-sm btn-success bg-gradient">
+                       <input type="submit" name="buscar" value="Buscar" class="btn btn-sm btn-primary bg-gradient rounded-pill">
                    </div>
                   </form>
               </div>

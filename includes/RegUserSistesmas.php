@@ -182,7 +182,7 @@
                     <label class="form-check-label" for="aviso1">
                        <a href="#" class="text-decoration-none text-muted" data-bs-toggle="modal" data-bs-target="#Terminos">Aceptar terminos y condiciones</a></label>
              </div>
-                <input type="submit" id="registrar" name="RegistrarSuper" value="Registrar" class="btn btn-sm btn-success">
+                <input type="submit" id="registrar" name="RegistrarSuper" value="Registrar" class="btn btn-sm btn-primary bg-gradient rounded-pill">
           </div>
        </div>
    </div>

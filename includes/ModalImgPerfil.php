@@ -12,7 +12,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Cancelar</button>
-        <input type="submit" value="Mofificar Imagen" name="Subir" class="btn btn-sm btn-success">
+        <input type="submit" value="Mofificar Imagen" name="Subir" class="btn btn-sm btn-peimary rounded-pill">
         </form>
       </div>
     </div>

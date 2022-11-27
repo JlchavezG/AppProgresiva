@@ -59,7 +59,7 @@
                <input type="text" name="NOficio" id="Noficio" placeholder="Nombre del Oficio" class="form-control" required>
                <textarea name="DescOficio" id="DescOficio" placeholder="Descripción del Oficio" cols="30" rows="3" class="form-control mt-3" required></textarea>
                <div class="d-grid gap-2 mt-2">
-                   <input type="submit" value="Registrar Oficio" name="Oficio" class="btn btn-sm btn-success">
+                   <input type="submit" value="Registrar Oficio" name="Oficio" class="btn btn-sm btn-primary bg-gradient rounded-pill">
                </div>  
             </div>   
            </form>

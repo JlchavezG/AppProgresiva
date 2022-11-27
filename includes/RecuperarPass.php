@@ -34,7 +34,7 @@ if($resultado > 0){
                   </div>
               </div>
               <div class='row py-2'>
-                  <input type='submit' name='guardar' value='Guardar nuevo password' class='btn btn-success btn-sm'>
+                  <input type='submit' name='guardar' value='Guardar nuevo password' class='btn btn-primary btn-sm bg-gradient rounded-pill'>
               </div>
               </div>
               </form>

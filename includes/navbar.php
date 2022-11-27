@@ -1,5 +1,5 @@
 <!-- inicia navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:rgba(0,0,0,.5);">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:rgba(245,172,39,.8);">
   <div class="container-fluid">
     <a class="navbar-brand" href="app.php">
       <img src="img/craken.png" alt="logo iscjlchavezg" style="width:50px;">
@@ -88,7 +88,7 @@
         &nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <li class="nav-item">
-        <div class="form-check form-switch nav-link">
+        <div class="form-check form-switch nav-link d-flex">
                   <input class="form-check-input" type="checkbox" id="darkSwitch">
                   <label class="form-check-label" for="darkSwitch">
                   <span>
@@ -101,6 +101,15 @@
                   </span>
                   </label>
                </div>
+        </li>
+        <li class="nav-item">
+           <form class="d-flex">
+             <input class="form-control me-2 rounded-pill" type="Buscar" placeholder="Buscar" aria-label="Buscar">
+             <button class="btn btn-sm text-light  rounded-pill" type="submit">
+                  <svg class="bi" width="18" height="18" fill="currentColor">
+                     <use xlink:href="library/icons/bootstrap-icons.svg#search"/> 
+                  </svg></button>
+           </form>
         </li>        
       </ul>  
     </div>
@@ -122,7 +131,7 @@
         <span class="text-center py-4 "> ¿Estas seguro de queres salir de la plataforma y cerrar tu sesión?</span>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-sm btn-secondary bg-gradient rounded-pil" data-bs-dismiss="modal">Cancelar</button>
         <a href="includes/CerrarS.php" class="btn btn-sm btn-danger">
           <svg class="bi" width="20" height="20" fill="currentColor">
                <use xlink:href="library/icons/bootstrap-icons.svg#power"/> 
@@ -159,7 +168,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-sm btn-danger" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-sm btn-danger bg-gradient rounded-pil" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>

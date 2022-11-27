@@ -65,7 +65,7 @@
                           <label for="floatingTextarea">Mensaje:</label>
                         </div>
                         <div class="d-grid gap-2 mt-3">
-                          <input type="submit" name="NotiUsers" class="btn btn-sm btn-success" value="Enviar Notificación">
+                          <input type="submit" name="NotiUsers" class="btn btn-sm btn-primary bg-gradient rounded-pill" value="Enviar Notificación">
                         </div>
                       </div>
                   </div>
