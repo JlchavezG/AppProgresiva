@@ -54,17 +54,9 @@ include 'includes/Acciones.php';
 <?php include 'includes/Terminos.php'; ?> 
 <?php include 'includes/footer.php'; ?>
 <script>
-    // deabilitar el boton de registrar
-    document.getElementById('registrar').disabled=true;
-    function activar(cb){
-        if(cb.checked)
-        document.getElementById('registrar').disabled=false;
-        else
-        document.getElementById('registrar').disabled=true;
-    }
-    $('#password, #passwordC').on('keyup', function () {
-       if ($('#password').val() == $('#passwordC').val()) {
-       $('#message').html('Validacion de password').css('color', 'green');
+    $('#passwordC,#password').on('keyup', function () {
+       if ($('#passwordC').val() == $('#password').val()) {
+       $('#message').html('Los password conciden').css('color', 'green');
   } else 
     $('#message').html('Verifica bien tu password no coincide').css('color', 'red');
 });

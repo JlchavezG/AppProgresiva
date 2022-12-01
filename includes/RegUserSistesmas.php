@@ -19,7 +19,7 @@
        <?php echo $alertas; ?>
        </div>
        <div class="col-sm-12 col-md-12 col-lg-12 py-2">
-          <div class="card shadow">
+          <div class="card shadow bg-light">
               <div class="container">
                  <div class="row py-3 text-center">
                     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" autocomplete="off">
@@ -173,15 +173,10 @@
          <svg class="bi" width="15" height="15" fill="currentColor">
             <use xlink:href="library/icons/bootstrap-icons.svg#geo-fill"/>
          </svg><strong>!importante¡</strong> Por favor Confirma la ubicación exacta de tu domicilio dentro del mapa</p>
-       <div class="card shadow">
+       <div class="card shadow bg-light">
           <div id="map"></div>
           <div class="row">
-          <div class="py-1 d-grid gap-2">
-             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="aviso" onclick="activar(this);">
-                    <label class="form-check-label" for="aviso1">
-                       <a href="#" class="text-decoration-none text-muted" data-bs-toggle="modal" data-bs-target="#Terminos">Aceptar terminos y condiciones</a></label>
-             </div>
+          <div class="py-1 d-grid gap-2 mt-3">
                 <input type="submit" id="registrar" name="RegistrarSuper" value="Registrar" class="btn btn-sm btn-primary bg-gradient rounded-pill">
           </div>
        </div>

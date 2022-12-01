@@ -76,15 +76,15 @@
      <div class="col-sm-12 col-md-12 col-lg-12">
          <?php if($Ej->num_rows > 0) { ?>
           <div class="card shadow">
-             <div class="card-header bg-white"> 
+             <div class="card-header bg-light"> 
                <svg class="bi" width="20" height="20" fill="currentColor">
                   <use xlink:href="library/icons/bootstrap-icons.svg#envelope-fill"/> 
                </svg> &nbsp; Tus Mensajes Globales</div>
-             <div class="card-body">
+             <div class="card-body bg-light">
                 <div class="Container">
                    <div class="table-responsive"> 
                     <table class="table table-sm">
-                      <thead class="text-center">
+                      <thead class="text-center bg-light">
                         <tr>
                           <th scope="col">Titulo</th>
                           <th scope="col">MensajeDeNotificación</th>
@@ -95,7 +95,7 @@
                       </thead>
                       <tbody>
                         <?php while($Lineas = $Ej->fetch_assoc()) { ?>
-                        <tr class="">
+                        <tr class="bg-light">
                           <td scope="col"><?php echo $Lineas['TituloN']; ?></td>
                           <td scope="col"><?php echo $Lineas['MensajeN']; ?></td>
                           <?php $fedit = $Lineas['FechaN'];
