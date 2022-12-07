@@ -50,3 +50,11 @@ textarea {
 #mapa {
   height: 100%;
 }
+.C_Oficio{
+ border:2px solid;
+ border-color: darkorange;
+}
+.C_Oficio:hover{
+  background-color: darkorange;
+ 
+}
