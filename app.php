@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/pace.css">
     <link rel="stylesheet" type="text/css" href="css/dark.css">
     <script src="library/push/push.min.js"></script>
+    <script src="js/plotly-2.16.1.min.js"></script>
     <script scr="js/jquery.js"></script>
   </head>
   <body>

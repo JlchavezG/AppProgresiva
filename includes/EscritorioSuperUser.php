@@ -220,5 +220,12 @@
                       </div>
                    </div>
              </div>
+             <div class="row py-2">
+                   <div class="col-sm-6 col-md-6 col-lg-6 py-2">
+                        <div class="container mt-n1 " id="Grafica"></div>
+                   </div>
+             </div>
+
          </div>
-      </div>  
+      </div> 
+      <script src="js/graficas.js"></script> 

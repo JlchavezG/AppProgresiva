@@ -48,7 +48,7 @@
                <div class="col-sm-12 col-md-12 col-lg-6">
                  <div class="text-center py-3 mt-5">
                      <div class="ImgHover mt-5">
-                       <a href="#" data-bs-toggle="modal" data-bs-target="#ImagenModal"><img src="img/user/<?php echo $separar['Imagen']?>" alt="Imagen de perfil" width="280px" height="280px" class="rounded shadow mt-3 "></a>  
+                       <a href="#" data-bs-toggle="modal" data-bs-target="#ImagenModal"><img src="img/user/<?php echo $separar['Imagen']?>" alt="Imagen de perfil" width="280px" height="280px" class="rounded shadow mt-3 ImagenHover"></a>  
                      </div>
                   </div>
                </div>
