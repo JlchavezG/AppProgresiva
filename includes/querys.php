@@ -1,5 +1,16 @@
 <?php
 error_reporting(0);
+// consulta para extraer las fechas de los registros de usuarios 
+$RegUserF = "SELECT Fecha_Registro, Tuser FROM Usuarios ORDER BY Fecha_Registro";
+$ResultReg = $conect->query($RegUserF);
+$ValoresX = array();// Tipos de usuarios
+$ValoresY = array();// fechas de registro
+ while($lineasGrafica = $ResultReg->fetch_row()){
+     $ValoresX[]=$lineasGrafica[1];
+     $ValoresY[]=$lineasGrafica[0];
+ }
+ $datosX= json_encode($ValoresX);
+ $datosY= json_encode($ValoresY);
 // consulta para extrar los datos de genero 
 $g = "SELECT * FROM Genero ORDER BY Id_Genero";
 $genero = $conect->query($g);
