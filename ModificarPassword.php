@@ -31,6 +31,7 @@ else{
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,31 +43,35 @@ else{
     <script src="js/jquery.js"></script>
     <title>Recuperar Password | iscjlchavezg</title>
 </head>
+
 <body>
-<div class="container py-4">
-    <div class="row justify-content-center h-100 py-4">
-        <div class="card col-sm-8 col-md-8 col-lg-8 shadow bg-ligth">
-        <p class="text-center text-muted py-2">Se modifico tu password exitosamente dentro de nuestra plataforma.</p><hr>
-        <div class="container text-center">
-            <div class="col py-1">
-                <h4> Email: <?php echo $correo; ?></h4>
-                <p>el nuevo password es: <?php echo $pass; ?></p>
+    <div class="container py-4">
+        <div class="row justify-content-center h-100 py-4">
+            <div class="card col-sm-8 col-md-8 col-lg-8 shadow bg-ligth">
+                <p class="text-center text-muted py-2">Se modifico tu password exitosamente dentro de nuestra
+                    plataforma.</p>
+                <hr>
+                <div class="container text-center">
+                    <div class="col py-1">
+                        <h4> Email: <?php echo $correo; ?></h4>
+                        <p>el nuevo password es: <?php echo $pass; ?></p>
+                    </div>
+                </div>
+                <div class="d-grid gap-2 py-3">
+                    <a href="index.php" class="btn btn-sm btn-success">Iniciar Sesión</a>
+                </div>
             </div>
         </div>
-        <div class="d-grid gap-2 py-3">
-           <a href="index.php" class="btn btn-sm btn-success">Iniciar Sesión</a>
+        <div class="container py-2">
+            <?php echo $alerta; ?>
         </div>
     </div>
-</div>
-<div class="container py-2">
-   <?php echo $alerta; ?>
-</div>
-</div>
-<div class="container ">
+    <div class="container ">
         <div class="row d-flex justify-content-center mt-2">
-           <img src="img/craken.png" alt="logo" style="width:100px;">
+            <img src="img/craken.png" alt="logo" style="width:100px;">
         </div>
     </div>
-<script src="js/bootstrap.min.js"></script> 
+    <script src="js/bootstrap.min.js"></script>
 </body>
+
 </html>

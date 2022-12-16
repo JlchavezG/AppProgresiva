@@ -80,9 +80,10 @@ $Usuario = "SELECT * FROM Usuarios ORDER BY Nombre ASC";
 $Usuarios = $conect->query($Usuario);
 $TotalRow = $Usuarios->num_rows;
 // consulta para saber el numero de solicitudes registrados 
-$solicitud = "SELECT * FROM Solicitud ORDER BY Id_Solicitud";
+$solicitud = "SELECT * FROM SolicitudService ORDER BY Id_Solicitud";
 $solicitudes = $conect->query($solicitud);
 $Tsolicitudes = $solicitudes->num_rows;
+$FolioSolicitud = $solicitudes->num_rows;
 // consulta para saber el numero de cancelaciones registrados 
 $cancelacion = "SELECT * FROM Solicitud WHERE Id_Estatus = '5'";
 $cancelaciones = $conect->query($cancelacion);

@@ -33,7 +33,7 @@
     </section>
      </div>
      <div class="row d-flex justify-content-center mt-2 mb-3">
-        <img src="img/craken.png" alt="logo" style="width:100px;">
+        <img src="img/craken.png" alt="logo" style="width:100px; height:80px;">
         <span class="text-center text-muted"> Iscjlchavezg@2021 | Webdeveloper</span>
      </div>
    </div>
