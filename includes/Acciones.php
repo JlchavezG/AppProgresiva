@@ -236,7 +236,6 @@
       }
     }
     // registrar usuario desde perfil de super Usuario 
-
     if(isset($_POST['RegistrarSuper'])){
       $Nombre = $conect->real_escape_string($_POST['nombre']);
       $ApellidoP = $conect->real_escape_string($_POST['apellidop']);
@@ -258,6 +257,7 @@
       $PasswordC = $conect->real_escape_string(md5($_POST['passwordC']));
       $Estatus = '1';
       $Tuser = $conect->real_escape_string($_POST['Tuser']);
+      $FechaRegSistemas = date('Y-m-d');
       $Online = '0';
       $actual = date("Y");
       $validar = date("Y",strtotime($fecha));
@@ -289,8 +289,8 @@
       // la consulta para insertar los datos 
       $Registro = "INSERT INTO Usuarios(Nombre, ApellidoP, ApellidoM, Telefono, Email, Id_Genero, FNac,
       Calle, Numero, Colonia, Id_Estado, Id_Municipio, Latitud, Longitud, UserName, Imagen, Password, 
-      Estatus, TUser, Online)VALUES('$Nombre','$ApellidoP','$ApellidoM','$Telefono','$Email','$Genero', '$fecha',
-      '$Calle','$Numero','$Colonia','$Estado','$Municipio','$latitud','$Longitud','$UserName','$Img','$Password','$Estatus','$Tuser','$Online')";
+      Estatus, TUser,Fecha_Registro,Online)VALUES('$Nombre','$ApellidoP','$ApellidoM','$Telefono','$Email','$Genero', '$fecha',
+      '$Calle','$Numero','$Colonia','$Estado','$Municipio','$latitud','$Longitud','$UserName','$Img','$Password','$Estatus','$Tuser','$FechaRegSistemas','$Online')";
       $insertar = $conect->query($Registro);
       if($insertar > 0){
         $alertas.='<div class="alert alert-success alert-dismissible fade show" role="alert">

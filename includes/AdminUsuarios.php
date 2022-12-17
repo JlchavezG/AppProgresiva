@@ -41,6 +41,7 @@
                 <th scope="col">Estado</th>
                 <th scope="col">Municipio</th>
                 <th scope="col">TUsuario</th>
+                <th scope="col">FechaRegistro</th>
                 <th scope="col">UserName</th>
                 <th scope="col">Opciones</th>
               </tr>
@@ -62,6 +63,9 @@
                  <td scope="col"><?php echo $separarUser['NombreE']; ?></td>
                  <td scope="col"><?php echo $separarUser['NombreM']; ?></td>
                  <td scope="col"><?php echo $separarUser['AppTuser']; ?></td>
+                 <?php $NFechaR = $separarUser['Fecha_Registro'];
+                 $NFechaR = date('d-m-Y'); ?>
+                 <td scope="col"><?php echo $NFechaR; ?></td>
                  <td scope="col"><?php echo $separarUser['UserName']; ?></td>
                  <td class="text-center">
                     <a href="MoficaUserApp.php?Id_Usuarios=<?php echo $separarUser['Id_Usuarios']; ?>" class="text-decoration-none text-secondary text-center">
