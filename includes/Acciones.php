@@ -416,4 +416,34 @@
       
     } 
   }  
+  // verificar el folio de la nueva solicitud 
+  if($FolioSolicitud == 0){
+    $Fconsecutivo = $FolioSolicitud+1;
+    $length = 9;
+    $string = substr(str_repeat(0, $length).$Fconsecutivo, - $length);
+}
+  // Insertar nueva solicitud de servicio 
+  if(isset($_POST['NuevaSolicitud'])){
+    $Id_UserSolicitante = $conect->real_escape_string($_POST['']);
+    $NombreUsuarioSolicitante = $conect->real_escape_string($_POST['']);
+    $Id_UserAceptacion = $conect->real_escape_string($_POST['']);
+    $FechaNs = $conect->real_escape_string($_POST['']);
+    $FolioNs = $Fconsecutivo;
+    $Id_Oficio =$conect->real_escape_string($_POST['']);
+    $DescripcionNs = $conect->real_escape_string($_POST['']);
+    $FechaTrabajoNs = $conect->real_escape_string($_POST['']);
+    $HoraSolicitadaNs = $conect->real_escape_string($_POST['']);
+    $CalleNs = $conect->real_escape_string($_POST['']);
+    $NumeroNs = $conect->real_escape_string($_POST['']);
+    $ColoniaNs = $conect->real_escape_string($_POST['']);
+    $IdEstadoNs = $conect->real_escape_string($_POST['']);
+    $IdMunicipioNs = $conect->real_escape_string($_POST['']);
+    $LongitudNs = $conect->real_escape_string($_POST['']);
+    $LatitudNs = $conect->real_escape_string($_POST['']);
+    $TelefonoNs = $conect->real_escape_string($_POST['']);
+    $EstatusNs = 1;
+    $IdCalificación;
+    $PrecioAsignado;
+
+  }
   ?>

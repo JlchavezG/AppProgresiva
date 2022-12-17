@@ -1,24 +1,44 @@
 <?php
 $hora = date('H:i:s');
-if($FolioSolicitud == 0){
-    $Fconsecutivo = $FolioSolicitud+1;
-    $length = 9;
-    $string = substr(str_repeat(0, $length).$Fconsecutivo, - $length);
-}
 ?>
 <div class="row text-center mt-2">
     <div class="col-sm-4 col-md-4 col-lg-4"></div>
     <div class="col-sm-4 col-md-4 col-lg-4"></div>
-    <div class="col-sm-4 col-md-4 col-lg-4"><?php echo "Folio de solicitud: ".$string; ?></div>
+    <div class="col-sm-4 col-md-4 col-lg-4"></div>
 </div>
 <div class="container mt-5">
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" autocomplete="off">
-        <div class="card shadow bg-light">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" autocomplete="off" name="NSolicitud"
+        id="NSolicitud">
+        <div class="head-card">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <span class="nav-link active" aria-current="page">Datos de la solicitud</span>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body shadow bg-light">
+            <div class="row mt-2 container card-body">
+                <div class="col-sm-12 col-md-6 col-lg-6 py-1">
+                    <input type="hidden" name="IdUserN" id="IdUserN" value="<?php echo $separar['Id_Usuarios']; ?>"
+                        required>
+                    <div class="input-group mb-1">
+                        <span class="input-group-text" id="basic-addon1">Fecha de la solicitud</span>
+                        <input type="date" name="FechaSolicitud" value="<?php echo date('Y-m-d'); ?>"
+                            class="form-control" required disabled>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 py-1">
+                    <div class="input-group mb-1">
+                        <span class="input-group-text" id="basic-addon1">Folio de la solicitud</span>
+                        <input type="text" name="FolioNs" value="<?php echo $string; ?>" class="form-control" required
+                            disabled>
+                    </div>
+                </div>
+            </div>
             <div class="row mt-2 container">
                 <div class="col-sm-12 col-md-6 col-lg-6 py-1">
                     <div class="input-group mb-1">
                         <span class="input-group-text" id="basic-addon1">Usuario solicitante</span>
-                        <input type="hiden" name="Id_User" value="<?php echo $separar['Id_Usuarios']; ?>">
                         <input type="text" class="form-control" name="Solicitante" id="Solicitante"
                             placeholder="Solicitante" aria-label="Solicitante" aria-describedby="basic-addon1"
                             value="<?php echo $separar['Nombre']." ".$separar['ApellidoP']; ?>" disabled>
@@ -48,14 +68,7 @@ if($FolioSolicitud == 0){
                 </div>
             </div>
             <div class="row container py-1">
-                <div class="col-sm-12 col-md-6 col-lg-6">
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">Fecha de la solicitud</span>
-                        <input type="date" name="FechaSolicitud" value="<?php echo date('Y-m-d'); ?>"
-                            class="form-control" required disabled>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">Hora de la solicitud</span>
                         <input type="time" name="HoraSolicitud" value="<?php echo $hora; ?>" class="form-control"
@@ -66,6 +79,13 @@ if($FolioSolicitud == 0){
         </div>
 </div>
 <div class="container mt-3">
+    <div class="head-card">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <span class="nav-link active" aria-current="page">Datos del servicio</span>
+            </li>
+        </ul>
+    </div>
     <div class="card shadow bg-light">
         <div class="row mt-1 container">
             <div class="col-sm-12 col-md-6 col-lg-6">
@@ -87,9 +107,18 @@ if($FolioSolicitud == 0){
     <div class="card shadow bg-light">
         <div class="row mt-1 container">
             <div class="col-sm-12 col-md-6 col-lg-6 mt-2">
+            <div class="input-group mb-2">
+              <input type="text" class="form-control" placeholder="Calle" aria-label="Calle" name="Calle" id="Calle" required>
+                <span class="input-group-text">Numero</span>
+                <input type="text" class="form-control" placeholder="Ejemplo 5 ó Lt7" aria-label="Numero" name="Numero" id="Numero" required >
+             </div>
+            </div>
+        </div>
+        <div class="row mt-1 container">
+            <div class="col-sm-12 col-md-6 col-lg-6 mt-2">
                 <div class="input-group mb-3">
                     <label class="input-group-text" for="estado">Estado</label>
-                    <select class="form-select" id="estado" name="estado">
+                    <select class="form-select" id="estado" name="estado" required>
                         <option selected> Selecciona una opción</option>
                         <?php while($row1 = $estados->fetch_assoc()){ ?>
                         <option value="<?php echo $row1['Id_Estado'];?>"><?php echo $row1['NombreE'];?></option>
@@ -100,7 +129,7 @@ if($FolioSolicitud == 0){
             <div class="col-sm-12 col-md-6 col-lg-6 mt-2">
                 <div class="input-group mb-3">
                     <label class="input-group-text" for="Municipio">Municipio</label>
-                    <select class="form-select" id="municipio" name="municipio"></select>
+                    <select class="form-select" id="municipio" name="municipio" required></select>
                     <input type="hidden" name="latitud" id="latitud" required>
                     <input type="hidden" name="longitud" id="longitud" required>
                 </div>
@@ -116,13 +145,13 @@ if($FolioSolicitud == 0){
                             <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapseOne" aria-expanded="false"
                                 aria-controls="flush-collapseOne">
-                                  Selecciona tu Ubicación
+                                Selecciona tu Ubicación
                             </button>
                         </h2>
                         <div id="flush-collapseOne" class="accordion-collapse collapse bg-light"
                             aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body">
-                               <div id="map"></div> 
+                                <div id="map"></div>
                             </div>
                         </div>
                     </div>
@@ -132,9 +161,10 @@ if($FolioSolicitud == 0){
     </div>
     <div class="row py-2">
         <div class="container">
-          <div class="d-grid gap-2">
-              <input type="submit" name="NuevaSolicitud" value="Enviar Solicitud" class="btn btn-sm btn-primary rounded-pill">
-          </div>
+            <div class="d-grid gap-2">
+                <input type="submit" name="NuevaSolicitud" value="Enviar Solicitud"
+                    class="btn btn-sm btn-primary rounded-pill">
+            </div>
         </div>
     </div>
     </form>
