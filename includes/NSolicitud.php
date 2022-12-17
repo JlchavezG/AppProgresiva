@@ -18,6 +18,7 @@ if($FolioSolicitud == 0){
                 <div class="col-sm-12 col-md-6 col-lg-6 py-1">
                     <div class="input-group mb-1">
                         <span class="input-group-text" id="basic-addon1">Usuario solicitante</span>
+                        <input type="hiden" name="Id_User" value="<?php echo $separar['Id_Usuarios']; ?>">
                         <input type="text" class="form-control" name="Solicitante" id="Solicitante"
                             placeholder="Solicitante" aria-label="Solicitante" aria-describedby="basic-addon1"
                             value="<?php echo $separar['Nombre']." ".$separar['ApellidoP']; ?>" disabled>
