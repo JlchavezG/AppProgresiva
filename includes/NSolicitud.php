@@ -107,12 +107,18 @@ $hora = date('H:i:s');
     <div class="card shadow bg-light">
         <div class="row mt-1 container">
             <div class="col-sm-12 col-md-6 col-lg-6 mt-2">
-            <div class="input-group mb-2">
+             <div class="input-group mb-2">
               <input type="text" class="form-control" placeholder="Calle" aria-label="Calle" name="Calle" id="Calle" required>
                 <span class="input-group-text">Numero</span>
                 <input type="text" class="form-control" placeholder="Ejemplo 5 ó Lt7" aria-label="Numero" name="Numero" id="Numero" required >
              </div>
             </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 mt-2">
+              <div class="input-group mb-1">
+                        <span class="input-group-text" id="basic-addon1">Colonia</span>
+                        <input type="text" name="ColoniaNs"  class="form-control" id="ColoniaNs" required>
+                    </div>
+              </div>
         </div>
         <div class="row mt-1 container">
             <div class="col-sm-12 col-md-6 col-lg-6 mt-2">
