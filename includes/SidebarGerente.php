@@ -62,5 +62,10 @@
          <use xlink:href="library/icons/bootstrap-icons.svg#mailbox2"/>
       </svg>&nbsp; Notificaciones</a>
     </li>
+    <li class="nav-item items">
+      <a href="#" class="nav-link fuente" data-bs-toggle="modal" data-bs-target="#CSesion"><svg class="bi" width="23" height="23" fill="currentColor">
+         <use xlink:href="library/icons/bootstrap-icons.svg#power"/>
+      </svg>&nbsp; Cerrar Sesion</a>
+    </li>
   </ul>
 </div>
