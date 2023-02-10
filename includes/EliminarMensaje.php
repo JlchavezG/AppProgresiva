@@ -10,4 +10,3 @@ if(isset($_GET['Id_Mensajes'])){
 else{
   return false;
 }
-?>
